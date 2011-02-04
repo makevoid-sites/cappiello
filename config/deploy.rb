@@ -14,14 +14,26 @@ set :deploy_to,   "#{apps}/#{application}"
 set :use_sudo,    false
 set :user,        "www-data"     
 
-set :scm_username, "makevoid"
 
-#File.read("/home/www-data/.password").strip
-set :password, File.read("/Users/makevoid/.password").strip
-set :scm_password, password
-# set :deploy_via, :copy
-# set :copy_exclude, [".git", "db", "nbproject", "public/images/cars"]
+#default_run_options[:pty] = true  # Must be set for the password prompt from git to work
+set :repository, "git://github.com/makevoid/cappiello.git"  # Your clone URL
+set :scm, "git"
+# needed?
+set :scm_passphrase, File.read("/Users/makevoid/.password").strip  # The deploy user's password
 
+ssh_options[:forward_agent] = true
+set :deploy_via, :remote_cache
+
+
+# 
+# set :scm_username, "makevoid"
+# 
+# #File.read("/home/www-data/.password").strip
+# set :password, File.read("/Users/makevoid/.password").strip
+# set :scm_password, password
+# # set :deploy_via, :copy
+# # set :copy_exclude, [".git", "db", "nbproject", "public/images/cars"]
+# 
 
 role :app, domain
 role :web, domain

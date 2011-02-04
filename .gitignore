@@ -1,8 +1,10 @@
 public/pdf
 .bundle
 .sql
+db/cappiello_*
 .log
 .DS_Store
 .svn
 .redcar
 .livereload
+log/*.log
