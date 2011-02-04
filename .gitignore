@@ -8,3 +8,4 @@ db/cappiello_*
 .redcar
 .livereload
 log/*.log
+*.pid
