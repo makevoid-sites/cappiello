@@ -1,0 +1,45 @@
+= form_for @page do |f|
+  = f.label :title_it, "Titolo [it]"
+  = f.text_field :title_it
+  = f.label :text_it, "Testo [it]"
+  = f.text_area :text_it
+  = f.label :title_en, "Titolo [en]"
+  = f.text_field :title_en
+  = f.label :text_en, "Testo  [en]"
+  = f.text_area :text_en
+  = f.label :meta_keywords_it, "Meta Keywords [it]"
+  = f.text_field :meta_keywords_it
+  = f.label :meta_description_it, "Meta Description [it]"
+  = f.text_area :meta_description_it, class: "small"
+  = f.label :meta_keywords_en, "Meta Keywords [en]"
+  = f.text_field :meta_keywords_en
+  = f.label :meta_description_en, "Meta Description [en]"
+  = f.text_area :meta_description_en, class: "small"
+  = f.submit "Modifica", class: "submit"
+
+#textile_ref
+  %h3
+    %a{ href: js_void, onclick: "$('#textile_ref .content').toggle()" } Guida Textile
+    
+  .content{ style: "display:none" }
+    %p Di seguito troverai degli esempi per inserire testo, link, immagini e intestazioni nelle pagine usando la formattazione Textile:
+  
+    %h4 grassetto
+    %p testo in *grassetto* 
+    %p testo in <span class='bold'>grassetto</span>
+    %h4 corsivo
+    %p _testo in corsivo_ 
+    %p.italic testo in corsivo
+
+    %h4 link
+    %p "etichetta":indirizzo
+    %p "accademia cappiello":http://accademia-cappiello.it
+    %p= link_to "accademia cappiello", "http://accademia-cappiello.it"
+
+    %h4 immagine  
+    %p !indirizzo_immagine!
+    -# TODO: levare il www. T_T
+    %p !http://www.accademia-cappiello.it/images/cappiello_icon.png!
+    %p= image_tag "http://www.accademia-cappiello.it/images/cappiello_icon.png"
+  
+    = link_to "Vai alla Guida completa", "http://redcloth.org/hobix.com/textile/quick.html", class: "complete"

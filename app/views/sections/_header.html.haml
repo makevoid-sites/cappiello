@@ -1,0 +1,11 @@
+%h1
+  = site_title 
+%a{ href: "/" }
+  - if master?
+    = image_tag "logo_blu.png", id: "logo"
+  - else
+    = image_tag "logo.png", id: "logo"
+#banner
+  = image_tag "banner/image1.jpg", class: "first"
+  = image_tag "banner/image4.png", class: "last"
+.clear

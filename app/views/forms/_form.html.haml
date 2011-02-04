@@ -1,0 +1,55 @@
+.forms_form
+  - form_for @user do |f|
+    .checkboxes
+      %h3 RICHIESTA INFORMAZIONI
+      = f.check_box :int_annuali_visual
+      = f.label     :int_annuali_visual,    "corsi annuali - VISUAL DESIGN"
+      = f.check_box :int_annuali_interior
+      = f.label     :int_annuali_interior,  "corsi annuali - INTERIOR DESIGN"
+      = f.check_box :int_brevi_visual
+      = f.label     :int_brevi_visual,    "corsi brevi - VISUAL DESIGN"
+      = f.check_box :int_brevi_interior
+      = f.label     :int_brevi_interior,  "corsi brevi - INTERIOR DESIGN"
+    
+      %h3 RICHIESTA DI PARTECIPAZIONE
+      = f.check_box :int_stage_visual
+      = f.label     :int_stage_visual,    "stage gratuito - VISUAL DESIGN"
+      = f.check_box :int_stage_interior
+      = f.label     :int_stage_interior,  "stage gratuito - INTERIOR DESIGN"
+
+    .form
+      = f.label :first_name, "Nome"
+      = f.text_field :first_name
+      = f.label :last_name, "Cognome"
+      = f.text_field :last_name
+      = f.label :email, "Email"
+      = f.text_field :email      
+      = f.label :birthplace, "Nato a"
+      = f.text_field :birthplace 
+      = f.label :birthdate, "Data"    
+      = f.text_field :birthdate    
+      = f.label :address, "Indirizzo"  
+      = f.text_field :address   
+      = f.label :city, "Città"  
+      = f.text_field :city          
+      = f.label :cap, "CAP"  
+      = f.text_field :cap           
+      = f.label :tel, "Telefono"  
+      = f.text_field :tel           
+      = f.label :qualification, "Titolo di studio"  
+      = f.text_field :qualification
+    
+      = f.label :notes, "Note"
+      = f.text_area :notes
+    
+      .checkboxes_bottom
+        = f.check_box :newsletter
+        = f.label     :newsletter,  "desidero ricevere informazioni su iniziative e nuovi corsi"
+    
+        = check_box_tag :authorize
+        = label_tag     :authorize,  "autorizzo il trattamento dei dati personali"
+      .clear
+    
+    
+      = f.submit "Invia", class: "submit"
+ 

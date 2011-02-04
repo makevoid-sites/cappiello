@@ -1,0 +1,18 @@
+defaults: &defaults
+  adapter: mysql
+  database: cappiello_development
+  username: root
+  password: 
+  host:     localhost
+
+development:
+  <<: *defaults
+
+test:
+  database: cappiello_test
+  <<: *defaults
+  
+production:
+  database: cappiello_production
+  password: secret
+  <<: *defaults

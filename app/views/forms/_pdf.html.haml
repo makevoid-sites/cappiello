@@ -1,0 +1,50 @@
+- pdf = pdf
+
+- content_for :jquery do 
+  :plain
+    $(".forms_pdf h3 a").click(function(){
+      $('.forms_pdf form').toggle();
+      $('.forms_pdf').toggleClass("bg");
+    })
+
+  
+.forms_pdf
+  - label = tf("Scarica il pdf informativo del corso", "Download the course information pdf")
+  - if logged_in?
+    - pdf_name = if pdf =~ /master_/
+      - "#{pdf.gsub(/master_/, '')}"
+    - else
+      - "#{"en/" if english?}#{pdf}"
+    %h3= link_to label, "/pdf/#{pdf_name}.pdf"
+  - else
+    %h3= link_to label, js_void
+
+    - form_for @user, html: { style: "display: none" } do |f|
+      .row
+        %p
+          = tf "Se sei già registrato", "If you are already registered"
+          = link_to tf("effettua il Login", "Log in here"), [:login]
+          = tf "altrimenti puoi registrarti riempiendo questo form:", "otherwise you can register filling the following form:"
+      %div
+        = f.label :first_name, tf("Nome", "First Name")
+        = f.text_field :first_name
+      %div  
+        = f.label :last_name, tf("Cognome", "Last Name")
+        = f.text_field :last_name
+      .clear
+      .row
+        = f.label :email, "Email"
+        = f.text_field :email
+      .clear  
+      .row
+        = f.label :password, tf("Scegli una password", "Choose a password")
+        = f.password_field :password
+      = f.hidden_field :redirect_url, value: request.path
+      /
+        %div.authorize
+          - label = "Autorizzo il trattamento dati".html_safe
+          -# label = "Autorizzo il <a href='/pdf/privacy.pdf'>trattamento dati</a>".html_safe
+      
+        = f.check_box :confirm, class: "checkbox"
+        = f.label :confirm, label, {checked: "checked"}
+      = f.submit tf("Scarica", "Download"), class: "submit"

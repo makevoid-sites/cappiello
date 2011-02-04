@@ -1,0 +1,137 @@
+set :application, "cappiello"
+
+
+set :domain,      "ovh.makevoid.com"
+set :domain2,      "makevoid.com"
+
+set :repository,  "svn://#{domain2}/svn/#{application}"
+
+
+set :apps,        "/www"
+set :deploy_to,   "#{apps}/#{application}"
+
+
+set :use_sudo,    false
+set :user,        "www-data"     
+
+set :scm_username, "makevoid"
+
+#File.read("/home/www-data/.password").strip
+set :password, File.read("/Users/makevoid/.password").strip
+set :scm_password, password
+# set :deploy_via, :copy
+# set :copy_exclude, [".git", "db", "nbproject", "public/images/cars"]
+
+
+role :app, domain
+role :web, domain
+role :db,  domain, :primary => true
+
+
+after :deploy, "deploy:create_symlinks"
+after :deploy, "deploy:create_database_yml"
+
+after :deploy, "deploy:cleanup"
+after :deploy, "chmod:entire"
+
+
+namespace :deploy do
+  
+  desc "Restart Application"
+  task :restart, :roles => :app do
+    run "touch #{current_path}/tmp/restart.txt"
+  end
+
+  
+  desc "Create symlinks (managing server)"
+  task :create_symlinks do
+    run "cd #{current_path}/public; ln -s #{deploy_to}/shared/pdf pdf"
+  end  
+  
+  desc "Create database yml"
+  task :create_database_yml do
+    
+    
+    
+    
+    run "ruby -e \"path = '#{current_path}/config'; db_yaml = File.read(path+'/database.yml'); File.open(path+'/database.yml', 'w'){ |f| f.write db_yaml.gsub(/secret/, '#{password}') }\""
+    # upload "config/database.yml", "#{current_path}/config/database.yml", via: :scp
+
+  end
+
+end
+
+namespace :chmod do 
+  desc "chmod entire dir"
+  task :entire do
+    run "cd #{current_path}; chown www-data:www-data -R *"
+  end
+end
+
+
+set :apache_name, "apache2"
+set :pub_domain, domain
+
+
+
+def path
+  File.expand_path File.dirname(__FILE__)
+end
+
+
+namespace :bundler do
+  task :create_symlink, :roles => :app do
+    shared_dir = File.join(shared_path, 'bundle')
+    release_dir = File.join(current_release, '.bundle')
+    run("mkdir -p #{shared_dir} && ln -s #{shared_dir} #{release_dir}")
+  end
+  
+  task :bundle_new_release, :roles => :app do
+    bundler.create_symlink
+    run "cd #{release_path} && bundle install --without test"
+  end
+  
+  task :lock, :roles => :app do
+    run "cd #{current_release} && bundle lock;"
+  end
+  
+  task :unlock, :roles => :app do
+    run "cd #{current_release} && bundle unlock;"
+  end
+end
+
+# HOOKS
+after "deploy:update_code" do
+  bundler.bundle_new_release
+  # ...
+end
+
+
+
+namespace :db do
+  desc "Create database"
+  task :create do
+    run "mysql -u root --password=#{password} -e 'CREATE DATABASE IF NOT EXISTS #{application}_production;'"
+  end
+  
+  desc "Seed database"
+  task :seeds do
+    run "cd #{current_path}; RAILS_ENV=production rake db:seeds"
+  end
+  
+  desc "Send the local db to production server"
+  task :toprod do
+    # `rake db:seeds`
+    `mysqldump -u root #{application}_development > db/#{application}_development.sql`
+    upload "db/#{application}_development.sql", "#{current_path}/db", via: :scp
+    run "mysql -u root --password=#{password} #{application}_production < #{current_path}/db/#{application}_development.sql"
+  end
+  
+  desc "Get the remote copy of production db"
+  task :todev do
+    run "mysqldump -u root --password=#{password} #{application}_production > #{current_path}/db/#{application}_production.sql"
+    download "#{current_path}/db/#{application}_production.sql", "db/#{application}_production.sql"
+    local_path = `pwd`.strip
+    `mysql -u root #{application}_development < #{local_path}/db/#{application}_production.sql`
+  end
+end

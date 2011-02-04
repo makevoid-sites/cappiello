@@ -1,0 +1,12 @@
+%div#inner_content
+  
+  %p= markup tr(@page).text
+  %ul
+    %li= link_to "Video Visual Design", "http://vimeo.com/19487440"
+    %li= link_to "Video Interior Design", "http://vimeo.com/19487331"
+    
+  
+%div#home_swf 
+  = image_tag "oldflash.png"
+
+= render partial: "sections/articles"

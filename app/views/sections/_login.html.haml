@@ -1,0 +1,31 @@
+- lang_link = if english?
+  - link_to "Italiano", "http://#{host_and_port}"
+- else
+  - link_to "English version", "http://#{subdomain}.#{host_and_port}"
+
+- if logged_in?
+  #admin
+    .left
+      - if admin?
+        = yield :admin
+    .right
+      #profile_tab
+        %a#profile_name{ href: "javascript:void(0)" }= current_user.full_name
+        #profile_links{ style: "display:none" }
+          
+          - if admin?
+            = link_to "Profilo", user_path(name_url: current_user.name_url), method: :get
+            = link_to "Carica foto", "#"
+          = lang_link
+          = link_to "Logout", "/logout"
+    .center
+      &nbsp;
+- else
+  #login.right
+    = lang_link
+    |
+    = link_to "Login", "/login"
+    |
+    = link_to "Registrati", "/users/new"
+    
+    

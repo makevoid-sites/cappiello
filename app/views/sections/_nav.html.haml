@@ -1,0 +1,26 @@
+#nav_cont
+  %ul#nav
+    - pages.each_with_index do |page, idx|
+      %li
+        - children = page.children
+        - if !children.nil? && children != []
+          %ul.subnav  
+            - children.map do |pag|
+              - pag_title = tr(pag).title.gsub(/(Visual|Interior) Design -/, '')
+              %li= link_to pag_title, pag_path(pag)
+          = link_to tr(page).title, "javascript:void(0)"
+        - else
+          = link_to tr(page).title, pag_path(page) 
+      
+    - unless master?
+      /%li#concorso= link_to "Concorso", pag_path(tf "concorso", "competition")
+      %li#masterbutt= link_to "Master Cappiello", pag_path("formula_master")
+    - else
+      %li#masterbutt= link_to "Accademia Cappiello", pag_path(tf "l_accademia", "about_us")
+    
+  #social
+    = link_to image_tag("fb_icon.png"), "http://www.facebook.com/pages/Accademia-dArte-e-Design-Leonetto-Cappiello-Firenze/124282164308467"
+    = link_to image_tag("vimeo_icon.png"), "http://vimeo.com/user5798268"
+    = link_to image_tag("flickr_icon.png"), "http://www.flickr.com/photos/accademiacappiello/"
+    = link_to image_tag("twitter_icon.png"), "http://twitter.com/Acc_Cappiello"
+

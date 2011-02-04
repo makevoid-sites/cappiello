@@ -1,0 +1,8 @@
+public/pdf
+.bundle
+.sql
+.log
+.DS_Store
+.svn
+.redcar
+.livereload

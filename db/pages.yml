@@ -1,0 +1,977 @@
+--- 
+- 
+  id: 1
+  master: false
+  meta_description_en: "The Academy of Art and Design Leonetto Cappiello is the perfect place to express their creativity and translate it into a real job opportunities. Visit the website to get informations about our courses in Visual and Interior Design."
+  meta_description_it: "L'Accademia d'Arte e Design Leonetto Cappiello è il luogo ideale per esprimere la propria creatività e per tradurla in una reale opportunità di lavoro. Visita il sito per maggiori informazioni sui corsi di Visual e Interior Design."
+  meta_keywords_en: "accademia, accademia cappiello, firenze, art school cappiello, leonetto cappiello, visual design, interior design, courses"
+  meta_keywords_it: "accademia, accademia cappiello, firenze, scuola arte cappiello, leonetto cappiello, visual design, interior design, courses"
+  parent_id: ~
+  ptype: standard
+  text_en: |-
+      The Academy of Art and Design Leonetto Cappiello is the perfect place to express their creativity and translate it into a real job opportunities. 
+      
+      Every profession, even the most creative, you can not improvise. Need bases, concepts, techniques. Ideas are important but not enough: you must give them shape, the best, and know how to apply. 
+      
+      With more than fifty years of experience in teaching and training, and thanks to the constant updating of its courses, the Academy Cappiello is a center specializing in qualified professionals in the fields of graphics, design and decoration Interior, advertising and editorial illustration. 
+      
+      Qualified teachers, who divide their time between teaching profession, carry their classroom experiences are the best guarantee of a real confrontation with the world of work. An exclusive  teaching, based on design culture, performing and teaches creative thinking and ideas through to finalize the instruments and the best software used by professionals.
+  text_it: |-
+      L'Accademia d'Arte e Design Leonetto Cappiello è il luogo ideale per esprimere la propria creatività e per tradurla in una reale opportunità di lavoro. Ogni professione, anche la più creativa, non si può improvvisare. 
+      
+      Ha bisogno di basi, di nozioni, di tecniche. Le idee sono importanti ma da sole non bastano: è necessario dar loro forma, la migliore possibile, e saperle applicare.
+      
+      Con più di cinquant'anni di esperienza nell'insegnamento e nella formazione, e grazie al costante aggiornamento dei suoi corsi, l'Accademia Cappiello rappresenta un polo specializzato nel qualificare professionisti nei settori della grafica, della progettazione e decorazione d'interni, della pubblicità e dell'illustrazione editoriale.
+      
+      Docenti qualificati, che dividono il loro tempo tra la professione e l'insegnamento, portano in aula le loro esperienze rappresentano la migliore garanzia di un reale confronto con il mondo del lavoro.
+      
+      Una didattica esclusiva, improntata sulla cultura del progetto, che esercita pensiero e creatività e insegna a finalizzare le idee attraverso gli strumenti e i software più aggiornati utilizzati dai professionisti del settore.
+  title_en: "About Us"
+  title_it: L'Accademia
+  title_url_en: about_us
+  title_url_it: l_accademia
+- 
+  id: 2
+  master: false
+  meta_description_en: ~
+  meta_description_it: ~
+  meta_keywords_en: ~
+  meta_keywords_it: ~
+  parent_id: ~
+  ptype: standard
+  text_en: ~
+  text_it: ""
+  title_en: "Visual Design"
+  title_it: "Visual Design"
+  title_url_en: visual_design
+  title_url_it: visual_design
+- 
+  id: 3
+  master: false
+  meta_description_en: ~
+  meta_description_it: ~
+  meta_keywords_en: ~
+  meta_keywords_it: ~
+  parent_id: ~
+  ptype: standard
+  text_en: ~
+  text_it: ""
+  title_en: "Interior Design"
+  title_it: "Interior Design"
+  title_url_en: interior_design
+  title_url_it: interior_design
+- 
+  id: 4
+  master: false
+  meta_description_en: ""
+  meta_description_it: ""
+  meta_keywords_en: "special courses"
+  meta_keywords_it: "corsi speciali"
+  parent_id: ~
+  ptype: standard
+  text_en: |-
+      Courses in preparation. 
+      Come and visit again the site or request informations directly from the secretary.
+      Want to be informed in preview?
+      Sign-up to the newsletter
+  text_it: |-
+      Corsi in preparazione.
+      Torna a visitare il sito o richiedi informazioni direttamente alla segreteria. Vuoi essere informato in anteprima?
+      Iscriviti alla "newsletter":/elements/newsletter.
+  title_en: "Special Courses"
+  title_it: "Corsi Speciali"
+  title_url_en: special_courses
+  title_url_it: corsi_speciali
+- 
+  id: 5
+  master: false
+  meta_description_en: "The academy offers some guidance days completely free, organized as Stage and addressed to those who want to assess their attitude to the profession of interior or visual designer"
+  meta_description_it: "l’Accademia propone alcune giornate di orientamento completamente gratuite, organizzate in forma di Stage e rivolte a coloro che vogliono valutare la propria attitudine alla professione del visual o interior designer"
+  meta_keywords_en: "free stages, visual design, interior design, graphic, accademia cappiello, design school"
+  meta_keywords_it: "stage gratuiti, visual design, interior design, accademia cappiello, scuola design"
+  parent_id: ~
+  ptype: standard
+  text_en: |-
+      During the year the academy offers some guidance days completely free, organized as Stage and addressed to those who want to assess their attitude to the profession of interior designer or the visual designer. 
+      Stages have a free moment ideal for making contact with the Academy, with the subjects and teachers, and to satisfy curiosity. 
+      Stages take place in one day and have a duration of 7 hours, during which some teachers explain the main materials and methods of study. They also provided practical meeting with former graduates of the Academy already entered the world of work. 
+      Participation in Stage is free (you can book) does not involve any commitment to inclusion, and one purpose only policy, and aptitude; also constitutes an element of further evaluation for the possible allocation of scholarships. At the end of the day, upon request, will receive a certificate of participation.
+      
+      "FILL THE FORM TO ACCESS TO STAGES":/pages/form
+      
+      h4. Start Date next stage:	
+      * VISUAL DESIGN:    24/01/2011
+      * INTERIOR DESIGN:  27/01/2011
+  text_it: |-
+      Durante l’anno l’Accademia propone alcune giornate di orientamento completamente gratuite, organizzate in forma di Stage e rivolte a coloro che vogliono valutare la propria attitudine alla professione dell' "Interior Designer":/interiorpdf o del "Visual Designer":/visualpdf.
+      Gli Stage gratuiti sono un momento ideale per prendere contatto con l’Accademia, con le materie e con i docenti, e per soddisfare ogni curiosità.
+      Gli Stage si svolgono in una giornata e hanno una durata complessiva di 7 ore, durante le quali alcuni insegnanti illustrano le principali materie e le metodologie di studio. Sono previste anche esercitazioni pratiche e l’incontro con ex diplomati dell’Accademia già inseriti nel mondo del lavoro.
+      La partecipazione agli Stage è libera (è sufficiente prenotare), non comporta alcun impegno per l’iscrizione, e ha uno scopo puramente orientativo e attitudinale; inoltre costituisce elemento di valutazione ulteriore per l’eventuale assegnazione delle Borse di Studio. Al termine della giornata, su richiesta, viene rilasciato un attestato di partecipazione.
+      
+      "COMPILA IL FORM PER ACCEDERE AGLI STAGES":/pages/form
+      
+      
+      h4. Data inizio prossimo stage:
+      * VISUAL DESIGN:    24/01/2011
+      * INTERIOR DESIGN:  27/01/2011
+  title_en: "Free Stages"
+  title_it: "Stage Gratuiti"
+  title_url_en: free_stages
+  title_url_it: stage_gratuiti
+- 
+  id: 6
+  master: false
+  meta_description_en: "10 Scholarships available for foreign young people interested in attending the first semester of the annual courses!"
+  meta_description_it: "10 Borse di Studio da assegnare a giovani che intendono frequentare il primo semestre dei corsi Interior Design e Visual Design"
+  meta_keywords_en: "scolarships, visual design, interior design, accademia cappiello, scuola design"
+  meta_keywords_it: "borse di studio, visual design, interior design, accademia cappiello, scuola design"
+  parent_id: ~
+  ptype: standard
+  text_en: "For the allocation of 10 Scholarships exclusively for foreign young people interested in attending the first semester of the annual courses, beginning Februaryr 21nd, 2011\n\n\
+      For the academic year 2010 have been established 10 Scholarships to be warded to young people that intend to frequent the first semester of the ANNUAL courses of INTERIOR DESIGN or VISUAL DESIGN, that will begin, with the Academy, the coming February 22nd 2010 and that will cover half the cost of the first semester of the chosen course ( value of 1.700 Euro, that is the 50% ).\n\n\
+      By the end of the first semester students that are eligible (high results) may ask for a further sholarship that will cover 50% of the cost.\n\n\
+      Form to apply for one of the 10 Scholarships for attending the first semester of one of the ANNUAL courses of the Art and Design Academy \"Leonetto Cappiello\" of Florence, with beginning February 21, 2011.\n\n\
+      to be sent by the 16th Jannuary 2011\n\n\
+      <Form[:borse_di_studio]> "
+  text_it: "Per l’anno accademico 2011 sono state istituite 10 Borse di Studio da assegnare a giovani che intendono frequentare il primo semestre dei corsi Interior Design e Visual Design che avranno inizio, presso l’Accademia, il prossimo 21 Febbraio 2011.\n\
+      \x20 Le 10 Borse di Studio in palio contribuiranno a coprire il costo del primo semestre del corso prescelto per il 50%. (valore borsa al 50% Euro 1.700).\n\
+      \x20 Alla fine del I semestre di corso si potrà partecipare all' assegnazione di Borse di Studio al 50% per frequentare il II semestre sulla base della media del profitto ottenuto.\n\
+      \x20 La possibilità di poter frequentare i corsi mediante Borse di Studio è nata dalla necessità di estendere ad un maggior numero di giovani l'opportunità di conseguire la specializzazione necessaria per un futuro nel mondo del lavoro.\n\n\
+      h3. Domanda per concorrere all'assegnazione delle Borse di Studio\n\n\
+      \x20 Per concorrere alla assegnazione di una delle 10 Borse di studio occorrerà far pervenire, il form sottostante correttamente ed integralmente compilato entro il 16 Gennaio 2011\n\n\
+      \x20 <Form[:borse_di_studio]> "
+  title_en: Scolarships
+  title_it: "Borse di Studio"
+  title_url_en: scolarships
+  title_url_it: borse_di_studio
+- 
+  id: 7
+  master: false
+  meta_description_en: "In this page you can find the courses dates for Visual Design, Interior design, stages and masters courses."
+  meta_description_it: "Le date e gli orari dei corsi di quest'anno in Visual Design, Interior design, dei master e degli stage."
+  meta_keywords_en: "dates, events, corsi, visual, interior, stages, accademia cappiello, design"
+  meta_keywords_it: "date, orari, corsi, visual, interior, stages, accademia cappiello, design"
+  parent_id: ~
+  ptype: standard
+  text_en: |-
+      h3. Annual courses of Interior Design and Visual Design 
+      (800 hours in 20 weeks)
+      
+      * Starting dates: February, 21 2011 
+      * Frequency: Monday to Friday morning
+      
+      h3. Short Courses Interior Design and Visual Design 
+      (40 hours in 5 weeks)
+      
+      * Beginning next courses: Jannuary 2011 
+      * Frequency Options: 
+      ** 5 weekends from Jannuary 17th 2011(8 hours each week on Friday afternoon and Saturday morning) 
+      ** 5 weeks from Jannuary 21st 2011(2 afternoons a week Monday and Thursday from 15:00 to 19:00)
+      
+      h3. STAGES Italian Interior Design and Visual Design
+      (3 days 15 hours)
+      
+      * Date Next Stage: JANNUARY 2011
+      * Monday 24   Visual Design free Stage
+      * Thursday 27  Interior Design free Stage
+      
+      h3. Special Courses
+      
+      Special Courses are coming soon. Stay tuned: subscribe to our newsletter!
+  text_it: |-
+      h3. Corsi annuali di Interior Design e Visual Design 
+      (800 ore in 40 settimane)
+      
+      * Inizio corsi: 21 FEBBRAIO 2011
+      * Frequenza: dal LUNEDÌ al VENERDÌ mattina
+      
+      h3. Corsi brevi di Interior Design e visual design 
+      (40 ore in 5 settimane)
+      
+      * Inizio prossimi corsi: Gennaio 2011
+      * Opzioni di frequenza:
+      ** 5 fine settimana dal 17 Gennaio (8 ore a settimana tra venerdì pomeriggio e sabato mattina)
+      ** 5 settimane  dal 21 Gennaio 2011 (2 pomeriggi la settimana LUNEDÌ e GIOVEDÌ dalle 15.00 alle 19.00)
+      
+      h3. Stages gratuiti di Interior Design e Visual Design 
+      (7 ore in 1 giorno)
+      
+      * Date prossimi Stage:  Novembre - Dicembre 2010
+      * Lunedì 29/11: 10.00-14.00 / 15.00-18.00  Stage di Visual Design
+      * Giovedì 02/12: 10.00-14.00 / 15.00-18.00 Stage di Interior Design
+      
+      h3. Corsi Speciali
+      
+      Sono in programmazione corsi speciali. Vuoi essere informato sui nuovi corsi? Iscriviti alla newsletter.
+  title_en: "Dates and Times"
+  title_it: "Date e Orari"
+  title_url_en: dates_and_times
+  title_url_it: date_e_orari
+- 
+  id: 8
+  master: false
+  meta_description_en: "Informations request and courses attendance"
+  meta_description_it: "Richiesta informazioni e partecipazione ai corsi"
+  meta_keywords_en: "form, informations, attendance, courses access, accademia cappiello"
+  meta_keywords_it: "form, richiesta informazioni, partecipazione, accesso corsi, accademia cappiello"
+  parent_id: ~
+  ptype: standard
+  text_en: "<Form[:form]>"
+  text_it: "<Form[:form]>"
+  title_en: Form
+  title_it: Form
+  title_url_en: form
+  title_url_it: form
+- 
+  id: 9
+  master: false
+  meta_description_en: |-
+      Accademia d’Arte e Design Leonetto Cappiello - Firenze
+      via della Fornace 33, 50125 - Florence, Italy
+  meta_description_it: |-
+      Accademia d’Arte e Design Leonetto Cappiello - Firenze
+      via della Fornace 33, 50125 - Firenze
+  meta_keywords_en: "contacts, accademia cappiello, firenze, florence, via della fornace, leonetto cappiello"
+  meta_keywords_it: "contatti, accademia cappiello, firenze, via della fornace, leonetto cappiello"
+  parent_id: ~
+  ptype: standard
+  text_en: |-
+      h3. Accademia d’Arte e Design Leonetto Cappiello
+      via della Fornace 33, 50125 FIRENZE
+      TEL | FAX: 055 681 32 11 (da Lunedì a Venerdì 9.00-13.00, 16.00-18.00)
+      email: "accademiacappiello@dada.it":mailto:accademiacappiello@dada.it
+      
+      
+      
+      Subscribe to our NEWSLETTER
+      "HOW TO GET THERE":http://maps.google.it/maps?client=safari&oe=UTF-8&ie=UTF8&q=accademia+cappiello+firenze&fb=1&gl=it&hq=accademia+cappiello&hnear=Florence&cid=0,0,3992697713780633557&t=h&z=16&iwloc=A
+      
+      
+      <div id="likebox">
+      <script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script><fb:like-box href="http://www.facebook.com/pages/Accademia-dArte-e-Design-Leonetto-Cappiello-Firenze/124282164308467" width="292" show_faces="true" stream="true" header="false"></fb:like-box></div>
+  text_it: |-
+      h3. Accademia d’Arte e Design Leonetto Cappiello
+      via della Fornace 33, 50125 FIRENZE
+      TEL | FAX: 055 681 32 11 (da Lunedì a Venerdì 9.00-13.00, 16.00-18.00)
+      email: "accademiacappiello@dada.it":mailto:accademiacappiello@dada.it
+      
+      
+      
+      Iscriviti alla NEWSLETTER
+      "COME RAGGIUNGERCI":http://maps.google.it/maps?client=safari&oe=UTF-8&ie=UTF8&q=accademia+cappiello+firenze&fb=1&gl=it&hq=accademia+cappiello&hnear=Florence&cid=0,0,3992697713780633557&t=h&z=16&iwloc=A
+      
+      
+      <div id="likebox">
+      <script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script><fb:like-box href="http://www.facebook.com/pages/Accademia-dArte-e-Design-Leonetto-Cappiello-Firenze/124282164308467" width="292" show_faces="true" stream="true" header="false"></fb:like-box></div>
+  title_en: Contacts
+  title_it: Contatti
+  title_url_en: contacts
+  title_url_it: contatti
+- 
+  id: 10
+  master: true
+  meta_description_en: "The training offered includes some Accademia Cappiello Master and postgraduate courses designed to provide basic training, further training or advanced on strategic issues in the field of Visual and Interior Design."
+  meta_description_it: "L’offerta formativa dell’Accademia Cappiello comprende alcuni Master e corsi di specializzazione concepiti per fornire una preparazione di base, di perfezionamento o avanzata su temi strategici nel settore del Visual e dell’Interior Design"
+  meta_keywords_en: "master, visual design, interior design, accademia cappiello, design school, firenze, florence"
+  meta_keywords_it: "master, visual design, interior design, accademia cappiello, scuola design, firenze"
+  parent_id: ~
+  ptype: standard
+  text_en: |-
+      The training offered includes some Accademia Cappiello Master and postgraduate courses designed to provide basic training, further training or advanced on strategic issues in the field of Visual and Interior Design.
+      
+      The Master is open to all and are held in the afternoon or evening in order to meet the needs even of those who work. The intensive formula and limited number (maximum 7 people) give the opportunity for participants to receive ongoing support from the teacher.
+      
+      This type of courses, initially reserved for Cappiello's graduates, have proven a valuable tool for professionals and companies who wish to deepen and update knowledge. 
+      The Accademia Cappiello is read y to organize ad hoc courses on request, in the company and also to individuals and small groups, and proposes to offer a flexible learning easily accessible even to those who work and want to keep themselves informed on new technologies and adding value to curriculum.
+  text_it: |-
+      L’offerta formativa dell’Accademia Cappiello comprende alcuni Master e corsi di specializzazione concepiti per fornire una preparazione di base, di perfezionamento o avanzata su temi strategici nel settore del Visual e dell’Interior Design. 
+      
+      I Master sono aperti a tutti e si svolgono in orario pomeridiano o serale proprio per venire incontro alle esigenze di chi lavora.La formula full-immersion e le classi a numero limitato (max 7 persone) consentono ai partecipanti di ricevere un'assistenza costante da parte del docente.
+      
+      Questo tipo di corsi, inizialmente riservati esclusivamente agli ex-allievi, si sono rivelati un valido strumento anche per professionisti e aziende che desiderano approfondire o aggiornare conoscenze specifiche.
+      
+      L’Accademia Cappiello è disponibile ad organizzare corsi ad hoc su richiesta, anche in Azienda e anche per singoli e piccoli gruppi, e propone formule flessibili per offrire una didattica facilmente fruibile anche a chi lavora e desidera informarsi costantemente sulle nuove tecnologie e dare valore aggiunto al proprio curriculum.
+  title_en: "Formula Master"
+  title_it: "Formula Master"
+  title_url_en: formula_master
+  title_url_it: formula_master
+- 
+  id: 11
+  master: true
+  meta_description_en: ~
+  meta_description_it: ~
+  meta_keywords_en: ~
+  meta_keywords_it: ~
+  parent_id: ~
+  ptype: standard
+  text_en: ~
+  text_it: ""
+  title_en: "Autocad 2D"
+  title_it: "Autocad 2D"
+  title_url_en: autocad_2d
+  title_url_it: autocad_2d
+- 
+  id: 12
+  master: true
+  meta_description_en: ~
+  meta_description_it: ~
+  meta_keywords_en: ~
+  meta_keywords_it: ~
+  parent_id: ~
+  ptype: standard
+  text_en: ~
+  text_it: ""
+  title_en: "3D Studio Max"
+  title_it: "3D Studio Max"
+  title_url_en: 3d_studio_max
+  title_url_it: 3d_studio_max
+- 
+  id: 13
+  master: true
+  meta_description_en: "V-Ray is a rendering engine available for many software, including 3D Studio MAX. The master of the Academy offers the opportunity to learn how to use Vray to render projects as an interior designer just made with 3D Studio."
+  meta_description_it: "VRay è un motore di rendering disponibile per numerosi software, tra cui 3D STUDIO MAX. Il master dell'Accademia offre l'opportunità di imparare ad usare Vray per renderizzare progetti di architettura di interni realizzati proprio con 3D Studio."
+  meta_keywords_en: "vray, v-ray, 3ds max, courses, master, accademia cappiello, 3d, modeling, rendering, school, max"
+  meta_keywords_it: "vray, v-ray, 3ds max, corsi, master, accademia cappiello, 3d, modellazione, rendering, scuola, max"
+  parent_id: ~
+  ptype: standard
+  text_en: |-
+      h3. for Interior Design
+      
+      <div id='aside'>
+      * - Start date: March, 7 2011
+      * - Duration: 20 hours
+      * - Frequency: weekly, monday 2-6 p.m
+      * - Max participants: 7
+      * - Cost of the course: 480 Euro
+      * - Certificate: Yes
+      * - Prerequisites: Knowledge of 3D Studio MAX
+      
+      Courses begin periodically throughout the year, starting with a minimum of 5 and a maximum of 7 members. If the course is complete you can subscribe to the next. If you wish to register as a professional practice or are still a group, the teacher is available to customize the program.
+      </div>
+      
+      V-Ray is a rendering engine available for many software, including 3D Studio MAX. The master of the Academy offers the opportunity to learn how to use Vray to render projects as an interior designer just made with 3D Studio. Vray offers a virtually unlimited number of options and the problem is often, maximize the efficiency. Vray, used in a timely manner, provide a very interesting level of photorealism also contains the processing time. The time machine is one of the key aspects in business use for the production of high quality images, and it is important to know the settings according to the most profitable time you have available and the results to be obtained. The course is especially dedicated to the graduates of the Academy of Interior Design, to graduates in architecture, and professionals who want to upgrade.
+  text_it: |-
+      h3. per Interior Design 
+      
+      <div id='aside'>
+      * - data di inizio: 7 MARZO 2011
+      * - durata: 20 ore
+      * - frequenza: settimanale - lunedì 14-18
+      * - numero max partecipanti: 7
+      * - costo del corso: 480 Euro
+      * - attestato: Si
+      * - prerequisiti: Conoscenza 3DS MAX
+      
+      I corsi iniziano periodicamente tutto l'anno, partono con un minimo di 5 e un massimo di 7 iscritti. Se il corso è completo potete iscrivervi al successivo. Se siete interessati a iscrivervi come Studio Professionale o siete comunque un gruppo, il docente è a vostra disposizione per personalizzare il programma. 
+      </div>
+      
+      VRay è un motore di rendering disponibile per numerosi software, tra cui 3D STUDIO MAX. Il master dell'Accademia offre l'opportunità di imparare ad usare Vray per renderizzare progetti di architettura di interni realizzati proprio con 3D Studio. Il programma offre un numero praticamente illimitato di opzioni per la realizzazione di rendering e il problema è spesso, visto il numero impressionante di variabili, ottimizzarne l'efficienza. Vray, usato in maniera opportuna, permette di raggiungere livelli molto interessanti di fotorealismo anche contenendo i tempi di elaborazione. Il tempo macchina è infatti uno degli aspetti fondamentali nell'uso professionale per la produzione di immagini ad alta qualità, ed è importante conoscere i settaggi più vantaggiosi in funzione del tempo che si ha a disposizione e dei risultati che si vogliono ottenere. Il corso è dedicato in particolare ai diplomati dell'Accademia in Interior Design, ai neolaureati in architettura e a tutti i professionisti che vogliono aggiornarsi.
+  title_en: V-Ray
+  title_it: V-Ray
+  title_url_en: vray
+  title_url_it: vray
+- 
+  id: 14
+  master: true
+  meta_description_en: ~
+  meta_description_it: ~
+  meta_keywords_en: ~
+  meta_keywords_it: ~
+  parent_id: ~
+  ptype: standard
+  text_en: ~
+  text_it: ""
+  title_en: "Autocad 3D"
+  title_it: "Autocad 3D"
+  title_url_en: autocad_3d
+  title_url_it: autocad_3d
+- 
+  id: 15
+  master: true
+  meta_description_en: ~
+  meta_description_it: ~
+  meta_keywords_en: ~
+  meta_keywords_it: ~
+  parent_id: ~
+  ptype: standard
+  text_en: ~
+  text_it: ""
+  title_en: SketchUp
+  title_it: SketchUp
+  title_url_en: sketchup
+  title_url_it: sketchup
+- 
+  id: 16
+  master: false
+  meta_description_en: "The Visual Design course is aimed at those aspiring to become professionals in the fields of graphics, illustration, graphics, editorial, the Advertising and Web Design, fields that have changed considerably and require more young talent"
+  meta_description_it: "Il corso di Visual Design è rivolto a coloro che aspirano a diventare professionisti nei settori della Grafica, dell’Illustrazione, della Grafica Editoriale, di quella Pubblicitaria e del Web Design"
+  meta_keywords_en: "visual design, courses, accademia cappiello, february, 2011, design school"
+  meta_keywords_it: "visual design, corsi, grafica, accademia cappiello, febbraio, 2011, scuola design"
+  parent_id: 2
+  ptype: standard
+  text_en: |-
+      <div id='aside'>
+      * - Start date: 21 February 2011
+      * - Duration: 800 hours
+      * - Frequency: daily
+      * - Max participants: 15
+      * - Cost of the course: each semester: Registration 1500 euro, 2 enrollment rates: 950 euro
+      * - Certificate: Yes
+      * - Prerequisites: none
+      
+      7 HOURS FREE STAGE
+      2010, November
+      Monday 11/29: 
+      10.00 a.m - 02.00 p.m.  
+      03.00 p.m. - 06.00 p.m.
+      </div>
+      
+      The Visual Design course is aimed at those aspiring to become professionals in the fields of graphics, illustration, graphics, editorial, the Advertising and Web Design, fields that have changed considerably and require more young talent. 
+      In two consecutive semesters are the basis for a career related to visual design, studying the different techniques for creating, processing and layout, with subjects ranging from design, to computer graphics to photography. The course includes a lot of practice and exercises: students participate in competitions and national and international awards.
+      The main graphics software and web are taught with the help of projections and tutorials dedicated classroom equipped with the latest Apple Mac computers.
+      
+      <Form[:pdf_visual_design_annual]>
+  text_it: |-
+      <div id='aside'>
+      
+      * - data di inizio: 21 Febbraio 2011
+      * - durata: 800 ore
+      * - frequenza: giornaliera
+      * - numero max partecipanti: 15
+      * - costo del corso: per ogni semestre: iscrizione 1500 euro, 2 rate di frequenza da 950 euro
+      * - attestato: Sì
+      * - prerequisiti: non occorrono prerequisiti particolari
+      
+      </div>  
+      
+      Il corso di Visual Design è rivolto a coloro che aspirano a diventare professionisti nei settori della Grafica, dell’Illustrazione, della Grafica Editoriale, di quella Pubblicitaria e del Web Design, campi che hanno subìto una forte evoluzione e richiedono sempre giovani talenti. In due semestri consecutivi vengono poste le basi per intraprendere una professione legata alla progettazione visiva, approfondendo le diverse tecniche di creazione, elaborazione e impaginazione, con materie che spaziano dal disegno, alla computer grafica fino alla fotografia. Il corso comprende molta pratica ed esercitazioni: gli alunni partecipano a concorsi e premi nazionali e internazionali. I principali software di grafica e di web sono insegnati con l’ausilio di proiezioni e tutorial in un’aula dedicata, attrezzata con computer Apple Mac di ultima generazione.
+      
+      <Form[:pdf_visual_design_annual]>
+  title_en: "Visual Design - Annual Training"
+  title_it: "Visual Design - Corsi Annuali"
+  title_url_en: visual_design_annual_training
+  title_url_it: visual_design_corsi_annuali
+- 
+  id: 17
+  master: false
+  meta_description_en: "The Visual Design short course aims to introduce the basics of visual communication through the implementation of a proposed design"
+  meta_description_it: "Il corso breve di Visual Design ha lo scopo di introdurre le basi della comunicazione visiva attraverso la realizzazione di un progetto di grafica"
+  meta_keywords_en: "visual design, courses, accademia cappiello, february, 2011, design school, short courses"
+  meta_keywords_it: "visual design, corsi, grafica, accademia cappiello, febbraio, 2011, scuola design, corso breve"
+  parent_id: 2
+  ptype: standard
+  text_en: |-
+      <div id='aside'>
+      * - Start date: Jannuary, 17th or 21st 2011
+      * - Duration: 40 hours
+      * - Frequency: twice weekly in PM or Week End
+      * - Max participants: 10
+      * - Cost of the course: 500 Euro
+      * - Certificate: Yes
+      * - Prerequisites: none
+      </div>
+      
+      The Visual Design short course aims to introduce the basics of visual communication through the implementation of a proposed design: Students will be invited, under the guidance of teachers, to address and resolve all issues related to different phases of work simulated. This type of formula immersion is aimed primarily at those who are engaged full-time study or into employment (students, graduates and young professionals), or any other person involved in the field that have a limited availability of time. To allow a more direct teaching and more personalized care, the number of participants is limited to ten students. This course is also a first level of contact with the profession and is preparatory to the annual course.
+      
+      <Form[:pdf_visual_design_short]>
+  text_it: |-
+      <div id='aside'>
+      * - data di inizio: 17 o 21 Gennaio 2011
+      * - durata: 40 ore
+      * - frequenza: bisettimanale - pomeridiano o week end
+      * - numero max partecipanti: 10
+      * - costo del corso: 500 Euro
+      * - attestato: Sì
+      * - prerequisiti: Non occorrono prerequisiti particolari
+      
+      </div>
+      
+      Il corso breve di Visual Design ha lo scopo di introdurre le basi della comunicazione visiva attraverso la realizzazione di un progetto di grafica: gli studenti saranno invitati, sotto la guida dei docenti, ad affrontare e risolvere tutte le problematiche legate alle diverse fasi di un lavoro simulato. Questo tipo di formula full-immersion si rivolge principalmente a coloro che sono impegnati a tempo pieno nello studio o nell’attività lavorativa (studenti, neolaureati o giovani professionisti), o comunque a persone interessate al settore che hanno una disponibilità di tempo limitata. Per consentire una didattica più diretta e un’assistenza più personalizzata, il numero dei partecipanti è limitato a dieci studenti. Questo corso rappresenta anche una prima occasione di contatto con la professione ed è propedeutico al corso annuale.
+      
+      <Form[:pdf_visual_design_short]>
+  title_en: "Visual Design - Short Courses"
+  title_it: "Visual Design - Corsi Brevi"
+  title_url_en: visual_design_short_courses
+  title_url_it: visual_design_corsi_brevi
+- 
+  id: 18
+  master: false
+  meta_description_en: "The course in Interior Design is a viable alternative to university education for those wishing to become interior designer"
+  meta_description_it: "Il corso di Interior Design rappresenta una valida alternativa alla preparazione universitaria per chi desidera diventare Progettista d’Interni"
+  meta_keywords_en: "interior design, corsi, accademia cappiello, february, 2011, design school"
+  meta_keywords_it: "interior design, corsi, grafica, accademia cappiello, febbraio, 2011, scuola design"
+  parent_id: 3
+  ptype: standard
+  text_en: |-
+      <div id='aside'>
+      * - Start date: 21 February 2011
+      * - Duration: 800 Hours
+      * - Frequency: daily
+      * - Max participants: 15
+      * - Cost of the course: Each semester: Registration 1500 euro, 2 enrollment rates: 950 euro
+      * - Certificate: Yes
+      * - Prerequisites: none
+      
+      7 HOURS FREE STAGE 
+      2010, December 
+      Tuesday 12/02: 
+      10.00 a.m - 02.00 p.m.  
+      03.00 p.m. - 18.00 p.m.
+      </div>
+      
+      The course in Interior Design is a viable alternative to university education for those wishing to become interior designer. 
+      The Interior Designer is a professional who uses his own sensibility and its expertise to interpret the taste of people and provide housing solutions that combine aesthetics and functionality. 
+      A good designer is able to divide rooms, advising materials and finishes depending on the intended use, suggest furniture and decor for private rooms, offices, public places. < br> The course is divided into two consecutive semesters in which students learn the theory and practice for the profession. The main software design are taught in dedicated computer room with guided lessons with the help of the projector.
+      
+      <Form[:pdf_interior_design_annual]>
+  text_it: |-
+      <div id='aside'>
+      * - data di inizio: 21 Febbraio 2011
+      * - durata: 800 ore
+      * - frequenza: giornaliera
+      * - numero max partecipanti: 15
+      * - costo del corso: per ogni semestre: iscrizione 1500 euro, 2 rate di frequenza da 950 euro
+      * - attestato: Sì
+      * - prerequisiti: Non occorrono prerequisiti particolari
+      </div>  
+      Il corso di Interior Design rappresenta una valida alternativa alla preparazione universitaria per chi desidera diventare Progettista d’Interni.
+      L’Interior Designer è un professionista che utilizza la propria sensibilità e la propria competenza per interpretare il gusto delle persone e fornire soluzioni abitative che coniugano estetica e funzionalità.
+      Un buon progettista è in grado di suddividere gli spazi, consigliare materiali e finiture in funzione delle destinazioni d’uso, suggerire mobili e complementi per l’arredamento di ambienti privati, uffici, locali pubblici.
+      Il corso si articola in due semestri consecutivi in cui gli allievi apprendono le basi teoriche e pratiche per la professione. I principali software di progettazione sono insegnati in un’aula computer dedicata con lezioni guidate con l’ausilio del videoproiettore.
+      
+      <Form[:pdf_interior_design_annual]>
+  title_en: "Interior Design - Annual Training"
+  title_it: "Interior Design - Corsi Annuali"
+  title_url_en: interior_design_annual_training
+  title_url_it: interior_design_corsi_annuali
+- 
+  id: 19
+  master: false
+  meta_description_en: "The short course in Interior Design is aimed particularly at people already working full time study or into employment, or any other person involved in the field and with limited time availability"
+  meta_description_it: "Il corso breve di Interior Design si rivolge in particolar modo a persone già impegnate a tempo pieno nello studio o nell’attività lavorativa, o comunque a persone interessate al settore e con limitate disponibilità di tempo"
+  meta_keywords_en: "interior design, corsi, grafica, accademia cappiello, febbraio, 2011, scuola design, short courses"
+  meta_keywords_it: "interior design, corsi, grafica, accademia cappiello, febbraio, 2011, scuola design, corsi brevi"
+  parent_id: 3
+  ptype: standard
+  text_en: |-
+      <div id='aside'>
+      * - Start date: jannuary, 17th or 21st 2011
+      * - Duration: 40 hours
+      * - Frequency: twice weekly in PM or Week End
+      * - Max participants: 15
+      * - Cost of the course: 500 Euro
+      * - Certificate: Yes
+      * - Prerequisites: none
+      </div>
+      
+      The short course in Interior Design is aimed particularly at people already working full time study or into employment (students, graduates or young professionals), or any other person involved in the field and with limited time availability. The short course is designed to provide an overview of immersion in the profession of interior designer, in order to focus, through a project, the highlights of the activity and provide a starting point, an opportunity specialization or upgrade. To allow a more direct teaching and more personalized care, the number of participants is limited to ten students. This course is also a first level of contact with the profession and is preparatory to the annual course.
+      
+      <Form[:pdf_interior_design_short]>
+  text_it: |-
+      <div id='aside'>
+      * - data di inizio: 17 o 21 gennaio 2011
+      * - durata: 40 ore
+      * - frequenza: bisettimanale - pomeridiano o week end
+      * - numero max partecipanti: 10
+      * - costo del corso: 500 Euro
+      * - attestato: Sì
+      * - prerequisiti: Non occorrono prerequisiti particolari
+      </div>
+      Il corso breve di Interior Design si rivolge in particolar modo a persone già impegnate a tempo pieno nello studio o nell’attività lavorativa (studenti, neolaureati o giovani professionisti), o comunque a persone interessate al settore e con limitate disponibilità di tempo. Il corso breve è concepito per offrire una panoramica full-immersion nella professione del progettista di interni, con lo scopo di mettere a fuoco, attraverso la realizzazione di un progetto, i punti salienti dell’attività e offrire un punto di partenza, un’occasione di specializza zione oppure di aggiornamento. 
+      Per consentire una didattica più diretta e un’assistenza più personalizzata, il numero dei partecipanti è limitato a dieci studenti. Questo corso rappresenta anche una prima occasione di contatto con la professione ed è propedeutico al corso annuale.
+      
+      <Form[:pdf_interior_design_short]>
+  title_en: "Interior Design - Short Courses"
+  title_it: "Interior Design - Corsi Brevi"
+  title_url_en: interior_design_short_courses
+  title_url_it: interior_design_corsi_brevi
+- 
+  id: 20
+  master: true
+  meta_description_en: "The Academy offers a course divided into three modules that address the part of two-dimensional CAD design and is intended for all those who want to use AutoCAD for design and interior architecture"
+  meta_description_it: "L'Accademia propone un corso suddiviso in 3 moduli che affronta la parte bidimensionale della progettazione CAD e si rivolge a tutti coloro che vogliono utilizzare AutoCAD per la progettazione e l'architettura di interni"
+  meta_keywords_en: "autocad, courses, accademia cappiello, 3d, modeling, rendering, scuola, cad"
+  meta_keywords_it: "autocad, corsi, accademia cappiello, 3d, modellazione, rendering, scuola, cad"
+  parent_id: 11
+  ptype: standard
+  text_en: |-
+      <div id='aside'>
+      * - Start date: 12 gennaio 2011
+      * - Duration: 20 hours
+      * - Frequency: weekly wednesday 2-6 p.m.
+      * - Max participants: 7
+      * - Cost of the course: 480 Euro
+      * - Certificate: Yes
+      * - Prerequisites: General knowledge of PC
+      
+      Courses start regularly throughout the year and provide a minimum of 5 and a maximum of 7 students. All modules are preparatory to the next level. To access the following modules without attending to basic need a valuation interview with the teacher
+      </div>
+      
+      AutoCAD is the program used primarily to produce two-dimensional and three-dimensional drawings for architectural and mechanical engineering as well.
+      
+      The Academy offers a course divided into three modules that address the part of two-dimensional CAD design and is intended for all those who want to use AutoCAD for design and interior architecture. One of the peculiarities of the course is to have an architect who teaches how to use AutoCAD in person for their profession and that now more than a decade, is also involved in the teaching of this application.
+  text_it: |-
+      <div id='aside'>
+      * - data di inizio: 12 GENNAIO 2011
+      * - durata: 20 ore
+      * - frequenza: settimanale - mercoledì 14-18
+      * - numero max partecipanti: 7
+      * - costo del corso: 480 Euro
+      * - attestato: Sì
+      * - prerequisiti: uso generico del PC
+      
+      I corsi iniziano periodicamente tutto l'anno e prevedono un minimo di 5 e un massimo di 7 allievi. tutti i moduli sono propedeutici al livello superiore. Per accedere ai moduli successivi senza frequentare quello base è necessario un colloquio di valutazione con il docente 
+      </div>
+      
+      AutoCAD è il programma utilizzato principalmente per produrre disegni bidimensionali e tridimensionali in ambito architettonico ma anche ingegneristico e meccanico.
+      L'Accademia propone un corso suddiviso in 3 moduli che affronta la parte bidimensionale della progettazione CAD e si rivolge a tutti coloro che vogliono utilizzare AutoCAD per la progettazione e l'architettura di interni. Una delle peculiarità del corso è quella di avere come docente un architetto che utilizza in prima persona AutoCAD per la propria professione e che da ormai più di un decennio si occupa anche dell'insegnamento di questo applicativo.
+      Il modulo base consente anche a chi non ha mai usato AutoCAD e utilizza in modo generico un personal computer (mail, internet, programmi di scrittura..) di imparare a muoversi con disinvoltura tra i comandi e di disegnare planimetrie.
+  title_en: "Autocad 1st level"
+  title_it: "Autocad 2D Base"
+  title_url_en: autocad_1st_level
+  title_url_it: autocad_2d_base
+- 
+  id: 21
+  master: true
+  meta_description_en: "This module consolidates the use of the program with extensive tutorials, you discover how to use advanced editing controls and you learn to draw floor plans two-dimensional complex listed and complete the blocks"
+  meta_description_it: "In questo modulo si consolida l'utilizzo del programma con ampie esercitazioni guidate, si illustra l'utilizzo di comandi di editing avanzato e si impara a disegnare planimetrie bidimensionali complesse quotate e complete dei blocchi."
+  meta_keywords_en: "autocad, corsi, accademia cappiello, advanced, 3d, modellazione, rendering, scuola, cad"
+  meta_keywords_it: "autocad, corsi, accademia cappiello, avanzato, 3d, modellazione, rendering, scuola, cad"
+  parent_id: 11
+  ptype: standard
+  text_en: |-
+      <div id="aside">
+      * - Start date: March 2011
+      * - Duration: 20 hours
+      * - Frequency: weekly
+      * - Max participants: 7
+      * - Cost of the course: 480 Euro
+      * - Certificate: yes
+      * - Prerequisites: Basic AutoCAD knowledge
+      
+      Courses start regularly throughout the year and provide a minimum of 5 and a maximum of 7 students. All modules are preparatory to the next level. To access the following modules without attending to basic need a valuation interview with the teacher.
+      </div>
+      
+      The AutoCAD Intermediate course deepens the knowledge acquired in the basic course and introduces some advanced concepts such as polylines, blocks and units.
+      
+      This module consolidates the use of the program with extensive tutorials, you discover how to use advanced editing controls and you learn to draw floor plans two-dimensional complex listed and complete the blocks. Like the other modules are specifically aimed at teaching AutoCAD in the design and interior architecture and is aimed at graduates, postgraduates, and professionals working or preparing to work in these areas.
+      
+      It is required to attend to the basic module or, alternatively, an interview with the professor to determine your level of know.
+  text_it: "<div id='aside'>\n\
+      * - data di inizio: Marzo 2011\n\
+      * - durata: 20 ore\n\
+      * - frequenza: settimanale - pomeridiano\n\
+      * - numero max partecipanti: 7\n\
+      * - costo del corso: 480 Euro\n\
+      * - attestato: Sì\n\
+      * - prerequisiti: Conoscenza base di AutoCAD\n\
+      </div>\n\n\
+      Il corso intermedio di AutoCAD approfondisce le conoscenze acquisite nel corso base e introduce alcuni concetti avanzati come le polilinee, i blocchi e le quote.\n\n\
+      In questo modulo si consolida l'utilizzo del programma con ampie esercitazioni guidate, si illustra l'utilizzo di comandi di editing avanzato e si impara a disegnare planimetrie bidimensionali complesse quotate e complete dei blocchi. Come gli altri moduli è finalizzato all'insegnamento specifico di AutoCAD nell'ambito della progettazione e dell'architettura di interni ed è rivolto a diplomati, neolaureati, e professionisti che lavorano o si preparano a lavorare in questi settori.\n\n\
+      È richiesta la frequenza al modulo base o, in alternativa, un colloquio con il docente che stabilirà il livello di conoscenza del programma e indirizzerà l'allievo verso il livello di apprendimento più adeguato. "
+  title_en: "AUTOCAD 2D 2nd level"
+  title_it: "Autocad 2D Intermedio"
+  title_url_en: autocad_2d_2nd_level
+  title_url_it: autocad_2d_intermedio
+- 
+  id: 22
+  master: true
+  meta_description_en: "The last level of AutoCAD 2D full training for the use of two-dimensional program. Apart from introducing the interchange files and show the ability to export and import files from other programs, the course teaches how to lay out tables with raster and vector elements and set up the plotter and printer profiles.\n"
+  meta_description_it: "L'ultimo modulo di AutoCAD 2D completa la formazione per l'utilizzo bidimensionale del programma. Oltre a introdurre i file di interscambio e illustrare la possibilità di esportare e importare file da altri programmi, il corso insegna a impaginare le tavole con elementi vettoriali e raster e a configurare il plotter e i profili di stampa."
+  meta_keywords_en: "autocad, corsi, accademia cappiello, professional, pro, 3d, modellazione, rendering, scuola, cad"
+  meta_keywords_it: "autocad, corsi, accademia cappiello, professionista, pro, 3d, modellazione, rendering, scuola, cad"
+  parent_id: 11
+  ptype: standard
+  text_en: |-
+      <div id='aside'>
+      * - Start date: March 2011
+      * - Duration: 20 hours
+      * - Frequency: weekly p.m.
+      * - Max participants: 7
+      * - Cost of the course: 480 Euro
+      * - Certificate: Yes
+      * - Prerequisites: Advaced knowledge of AutoCAD 2D
+      
+      Courses start regularly throughout the year and provide a minimum of 5 and a maximum of 7 students. All modules are preparatory to the next level. To access the following modules without attending to basic need a valuation interview with the teacher.
+      </div>
+      
+      The last level of AutoCAD 2D full training for the use of two-dimensional program. Apart from introducing the interchange files and show the ability to export and import files from other programs, the course teaches how to lay out tables with raster and vector elements and set up the plotter and printer profiles.
+      
+      Surveyors, Architects and Interior Designers are available at the end of the three modules 2D, the competence required to use this application in their daily profession.For those who wish to further deepen the knowledge of this module is a prerequisite to AutoCAD 3D course.
+  text_it: |-
+      <div id='aside'>
+      * - data di inizio: Marzo 2011
+      * - durata: 20 ore
+      * - frequenza: settimanale - pomeridiano
+      * - numero max partecipanti: 7
+      * - costo del corso: 480 Euro
+      * - attestato: sì
+      * - prerequisiti: Conoscenza avanzata di AutoCAD 2D
+      
+      I corsi iniziano periodicamente tutto l'anno e prevedono un minimo di 5 e un massimo di 7 allievi. tutti i moduli sono propedeutici al livello superiore. Per accedere ai moduli successivi senza frequentare quello base è necessario un colloquio di valutazione con il docente.
+      </div>  
+      L'ultimo modulo di AutoCAD 2D completa la formazione per l'utilizzo bidimensionale del programma. Oltre a introdurre i file di interscambio e illustrare la possibilità di esportare e importare file da altri programmi, il corso insegna a impaginare le tavole con elementi vettoriali e raster e a configurare il plotter e i profili di stampa.
+      Geometri, Architetti e Interior Designer hanno a disposizione, alla fine dei tre moduli 2D, la competenza necessaria per  utilizzare quotidianamente questo applicativo nella loro professione. Per tutti coloro che desiderano approfondire ulteriormente la conoscenza di AutoCAD questo modulo è propedeutico al corso AutoCAD 3D. 
+      Anche per l'iscrizione al modulo PRO è richiesta la frequenza ai moduli precedenti. L'accesso diretto è possibile attraverso un colloquio preliminare con il docente che stabilirà il livello di preparazione del candidato.
+  title_en: "Autocad 2D Pro"
+  title_it: "Autocad 2D Pro"
+  title_url_en: autocad_2d_pro
+  title_url_it: autocad_2d_pro
+- 
+  id: 23
+  master: true
+  meta_description_en: "The Master of 3D Studio MAX is composed of two modules of 20 hours and is aimed at graduates, professionals and graduates in architecture who want to create professional 3d models and renders."
+  meta_description_it: "Il Master di 3D Studio MAX è composto di due moduli da 20 ore ed è rivolto a diplomati, neolaureati in architettura e professionisti che vogliono realizzare modelli 3D e render professionali."
+  meta_keywords_en: "3d studio max, 3ds max, courses, accademia cappiello, 3d, modellazione, rendering, scuola, max"
+  meta_keywords_it: "3d studio max, 3ds max, corsi, accademia cappiello, 3d, modellazione, rendering, scuola, max"
+  parent_id: 12
+  ptype: standard
+  text_en: |-
+      <div id='aside'> 
+      * - Start date: March, 3 2011
+      * - Duration: 20 Hours
+      * - Frequency: weekly Thursday 2-6 p.m.
+      * - Max participants: 7
+      * - Cost of the course: 480 Euro
+      * - Certificate: Yes
+      * - Prerequisites: none
+      
+      Courses start regularly throughout the year and provide a minimum of 5 and a maximum of 7 students. All modules are preparatory to the next level. To access the following modules without attending to basic need a valuation interview with the teacher.
+      </div>
+      
+      3D Studio Max is one of the most powerful and complex software to create 3D images and animations. Thanks to its compatibility with AutoCAD has established itself as one of the most widely used in architecture and interior design. This course teaches specifically to use the program for the presentation of projects ARCHITECTURE AND INTERIOR DESIGN. 
+      
+      The Master of 3D Studio MAX is composed of two modules of 20 hours and is aimed at graduates, professionals and graduates in architecture who want to create professional 3d models and renders. The main objective is to teach how to use the tools most appropriate to the type of project to save not only hours worked but valuable machine time. Through examples and guided lessons you can from the first lesson to start building 3D images of the projects.
+  text_it: |-
+      <div id='aside'>  
+      * - data di inizio: 3 Marzo 2011
+      * - durata: 20 ore
+      * - frequenza: settimanale - giovedì 14-18
+      * - numero max partecipanti: 7
+      * - costo del corso: 480 Euro
+      * - attestato: Sì
+      * - prerequisiti: Conoscenza base di AutoCAD
+      I corsi iniziano periodicamente durante tutto l'anno, partono con un minimo di 5 e un massimo di 7 iscritti. Se il corso è completo potete iscrivervi al successivo. Se siete interessati a iscrivervi come Studio Professionale o siete comunque un gruppo l'insegnante è a vostra disposizione per personalizzare il programma.
+      </div> 
+      
+      3D Studio Max è uno dei software più potenti e complessi per la creazione di immagini e animazioni 3D. Grazie alla sua totale compatibilità con AutoCAD si è imposto come uno degli applicativi più utili zzati negli studi di architettura e di interni. 
+      
+      Questo corso insegna specificatamente a utilizzare il programma per la PRESENTAZIONE DI PROGETTI ARCHITETTONICI E DI INTERIOR DESIGN. Il Master di 3D Studio MAX è composto di due moduli da 20 ore ed è rivolto a diplomati, neolaureati in architettura e professionisti che vogliono realizzare modelli 3D e render professionali. 
+      
+      L'obiettivo principale è quello di insegnare a utilizzare gli strumenti più idonei al tipo di progetto per risparmiare non solo ore di lavoro ma prezioso tempo macchina. Attraverso esempi e lezioni guidate sarete in grado fin dalla prima lezione di cominciare a costruire immagini in 3D dei progetti.
+  title_en: "3D Studio MAX 1st. Level"
+  title_it: "3D Studio MAX Base"
+  title_url_en: 3d_studio_max_1st_level
+  title_url_it: 3d_studio_max_base
+- 
+  id: 24
+  master: true
+  meta_description_en: "In the second part of the course of 3D Studio Max, you complete the knowledge of the most advanced tools available under the program and refine modeling techniques."
+  meta_description_it: "Le costruzioni 3D si fanno più complesse e si impara a modificare e ad ottimizzare i modelli creando anche librerie personalizzate imparando a utilizzare al meglio textures e materiali. Alla fine del modulo l'allievo sarà in grado di costruire set virtuali completi e di trasformare i propri progetti di AutoCAD in ambienti tridimensionali."
+  meta_keywords_en: "3d studio max, 3ds max, courses, advanced, accademia cappiello, 3d, modellazione, rendering, school, max"
+  meta_keywords_it: "3d studio max, 3ds max, corsi, avanzato, accademia cappiello, 3d, modellazione, rendering, scuola, max"
+  parent_id: 12
+  ptype: standard
+  text_en: |-
+      <div id='aside'>
+      * - Start date: April 2011
+      * - Duration: 20 hours
+      * - Frequency: weekly p.m.
+      * - Max participants: 7
+      * - Cost of the course: 480 Euro
+      * - Certificate: Yes
+      * - Prerequisites: basic knowledge of 3D st. MAX
+      
+      The advanced module is a natural continuation of the basic module. If you have not attended the first module you can still have a talk with the teacher to arrange for entry to second level.      
+      </div>
+      
+      In the second part of the course of 3D Studio Max, you complete the knowledge of the most advanced tools available under the program and refine modeling techniques.
+      
+      The 3D structures are more complex and you learn to change and optimize the models and also creating custom libraries, learning to make best use of textures and materials. At the end of the module the student will be able to build virtual sets complete and turn their AutoCAD projects into three-dimensional environments.
+  text_it: |-
+      <div id='aside'>
+      * - data di inizio: Aprile 2011
+      * - durata: 20 ore
+      * - frequenza: settimanale - pomeridiano
+      * - numero max partecipanti: 7
+      * - costo del corso: 480 Euro
+      * - attestato: Sì
+      * - prerequisiti: Conoscenza base 3D st. MAX
+      </div>
+      
+      Nel secondo modulo del corso di 3D Studio Max, si completano le conoscenze degli strumenti più avanzati messi a disposizione dal programma e si affinano le tecniche di modellazione. 
+      Le costruzioni 3D si fanno più complesse e si impara a modificare e ad ottimizzare i modelli creando anche librerie personalizzate imparando a utilizzare al meglio textures e materiali. Alla fine del modulo l'allievo sarà in grado di costruire set virtuali completi e di trasformare i propri progetti di AutoCAD in ambienti tridimensionali.
+  title_en: "3D Studio MAX advanced"
+  title_it: "3D Studio MAX Avanzato"
+  title_url_en: 3d_studio_max_advanced
+  title_url_it: 3d_studio_max_avanzato
+- 
+  id: 25
+  master: true
+  meta_description_en: "Autocad 3D for interior design"
+  meta_description_it: "AutoCAD 3D per la progettazione architettonica e di interni si rivolge a tutti coloro che hanno un'ottima conoscenza della parte bidimensionale del programma e vogliono imparare a modellare in tre dimensioni e trasformare le planimetrie in progetti 3D"
+  meta_keywords_en: "autocad 3d, courses, accademia cappiello, audocad, modeling, rendering, scuola, cad"
+  meta_keywords_it: "autocad 3d, corsi, accademia cappiello, audocad, modellazione, rendering, scuola, cad"
+  parent_id: 14
+  ptype: standard
+  text_en: |-
+      <div id='aside'>
+      * - Start date: March, 2 2011
+      * - Duration: 20 hours
+      * - Frequency: weekly, wendnesday 2-6 p.m
+      * - Max participants: 7
+      * - Cost of the course: 480 Euro
+      * - Certificate: Yes
+      * - Prerequisites: Knowledge of AutoCAD 2D
+      </div>
+      
+      TO RECEIVE THE COMPLETE SCHEDULE OF THE COURSE IN PDF FILL THE FORM.
+  text_it: |-
+      <div id='aside'>
+      * - data di inizio: 2 MARZO 2011
+      * - durata: 20 ore
+      * - frequenza: settimanale - mercoledì 14-18
+      * - numero max partecipanti: 7
+      * - costo del corso: 550 Euro
+      * - attestato: Sì
+      * - prerequisiti: Ottima conoscenza di AutoCAD 2D
+      
+      I corsi iniziano periodicamente tutto l'anno e prevedono un minimo di 5 e un massimo di 7 allievi. Tutti i moduli sono propedeutici al livello superiore. Per accedere ai moduli successivi senza frequentare quello base è necessario un colloquio di valutazione con il docente.   
+      </div>  
+      
+      AutoCAD 3D per la progettazione architettonica e di interni si rivolge a tutti coloro che hanno un'ottima conoscenza della parte bidimensionale del programma e vogliono imparare a modellare in tre dimensioni e trasformare le planimetrie in progetti 3D.
+      Con 2 moduli specifici, ciascuno da 20 ore, l'Accademia mette a disposizione di diplomati, neolaureati o professionisti un corso in grado di far apprendere la parte più complessa dell'applicativo più famoso per la progettazione. Il modulo 1, dopo un'introduzione alla grafica tridimensionale, illustra la trasformazione da 2D a 3D e gli strumenti di base per il disegno e il movimento nello spazio.
+      Il corso richiede una conoscenza avanzata di AutoCAD 2D ed è auspicabile, anche se non obbligatorio, aver frequentato prima il master in AutoCAD 2D dell'Accademia. Per l'accesso diretto è richiesto un breve colloquio con il docente.
+  title_en: "AUTOCAD 3D - 1"
+  title_it: "AUTOCAD 3D - 1"
+  title_url_en: autocad_3d_1
+  title_url_it: autocad_3d_1
+- 
+  id: 26
+  master: true
+  meta_description_en: "Autocad 3D for Interior Design"
+  meta_description_it: "Il secondo modulo di AutoCAD 3D insegna a effettuare operazioni complesse con i solidi, a editare e organizzare la scena e a esportare i progetti tridimensionali verso altri software di rendering come 3D STUDIO MAX."
+  meta_keywords_en: "autocad 3d, courses, accademia cappiello, audocad, modeling, rendering, scuola, cad"
+  meta_keywords_it: "autocad 3d, corsi, accademia cappiello, audocad, modellazione, rendering, scuola, cad"
+  parent_id: 14
+  ptype: standard
+  text_en: |-
+      <div id='aside'>
+      * - Start date: April 2011
+      * - Duration: 20 Hours
+      * - Frequency: weekly, p.m.
+      * - Max participants: 7
+      * - Cost of the course: 480 Euro
+      * - Certificate: Yes
+      * - Prerequisites: Knowledge of AutoCAD 2D-3D
+      </div>
+      
+      TO RECEIVE THE COMPLETE SCHEDULE OF THE COURSE IN PDF FILL THE FORM.
+  text_it: |-
+      <div id='aside'>
+      * - data di inizio: Aprile 2011
+      * - durata: 20 ore
+      * - frequenza: settimanale - pomeridiano
+      * - numero max partecipanti: 7
+      * - costo del corso: 550 Euro
+      * - attestato: Sì
+      * - prerequisiti: ottima conoscenza di AutoCAD 2D
+      
+      I corsi iniziano periodicamente tutto l'anno e prevedono un minimo di 5 e un massimo di 7 allievi. Tutti i moduli sono propedeutici al livello superiore. Per accedere ai moduli successivi senza frequentare quello base è necessario un colloquio di valutazione con il docente. 
+      </div>  
+      
+      Il secondo modulo di AutoCAD 3D insegna a effettuare operazioni complesse con i solidi, a editare e organizzare la scena e a esportare i progetti tridimensionali verso altri software di rendering come 3D STUDIO MAX.
+      Il programma del corso affronta le operazioni booleane e analizza i comandi base e avanzati per la modifica delle superfici. Questo secondo modulo rappresenta il livello più complesso delle operazioni possibili con AutoCAD per le esigenze della progettazione e l'architettura di interni.
+      Il corso richiede una approfondita conoscenza del disegno vettoriale bidimensionale e una buona abilità con gli strumenti base di AutoCAD 3D. Anche in questo caso, per accedere direttamente al livello del corso senza aver frequentato gli altri moduli si richiede un breve colloquio con il docente prima dell'iscrizione.
+  title_en: "AUTOCAD 3D - 2"
+  title_it: "AUTOCAD 3D - 2"
+  title_url_en: autocad_3d_2
+  title_url_it: autocad_3d_2
+- 
+  id: 27
+  master: true
+  meta_description_en: "Have you ever wanted to work with a 3D program easy and intuitive, you learn quickly? SketchUp is the answer. The Academy 'Cappiello' promotes a specific course to learn SketchUp PRO version, to give the possibility to all those who wish to upgrade to start designing in 3D in a short time"
+  meta_description_it: "Avete mai desiderato di poter lavorare con un programma 3D facile e intuitivo, che si impara in poco tempo? SketchUp è l'applicativo che fa per voi. L'Accademia Cappiello promuove un corso specifico per imparare SketchUp nella versione PRO per dare la possibilità a tutti coloro che desiderano aggiornarsi di cominciare a progettare in 3D in breve tempo."
+  meta_keywords_en: "sketchup, courses, accademia cappiello, 3d, modeling, rendering, scuola, google, sketch up"
+  meta_keywords_it: "sketchup, corsi, accademia cappiello, 3d, modellazione, rendering, scuola, google, sketch up"
+  parent_id: 15
+  ptype: standard
+  text_en: |-
+      <div id='aside'>
+      * - Start date: 2011 JANUARY, 13 
+      * - Duration: 20 Hours
+      * - Frequency: twice weekly
+      * - Max participants: 7
+      * - Cost of the course: 350 Euro
+      * - Certificate: Yes
+      * - Prerequisites: general knowledge of PC
+      </div>
+      
+      Have you ever wanted to work with a 3D program easy and intuitive, you learn quickly? SketchUp is the answer. The software developed by Google, is developed with a particular focus on the conceptual stages of architectural planning and design and allows you to easily create 3D models. 
+      The Academy 'Cappiello' promotes a specific course to learn SketchUp PRO version, to give the possibility to all those who wish to upgrade to start designing in 3D in a short time. The master is open to all and includes two modules of 20 hours each. The basic module also allows those who uses a personal computer in a generic way (mail, internet, writing programs ..) to learn to move with ease between the controls and get good results quickly. Classes are held Monday and Thursday afternoons.
+  text_it: |-
+      <div id='aside'>
+      * - data di inizio: 13 GENNAIO 2011
+      * - durata: 20 ore
+      * - frequenza: bisettimanale - pomeridiano
+      * - numero max partecipanti: 7
+      * - costo del corso: 350 Euro
+      * - attestato: Sì
+      * - prerequisiti: Uso generico del PC
+      </div>
+      Avete mai desiderato di poter lavorare con un programma 3D facile e intuitivo, che si impara in poco tempo? SketchUp è l'applicativo che fa per voi. Il software messo a punto da Google permette di creare facilmente modelli 3D, ed è sviluppato con un particolare occhio di riguardo alle fasi concettuali della progettazione architettonica e del design. L'Accademia Cappiello promuove un corso specifico per imparare SketchUp nella versione PRO per dare la possibilità a tutti coloro che desiderano aggiornarsi di cominciare a progettare in 3D in breve tempo. Il master è aperto a tutti e prevede due moduli da 20 ore ciascuno. Il modulo base consente anche a chi non ha mai usato SketchUp e utilizza in modo generico un personal computer (mail, internet, programmi di scrittura..) di imparare a muoversi con disinvoltura tra i comandi e ottenere in breve tempo risultati soddisfacenti. I corsi si tengono il lunedì e il giovedì pomeriggio.
+  title_en: "SketchUp Basic"
+  title_it: "SketchUp Base"
+  title_url_en: sketchup_basic
+  title_url_it: sketchup_base
+- 
+  id: 28
+  master: true
+  meta_description_en: "The second module describes the advanced features of SketchUp program, also using the expansions of the plug-in. Ample space is devoted to exercises and learning methods for exporting files with the aim of interfacing with other vector programs such as AutoCAD and Illustrator."
+  meta_description_it: "Il secondo modulo di SketchUP illustra le funzioni avanzate del programma utilizzando anche le espansioni dei plug-in. Ampio spazio è dedicato alle esercitazioni e all'apprendimento dei metodi di esportazione dei files con l'obiettivo di interfacciarsi con altri programmi vettoriali come AutoCAD e Illustrator."
+  meta_keywords_en: "sketchup, advanced courses, accademia cappiello, 3d, modeling, rendering, scuola, google, sketch up"
+  meta_keywords_it: "sketchup, corsi avanzati, accademia cappiello, 3d, modellazione, rendering, scuola, google, sketch up"
+  parent_id: 15
+  ptype: standard
+  text_en: |-
+      <div id='aside'>
+      * - Start date: 2011 JANUARY, 31 
+      * - Duration: 20 Hours
+      * - Frequency: twice weekly p.m.
+      * - Max participants: 7
+      * - Cost of the course: 350 Euro
+      * - Certificate: Yes
+      * - Prerequisites: Knowledge of Basic SketchUP
+      </div>
+      
+      The second module describes the advanced features of SketchUp program, also using the expansions of the plug-in. Ample space is devoted to exercises and learning methods for exporting files with the aim of interfacing with other vector programs such as AutoCAD and Illustrator. Students also learn to customize the rendering styles and set the scene, the technique to export the images for process. The course is aimed at those who have already attended the basic module.
+  text_it: |-
+      <div id='aside'>
+      * - data di inizio: 31 GENNAIO 2011
+      * - durata: 20 ore
+      * - frequenza: bisettimanale - pomeridiano
+      * - numero max partecipanti: 7
+      * - costo del corso: 350 Euro
+      * - attestato: Sì
+      * - prerequisiti: Frequenza del modulo base
+      </div>  
+      Il secondo modulo di SketchUP illustra le funzioni avanzate del programma utilizzando anche le espansioni dei plug-in. Ampio spazio è dedicato alle esercitazioni e all'apprendimento dei metodi di esportazione dei files con l'obiettivo di interfacciarsi con altri programmi vettoriali come AutoCAD e Illustrator. Gli studenti imparano anche a personalizzare gli stili di rendering e a settare le scene. Sono illustrate le tecniche di fotoinserimento del modello 3D e le esportazioni di immagini. Il corso è rivolto a coloro che hanno già frequentato il modulo base.
+  title_en: "SketchUp Advanced"
+  title_it: "SketchUp Avanzato"
+  title_url_en: sketchup_advanced
+  title_url_it: sketchup_avanzato
+- 
+  id: 29
+  master: false
+  meta_description_en: ""
+  meta_description_it: ""
+  meta_keywords_en: concorso
+  meta_keywords_it: concorso
+  parent_id: ~
+  ptype: standard
+  text_en: "To be announced soon."
+  text_it: "Stiamo perparando un concorso, le modalità verranno annunciate al piu presto."
+  title_en: Competition
+  title_it: Concorso
+  title_url_en: competition
+  title_url_it: concorso

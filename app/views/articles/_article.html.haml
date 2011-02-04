@@ -1,0 +1,5 @@
+- link = articl_path(article)
+%li 
+  - text = tr(article).title
+  - text += " <span class='date'>#{I18n.l(article.created_at.to_date, format: :medium)}</span>"
+  = link_to text.html_safe, link

@@ -1,0 +1,67 @@
+!!! Strict
+%html{ html_attrs("en_EN") }
+  %head
+    %title= site_title "#{" - #{@title}" unless @title.blank?}"
+    %meta{ :content => "text/html; charset=utf-8", "http-equiv" => "content-type" }/    
+    %meta{ content: meta_description, name: "description"}/
+    %meta{ content: meta_keywords, name: "keywords"}/
+    %meta{ content: meta_author, name: "author"}/     
+    %meta{ name: 'csrf-token', content: form_authenticity_token}/
+    %meta{ name: 'csrf-param', content: 'authenticity_token'}/
+    = stylesheet_link_tag "main"#, :cache =>  "cache/all"       
+    = javascript_include_tag "jquery", "jquery-cycle", "jquery-swfobject", "rails", "master"#, :cache => "cache/all" 
+    = yield :head
+    %script{ type: "text/javascript" }
+      = yield :script
+      :plain
+        function hide_flashes() {
+          $('#flashes').slideUp("slow");
+        }
+
+      $(function(){
+      = yield :jquery
+      :plain
+        // if !webkit
+        $('#banner').cycle({
+          fx: 'fade' 
+        });
+        setTimeout(hide_flashes, 3000)
+      });
+    - if Rails.env == "production" && !analytics_tracker.blank?
+      = render partial: "layouts/analytics"
+  %body{ class: "#{controller.controller_name} #{controller.action_name} #{"master" if master?} #{"admin" if admin?}"}
+    #backg
+      #container 
+        = render partial: "sections/login"
+        .clear
+        - unless flash == {} || flash.nil?
+          #flashes
+            - flash.map do |key, value|
+              - unless value.blank?
+                %div{ :class => key }= value            
+        #header
+          = render partial: "sections/header"
+        #sub_container
+          = render partial: "sections/nav"
+          #content    
+            - title
+            = yield
+            .clear
+          
+        .clear   
+        #footer
+          = footer_text
+    .clear
+    :javascript
+      $(function(){
+            
+        $('#profile_tab').hover(function(){
+          $('#profile_links').show();
+          $('#profile_tab').addClass("hover");
+        },
+        function(){
+          $('#profile_links').hide();
+          $('#profile_tab').removeClass("hover");
+        });
+        
+      });
