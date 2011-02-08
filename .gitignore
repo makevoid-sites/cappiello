@@ -9,3 +9,4 @@ db/cappiello_*
 .livereload
 log/*.log
 *.pid
+tmp/^

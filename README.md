@@ -1,8 +1,12 @@
 # Cappiello
 
-# http://www.flickr.com/photos/58751791@N02/
+logo:
+http://www.flickr.com/photos/58751791@N02/
 
 TODO:
+
+- email registrazione con password
+
 
 - controllare i link nelle pagine
   - http://localhost:3000/pages/corsi_speciali - http://localhost:3000/pages/date_e_orari - newsletter
