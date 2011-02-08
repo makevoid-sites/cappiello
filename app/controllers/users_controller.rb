@@ -16,10 +16,12 @@ class UsersController < ApplicationController
   
   def create
     @user = User.new(params[:user])
+    @user.tmp_password = params[:user][:password]
     if @user.save
       session[:user_id] = @user.id
       path = root_path
       path = @user.redirect_url unless @user.redirect_url.blank?
+      UserMailer.deliver_welcome(@user)
       redirect_to path, notice: "La registrazione è andata a buon fine!"
     else
       flash[:error] = "Non è stato possibile completare la registrazione"

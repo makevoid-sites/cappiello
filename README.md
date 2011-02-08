@@ -13,7 +13,6 @@ TODO:
 
   - http://localhost:3000/pages/contatti - newsletter, contatti
 
-- pdf corsi
 
 ## RELEASE!
 

@@ -1,0 +1,20 @@
+%p Ciao #{@user.first_name},
+
+%p grazie di esserti registrato al nostro sito, potrai scaricare i PDF dei corsi e accedere a tutte le informazioni effettuando il login da: 
+
+%p
+  = link_to "accademia-cappiello.it/login", "http://accademia-cappiello.it/login"
+
+%p inserendo la tua email e la password che hai scelto al momento della registrazione
+
+
+%p email: #{@user.email}
+%p password: #{@user.tmp_password}
+
+
+%p A presto, 
+%p Accademia d'Arte e Design Leonetto Cappiello
+%p via della Fornace 33, 50125 - Firenze
+
+
+-# se sei studente seleziona nel tuo profilo la casella [ho studiato all'Accademia Cappiello] per poter caricare le foto dei tuoi lavori. 

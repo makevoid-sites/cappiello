@@ -43,12 +43,15 @@ class User
 
   validates_format_of :email, :with => /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i
 
-  attr_accessor :confirm, :redirect_url
+  attr_accessor :confirm, :redirect_url, :tmp_password
 
   def full_name
     "#{first_name} #{last_name}"
   end
 
+  def en?
+    self.lang == "en"
+  end
 
   # auth
   
