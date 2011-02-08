@@ -620,6 +620,11 @@ input.radio2 {
 .forms_pdf.bg {
   background: #dddddd; }
 
+#galleria {
+  clear: left; }
+  #galleria img {
+    float: left; }
+
 #flashes div {
   text-align: center;
   margin: 0 auto 12px;
