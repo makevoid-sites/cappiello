@@ -13,6 +13,7 @@ class Article
   property :created_at, DateTime
   property :article_type, String, index: true # ["news", "event"]
   
+  default_scope(:default).update order: [:created_at.desc]
   
   before :create do
     Lang::LANGS.map do |t|
