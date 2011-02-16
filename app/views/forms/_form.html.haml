@@ -1,53 +1,55 @@
 .forms_form
   - form_for @user do |f|
     .checkboxes
-      %h3 RICHIESTA INFORMAZIONI
+      %h3= tf("RICHIESTA INFORMAZIONI", "INFORMATION REQUEST")
       = f.check_box :int_annuali_visual
-      = f.label     :int_annuali_visual,    "corsi annuali - VISUAL DESIGN"
+      = f.label     :int_annuali_visual,    "#{tf "corsi annuali", "annual courses"} - VISUAL DESIGN"
       = f.check_box :int_annuali_interior
-      = f.label     :int_annuali_interior,  "corsi annuali - INTERIOR DESIGN"
+      = f.label     :int_annuali_interior,  "#{tf "corsi annuali", "annual courses"} - INTERIOR DESIGN"
       = f.check_box :int_brevi_visual
-      = f.label     :int_brevi_visual,    "corsi brevi - VISUAL DESIGN"
+      = f.label     :int_brevi_visual,    "#{tf "corsi brevi", "short courses"} - VISUAL DESIGN"
       = f.check_box :int_brevi_interior
-      = f.label     :int_brevi_interior,  "corsi brevi - INTERIOR DESIGN"
+      = f.label     :int_brevi_interior,  "#{tf "corsi brevi", "short courses"} - INTERIOR DESIGN"
     
-      %h3 RICHIESTA DI PARTECIPAZIONE
+      %h3= tf("RICHIESTA DI PARTECIPAZIONE", "REQUEST FOR PARTICIPATION")
       = f.check_box :int_stage_visual
-      = f.label     :int_stage_visual,    "stage gratuito - VISUAL DESIGN"
+      = f.label     :int_stage_visual,    "#{tf "stage gratuito", "free stage"} - VISUAL DESIGN"
       = f.check_box :int_stage_interior
-      = f.label     :int_stage_interior,  "stage gratuito - INTERIOR DESIGN"
+      = f.label     :int_stage_interior,  "#{tf "stage gratuito", "free stage"} - INTERIOR DESIGN"
 
     .form
-      = f.label :first_name, "Nome"
+      = f.label :first_name, tf("Nome", "First name")
       = f.text_field :first_name
-      = f.label :last_name, "Cognome"
+      = f.label :last_name, tf("Cognome", "Last name")
       = f.text_field :last_name
       = f.label :email, "Email"
-      = f.text_field :email      
-      = f.label :birthplace, "Nato a"
+      = f.text_field :email
+      = f.label :password, tf("Scegli una password", "Choose a password")
+      = f.password_field :password
+      = f.label :birthplace, tf("Nato a", "Born")
       = f.text_field :birthplace 
-      = f.label :birthdate, "Data"    
+      = f.label :birthdate, tf("Data", "Birthdate")    
       = f.text_field :birthdate    
-      = f.label :address, "Indirizzo"  
+      = f.label :address, tf("Indirizzo", "Address")  
       = f.text_field :address   
-      = f.label :city, "Città"  
+      = f.label :city, tf("Città", "City")  
       = f.text_field :city          
-      = f.label :cap, "CAP"  
+      = f.label :cap, tf("CAP", "ZIP")  
       = f.text_field :cap           
-      = f.label :tel, "Telefono"  
+      = f.label :tel, tf("Telefono", "Phone")  
       = f.text_field :tel           
-      = f.label :qualification, "Titolo di studio"  
+      = f.label :qualification, tf("Titolo di studio", "Degree")  
       = f.text_field :qualification
     
-      = f.label :notes, "Note"
+      = f.label :notes, tf("Note", "Other infos")
       = f.text_area :notes
     
       .checkboxes_bottom
         = f.check_box :newsletter
-        = f.label     :newsletter,  "desidero ricevere informazioni su iniziative e nuovi corsi"
+        = f.label     :newsletter,  tf("desidero ricevere informazioni su iniziative e nuovi corsi", "I want to receive information about new courses")
     
         = check_box_tag :authorize
-        = label_tag     :authorize,  "autorizzo il trattamento dei dati personali"
+        = label_tag     :authorize,  tf("autorizzo il trattamento dei dati personali", "I authorize the processing of personal data")
       .clear
     
     
