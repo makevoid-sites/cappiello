@@ -6,7 +6,7 @@
   - else
     = image_tag "logo.png", id: "logo"
 #banner
-  - files = Dir.glob("#{Rails.root}/public/images/banner/main/*")
+  - files = Dir.glob("#{Rails.root}/public/images/banner/#{master? ? "master" : "main"}/*")
   - files.each do |file|
     = image_tag file.gsub("#{Rails.root}/public", '')#, class: "first"
     -# image_tag "banner/2.png"#, class: "last"
