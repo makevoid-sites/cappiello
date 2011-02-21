@@ -225,7 +225,7 @@ a#profile_name {
     color: white;
     padding: 3px 10px 4px;
     text-transform: uppercase;
-    float: left;
+    float: right;
     -moz-border-radius-topleft: 4px;
     -moz-border-radius-topright: 4px;
     -webkit-border-top-left-radius: 4px;
@@ -238,7 +238,8 @@ a#profile_name {
     text-align: left;
     margin-bottom: 6px; }
   #news .insert_article {
-    margin-top: 10px; }
+    margin-top: 10px;
+    float: left; }
   #news .date {
     float: right; }
   #news a:hover .date {
@@ -257,7 +258,7 @@ a#profile_name {
 
 #likebox {
   float: right;
-  margin: 30px 10px; }
+  margin: 0 10px; }
 
 #banner {
   float: left;

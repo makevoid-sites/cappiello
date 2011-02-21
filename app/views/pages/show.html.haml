@@ -1,10 +1,15 @@
 - title tr(@page).title
 
-- if @page.id != 1 && @page.root? && @page.id != 6 && @page.id != 8 && @page.id != 13 #form
-  = image_tag "image4.jpg", id: "gallery"
-  
+-#- if @page.id != 1 && @page.root? && @page.id != 6 && @page.id != 8 && @page.id != 13 #form
+-#  = image_tag "image4.jpg", id: "gallery"
 
-#inner{ class: "#{"home" if home_page?} #{"full" unless @page.root? && @page.id != 6 && @page.id != 8 && @page.id != 13}" }
+- if @page.id == 9
+  #likebox
+    :plain
+      <script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script><fb:like-box href="http://www.facebook.com/pages/Accademia-dArte-e-Design-Leonetto-Cappiello-Firenze/124282164308467" width="292" show_faces="true" stream="true" header="false"></fb:like-box>
+  
+- # borse di studio, form
+#inner{ class: "#{"home" if home_page?} #{"full" unless @page.root? && @page.id != 6 && @page.id != 8 && @page.id != 13 && @page.id != 10 && @page.id != 29 && @page.id != 7 && @page.id != 5 && @page.id != 4}" }
   - if @page.id == 1
     = render partial: "elements/home"
   - else
