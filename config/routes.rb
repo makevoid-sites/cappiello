@@ -65,7 +65,8 @@ Cappiello::Application.routes.draw do
   get "/news/:year/:month/:day/:id", to: "articles#show", as: :news_date
   get "/events/:year/:month/:day/:id", to: "articles#show", as: :event_date
   resources :articles
-
+  
+  resources :photos
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
   root :to => "pages#index"

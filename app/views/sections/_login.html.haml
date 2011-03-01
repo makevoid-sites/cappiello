@@ -15,7 +15,7 @@
           
           - if admin?
             = link_to "Profilo", user_path(name_url: current_user.name_url), method: :get
-            = link_to "Carica foto", "#"
+            = link_to "Carica foto", [:new_photo]
           = lang_link
           = link_to "Logout", "/logout"
     .center

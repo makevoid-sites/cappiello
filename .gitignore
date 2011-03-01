@@ -10,3 +10,5 @@ db/cappiello_*
 log/*.log
 *.pid
 tmp/^
+.sassc
+pages2.yml
