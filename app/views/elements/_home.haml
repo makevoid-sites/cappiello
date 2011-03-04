@@ -8,7 +8,7 @@
   
 %div#home_swf
   =# image_tag "oldflash.png"
-  - Dir.glob("#{Rails.root}/public/images/galleries/home/*.*").each_with_index do |img, idx| 
+  - Dir.glob("#{Rails.root}/public/images/galleries/home/*.*").sort.each_with_index do |img, idx| 
     %div
       = image_tag "galleries/home/#{File.basename(img)}"
       = image_tag "galleries/home/#{File.basename(img)}", class: "hover #{"hover2" if idx%2==1} #{"hoverEnd" if idx == 6 || idx == 7}"
