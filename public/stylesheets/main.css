@@ -298,9 +298,19 @@ a#profile_name {
 div#home_swf {
   float: left;
   margin: 0 1% 0 1.2%;
-  width: 33%; }
+  width: 34%; }
+  div#home_swf div {
+    float: left;
+    width: 49%;
+    position: relative; }
   div#home_swf img {
     width: 100%; }
+  div#home_swf img.hover, div#home_swf img.hover2 {
+    display: none;
+    position: absolute;
+    top: 0; }
+  div#home_swf img.hover2 {
+    left: 0; }
 
 #nav_cont {
   float: left;

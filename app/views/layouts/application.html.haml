@@ -9,7 +9,7 @@
     %meta{ name: 'csrf-token', content: form_authenticity_token}/
     %meta{ name: 'csrf-param', content: 'authenticity_token'}/
     = stylesheet_link_tag "main"#, :cache =>  "cache/all"       
-    = javascript_include_tag "jquery", "jquery-cycle", "jquery-swfobject", "rails", "master"#, :cache => "cache/all" 
+    = javascript_include_tag "jquery", "jquery-cycle", "jquery-swfobject", "jquery-hoverintent", "rails", "master"#, :cache => "cache/all" 
     = yield :head
     %script{ type: "text/javascript" }
       = yield :script
