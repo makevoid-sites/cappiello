@@ -19,16 +19,17 @@
   :plain
     var zIdx = 1;
     $('#home_swf div').hoverIntent(function(){
+      offset = "-94px";
       img = $(this).find("img.hover");
       img.css({ display: "block" });
       zIdx = zIdx+1;
       img.css({ zIndex: zIdx });
       if (img.hasClass("hoverEnd") && img.hasClass("hover2"))
-        img.animate({width: "200%", left: "-100%", top: "-100px"});
+        img.animate({width: "200%", left: "-100%", top: offset});
       else if (!img.hasClass("hoverEnd") && img.hasClass("hover2"))
         img.animate({width: "200%", left: "-100%"});
       else if (img.hasClass("hoverEnd"))
-        img.animate({width: "200%", top: "-100px"});
+        img.animate({width: "200%", top: offset});
       else
         img.animate({ width: "200%"});
     }, function(){
