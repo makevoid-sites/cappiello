@@ -10,6 +10,7 @@
           = link_to tf("Corsi Annuali", "Annual Courses"), js_void
       - when "special_courses" # corsi brevi
         = render partial: "sections/special_courses", locals: { page: page }
+      - when "dates_and_times"
       - else
         %li
           - children = page.children
