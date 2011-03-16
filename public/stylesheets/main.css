@@ -654,7 +654,8 @@ input.radio2 {
       width: 130px; }
 
 .forms_pdf.bg {
-  background: #dddddd; }
+  background: #dddddd;
+  padding-left: 20px; }
 
 #galleria {
   clear: left; }
@@ -692,8 +693,35 @@ input.radio2 {
 .error_messages li {
   color: #ad0100; }
 
+.icon {
+  width: 30px; }
+
+.flickr_button {
+  margin-right: 10px;
+  float: right;
+  padding-right: 5px; }
+  .flickr_button img {
+    width: 28px;
+    margin-top: 5px;
+    float: right; }
+  .flickr_button span {
+    display: block;
+    line-height: 37px;
+    float: right;
+    margin: 0 10px; }
+
 #photos {
+  margin-top: 30px;
   overflow: hidden;
-  height: 150px; }
+  height: 175px; }
   #photos a {
-    margin: 10px 5px; }
+    margin: 0 5px;
+    opacity: 0.7; }
+    #photos a img {
+      margin: 5px 0;
+      border: 1px solid transparent; }
+  #photos a:hover {
+    background: none;
+    opacity: 1; }
+  #photos a:hover img {
+    border: 1px solid #999999; }
