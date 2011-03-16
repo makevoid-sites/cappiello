@@ -3,10 +3,17 @@
 logo:
 http://www.flickr.com/photos/58751791@N02/
 
+
+# Features
+
+- fancybox gallery that pulls off 
+
 TODO:
 
-- email registrazione con password
-
+- new features: 
+  - edit pagine enhanced:
+    - new db field: 'sidebar_text'
+    - new db field: 'flickr_photogallery_id'
 
 - controllare i link nelle pagine
   - http://localhost:3000/pages/corsi_speciali - http://localhost:3000/pages/date_e_orari - newsletter

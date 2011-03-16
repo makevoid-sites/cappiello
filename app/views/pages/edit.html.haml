@@ -1,10 +1,12 @@
 = form_for @page do |f|
   = f.label :title_it, "Titolo [it]"
-  = f.text_field :title_it
+  =# f.text_field :title_it
+  %h3= @page.title_it
   = f.label :text_it, "Testo [it]"
   = f.text_area :text_it
   = f.label :title_en, "Titolo [en]"
-  = f.text_field :title_en
+  =# f.text_field :title_en
+  %h3= @page.title_en
   = f.label :text_en, "Testo  [en]"
   = f.text_area :text_en
   = f.label :meta_keywords_it, "Meta Keywords [it]"

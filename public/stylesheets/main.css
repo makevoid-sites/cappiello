@@ -263,7 +263,8 @@ a#profile_name {
 #banner {
   float: left;
   margin: 0 0 0 2.3%;
-  width: 84.7%; }
+  width: 84.7%;
+  z-index: 1; }
   #banner img {
     -moz-box-shadow: 0px -3px 10px #333333;
     -webkit-box-shadow: 0px -3px 10px #333333;
@@ -690,3 +691,9 @@ input.radio2 {
 
 .error_messages li {
   color: #ad0100; }
+
+#photos {
+  overflow: hidden;
+  height: 150px; }
+  #photos a {
+    margin: 10px 5px; }

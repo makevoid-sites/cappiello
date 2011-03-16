@@ -1,31 +1,27 @@
 #nav_cont
   %ul#nav
     - pages.each_with_index do |page, idx|
-      - unless page.title_url_en == "special_courses"
+      - case page.title_url_en
+      - when "visual_design" # corsi annuali
+        %li
+          %ul.subnav
+            %li= link_to "Visual Design", page_path(id: tf("visual_design_corsi_annuali", "visual_design_annual_training"))
+            %li= link_to "Interior Design", page_path(id: tf("interior_design_corsi_annuali", "interior_design_annual_training"))
+          = link_to tf("Corsi Annuali", "Annual Courses"), js_void
+      - when "special_courses" # corsi brevi
+        = render partial: "sections/special_courses", locals: { page: page }
+      - else
         %li
           - children = page.children
           - if !children.nil? && children != []
-            %ul.subnav  
-              - children.map do |pag|
-                - pag_title = tr(pag).title.gsub(/(Visual|Interior) Design -/, '')
-                %li= link_to pag_title, pag_path(pag)
-            = link_to tr(page).title, "javascript:void(0)"
+            -# %ul.subnav  
+            -#   - children.map do |pag|
+            -#     - pag_title = tr(pag).title.gsub(/(Visual|Interior) Design -/, '')
+            -#     %li= link_to pag_title, pag_path(pag)
+            -# = link_to tr(page).title, js_void
           - else
             = link_to tr(page).title, pag_path(page) 
-      - else
-        %li
-          %ul.subnav  
-            %li
-              %ul.subnav.sub2  
-                %li= link_to "Autocad 2d", page_path(id: tf("autocad_2d_base", "autocad_1st_level"))
-              = link_to "Autocad 2d", page_path(id: tf("autocad_2d_base", "autocad_1st_level"))
-            %li= link_to "3d Studio Max", page_path(id: "3d_studio_max")
-            %li= link_to "V-Ray", page_path(id: "vray")
-            %li= link_to "Autocad 3d", page_path(id: "autocad_3d_1")
-            %li= link_to "SketchUp", page_path(id: "sketchup")
-            %li= link_to "Corsi Speciali", pag_path(page) 
-          = link_to "Corsi", "javascript:void(0)"
-      
+
     
   #social
     = link_to image_tag("icons/fb_icon.png"), "http://www.facebook.com/group.php?gid=25010319906"

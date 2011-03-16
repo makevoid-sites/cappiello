@@ -9,8 +9,9 @@ module ApplicationHelper
   end
 
   def master?
-    return false if @page.nil?
-    @page.master?
+    # return false if @page.nil?
+    # @page.master?
+    false
   end
   
   def home_page?
@@ -18,7 +19,7 @@ module ApplicationHelper
   end
   
   def pages
-    @pages ||= Page.all(master: master?).roots
+    @pages ||= Page.all(master: false).roots
   end
   
   def parse_text(text)
