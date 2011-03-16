@@ -408,7 +408,8 @@ ul.subnav {
   display: block; }
 #nav li .subnav li:hover .subnav.sub2 li a {
   background: #c82d5e;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#c82d5e', endColorstr='#c82d5e',GradientType=0 ); }
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#c82d5e', endColorstr='#c82d5e',GradientType=0 );
+  border: 1px solid #c82d5e; }
 #nav li .subnav li .subnav.sub2 li:hover a {
   background: #a82949;
   background: -moz-linear-gradient(top, #7d1622 0%, #a82949 20%, #a82949 80%, #7d1622 100%);
