@@ -304,6 +304,7 @@ div#home_swf {
     width: 49%;
     position: relative; }
   div#home_swf img {
+    cursor: pointer;
     width: 100%; }
   div#home_swf img.hover, div#home_swf img.hover2 {
     display: none;
@@ -400,6 +401,21 @@ ul.subnav {
   right: -140px;
   z-index: 3; }
 
+#nav li .subnav.sub2 {
+  display: none; }
+#nav li .subnav li:hover .subnav.sub2 {
+  display: block; }
+#nav li .subnav li:hover .subnav.sub2 li a {
+  background: #c82d5e;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#c82d5e', endColorstr='#c82d5e',GradientType=0 ); }
+#nav li .subnav li .subnav.sub2 li:hover a {
+  background: #a82949;
+  background: -moz-linear-gradient(top, #7d1622 0%, #a82949 20%, #a82949 80%, #7d1622 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #7d1622), color-stop(20%, #a82949), color-stop(80%, #a82949), color-stop(100%, #7d1622));
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='!c1', endColorstr='!c1',GradientType=0 );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#7d1622', endColorstr='#a82949',GradientType=0 );
+  border: 1px solid #871623; }
+
 #inner {
   width: 55%; }
 
@@ -430,11 +446,19 @@ ul#selection {
   ul#selection li:hover a, ul#selection li#masterbutt:hover a {
     background: #b42c4e; }
 
+#video {
+  float: right;
+  margin: 0 2px 5px 15px; }
+  #video iframe {
+    width: 360px;
+    height: 252px; }
+
 #aside {
   background: #c82d5e;
+  clear: right;
   float: right;
   display: block;
-  width: 35%;
+  width: 340px;
   color: white;
   padding: 10px 10px;
   margin: 0 2px 0 15px; }

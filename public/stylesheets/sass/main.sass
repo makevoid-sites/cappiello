@@ -406,7 +406,8 @@ a#profile_name
   text-align: center
   margin: 0 5%
   width: 40%
-  
+
+
   
 div#home_swf
   float: left
@@ -417,6 +418,7 @@ div#home_swf
     width: 49%
     position: relative
   img
+    cursor: pointer
     width: 100%
   img.hover, img.hover2
     display: none
@@ -507,12 +509,31 @@ div#home_swf
 .master ul#nav .subnav li:hover a    
   +gradient_bg_perc(#211949, #2d2264, 20%)
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#211949', endColorstr='#2d2264',GradientType=0 )
+  
+  
 $subnav_width = 140px
 ul.subnav
   position: absolute
   width: $subnav_width
   right: -$subnav_width
   z-index: 3
+
+
+#nav li 
+  .subnav.sub2
+    display: none
+  .subnav li:hover .subnav.sub2
+    display: block
+  .subnav li:hover .subnav.sub2 li a
+    background: $main
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c82d5e', endColorstr='#c82d5e',GradientType=0 )
+  .subnav li .subnav.sub2 li:hover a
+    background: #a82949
+    +gradient_bg_perc(#7d1622, #a82949, 20%)
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7d1622', endColorstr='#a82949',GradientType=0 )
+    border: 1px solid #871623
+
+    
 
 #inner
   width: 55%
@@ -545,11 +566,20 @@ ul#selection
     a
       background: #B42C4E
 
+$video_width: 360px
+#video
+  float: right
+  margin: 0 2px 5px 15px
+  iframe 
+    width: $video_width
+    height: 252px
+
 #aside
   background: $main
+  clear: right
   float: right
   display: block
-  width: 35%
+  width: $video_width - 20px
   color: #FFF
   padding: 10px 10px
   margin: 0 2px 0 15px
