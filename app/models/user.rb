@@ -9,6 +9,8 @@ class User
   property :email, String, required: true, unique: true
   property :password, String, required: true
   property :salt, String
+  
+  property :anonym_id, String, index: true
   # necessari per la registrazione alla scuola
 
   property :admin, Boolean, default: false
@@ -42,12 +44,22 @@ class User
   end
 
   validates_format_of :email, :with => /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i
-
+  
+  validates_with_block :full_name do
+    if User.first(first_name: self.first_name, last_name: self.last_name).nil?
+      [true]
+    else
+      [false, "Un utente con il tuo nome e cognome e' gia' registrato, probabilmente hai gia' un account. Controlla la tua mail - There is another user with your first and last name, probably you already have an account. Check your mail."]
+    end
+  end
+  
   attr_accessor :confirm, :redirect_url, :tmp_password
+
 
   def full_name
     "#{first_name} #{last_name}"
   end
+  alias :name :full_name
 
   def en?
     self.lang == "en"

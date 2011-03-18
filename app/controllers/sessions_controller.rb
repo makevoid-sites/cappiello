@@ -17,6 +17,7 @@ class SessionsController < ApplicationController
   
   def destroy
     session[:user_id] = nil
+    session[:anonym_id] = ""
     redirect_to root_path, notice: "Logout Effettuato"
   end
 end

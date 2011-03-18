@@ -146,10 +146,12 @@ GEM
       data_objects (= 0.10.2)
     erubis (2.6.6)
       abstract (>= 1.0.0)
+    escape (0.0.4)
     extlib (0.9.15)
     fastercsv (1.5.3)
     haml (3.0.22)
     i18n (0.5.0)
+    json (1.5.1)
     json_pure (1.4.6)
     launchy (0.3.7)
       configuration (>= 0.0.5)
@@ -160,6 +162,10 @@ GEM
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mime-types (1.16)
+    mixpanel (0.8.1)
+      escape
+      json
+      rack
     nokogiri (1.4.3.1)
     polyglot (0.3.1)
     rack (1.2.1)
@@ -219,6 +225,7 @@ DEPENDENCIES
   exception_notification!
   haml (~> 3.0.18)
   launchy
+  mixpanel
   railties (~> 3.0.3)
   rspec (~> 2.1)
   rspec-core (~> 2.1)

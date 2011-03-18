@@ -5,22 +5,37 @@ class String
 end
 
 class PagesController < ApplicationController
+
+  after_filter :track_site, only: [:index, :show]
+  
+  private
+  
+  def track_site
+    properties = { source: "organic" } # TODO: add coming from: adwords, fb
+    track :site, properties
+  end
+  
+  public
+  
   def index
     params[:id] = "1"
     @page = Page.get(params[:id])
     @news = Article.news.all(limit: 6)
     @events = Article.events.all(limit: 6)
     raise NotFound if @page.nil?
+
     render :show
   end
   
   def show
     if ["l_accademia", "about_us", "1"].include? params[:id]
       redirect_to root_path; return 
-    end
+    end  
       
     @page = params[:id].inty? ? Page.get(params[:id]) : Page.first( "title_url_#{current_lang}".to_sym => params[:id])
     @user = current_user || User.new
+
+    track_page(:course) if @page.course?
     raise NotFound if @page.nil?
   end
   

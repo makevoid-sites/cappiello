@@ -22,6 +22,8 @@ class UsersController < ApplicationController
       path = root_path
       path = @user.redirect_url unless @user.redirect_url.blank?
       UserMailer.deliver_welcome(@user)
+      @user.update anonym_id: session[:anonym_id]
+      track :registration
       redirect_to path, notice: "La registrazione è andata a buon fine!"
     else
       flash[:error] = "Non è stato possibile completare la registrazione"

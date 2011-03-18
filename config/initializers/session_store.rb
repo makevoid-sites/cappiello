@@ -9,3 +9,4 @@ Cappiello::Application.config.session_store :cookie_store, :key => '_cappiello_s
 # which shouldn't be used to store highly confidential information
 # (create the session table with "rake db:sessions:create")
 # Cappiello::Application.config.session_store :active_record_store
+ActionController::Base.session = { :expire_after => 3.months }

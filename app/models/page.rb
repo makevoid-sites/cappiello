@@ -16,6 +16,10 @@ class Page
   end
   
   is :tree
+
+  def course?
+    !root? || master?    
+  end
   
   def root?
     parent_id.nil?
