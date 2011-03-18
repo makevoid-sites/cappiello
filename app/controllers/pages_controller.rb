@@ -11,8 +11,10 @@ class PagesController < ApplicationController
   private
   
   def track_site
-    properties = { source: "organic" } # TODO: add coming from: adwords, fb
-    track :site, properties
+    source =  "organic"
+    # TODO: add coming from: adwords, fb
+    properties = {  } # add analytics or fb id & info
+    track "site_#{source}", properties
   end
   
   public
