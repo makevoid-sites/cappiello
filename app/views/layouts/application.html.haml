@@ -2,10 +2,10 @@
   - debug = "anonym_id: #{session[:anonym_id]}"
 
 !!! Strict
-%html{ html_attrs("en_EN") }
+%html{ html_attrs(english? ? "en_EN" : "it_IT") }
   %head
     %title= site_title "#{" - #{@title}" unless @title.blank?}#{debug}"
-    %meta{ :content => "text/html; charset=utf-8", "http-equiv" => "content-type" }/    
+    %meta{ charset: "UTF-8" }/    
     %meta{ content: meta_description, name: "description"}/
     %meta{ content: meta_keywords, name: "keywords"}/
     %meta{ content: meta_author, name: "author"}/     

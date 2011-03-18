@@ -18,7 +18,7 @@ class TextileEnhancer
     #raise REGEX.inspect
     unless match.nil?
       name = match[1]
-      @text.gsub!(/#{@regex}/, block.call(name))
+      @text.gsub!(/<p>#{@regex}<\/p>/, block.call(name))
     end
     
     #raise 
