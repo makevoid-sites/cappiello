@@ -1,6 +1,6 @@
 %div#news
   %h5
-    %div News
+    %span News
   .news
     %ul
       = render partial: "articles/article", collection: @news
@@ -9,7 +9,7 @@
         = link_to "Inserisci News", new_article_path(article_type: "news")
   .clear
   %h5 
-    %div Eventi
+    %span Eventi
   .eventi
     %ul
       = render partial: "articles/article", collection: @events
@@ -19,7 +19,7 @@
   .clear
   /
     %h5 
-      %div Lavoro
+      %span Lavoro
     .lavoro
       %ul
         %li
