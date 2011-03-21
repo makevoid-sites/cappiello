@@ -1,9 +1,14 @@
+= f.label :created_at, "Data"
+.date_select
+  = f.date_select :created_at
+
+
 = f.label :title_it, "Titolo [it]"
 = f.text_field :title_it
 = f.label :text_it, "Testo [it]"
 = f.text_area :text_it
 
-= f.label :title_en, "Titolo [it]"
+= f.label :title_en, "Titolo [en]"
 = f.text_field :title_en
 = f.label :text_en, "Testo [en]"
 = f.text_area :text_en

@@ -1,3 +1,9 @@
+class DataMapper::Property
+  def class_name
+    self.class.name.split("::").last    
+  end
+end
+
 class Article
   include DataMapper::Resource
   
@@ -13,7 +19,8 @@ class Article
   property :created_at, DateTime
   property :article_type, String, index: true # ["news", "event"]
   
-  default_scope(:default).update order: [:created_at.desc]
+  default_scope(:default).update order: [:created_at.asc]
+  
   
   before :create do
     Lang::LANGS.map do |t|

@@ -513,6 +513,9 @@ input.submit {
   width: auto;
   float: right; }
 
+.date_select {
+  margin: 5px 0 10px; }
+
 .new textarea, .edit textarea {
   height: 450px; }
 

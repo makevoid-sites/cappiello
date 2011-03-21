@@ -23,7 +23,7 @@ class PagesController < ApplicationController
     params[:id] = "1"
     @page = Page.get(params[:id])
     @news = Article.news.all(limit: 6)
-    @events = Article.events.all(limit: 6)
+    @events = Article.events.all(limit: 6, order: [:created_at.desc])
     raise NotFound if @page.nil?
 
     render :show
