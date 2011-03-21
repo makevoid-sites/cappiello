@@ -1,0 +1,259 @@
+Checking link http://www.accademia-cappiello.it/img/rigaDes_ita.gif
+HEAD http://www.accademia-cappiello.it/img/rigaDes_ita.gif  fetched in 1.14 seconds
+
+Checking link http://www.accademia-cappiello.it/indexMaster.asp
+HEAD http://www.accademia-cappiello.it/indexMaster.asp  fetched in 1.20 seconds
+
+Checking link http://www.accademia-cappiello.it/indexCappiello.swf
+HEAD http://www.accademia-cappiello.it/indexCappiello.swf  fetched in 1.14 seconds
+
+Checking link http://www.accademia-cappiello.it/eventiDett.asp?ID=13
+HEAD http://www.accademia-cappiello.it/eventiDett.asp?ID=13  fetched in 1.22 seconds
+
+Checking link http://www.accademia-cappiello.it/img/images/sfondo_08_ita.gif
+HEAD http://www.accademia-cappiello.it/img/images/sfondo_08_ita.gif  fetched in 1.14 seconds
+
+Checking link http://www.accademia-cappiello.it/stages.asp
+HEAD http://www.accademia-cappiello.it/stages.asp  fetched in 1.21 seconds
+
+Checking link http://www.accademia-cappiello.it/corsiIni.asp?idtipo=corsi%20annuali
+HEAD http://www.accademia-cappiello.it/corsiIni.asp?idtipo=corsi%20annuali  fetched in 1.46 seconds
+
+Checking link http://www.accademia-cappiello.it/newsDett.asp?ID=12
+HEAD http://www.accademia-cappiello.it/newsDett.asp?ID=12  fetched in 1.44 seconds
+
+Checking link http://www.accademia-cappiello.it/contatti.asp
+HEAD http://www.accademia-cappiello.it/contatti.asp  fetched in 1.29 seconds
+
+Checking link http://www.accademia-cappiello.it/img/images/sfondo_09_ita.gif
+HEAD http://www.accademia-cappiello.it/img/images/sfondo_09_ita.gif  fetched in 1.15 seconds
+
+Checking link http://www.accademia-cappiello.it/img/logo.png
+HEAD http://www.accademia-cappiello.it/img/logo.png  fetched in 1.15 seconds
+
+Checking link http://www.accademia-cappiello.it/img/AAA_02_ita.gif
+HEAD http://www.accademia-cappiello.it/img/AAA_02_ita.gif  fetched in 1.14 seconds
+
+Checking link http://www.accademia-cappiello.it/img/AAA_04_ita.gif
+HEAD http://www.accademia-cappiello.it/img/AAA_04_ita.gif  fetched in 1.15 seconds
+
+Checking link http://www.accademia-cappiello.it/img/images/sfondo_03_ita.gif
+HEAD http://www.accademia-cappiello.it/img/images/sfondo_03_ita.gif  fetched in 1.15 seconds
+
+Checking link http://www.accademia-cappiello.it/img/images/sfondo_07_ita.gif
+HEAD http://www.accademia-cappiello.it/img/images/sfondo_07_ita.gif  fetched in 1.14 seconds
+
+Checking link http://www.accademia-cappiello.it/dateOrari.asp
+HEAD http://www.accademia-cappiello.it/dateOrari.asp  fetched in 1.24 seconds
+
+Checking link http://www.accademia-cappiello.it/img/images/sfondo_05_ita.gif
+HEAD http://www.accademia-cappiello.it/img/images/sfondo_05_ita.gif  fetched in 1.14 seconds
+
+Checking link http://www.accademia-cappiello.it/news.asp
+HEAD http://www.accademia-cappiello.it/news.asp  fetched in 1.14 seconds
+
+Checking link http://www.accademia-cappiello.it/cambioLingua.asp?lingua=_eng
+HEAD http://www.accademia-cappiello.it/cambioLingua.asp?lingua=_eng 
+-> HEAD http://www.accademia-cappiello.it/ 
+-> HEAD http://www.accademia-cappiello.it/index.asp  fetched in 3.64 seconds
+
+Checking link http://www.accademia-cappiello.it/lavoro.asp
+HEAD http://www.accademia-cappiello.it/lavoro.asp  fetched in 1.16 seconds
+
+Checking link http://www.accademia-cappiello.it/img/images/sfondo_04_ita.gif
+HEAD http://www.accademia-cappiello.it/img/images/sfondo_04_ita.gif  fetched in 1.28 seconds
+
+Checking link http://www.accademia-cappiello.it/corsiSpecial.asp
+HEAD http://www.accademia-cappiello.it/corsiSpecial.asp  fetched in 1.20 seconds
+
+Checking link http://www.accademia-cappiello.it/newsDett.asp?ID=14
+HEAD http://www.accademia-cappiello.it/newsDett.asp?ID=14  fetched in 1.20 seconds
+
+Checking link http://www.accademia-cappiello.it/index.asp
+HEAD http://www.accademia-cappiello.it/index.asp  fetched in 1.20 seconds
+
+Checking link http://www.accademia-cappiello.it/img/images/sfondo_06_ita.gif
+HEAD http://www.accademia-cappiello.it/img/images/sfondo_06_ita.gif  fetched in 1.14 seconds
+
+Checking link http://www.accademia-cappiello.it/newsDett.asp?ID=13
+HEAD http://www.accademia-cappiello.it/newsDett.asp?ID=13  fetched in 1.20 seconds
+
+Checking link http://www.accademia-cappiello.it/newsDett.asp?ID=9
+HEAD http://www.accademia-cappiello.it/newsDett.asp?ID=9  fetched in 1.20 seconds
+
+Checking link http://www.accademia-cappiello.it/eventiDett.asp?ID=8
+HEAD http://www.accademia-cappiello.it/eventiDett.asp?ID=8  fetched in 1.21 seconds
+
+Checking link http://www.accademia-cappiello.it/bannercappiello.swf
+HEAD http://www.accademia-cappiello.it/bannercappiello.swf  fetched in 1.14 seconds
+
+Checking link http://www.accademia-cappiello.it/img/trasp.gif
+HEAD http://www.accademia-cappiello.it/img/trasp.gif  fetched in 1.14 seconds
+
+Checking link http://www.accademia-cappiello.it/img/images/sfondo_on_01_ita.gif
+HEAD http://www.accademia-cappiello.it/img/images/sfondo_on_01_ita.gif  fetched in 1.15 seconds
+
+Checking link http://www.accademia-cappiello.it/form.asp
+HEAD http://www.accademia-cappiello.it/form.asp  fetched in 1.24 seconds
+
+Checking link http://www.accademia-cappiello.it/newsDett.asp?ID=10
+HEAD http://www.accademia-cappiello.it/newsDett.asp?ID=10  fetched in 1.20 seconds
+
+Checking link http://www.macromedia.com/go/getflashplayer
+HEAD http://www.macromedia.com/go/getflashplayer 
+-> GET http://www.adobe.com/robots.txt 
+-> HEAD http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash 
+-> HEAD http://get.adobe.com/flashplayer/ 
+-> HEAD http://get.adobe.com/flashplayer/otherversions/  fetched in 5.84 seconds
+
+Checking link http://www.accademia-cappiello.it/lavoroOffroDett.asp?ID=2
+HEAD http://www.accademia-cappiello.it/lavoroOffroDett.asp?ID=2  fetched in 0.34 seconds
+
+Checking link http://www.accademia-cappiello.it/eventi.asp
+HEAD http://www.accademia-cappiello.it/eventi.asp  fetched in 1.14 seconds
+
+Checking link http://www.accademia-cappiello.it/corsiIni.asp?idtipo=corsi%20brevi
+HEAD http://www.accademia-cappiello.it/corsiIni.asp?idtipo=corsi%20brevi  fetched in 1.32 seconds
+
+Checking link http://www.accademia-cappiello.it/borse.asp
+HEAD http://www.accademia-cappiello.it/borse.asp  fetched in 1.23 seconds
+
+Checking link http://www.accademia-cappiello.it/img/images/sfondo_033_ita.gif
+HEAD http://www.accademia-cappiello.it/img/images/sfondo_033_ita.gif  fetched in 1.13 seconds
+
+Checking link http://www.accademia-cappiello.it/AC_RunActiveContent.js
+HEAD http://www.accademia-cappiello.it/AC_RunActiveContent.js  fetched in 1.14 seconds
+
+Checking link http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash
+HEAD http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash 
+-> HEAD http://www.adobe.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash 
+-> HEAD http://get.adobe.com/flashplayer/ 
+-> HEAD http://get.adobe.com/flashplayer/otherversions/  fetched in 1.72 seconds
+
+Checking link http://www.accademia-cappiello.it/file/foto/Privacy_ita.pdf
+HEAD http://www.accademia-cappiello.it/file/foto/Privacy_ita.pdf  fetched in 0.27 seconds
+
+Checking link http://www.accademia-cappiello.it/eventiDett.asp?ID=9
+HEAD http://www.accademia-cappiello.it/eventiDett.asp?ID=9  fetched in 1.21 seconds
+
+Checking link http://www.accademia-cappiello.it/lavoroCercoDett.asp?ID=2
+HEAD http://www.accademia-cappiello.it/lavoroCercoDett.asp?ID=2  fetched in 1.24 seconds
+
+Checking link http://www.accademia-cappiello.it/css/style.css
+HEAD http://www.accademia-cappiello.it/css/style.css  fetched in 1.14 seconds
+
+Checking link http://www.accademia-cappiello.it/img/images/sfondo_02_ita.gif
+HEAD http://www.accademia-cappiello.it/img/images/sfondo_02_ita.gif  fetched in 1.14 seconds
+
+
+
+Checking link http://www.accademia-cappiello.it/10noteswf/corsiannuali.swf
+HEAD http://www.accademia-cappiello.it/10noteswf/corsiannuali.swf  fetched in 1.18 seconds
+
+Checking link http://www.accademia-cappiello.it/10noteswf/brevi.swf
+HEAD http://www.accademia-cappiello.it/10noteswf/brevi.swf  fetched in 1.18 seconds
+
+Checking link http://www.accademia-cappiello.it/html/eventi.html
+HEAD http://www.accademia-cappiello.it/html/eventi.html  fetched in 1.16 seconds
+
+Checking link http://www.accademia-cappiello.it/10noteswf/stages.swf
+HEAD http://www.accademia-cappiello.it/10noteswf/stages.swf  fetched in 1.15 seconds
+
+Checking link http://www.accademia-cappiello.it/immagini/home/news.jpg
+HEAD http://www.accademia-cappiello.it/immagini/home/news.jpg  fetched in 1.16 seconds
+
+Checking link http://www.accademia-cappiello.it/immagini/corsi/corsib107x60.jpg
+HEAD http://www.accademia-cappiello.it/immagini/corsi/corsib107x60.jpg  fetched in 1.16 seconds
+
+Checking link http://www.accademia-cappiello.it/html/stagesgratis.html
+HEAD http://www.accademia-cappiello.it/html/stagesgratis.html  fetched in 1.14 seconds
+
+Checking link http://www.accademia-cappiello.it/html/news_html.asp
+HEAD http://www.accademia-cappiello.it/html/news_html.asp  fetched in 1.27 seconds
+
+Checking link http://www.accademia-cappiello.it/10noteswf/straordinario.swf
+HEAD http://www.accademia-cappiello.it/10noteswf/straordinario.swf  fetched in 1.14 seconds
+
+Checking link http://www.accademia-cappiello.it/html/cors_nf.html
+HEAD http://www.accademia-cappiello.it/html/cors_nf.html  fetched in 1.14 seconds
+
+Checking link http://www.accademia-cappiello.it/css/cappiello.css
+HEAD http://www.accademia-cappiello.it/css/cappiello.css  fetched in 1.15 seconds
+
+Checking link http://www.accademia-cappiello.it/immagini/home/contatto3_sm.jpg
+HEAD http://www.accademia-cappiello.it/immagini/home/contatto3_sm.jpg  fetched in 1.15 seconds
+
+Checking link http://www.accademia-cappiello.it/html/contatto.html
+HEAD http://www.accademia-cappiello.it/html/contatto.html  fetched in 1.15 seconds
+
+Checking link http://www.accademia-cappiello.it/10noteswf/borse.swf
+HEAD http://www.accademia-cappiello.it/10noteswf/borse.swf  fetched in 1.16 seconds
+
+Checking link http://www.accademia-cappiello.it/immagini/home/storia-arte-grafpubb_sm.jpg
+HEAD http://www.accademia-cappiello.it/immagini/home/storia-arte-grafpubb_sm.jpg  fetched in 1.15 seconds
+
+Checking link http://www.accademia-cappiello.it/10noteswf/news.swf
+HEAD http://www.accademia-cappiello.it/10noteswf/news.swf  fetched in 1.16 seconds
+
+Checking link http://www.accademia-cappiello.it/immagini/home/illustrazione107x60.jpg
+HEAD http://www.accademia-cappiello.it/immagini/home/illustrazione107x60.jpg  fetched in 1.14 seconds
+
+Checking link http://www.accademia-cappiello.it/html/illustrazione.html
+HEAD http://www.accademia-cappiello.it/html/illustrazione.html  fetched in 1.16 seconds
+
+Checking link http://www.accademia-cappiello.it/10noteswf/chisiamo.swf
+HEAD http://www.accademia-cappiello.it/10noteswf/chisiamo.swf  fetched in 1.16 seconds
+
+Checking link http://www.accademia-cappiello.it/html/borse.html
+HEAD http://www.accademia-cappiello.it/html/borse.html  fetched in 1.16 seconds
+
+Checking link http://www.accademia-cappiello.it/swf/top.swf
+HEAD http://www.accademia-cappiello.it/swf/top.swf  fetched in 1.17 seconds
+
+Checking link http://www.accademia-cappiello.it/10noteswf/eventi.swf
+HEAD http://www.accademia-cappiello.it/10noteswf/eventi.swf  fetched in 1.16 seconds
+
+Checking link http://www.accademia-cappiello.it/10noteswf/contatto.swf
+HEAD http://www.accademia-cappiello.it/10noteswf/contatto.swf  fetched in 1.16 seconds
+
+Checking link http://www.accademia-cappiello.it/immagini/home/chisiamo1_sm.jpg
+HEAD http://www.accademia-cappiello.it/immagini/home/chisiamo1_sm.jpg  fetched in 1.13 seconds
+
+Checking link http://www.accademia-cappiello.it/html/chis_nf.html
+HEAD http://www.accademia-cappiello.it/html/chis_nf.html  fetched in 1.60 seconds
+
+Checking link http://www.accademia-cappiello.it/immagini/corsi/lavoro107x60.jpg
+HEAD http://www.accademia-cappiello.it/immagini/corsi/lavoro107x60.jpg  fetched in 1.14 seconds
+
+Checking link http://www.accademia-cappiello.it/html/corsibrevi_nf.html
+HEAD http://www.accademia-cappiello.it/html/corsibrevi_nf.html  fetched in 1.16 seconds
+
+Checking link http://www.accademia-cappiello.it/immagini/logo_intestaz.gif
+HEAD http://www.accademia-cappiello.it/immagini/logo_intestaz.gif  fetched in 1.14 seconds
+
+Checking link http://www.macromedia.com/go/getflashplayer
+HEAD http://www.macromedia.com/go/getflashplayer 
+-> GET http://www.adobe.com/robots.txt 
+-> HEAD http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash 
+-> HEAD http://get.adobe.com/flashplayer/ 
+-> HEAD http://get.adobe.com/flashplayer/otherversions/  fetched in 8.63 seconds
+
+Checking link http://www.accademia-cappiello.it/10noteswf/lavoro.swf
+HEAD http://www.accademia-cappiello.it/10noteswf/lavoro.swf  fetched in 0.32 seconds
+
+Checking link http://www.accademia-cappiello.it/immagini/home/corsi.jpg
+HEAD http://www.accademia-cappiello.it/immagini/home/corsi.jpg  fetched in 1.14 seconds
+
+Checking link http://www.accademia-cappiello.it/immagini/home/disegno-art_sm.jpg
+HEAD http://www.accademia-cappiello.it/immagini/home/disegno-art_sm.jpg  fetched in 1.14 seconds
+
+Checking link http://www.accademia-cappiello.it/immagini/home/fireworks.jpg
+HEAD http://www.accademia-cappiello.it/immagini/home/fireworks.jpg  fetched in 1.14 seconds
+
+Checking link http://www.accademia-cappiello.it/index.html
+HEAD http://www.accademia-cappiello.it/index.html  fetched in 1.14 seconds
+
+Checking link http://www.accademia-cappiello.it/html/lavoro.html
+HEAD http://www.accademia-cappiello.it/html/lavoro.html  fetched in 1.29 seconds
+
+Processed in 49.77 seconds.
