@@ -7,6 +7,7 @@ http://www.flickr.com/photos/58751791@N02/
 
 # TODO:
 
+- edit protection
 - i18n messaggi di registrazione
 - campi non obbligatori
   tel
