@@ -4,6 +4,23 @@ logo:
 http://www.flickr.com/photos/58751791@N02/
 
 
+
+# TODO:
+
+- i18n messaggi di registrazione
+- campi non obbligatori
+  tel
+  citta'
+  indirizzo
+  cap
+  
+  http://cappiello.makevoid.com/pages/form
+- per i corsi brevi
+  - scelta turno (pomeridiano/week-end)
+
+
+
+
 # Features
 
 - fancybox gallery that pulls off 

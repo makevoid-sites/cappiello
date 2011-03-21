@@ -8,25 +8,26 @@
       .insert_article
         = link_to "Inserisci News", new_article_path(article_type: "news")
   .clear
-  %h5 
-    %span Eventi
-  .eventi
-    %ul
-      = render partial: "articles/article", collection: @events
-    - if admin?
-      .insert_article
-        = link_to "Inserisci Evento", new_article_path(article_type: "event")
-  .clear
   /
     %h5 
-      %span Lavoro
-    .lavoro
+      %span Eventi
+    .eventi
       %ul
-        %li
-          .lavoro_title Cerco
-          %ul 
-            %li - Sezione in allestimento
-        %li
-          .lavoro_title Offro
-          %ul 
-            %li - Sezione in allestimento
+        = render partial: "articles/article", collection: @events
+      - if admin?
+        .insert_article
+          = link_to "Inserisci Evento", new_article_path(article_type: "event")
+    .clear
+  
+  %h5 
+    %span Lavoro
+  .lavoro
+    %ul
+      %li
+        .lavoro_title Cerco
+        %ul 
+          %li - Sezione in allestimento
+      %li
+        .lavoro_title Offro
+        %ul 
+          %li - Sezione in allestimento
