@@ -3,10 +3,10 @@
   = link_to "Modifica", [:edit, @article]
   = link_to "Elimina", @article, method: :delete
 
+.article_cont
+  - title tr(@article).title + "<span class='date'>#{I18n.l(@article.created_at.to_date, format: :medium)}</span>"
 
-- title tr(@article).title + "<span class='date'>#{I18n.l(@article.created_at.to_date, format: :medium)}</span>"
+  = markup tr(@article).text
 
-= markup tr(@article).text
-
-.right
-  = link_to tf("Torna alla home page", "Back to home page"), root_path
+  .right
+    = link_to tf("Torna alla home page", "Back to home page"), root_path

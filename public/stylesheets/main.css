@@ -115,7 +115,12 @@ a:hover {
 
 #content p {
   text-shadow: 1px 2px 0px white;
-  margin-bottom: 12px; }
+  margin-bottom: 12px;
+  width: 59%;
+  text-align: justify; }
+
+#content .home p, #content #aside p, #content .article_cont p {
+  width: 100%; }
 
 #content #aside p {
   padding-top: 30px;
@@ -410,8 +415,8 @@ div#home_swf {
 
 ul.subnav {
   position: absolute;
-  width: 140px;
-  right: -140px;
+  width: 150px;
+  right: -151px;
   z-index: 3; }
 
 #nav li .subnav.sub2 {
