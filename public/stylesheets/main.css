@@ -207,6 +207,17 @@ a#profile_name {
 #profile_links {
   background: #999999; }
 
+#news li {
+  clear: both; }
+#news span.title {
+  width: 60%;
+  display: block;
+  float: left; }
+#news span.date {
+  width: 40%;
+  display: block;
+  float: right; }
+
 #news {
   text-align: right;
   width: 23%;

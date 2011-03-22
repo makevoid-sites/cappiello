@@ -18,6 +18,8 @@ http://www.flickr.com/photos/58751791@N02/
   http://cappiello.makevoid.com/pages/form
 - per i corsi brevi
   - scelta turno (pomeridiano/week-end)
+  
+- newsletter
 
 
 

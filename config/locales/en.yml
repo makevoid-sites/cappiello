@@ -5,3 +5,4 @@ en:
   date:
     formats:
       medium: "%d %b %y"
+      custom: "%d %b %Y"
