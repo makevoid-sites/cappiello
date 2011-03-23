@@ -65,7 +65,10 @@ $(function(){
       console.log(photos.randomized())
       
       $.each(photos.all, function(idx, photo) {
-        $("#photos").append("<a rel='group' class='fancybox' href='"+photo_url(photo, "b")+"'><img src='"+photo_url(photo, "s")+"'></a>")
+        klass = ""
+        if (idx == 0)
+          klass = " first"
+        $("#photos").append("<a rel='group' class='fancybox"+klass+"' href='"+photo_url(photo, "b")+"'><img src='"+photo_url(photo, "s")+"'></a>")
 
         $("a.fancybox").fancybox(fancybox_options)
 
