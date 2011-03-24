@@ -1,8 +1,13 @@
 # Cappiello
 
+
+- z index vimeo filmati
+- controllare menu IE
+
 logo:
 http://www.flickr.com/photos/58751791@N02/
 
+- allineare le unordered lists
 
 
 # TODO:

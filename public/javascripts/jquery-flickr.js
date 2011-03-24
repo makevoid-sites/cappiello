@@ -61,8 +61,8 @@ $(function(){
     }
     
     function render_images() {
-      console.log(photos.all)
-      console.log(photos.randomized())
+      //console.log(photos.all)
+      //console.log(photos.randomized())
       
       $.each(photos.all, function(idx, photo) {
         klass = ""
