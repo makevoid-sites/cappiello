@@ -15,6 +15,8 @@ class UsersController < ApplicationController
   end
   
   def create
+    correct_date_params
+    
     @user = User.new(params[:user])
     @user.tmp_password = params[:user][:password]
     if @user.save
@@ -36,8 +38,26 @@ class UsersController < ApplicationController
   end
   
   def update
+    correct_date_params
     params[:admin] = false if params[:admin] == true
     
   end
   
+  protected
+  
+  def correct_date_params
+    obj = :article
+    Article.properties.each do |prop|
+      attr = prop.name.to_s
+      if prop.class_name.to_s =~ /Date/
+        year  = params[obj]["#{attr}(1i)"].to_i
+        month = params[obj]["#{attr}(2i)"].to_i
+        day   = params[obj]["#{attr}(3i)"].to_i
+        params[obj].delete "#{attr}(1i)"
+        params[obj].delete "#{attr}(2i)"
+        params[obj].delete "#{attr}(3i)"
+        params[obj][attr] = Date.new(year, month, day)
+      end
+    end
+  end
 end
