@@ -15,6 +15,8 @@
     = javascript_include_tag "jquery", "jquery-cycle", "jquery-swfobject", "jquery-hoverintent","jquery-flickr", "jquery-mousewheel", "jquery-fancybox", "rails", "master"#, :cache => "cache/all" 
     = yield :head
     %script{ type: "text/javascript" }
+      var action = '#{controller.action_name}'
+      var resources = '#{controller.controller_name.pluralize}' 
       = yield :script
       :plain
         function hide_flashes() {

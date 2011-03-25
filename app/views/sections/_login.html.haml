@@ -6,6 +6,9 @@
 - if logged_in?
   #admin
     .left
+      - if File.exist? "#{Rails.root}/app/views/#{controller.controller_name.pluralize}/#{controller.action_name}.html.haml"
+        %a#edit_view{ href: js_void } View
+      %a#edit_css{ href: js_void } CSS
       - if admin?
         = yield :admin
     .right

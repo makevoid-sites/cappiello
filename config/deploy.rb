@@ -149,5 +149,14 @@ namespace :db do
     download "#{current_path}/db/#{application}_production.sql", "db/#{application}_production.sql"
     local_path = `pwd`.strip
     `mysql -u root #{application}_development < #{local_path}/db/#{application}_production.sql`
+    
+    t = Time.now
+    file = "#{application}_production_#{t.strftime("%Y_%m_%d")}.sql"
+    `mv db/#{application}_production.sql db/#{file}`
+    
+    if ENV["BACKUP"] != "" || ENV["BACKUP"].nil?
+      `cp db/#{file} ~/db_backups/`
+      puts "Backup saved on ~/db_backups/#{file}"
+    end
   end
 end

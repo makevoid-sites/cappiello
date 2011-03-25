@@ -223,7 +223,8 @@ a#profile_name {
 #news span.date {
   width: 40%;
   display: block;
-  float: right; }
+  float: right;
+  text-align: right; }
 
 #news {
   text-align: right;
