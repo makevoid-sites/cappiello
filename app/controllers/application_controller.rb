@@ -89,7 +89,7 @@ class ApplicationController < ActionController::Base
   end
   
   def not_found
-    render file: "#{Rails.root}/public/404.html", status: 404
+    render file: "#{Rails.root}/public/404_cont_#{I18n.locale}.html", status: 404
   end
   
   # english version

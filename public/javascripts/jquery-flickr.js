@@ -64,7 +64,7 @@ $(function(){
       //console.log(photos.all)
       //console.log(photos.randomized())
       
-      $.each(photos.all, function(idx, photo) {
+      $.each(photos.randomized(), function(idx, photo) {
         klass = ""
         if (idx == 0)
           klass = " first"

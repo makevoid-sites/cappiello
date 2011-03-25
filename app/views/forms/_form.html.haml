@@ -30,7 +30,7 @@
       = f.text_field :birthplace 
       = f.label :birthdate, tf("Data", "Birthdate")
       .date_select
-        = f.date_select :birthdate    
+        = f.date_select :birthdate, start_year: 1920, end_year: 2000    
       = f.label :address, tf("Indirizzo", "Address")  
       = f.text_field :address   
       = f.label :city, tf("Città", "City")  
