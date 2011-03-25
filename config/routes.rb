@@ -103,7 +103,8 @@ Cappiello::Application.routes.draw do
    "/html/chis_nf.html",
    "/html/corsibrevi_nf.html",
    "/index.html",
-   "/html/lavoro.html"]
+   "/html/lavoro.html",
+   "html/ienf.html"]
    
   old_routes.each do |route|
     match route => redirect("http://accademia-cappiello.it/")

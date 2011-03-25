@@ -1,6 +1,9 @@
 # Cappiello
 
 
+- randomize photo flickr again
+
+
 - z index vimeo filmati
 - controllare menu IE
 
