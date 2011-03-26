@@ -360,7 +360,9 @@ div#home_swf {
       font-size: 13px;
       border: 1px solid #871623;
       border-top: 1px solid #c82d5e;
-      border-bottom: 1px solid #c82d5e; }
+      border-bottom: 1px solid #c82d5e;
+      width: 83%;
+      text-align: right; }
   #nav li .subnav {
     display: none; }
   #nav li:hover .subnav {
