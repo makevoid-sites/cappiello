@@ -46,8 +46,8 @@ class UsersController < ApplicationController
   protected
   
   def correct_date_params
-    obj = :article
-    Article.properties.each do |prop|
+    obj = :user
+    User.properties.each do |prop|
       attr = prop.name.to_s
       if prop.class_name.to_s =~ /Date/
         year  = params[obj]["#{attr}(1i)"].to_i

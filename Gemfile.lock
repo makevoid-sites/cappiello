@@ -6,106 +6,117 @@ GIT
 
 GIT
   remote: git://github.com/datamapper/dm-active_model
-  revision: 9fc0771cec1a59abb58465ea0c8c054b770d48d5
+  revision: 6b49e3ec80e3164c980adf97f27186095fe5d305
   specs:
-    dm-active_model (1.0.3)
-      activemodel (~> 3.0.0)
-      dm-core (~> 1.0.2)
+    dm-active_model (1.1.0)
+      activemodel (~> 3.0.4)
+      dm-core (~> 1.1.0)
 
 GIT
   remote: git://github.com/datamapper/dm-aggregates
-  revision: 52cdf21b4ce47d8db5f47dcb47f139a9ef20599c
+  revision: 82cb777b59f4227bb20ed7bed38b5c0cb6b5d608
   specs:
-    dm-aggregates (1.0.2)
-      dm-core (~> 1.0.2)
+    dm-aggregates (1.1.0)
+      dm-core (~> 1.1.0)
 
 GIT
   remote: git://github.com/datamapper/dm-core.git
-  revision: 5ad80896215f1566c7c7bee256d34a4fbcc03f8f
+  revision: 39e4d17fbc2b779d5a8185314bd6b9ddfa1491a0
   specs:
-    dm-core (1.0.2)
-      addressable (~> 2.2)
-      extlib (~> 0.9.15)
+    dm-core (1.1.0)
+      addressable (~> 2.2.4)
 
 GIT
   remote: git://github.com/datamapper/dm-do-adapter
-  revision: c1fa5e62a8378a120034cb4c2f30d880b90ff7eb
+  revision: 3a285521efa295044c85827442f755d718b23335
   specs:
-    dm-do-adapter (1.0.2)
+    dm-do-adapter (1.1.0)
       data_objects (~> 0.10.2)
-      dm-core (~> 1.0.2)
+      dm-core (~> 1.1.0)
 
 GIT
   remote: git://github.com/datamapper/dm-is-tree
-  revision: 5c4e1620f809173d0756c5e9c79770e7a474b0c8
+  revision: e86f5f23f5ed15d2e9f2969242801cd30567ff46
   specs:
-    dm-is-tree (1.0.2)
-      dm-core (~> 1.0.2)
+    dm-is-tree (1.1.0)
+      dm-core (~> 1.1.0)
 
 GIT
   remote: git://github.com/datamapper/dm-migrations
-  revision: cd9d62ee08b6615a2d1ab2482b24d72232d867a3
+  revision: 49a44696bfa73798476b70b1eafabea27a780a42
   specs:
-    dm-migrations (1.0.2)
-      dm-core (~> 1.0.2)
+    dm-migrations (1.1.0)
+      dm-core (~> 1.1.0)
 
 GIT
   remote: git://github.com/datamapper/dm-mysql-adapter.git
-  revision: f19a31b9e35c19b0bd2e843b2c5624518cec2ee1
+  revision: 88ecdad3fd92bee7a7ad3c621a58431fd230ccda
   specs:
-    dm-mysql-adapter (1.0.2)
-      dm-do-adapter (~> 1.0.2)
+    dm-mysql-adapter (1.1.0)
+      dm-do-adapter (~> 1.1.0)
       do_mysql (~> 0.10.2)
 
 GIT
   remote: git://github.com/datamapper/dm-observer
-  revision: cbea176248767afdc3b8052e207744009c46fee4
+  revision: b56ef1120c0e64ba5d9a2b17879b66a47d2a8227
   specs:
-    dm-observer (1.0.2)
-      dm-core (~> 1.0.2)
+    dm-observer (1.1.0)
+      dm-core (~> 1.1.0)
 
 GIT
   remote: git://github.com/datamapper/dm-rails.git
-  revision: 3b1d4789bb6e4bb85fb4d1183a381e21e680014b
+  revision: 95c0d6b5176cffd65634a6c98331130d99e51101
   specs:
-    dm-rails (1.0.4)
-      actionpack (~> 3.0.0)
-      activesupport (~> 3.0.0)
-      dm-active_model (~> 1.0.3)
-      dm-core (~> 1.0.0)
-      railties (~> 3.0.0)
+    dm-rails (1.1.0)
+      actionpack (~> 3.0.4)
+      dm-active_model (~> 1.1.0)
+      dm-core (~> 1.1.0)
+      railties (~> 3.0.4)
 
 GIT
   remote: git://github.com/datamapper/dm-timestamps
-  revision: 02c03982b6e37002558eb373978ba81c83901e96
+  revision: 6c77bf28b00590ef27c7df4d99ee6b16788750a9
   specs:
-    dm-timestamps (1.0.2)
-      dm-core (~> 1.0.2)
+    dm-timestamps (1.1.0)
+      dm-core (~> 1.1.0)
 
 GIT
   remote: git://github.com/datamapper/dm-transactions.git
-  revision: f824d2bbeba6c8c5ef263b3000c0463a41afbf54
+  revision: 71cbaf93cbefe9d13054296b075b83ddfaa50a25
   specs:
-    dm-transactions (1.0.2)
-      dm-core (~> 1.0.2)
+    dm-transactions (1.1.0)
+      dm-core (~> 1.1.0)
 
 GIT
   remote: git://github.com/datamapper/dm-types
-  revision: 5e3e9976cb7fb6a2987cb2c2636cf9cbddb5643a
+  revision: 132731d8d439bd712d630f148c34476e6bc94fc9
   specs:
-    dm-types (1.0.2)
-      dm-core (~> 1.0.2)
-      fastercsv (~> 1.5.3)
-      json_pure (~> 1.4)
-      stringex (~> 1.1.0)
-      uuidtools (~> 2.1.1)
+    dm-types (1.1.0)
+      bcrypt-ruby (~> 2.1.4)
+      dm-core (~> 1.1.0)
+      fastercsv (~> 1.5.4)
+      json (~> 1.4.6)
+      stringex (~> 1.2.0)
+      uuidtools (~> 2.1.2)
 
 GIT
   remote: git://github.com/datamapper/dm-validations
-  revision: 69b4b9a2237b6a73c708d6fb460caabb0cb8ba01
+  revision: 310bfd2eb103ea436775a898be99bed1f864ce00
   specs:
-    dm-validations (1.0.2)
-      dm-core (~> 1.0.2)
+    dm-validations (1.1.0)
+      dm-core (~> 1.1.0)
+
+GIT
+  remote: git://github.com/jnicklas/capybara.git
+  revision: 218510e64f2fa8c2a2ccd3a709897be5dbfd1b93
+  specs:
+    capybara (0.4.1.1)
+      mime-types (>= 1.16)
+      nokogiri (>= 1.3.3)
+      rack (>= 1.0.0)
+      rack-test (>= 0.5.4)
+      selenium-webdriver (>= 0.0.27)
+      xpath (~> 0.1.3)
 
 GIT
   remote: git://github.com/rails/exception_notification
@@ -116,47 +127,52 @@ GIT
 GEM
   remote: http://rubygems.org/
   specs:
-    RedCloth (4.2.3)
+    RedCloth (4.2.7)
     abstract (1.0.0)
-    actionmailer (3.0.3)
-      actionpack (= 3.0.3)
-      mail (~> 2.2.9)
-    actionpack (3.0.3)
-      activemodel (= 3.0.3)
-      activesupport (= 3.0.3)
+    actionmailer (3.0.5)
+      actionpack (= 3.0.5)
+      mail (~> 2.2.15)
+    actionpack (3.0.5)
+      activemodel (= 3.0.5)
+      activesupport (= 3.0.5)
       builder (~> 2.1.2)
       erubis (~> 2.6.6)
       i18n (~> 0.4)
       rack (~> 1.2.1)
       rack-mount (~> 0.6.13)
-      rack-test (~> 0.5.6)
+      rack-test (~> 0.5.7)
       tzinfo (~> 0.3.23)
-    activemodel (3.0.3)
-      activesupport (= 3.0.3)
+    activemodel (3.0.5)
+      activesupport (= 3.0.5)
       builder (~> 2.1.2)
       i18n (~> 0.4)
-    activesupport (3.0.3)
-    addressable (2.2.2)
+    activesupport (3.0.5)
+    addressable (2.2.4)
+    bcrypt-ruby (2.1.4)
     builder (2.1.2)
+    childprocess (0.1.8)
+      ffi (~> 1.0.6)
     configuration (1.2.0)
-    data_objects (0.10.2)
+    data_objects (0.10.3)
       addressable (~> 2.1)
+    database_cleaner (0.6.6)
     diff-lcs (1.1.2)
-    do_mysql (0.10.2)
-      data_objects (= 0.10.2)
+    do_mysql (0.10.3)
+      data_objects (= 0.10.3)
     erubis (2.6.6)
       abstract (>= 1.0.0)
     escape (0.0.4)
-    extlib (0.9.15)
-    fastercsv (1.5.3)
-    haml (3.0.22)
+    fastercsv (1.5.4)
+    ffi (1.0.7)
+      rake (>= 0.8.7)
+    haml (3.0.25)
     i18n (0.5.0)
-    json (1.5.1)
-    json_pure (1.4.6)
-    launchy (0.3.7)
+    json (1.4.6)
+    json_pure (1.5.1)
+    launchy (0.4.0)
       configuration (>= 0.0.5)
       rake (>= 0.8.1)
-    mail (2.2.12)
+    mail (2.2.15)
       activesupport (>= 2.3.6)
       i18n (>= 0.4.0)
       mime-types (~> 1.16)
@@ -166,72 +182,79 @@ GEM
       escape
       json
       rack
-    nokogiri (1.4.3.1)
+    nokogiri (1.4.4)
     polyglot (0.3.1)
-    rack (1.2.1)
-    rack-mount (0.6.13)
+    rack (1.2.2)
+    rack-mount (0.6.14)
       rack (>= 1.0.0)
-    rack-test (0.5.6)
+    rack-test (0.5.7)
       rack (>= 1.0)
-    railties (3.0.3)
-      actionpack (= 3.0.3)
-      activesupport (= 3.0.3)
+    railties (3.0.5)
+      actionpack (= 3.0.5)
+      activesupport (= 3.0.5)
       rake (>= 0.8.7)
       thor (~> 0.14.4)
     rake (0.8.7)
-    rspec (2.1.0)
-      rspec-core (~> 2.1.0)
-      rspec-expectations (~> 2.1.0)
-      rspec-mocks (~> 2.1.0)
-    rspec-core (2.1.0)
-    rspec-expectations (2.1.0)
+    rspec (2.5.0)
+      rspec-core (~> 2.5.0)
+      rspec-expectations (~> 2.5.0)
+      rspec-mocks (~> 2.5.0)
+    rspec-core (2.5.1)
+    rspec-expectations (2.5.0)
       diff-lcs (~> 1.1.2)
-    rspec-mocks (2.1.0)
-    rspec-rails (2.1.0)
-      rspec (~> 2.1.0)
-    stringex (1.1.0)
+    rspec-mocks (2.5.0)
+    rspec-rails (2.5.0)
+      actionpack (~> 3.0)
+      activesupport (~> 3.0)
+      railties (~> 3.0)
+      rspec (~> 2.5.0)
+    rubyzip (0.9.4)
+    selenium-webdriver (0.1.4)
+      childprocess (>= 0.1.7)
+      ffi (>= 1.0.7)
+      json_pure
+      rubyzip
+    steak (1.1.0)
+      rspec (>= 1.3)
+    stringex (1.2.1)
     thor (0.14.6)
     treetop (1.4.9)
       polyglot (>= 0.3.1)
-    tzinfo (0.3.23)
-    uuidtools (2.1.1)
-    voidtools (0.2.0)
-    webrat (0.7.2)
-      nokogiri (>= 1.2.0)
-      rack (>= 1.0)
-      rack-test (>= 0.5.3)
+    tzinfo (0.3.25)
+    uuidtools (2.1.2)
+    voidtools (0.2.2)
+    xpath (0.1.3)
+      nokogiri (~> 1.3)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   RedCloth
-  actionmailer (~> 3.0.3)
-  actionpack (~> 3.0.3)
-  activesupport (~> 3.0.3)
-  dm-active_model (~> 1.0.3)!
-  dm-aggregates (~> 1.0.2)!
-  dm-core (~> 1.0.2)!
-  dm-do-adapter (~> 1.0.2)!
+  actionmailer (~> 3.0.5)
+  actionpack (~> 3.0.5)
+  activesupport (~> 3.0.5)
+  capybara!
+  database_cleaner
+  dm-active_model (~> 1.1.0)!
+  dm-aggregates (~> 1.1.0)!
+  dm-core (~> 1.1.0)!
+  dm-do-adapter (~> 1.1.0)!
   dm-is-tree!
-  dm-migrations (~> 1.0.2)!
-  dm-mysql-adapter (~> 1.0.2)!
-  dm-observer (~> 1.0.2)!
-  dm-rails (~> 1.0.4)!
-  dm-timestamps (~> 1.0.2)!
-  dm-transactions (~> 1.0.2)!
-  dm-types (~> 1.0.2)!
-  dm-validations (~> 1.0.2)!
+  dm-migrations (~> 1.1.0)!
+  dm-mysql-adapter (~> 1.1.0)!
+  dm-observer (~> 1.1.0)!
+  dm-rails (~> 1.1.0)!
+  dm-timestamps (~> 1.1.0)!
+  dm-transactions (~> 1.1.0)!
+  dm-types (~> 1.1.0)!
+  dm-validations (~> 1.1.0)!
   exception_notification!
   haml (~> 3.0.18)
   launchy
   mixpanel
-  railties (~> 3.0.3)
-  rspec (~> 2.1)
-  rspec-core (~> 2.1)
-  rspec-expectations (~> 2.1)
-  rspec-mocks (~> 2.1)
-  rspec-rails (~> 2.1)
+  railties (~> 3.0.5)
+  rspec-rails
+  steak
   voidtools
-  webrat
   ya2yaml!

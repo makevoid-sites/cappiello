@@ -1,9 +1,9 @@
 source 'http://rubygems.org'
 
-RAILS_VERSION = '~> 3.0.3'
+RAILS_VERSION = '~> 3.0.5'
 
 DATAMAPPER    = 'git://github.com/datamapper'
-DM_VERSION    = '~> 1.0.2'
+DM_VERSION    = '~> 1.1.0'
 
 RSPEC         = 'git://github.com/rspec'
 RSPEC_VERSION = '~> 2.1'
@@ -18,7 +18,7 @@ RSPEC_VERSION = '~> 2.1'
 #end
 
 #gem 'dm-rails',             DM_VERSION, :git => "#{DATAMAPPER}/dm-rails.git"
-gem 'dm-rails',             "~> 1.0.4", :git => "git://github.com/datamapper/dm-rails.git"
+gem 'dm-rails',             DM_VERSION, :git => "git://github.com/datamapper/dm-rails.git"
 #gem 'dm-sqlite-adapter',    DM_VERSION, :git => "#{DATAMAPPER}/dm-sqlite-adapter.git"
 
 # You can use any of the other available database adapters.
@@ -44,22 +44,12 @@ gem 'dm-aggregates',        DM_VERSION, :git => "#{DATAMAPPER}/dm-aggregates"
 gem 'dm-timestamps',        DM_VERSION, :git => "#{DATAMAPPER}/dm-timestamps"
 gem 'dm-observer',          DM_VERSION, :git => "#{DATAMAPPER}/dm-observer"
 
-group(:test) do
-
-  gem 'rspec',              RSPEC_VERSION
-  gem 'rspec-core',         RSPEC_VERSION,  :require => 'rspec/core'
-  gem 'rspec-expectations', RSPEC_VERSION,  :require => 'rspec/expectations'
-  gem 'rspec-mocks',        RSPEC_VERSION,  :require => 'rspec/mocks'
-  gem 'rspec-rails',        RSPEC_VERSION
-  
-    # gem 'rspec',              RSPEC_VERSION, :git => "#{RSPEC}/rspec.git"
-    # gem 'rspec-core',         RSPEC_VERSION, :git => "#{RSPEC}/rspec-core.git",         :require => 'rspec/core'
-    # gem 'rspec-expectations', RSPEC_VERSION, :git => "#{RSPEC}/rspec-expectations.git", :require => 'rspec/expectations'
-    # gem 'rspec-mocks',        RSPEC_VERSION, :git => "#{RSPEC}/rspec-mocks.git",        :require => 'rspec/mocks'
-    # gem 'rspec-rails',        RSPEC_VERSION, :git => "#{RSPEC}/rspec-rails.git"
-  
-    gem 'webrat'
-    gem 'launchy'
+group :development, :test do
+  gem 'rspec-rails'
+  gem 'capybara', :git => 'git://github.com/jnicklas/capybara.git'
+  gem 'launchy'
+  gem 'steak'
+  gem 'database_cleaner'
 end
 
 # ------------------------------------------------------------------------------
@@ -74,7 +64,7 @@ end
 gem 'dm-core',              DM_VERSION, :git => "#{DATAMAPPER}/dm-core.git"
 gem 'dm-do-adapter',        DM_VERSION, :git => "#{DATAMAPPER}/dm-do-adapter"
 #gem 'dm-active_model',      DM_VERSION, :git => "#{DATAMAPPER}/dm-active_model"
-gem 'dm-active_model',      "~> 1.0.3", :git => "git://github.com/datamapper/dm-active_model"
+gem 'dm-active_model',      DM_VERSION, :git => "git://github.com/datamapper/dm-active_model"
 
 
 gem "dm-is-tree",         git: "git://github.com/datamapper/dm-is-tree"

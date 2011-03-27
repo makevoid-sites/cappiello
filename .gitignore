@@ -9,6 +9,7 @@ db/cappiello_*
 .livereload
 log/*.log
 *.pid
-tmp/^
+tmp/*
 .sassc
 pages2.yml
+*.log

@@ -1,0 +1,59 @@
+.forms_form
+  - form_for @user do |f|
+    .checkboxes
+      %h3= tf("RICHIESTA INFORMAZIONI", "INFORMATION REQUEST")
+      = f.check_box :int_annuali_visual
+      = f.label     :int_annuali_visual,    "#{tf "corsi annuali", "annual courses"} - VISUAL DESIGN"
+      = f.check_box :int_annuali_interior
+      = f.label     :int_annuali_interior,  "#{tf "corsi annuali", "annual courses"} - INTERIOR DESIGN"
+      = f.check_box :int_brevi_visual
+      = f.label     :int_brevi_visual,    "#{tf "corsi brevi", "short courses"} - VISUAL DESIGN"
+      = f.check_box :int_brevi_interior
+      = f.label     :int_brevi_interior,  "#{tf "corsi brevi", "short courses"} - INTERIOR DESIGN"
+    
+      %h3= tf("RICHIESTA DI PARTECIPAZIONE GRATUITA", "REQUEST FREE PARTICIPATION")
+      = f.check_box :int_stage_visual
+      = f.label     :int_stage_visual,    "#{tf "stage gratuito", "free stage"} - VISUAL DESIGN"
+      = f.check_box :int_stage_interior
+      = f.label     :int_stage_interior,  "#{tf "stage gratuito", "free stage"} - INTERIOR DESIGN"
+
+    .form
+      = f.label :first_name, tf("Nome", "First name")
+      = f.text_field :first_name
+      = f.label :last_name, tf("Cognome", "Last name")
+      = f.text_field :last_name
+      = f.label :email, "Email"
+      = f.text_field :email
+      - unless logged_in?
+        = f.label :password, tf("Scegli una password", "Choose a password")
+        = f.password_field :password
+      = f.label :birthplace, tf("Nato a", "Born")
+      = f.text_field :birthplace 
+      = f.label :birthdate, tf("Data", "Birthdate")
+      .date_select
+        = f.date_select :birthdate, start_year: 1920, end_year: 2000    
+      = f.label :address, tf("Indirizzo", "Address")  
+      = f.text_field :address   
+      = f.label :city, tf("Città", "City")  
+      = f.text_field :city          
+      = f.label :cap, tf("CAP", "ZIP")  
+      = f.text_field :cap           
+      = f.label :tel, tf("Telefono", "Phone")  
+      = f.text_field :tel           
+      = f.label :qualification, tf("Titolo di studio", "Degree")  
+      = f.text_field :qualification
+    
+      = f.label :notes, tf("Note", "Other infos")
+      = f.text_area :notes
+    
+      .checkboxes_bottom
+        = f.check_box :newsletter
+        = f.label     :newsletter,  tf("desidero ricevere informazioni su iniziative e nuovi corsi", "I want to receive information about new courses")
+    
+        = check_box_tag :authorize
+        = label_tag     :authorize,  tf("autorizzo il trattamento dei dati personali", "I authorize the processing of personal data")
+      .clear
+    
+    
+      = f.submit "Invia", class: "submit"
+ 
