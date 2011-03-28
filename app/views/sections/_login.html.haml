@@ -15,9 +15,10 @@
       #profile_tab
         %a#profile_name{ href: "javascript:void(0)" }= current_user.full_name
         #profile_links{ style: "display:none" }
+          = link_to "Profilo", user_path(name_url: current_user.name_url), method: :get
           
           - if admin?
-            = link_to "Profilo", user_path(name_url: current_user.name_url), method: :get
+            = link_to "Utenti", [:users]
             = link_to "Carica foto", [:new_photo]
           = lang_link
           = link_to "Logout", "/logout"

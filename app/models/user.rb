@@ -18,7 +18,7 @@ class User
 
   property :lang, String, index: true, default: "it"
   property :birthplace, String
-  property :birthdate, DateTime
+  property :birthdate, Date
   property :address, String
   property :city, String
   property :cap, String
@@ -38,10 +38,17 @@ class User
   property :qualification, String
   property :grade, String 
   property :job, String
+  
+  property :created_at, DateTime
+  property :updated_at, DateTime, index: true
 
   5.times do |i|
     property "info#{i}", Text
   end
+
+  
+  default_scope(:default).update order: [:updated_at.asc, :id.desc]
+
 
   validates_format_of :email, with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i
   
@@ -57,6 +64,9 @@ class User
   attr_accessor :confirm, :redirect_url, :tmp_password
 
 
+  def name_pres
+    "#{first_name.capitalize} #{last_name.capitalize}"
+  end
   def full_name
     "#{first_name} #{last_name}"
   end

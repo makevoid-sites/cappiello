@@ -1,6 +1,8 @@
 # encoding: utf-8
 class UsersController < ApplicationController
   
+  before_filter :admin_only, only: [:index, :destroy]  
+  
   def index
     @users = User.all
   end
@@ -41,7 +43,7 @@ class UsersController < ApplicationController
     correct_date_params
     params[:admin] = false if params[:admin] == true
     @user = User.get(params[:id])
-    return(render text: tf("Error: You're not logged in or you're not editing your profile")) if @user != current_user
+    return(render text: tf("Error: You're not logged in or you're not editing your profile")) if @user != current_user && !admin?
     if @user.update(params[:user])
       redirect_to @user
     else
@@ -62,7 +64,7 @@ class UsersController < ApplicationController
     obj = :user
     User.properties.each do |prop|
       attr = prop.name.to_s
-      if prop.class_name.to_s =~ /Date/
+      if prop.class_name.to_s == "Date"
         year  = params[obj]["#{attr}(1i)"].to_i
         month = params[obj]["#{attr}(2i)"].to_i
         day   = params[obj]["#{attr}(3i)"].to_i

@@ -55,7 +55,24 @@ class ApplicationController < ActionController::Base
     track "page", properties
   end
   
-  # Auth
+  # Auth(orization)
+  
+  def admin_only
+    not_found unless admin?
+  end
+  
+  helper_method :superadmin?, :admin?
+  
+  def superadmin?
+    current_user.id == 1 unless current_user.nil?
+  end
+  
+  def admin?
+    current_user.admin? unless current_user.nil?
+  end
+  
+  
+  # Auth(entication)
   
   helper_method :current_user, :logged_in?
   

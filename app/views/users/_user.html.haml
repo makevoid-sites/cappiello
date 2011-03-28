@@ -1,0 +1,6 @@
+%li
+  %a{ href: user_path(user) }
+    %span.date= user.updated_at.to_s(:short)
+    \-
+    %span.name= user.name_pres
+    

@@ -1,7 +1,48 @@
-%h2= @user.full_name
+%h2 
+  - unless @user == current_user 
+    Profilo
+  - else 
+    Il mio profilo
 
-dati profilo utente...
-immagini lavori...
-= link_to "Carica un'immagine"
+%p.name= @user.full_name
+
+.cont_nav
+  - unless @user == current_user 
+    = link_to "Utenti", [:users], class: "button"
+    = link_to "Modifica", [:edit, @user], class: "button"
+  - else
+    = link_to "Modifica", "/pages/form", class: "button"
+
+.user_infos
+  %h3 Voglio ricevere informazioni su:
+
+  - show_selection :int_annuali_visual, "Corso annuale Visual Design"
+  - show_selection :int_annuali_interior, "Corso annuale Interior Design"
+  - show_selection :int_brevi_visual, "Corsi brevi Visual Design"
+  - show_selection :int_brevi_interior, "Corsi brevi Interior Design"
+
+  %h3 Voglio partecipare a:
+
+  - show_selection :int_stage_visual, "Stage Visual Design"
+  - show_selection :int_stage_interior, "Stage Interior Desgin"
+
+.user_details
+  %h3 Dettagli:
+  - show_field :email, "Email"
+  - show_field :address, "Indirizzo"
+  - show_field :city, "Città"
+  - show_field :cap, "CAP"
+  - show_field :tel, "Telefono"
+  - show_field :birthplace, "Nato a"
+  - show_field :birthdate, "Nato il" do |date|
+    - I18n.l date, format: :long unless date.nil?
+  - show_field :qualification, "Titolo di studio"
+
+
+
+- if superadmin?
+  .admin
+    %p immagini lavori...
+    = link_to "Carica un'immagine"
 
 

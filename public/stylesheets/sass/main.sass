@@ -694,9 +694,18 @@ input.submit
   width: auto
   float: right  
   
-input[type='submit'], input.submit
+#content
+  a.button
+    color: #FFF
+    text-shadow: none
+  a.button:hover
+    +color($main)
+    text-shadow: none
+  
+input[type='submit'], input.submit, a.button
   +button
   +color($main)
+  
 
 input[type='checkbox'], input.checkbox
   width: 23px
@@ -861,4 +870,31 @@ input.radio2
     opacity: 0.8
   a:hover img
     border: 1px solid #999    
-    
+
+// user
+
+.users.show
+  .user_infos
+    margin: 30px 0 10px
+  #content  
+    p
+      font-size: 1em  
+      margin: 0
+      padding: 0
+    h3
+      margin: 22px 0 7px
+    p.name
+      font-size: 1.3em
+      margin-bottom: 10px
+    .user_infos
+      p 
+        margin: 3px 0 5px
+      img
+        margin-left: 8px
+        position: relative
+        top: 4px
+    .user_details
+      p.b 
+        font-weight: bold
+        font-size: 0.9em
+        margin: 10px 0 3px

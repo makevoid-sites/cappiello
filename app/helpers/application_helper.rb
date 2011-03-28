@@ -4,10 +4,6 @@ module ApplicationHelper
   include UrlHelpers
   include MarkupHelpers
 
-  def admin?
-    current_user.admin? unless current_user.nil?
-  end
-
   def master?
     # return false if @page.nil?
     # @page.master?
