@@ -6,7 +6,7 @@ class UsersController < ApplicationController
   end
   
   def show
-    @user = User.first(name_url: params[:name_url])
+    @user = params[:name_url].inty? ? User.get(params[:name_url]) : User.first(name_url: params[:name_url])
     return not_found if @user.nil?
   end
   

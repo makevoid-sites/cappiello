@@ -1,9 +1,3 @@
-class String
-  def inty?
-    self.to_i.to_s == self && self.to_i != 0
-  end
-end
-
 class PagesController < ApplicationController
 
   after_filter :track_site, only: [:index, :show]

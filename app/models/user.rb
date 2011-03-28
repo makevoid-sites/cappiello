@@ -43,9 +43,10 @@ class User
     property "info#{i}", Text
   end
 
-  validates_format_of :email, :with => /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i
+  validates_format_of :email, with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i
   
   validates_with_block :full_name do
+    return true if self.saved?
     if User.first(first_name: self.first_name, last_name: self.last_name).nil?
       [true]
     else

@@ -24,6 +24,20 @@ require "RedCloth"
 # model
 # script/generate model MODEL --skip-migration --no-test-framework
 
+# monkeypatching
+
+module Intyable
+  def inty?
+    self.to_i.to_s == self && self.to_i != 0
+  end
+end
+
+class String
+  include Intyable
+end
+class NilClass
+  include Intyable
+end
 
 class String
   def title_urlize
@@ -50,3 +64,4 @@ class NotFound < Exception
     "Pagina non trovata"
   end
 end
+

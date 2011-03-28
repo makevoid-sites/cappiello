@@ -64,7 +64,8 @@ class ApplicationController < ActionController::Base
   end
   
   def current_user
-    @current_user = User.get(session[:user_id]) unless @current_user.nil?
+    @current_user = User.get(session[:user_id]) if @current_user.nil?
+    @current_user
   end
   
   
