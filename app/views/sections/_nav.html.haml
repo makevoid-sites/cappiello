@@ -1,26 +1,28 @@
-#nav_cont
-  %ul#nav
-    - pages.each_with_index do |page, idx|
-      - case page.title_url_en
-      - when "visual_design" # corsi annuali
-        %li
-          %ul.subnav
-            %li= link_to "Visual Design", page_path(id: tf("visual_design_corsi_annuali", "visual_design_annual_training"))
-            %li= link_to "Interior Design", page_path(id: tf("interior_design_corsi_annuali", "interior_design_annual_training"))
-          = link_to tf("Corsi Annuali", "Annual Courses"), js_void
-      - when "special_courses" # corsi brevi
-        = render partial: "sections/special_courses", locals: { page: page }
-      - when "dates_and_times"
-      - when "interior_design"      
-      - else
-        %li
-          = link_to tr(page).title, pag_path(page) 
+-# expire_fragment :nav # where?
+- cache :nav do 
+  #nav_cont
+    %ul#nav
+      - pages.each_with_index do |page, idx|
+        - case page.title_url_en
+        - when "visual_design" # corsi annuali
+          %li
+            %ul.subnav
+              %li= link_to "Visual Design", page_path(id: tf("visual_design_corsi_annuali", "visual_design_annual_training"))
+              %li= link_to "Interior Design", page_path(id: tf("interior_design_corsi_annuali", "interior_design_annual_training"))
+            = link_to tf("Corsi Annuali", "Annual Courses"), js_void
+        - when "special_courses" # corsi brevi
+          = render partial: "sections/special_courses", locals: { page: page }
+        - when "dates_and_times"
+        - when "interior_design"      
+        - else
+          %li
+            = link_to tr(page).title, pag_path(page) 
 
     
-  #social
-    = link_to image_tag("icons/fb_icon.png"), "http://www.facebook.com/group.php?gid=25010319906"
-    -# "http://www.facebook.com/pages/Accademia-dArte-e-Design-Leonetto-Cappiello-Firenze/124282164308467"
-    = link_to image_tag("icons/vimeo_icon.png"), "http://vimeo.com/user5798268"
-    = link_to image_tag("icons/flickr_icon.png"), "http://www.flickr.com/photos/accademiacappiello/"
-    = link_to image_tag("icons/twitter_icon.png"), "http://twitter.com/Acc_Cappiello"
+    #social
+      = link_to image_tag("icons/fb_icon.png"), "http://www.facebook.com/group.php?gid=25010319906"
+      -# "http://www.facebook.com/pages/Accademia-dArte-e-Design-Leonetto-Cappiello-Firenze/124282164308467"
+      = link_to image_tag("icons/vimeo_icon.png"), "http://vimeo.com/user5798268"
+      = link_to image_tag("icons/flickr_icon.png"), "http://www.flickr.com/photos/accademiacappiello/"
+      = link_to image_tag("icons/twitter_icon.png"), "http://twitter.com/Acc_Cappiello"
 

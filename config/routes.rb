@@ -51,8 +51,8 @@ Cappiello::Application.routes.draw do
 
   
   #get "/users/:name_url", to: "users#show", as: :user_path
-  match "/users/new" => "users#new", as: :new_user
-  match "/users/:name_url" => "users#show", as: :user
+  get "/users/new", to: "users#new", as: :new_user
+  get "/users/:name_url", to: "users#show", as: :user
   resources :users
   
   get "/login", to: "sessions#new", as: :login_page

@@ -34,13 +34,26 @@ class UsersController < ApplicationController
   end
   
   def edit
-    #...
+    @user = User.get(params[:id])
   end
   
   def update
     correct_date_params
     params[:admin] = false if params[:admin] == true
-    
+    @user = User.get(params[:id])
+    return(render text: tf("Error: You're not logged in or you're not editing your profile")) if @user != current_user
+    if @user.update(params[:user])
+      redirect_to @user
+    else
+      flash[:error] = tf("Non è stato possibile aggiornare il profilo")
+      if params[:form] == "form"
+        @page = Page.first(title_url_en: "form")
+        raise NotFound if @page.nil?
+        render "pages/show"
+      else
+        render :edit
+      end
+    end
   end
   
   protected

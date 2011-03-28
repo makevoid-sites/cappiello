@@ -64,7 +64,7 @@ class ApplicationController < ActionController::Base
   end
   
   def current_user
-    @current_user || User.get(session[:user_id])
+    @current_user = User.get(session[:user_id]) unless @current_user.nil?
   end
   
   
@@ -119,7 +119,7 @@ class ApplicationController < ActionController::Base
     object
   end
   
-  def tf(first, last)
+  def tf(first, last=first)
     english? ? last : first
   end
   

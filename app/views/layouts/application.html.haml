@@ -1,9 +1,8 @@
-- unless Rails.env == "production"
-  - debug = " anonym_id: #{session[:anonym_id]}"
-
 !!! Strict
 %html{ html_attrs(english? ? "en_EN" : "it_IT") }
   %head
+    - unless Rails.env == "production"
+      - debug = " anonym_id: #{session[:anonym_id]}"
     %title= site_title "#{" - #{@title}" unless @title.blank?}#{debug}"
     %meta{ charset: "UTF-8" }/    
     %meta{ content: meta_description, name: "description"}/

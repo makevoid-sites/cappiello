@@ -1,5 +1,6 @@
 .forms_form
   - form_for @user do |f|
+    = hidden_field_tag "form", "form"
     .checkboxes
       %h3= tf("RICHIESTA INFORMAZIONI", "INFORMATION REQUEST")
       = f.check_box :int_annuali_visual
