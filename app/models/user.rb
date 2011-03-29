@@ -47,7 +47,7 @@ class User
   end
 
   
-  default_scope(:default).update order: [:updated_at.asc, :id.desc]
+  default_scope(:default).update order: [:updated_at.desc, :id.desc]
 
 
   validates_format_of :email, with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i

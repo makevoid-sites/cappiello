@@ -30,9 +30,9 @@ class PagesController < ApplicationController
       
     @page = params[:id].inty? ? Page.get(params[:id]) : Page.first( "title_url_#{current_lang}".to_sym => params[:id])
     @user = current_user || User.new
-
-    track_page(:course) if @page.course?
+    
     raise NotFound if @page.nil?
+    track_page(:course) if @page.course?
   end
   
   def edit

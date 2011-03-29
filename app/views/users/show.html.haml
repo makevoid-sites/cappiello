@@ -25,6 +25,12 @@
 
   - show_selection :int_stage_visual, "Stage Visual Design"
   - show_selection :int_stage_interior, "Stage Interior Desgin"
+  
+  - unless @user.interested_in.blank?
+  
+    %h3 Vorrei ottenere una borsa di studio per:
+
+    %p= @user.interested_in
 
 .user_details
   %h3 Dettagli:
