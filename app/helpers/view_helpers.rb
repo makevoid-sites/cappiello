@@ -5,7 +5,8 @@ module ViewHelpers
   # basic texts
   
   def site_title(content=nil)
-    "Accademia d'Arte e Design Leonetto Cappiello #{content} - Firenze"
+    # old: Accademia d'Arte e Design Leonetto Cappiello
+    "Accademia Cappiello #{content} - Firenze"
   end
   
   def footer_text
