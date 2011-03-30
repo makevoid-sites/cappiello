@@ -64,7 +64,7 @@ class UsersController < ApplicationController
     obj = :user
     User.properties.each do |prop|
       attr = prop.name.to_s
-      if prop.class_name.to_s == "Date"
+      if prop.class_name.to_s == "Date" && !params[obj]["#{attr}(1i)"].blank?
         year  = params[obj]["#{attr}(1i)"].to_i
         month = params[obj]["#{attr}(2i)"].to_i
         day   = params[obj]["#{attr}(3i)"].to_i
