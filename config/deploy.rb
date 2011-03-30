@@ -154,7 +154,7 @@ namespace :db do
     file = "#{application}_production_#{t.strftime("%Y_%m_%d")}.sql"
     `mv db/#{application}_production.sql db/#{file}`
     
-    if ENV["BACKUP"] != "" || ENV["BACKUP"].nil?
+    if ENV["BACKUP"] != "" || !ENV["BACKUP"].nil?
       `cp db/#{file} ~/db_backups/`
       puts "Backup saved on ~/db_backups/#{file}"
     end
