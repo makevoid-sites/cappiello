@@ -50,12 +50,30 @@ $(function(){
       var photoset_id = $("#photos").attr("data-set_id")
       var api_url = "http://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key="+api_key+"&photoset_id="+photoset_id+"&format=json&nojsoncallback=1"
       
+      // DEBUG IE diahanz
+      // url2 = "http://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=ceedea54d4a6a93de57f7f0f8b448106&photoset_id=72157625778631893&format=json&nojsoncallback=1"
+      // var date = new Date();
+      // $.ajax({
+      //   url: url2+"&_="+date.getTime(),
+      //   dataType: 'text',
+      //   type: "GET",
+      //   cache: false,
+      //   success: function(data){     
+      //     data = eval("(" + data + ")");
+      //     $("#photos").prepend(data.photoset.id)    
+      //     //console.log(data)
+      //   },
+      //   error: function(xhr, status, error) {
+      //        $("#photos").prepend("error: "+xhr.status+", "+error)
+      //    }
+      // })
       
       $.getJSON(api_url, function(data) {
+
         $.each(data.photoset.photo, function(idx, photo) {
           photos.add(photo)
         })
-
+        
         render_images()
       })
     }

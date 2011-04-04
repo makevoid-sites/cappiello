@@ -1,5 +1,5 @@
--# expire_fragment :nav # where?
-- cache :nav do 
+-# expire_fragment "name" # where?
+- cache "nav_#{current_lang}" do 
   #nav_cont
     %ul#nav
       - pages.each_with_index do |page, idx|
