@@ -1,4 +1,8 @@
 it:
+  first_name: "Nome"
+  last_name: "Cognome"
+  email: "Email"
+  password: "Password"  
   date:
     formats:
       default: "%d-%m-%Y"

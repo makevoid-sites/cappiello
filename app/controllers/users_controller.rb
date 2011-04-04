@@ -25,7 +25,7 @@ class UsersController < ApplicationController
       session[:user_id] = @user.id
       path = root_path
       path = @user.redirect_url unless @user.redirect_url.blank?
-      UserMailer.deliver_welcome(@user)
+      UserMailer.deliver_welcome @user
       send_form_notification @user
       @user.update anonym_id: session[:anonym_id]
       track :registration
@@ -65,7 +65,7 @@ class UsersController < ApplicationController
   protected
   
   def send_form_notification(user)
-    form = params[:user][:form]
+    form = params[:user][:tmp_form]
     unless form.blank?
       UserMailer.send("deliver_admin_#{form}", user)
     end

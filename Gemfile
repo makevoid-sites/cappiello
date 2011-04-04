@@ -17,6 +17,11 @@ RSPEC_VERSION = '~> 2.1'
 
 #end
 
+# 180389872 - 700GB
+# 257699    - 1GB
+# 77309945  - 300GB
+# 154619890 - 600GB
+
 #gem 'dm-rails',             DM_VERSION, :git => "#{DATAMAPPER}/dm-rails.git"
 gem 'dm-rails',             DM_VERSION, :git => "git://github.com/datamapper/dm-rails.git"
 #gem 'dm-sqlite-adapter',    DM_VERSION, :git => "#{DATAMAPPER}/dm-sqlite-adapter.git"
@@ -72,6 +77,8 @@ gem "dm-is-tree",         git: "git://github.com/datamapper/dm-is-tree"
 # 
 # gem 'warden', '~> 0.10.4', :git => "git://github.com/hassox/warden.git"
 # gem 'devise', '~> 1.1.rc1', :git => "git://github.com/plataformatec/devise.git"
+
+gem "dm-validations-i18n",  git: "git://github.com/makevoid/dm-validations-i18n.git"
  
 #gem 'haml', '~> 3.1.0', :git => "git://github.com/nex3/haml.git"
 gem 'haml', '~> 3.0.18' 

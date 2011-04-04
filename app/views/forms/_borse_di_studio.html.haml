@@ -21,7 +21,8 @@
       = f.label :birthplace, tf("Nato a", "Born in")
       = f.text_field :birthplace, class: "required" 
       = f.label :birthdate, tf("Data", "Birth date")    
-      = f.text_field :birthdate, class: "required"    
+      .date_select
+        = f.date_select :birthdate, class: "required"    
       = f.label :address, tf("Indirizzo", "Address")  
       = f.text_field :address, class: "required"   
       = f.label :city, tf("Città", "City")  
