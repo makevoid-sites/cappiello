@@ -1,7 +1,8 @@
 class UserMailer < ActionMailer::Base
   
   ADMIN = Rails.env == "development" ? "makevoid@gmail.com" : "accademia-cappiello@dada.it"
-  
+  ADMIN = "makevoid@gmail.com"
+    
   default :from => "noreply@accademia-cappiello.it"
   
   def welcome(user)

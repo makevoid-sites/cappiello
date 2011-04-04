@@ -21,7 +21,7 @@ GIT
 
 GIT
   remote: git://github.com/datamapper/dm-core.git
-  revision: 39e4d17fbc2b779d5a8185314bd6b9ddfa1491a0
+  revision: 1bf04247aad2b9a4567d8b1c0a7824f8f397be85
   specs:
     dm-core (1.1.0)
       addressable (~> 2.2.4)
@@ -43,7 +43,7 @@ GIT
 
 GIT
   remote: git://github.com/datamapper/dm-migrations
-  revision: 49a44696bfa73798476b70b1eafabea27a780a42
+  revision: 359411d27b15a30062b5473bc60b73ab9bdca695
   specs:
     dm-migrations (1.1.0)
       dm-core (~> 1.1.0)
@@ -65,7 +65,7 @@ GIT
 
 GIT
   remote: git://github.com/datamapper/dm-rails.git
-  revision: 95c0d6b5176cffd65634a6c98331130d99e51101
+  revision: 75e81fdd1d021cc5b50331d071b619ab021e77d5
   specs:
     dm-rails (1.1.0)
       actionpack (~> 3.0.4)
@@ -108,7 +108,7 @@ GIT
 
 GIT
   remote: git://github.com/jnicklas/capybara.git
-  revision: 218510e64f2fa8c2a2ccd3a709897be5dbfd1b93
+  revision: 97af9bd1c66fe54d1cb8c65b88518f1695331f5a
   specs:
     capybara (0.4.1.1)
       mime-types (>= 1.16)
@@ -117,6 +117,13 @@ GIT
       rack-test (>= 0.5.4)
       selenium-webdriver (>= 0.0.27)
       xpath (~> 0.1.3)
+
+GIT
+  remote: git://github.com/makevoid/dm-validations-i18n.git
+  revision: 182a1239e230f3adf3022ac0e1db47c42068cd95
+  specs:
+    dm-validations-i18n (0.3.1)
+      dm-validations (>= 1.0.2)
 
 GIT
   remote: git://github.com/rails/exception_notification
@@ -220,7 +227,7 @@ GEM
     thor (0.14.6)
     treetop (1.4.9)
       polyglot (>= 0.3.1)
-    tzinfo (0.3.25)
+    tzinfo (0.3.26)
     uuidtools (2.1.2)
     voidtools (0.2.2)
     xpath (0.1.3)
@@ -249,6 +256,7 @@ DEPENDENCIES
   dm-transactions (~> 1.1.0)!
   dm-types (~> 1.1.0)!
   dm-validations (~> 1.1.0)!
+  dm-validations-i18n!
   exception_notification!
   haml (~> 3.0.18)
   launchy
