@@ -15,4 +15,6 @@ $(function(){
     file = "app/views/"+resources+"/"+action+".html.haml"
     open_in_textmate(file)
   })
+  
+  $(".borse_di_studio form").validate()
 })

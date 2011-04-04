@@ -26,11 +26,13 @@ class UsersController < ApplicationController
       path = root_path
       path = @user.redirect_url unless @user.redirect_url.blank?
       UserMailer.deliver_welcome(@user)
+      send_form_notification @user
       @user.update anonym_id: session[:anonym_id]
       track :registration
-      redirect_to path, notice: "La registrazione è andata a buon fine!"
+      flash[:notice] = tf("La registrazione è andata a buon fine!", "You registered successfully!") if flash[:notice].blank?
+      redirect_to path
     else
-      flash[:error] = "Non è stato possibile completare la registrazione"
+      flash[:error] = tf("Non è stato possibile completare la registrazione", "An error occurred during the registration")
       render :new
     end
   end
@@ -45,6 +47,8 @@ class UsersController < ApplicationController
     @user = User.get(params[:id])
     return(render text: tf("Error: You're not logged in or you're not editing your profile")) if @user != current_user && !admin?
     if @user.update(params[:user])
+      send_form_notification @user
+      flash[:notice] = tf("La registrazione è andata a buon fine!", "You registered successfully!") if flash[:notice].blank?
       redirect_to @user
     else
       flash[:error] = tf("Non è stato possibile aggiornare il profilo")
@@ -59,6 +63,13 @@ class UsersController < ApplicationController
   end
   
   protected
+  
+  def send_form_notification(user)
+    form = params[:user][:form]
+    unless form.blank?
+      UserMailer.send("deliver_admin_#{form}", user)
+    end
+  end
   
   def correct_date_params
     obj = :user

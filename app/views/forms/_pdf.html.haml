@@ -20,6 +20,7 @@
     %h3= link_to label, js_void
 
     - form_for @user, html: { style: "display: none" } do |f|
+      = f.hidden_field :tmp_form, value: "pdf"
       .row
         %p
           = tf "Se sei già registrato", "If you are already registered"

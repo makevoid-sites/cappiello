@@ -479,7 +479,8 @@ div#home_swf
       border: 1px solid #871623
       border-top: 1px solid $main
       border-bottom: 1px solid $main
-      width: 83%
+      width: 84% // safari
+      width: 83% // ie
       text-align: right
   li .subnav
     display: none
@@ -898,3 +899,11 @@ input.radio2
         font-weight: bold
         font-size: 0.9em
         margin: 10px 0 3px
+        
+form label.error
+  margin-bottom: 10px
+  color: #D00
+  display: block
+  position: relative
+  top: -5px
+  

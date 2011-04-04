@@ -1,5 +1,6 @@
 .borse_di_studio
   - form_for @user do |f|
+    = f.hidden_field :tmp_form, value: "borsa"
     .preradio
   
       = f.label :interested_in_visual, "VISUAL DESIGN"
@@ -9,28 +10,28 @@
   
     .first
       = f.label :first_name, tf("Nome", "Name")
-      = f.text_field :first_name
+      = f.text_field :first_name, class: "required"
       = f.label :last_name, tf("Cognome", "Surname")
-      = f.text_field :last_name
+      = f.text_field :last_name, class: "required"
       = f.label :email, "Email"
-      = f.text_field :email 
+      = f.text_field :email, class: "required" 
       - unless logged_in?     
         = f.label :password, tf("Scegli una password", "Choose a password")
-        = f.password_field :password
+        = f.password_field :password, class: "required"
       = f.label :birthplace, tf("Nato a", "Born in")
-      = f.text_field :birthplace 
+      = f.text_field :birthplace, class: "required" 
       = f.label :birthdate, tf("Data", "Birth date")    
-      = f.text_field :birthdate    
+      = f.text_field :birthdate, class: "required"    
       = f.label :address, tf("Indirizzo", "Address")  
-      = f.text_field :address   
+      = f.text_field :address, class: "required"   
       = f.label :city, tf("Città", "City")  
       = f.text_field :city          
       = f.label :cap, tf("CAP", "ZIP")  
-      = f.text_field :cap           
+      = f.text_field :cap, class: "required"           
       = f.label :tel, tf("Telefono", "Phone")  
-      = f.text_field :tel           
+      = f.text_field :tel, class: "required"           
       = f.label :qualification, tf("Titolo di studio", "Degree")  
-      = f.text_field :qualification 
+      = f.text_field :qualification, class: "required" 
       = f.label :grade, tf("Votazione", "Vote")  
       = f.text_field :grade 
       = f.label :job, tf("Attuale occupazione", "Current employment")  
