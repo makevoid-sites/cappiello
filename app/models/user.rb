@@ -61,7 +61,7 @@ class User
     end
   end
   
-  attr_accessor :confirm, :redirect_url, :tmp_password, :tmp_form
+  attr_accessor :confirm, :redirect_url, :tmp_password, :tmp_form. :tmp_form_pdf
 
 
   def name_pres
