@@ -1,13 +1,10 @@
 class PagesController < ApplicationController
 
-  after_filter :track_site, only: [:index, :show]
+  after_filter :track_site, only: [:show]
   
   private
   
-  def track_site
-    source =  "organic"
-    # TODO: add coming from: adwords, fb
-    properties = {  } # add analytics or fb id & info
+  def track_site(source = :organic, properties = {}) # add adwords id or fb id & info
     track "site_#{source}", properties
   end
   
@@ -20,9 +17,12 @@ class PagesController < ApplicationController
     @events = Article.events.all(limit: 6, order: [:created_at.desc])
     raise NotFound if @page.nil?
     
-    if params[:source]
-      logger.info "analytics: { source: #{params[:source]} }"
-    end
+    source = nil
+    unless params[:source].blank?
+      logger.info "advertising: { source: #{params[:source]} }"
+      source = params[:source] 
+    end 
+    track_site source
     
     render :show
   end
