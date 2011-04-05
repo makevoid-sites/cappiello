@@ -13,24 +13,7 @@
   - else
     = link_to "Modifica", "/pages/form", class: "button"
 
-.user_infos
-  %h3 Voglio ricevere informazioni su:
-
-  - show_selection :int_annuali_visual, "Corso annuale Visual Design"
-  - show_selection :int_annuali_interior, "Corso annuale Interior Design"
-  - show_selection :int_brevi_visual, "Corsi brevi Visual Design"
-  - show_selection :int_brevi_interior, "Corsi brevi Interior Design"
-
-  %h3 Voglio partecipare a:
-
-  - show_selection :int_stage_visual, "Stage Visual Design"
-  - show_selection :int_stage_interior, "Stage Interior Desgin"
-  
-  - unless @user.interested_in.blank?
-  
-    %h3 Vorrei ottenere una borsa di studio per:
-
-    %p= @user.interested_in
+= render partial: "user_infos"
 
 .user_details
   %h3 Dettagli:

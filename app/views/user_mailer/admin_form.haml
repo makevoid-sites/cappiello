@@ -1,0 +1,44 @@
+= render partial: "style"
+    
+#container
+  %img.logo{ src: "http://accademia-cappiello.it/images/logo_small.png" }
+
+  %h2 Form Inviato:
+
+  %p.tit Nome: 
+  %p.val= @user.name
+  
+  .clear
+  = render partial: "users/user_infos"
+  
+  
+  %p.tit Email: 
+  %p.val= @user.email
+
+  %p.tit Lingua: 
+  %p.val= @user.lang
+
+  %p.tit Nato a: 
+  %p.val= @user.birthplace
+
+  %p.tit Il: 
+  %p.val= @user.birthdate
+
+  %p.tit Indirizzo: 
+  %p.val= @user.address
+
+  %p.tit Città: 
+  %p.val= @user.city
+
+  %p.tit CAP: 
+  %p.val= @user.cap
+
+  %p.tit Telefono: 
+  %p.val= @user.tel
+
+  %p.tit Newsletter: 
+  %p.val= @user.newsletter
+
+  %p.tit Titolo di studio: 
+  %p.val= @user.qualification
+  

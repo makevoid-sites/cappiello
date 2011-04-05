@@ -1,5 +1,6 @@
 module UsersHelper
   
+  #  common in user and user_mailer
   def show_selection(field, label)
     img = "<img class='check' src='/images/icons/check.png' />" if @user.send(field)
     haml_tag :p do

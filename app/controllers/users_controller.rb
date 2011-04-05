@@ -64,10 +64,16 @@ class UsersController < ApplicationController
   
   protected
   
-  def send_form_notification(user)
+  def send_form_notification(user, pdf=nil)
     form = params[:user][:tmp_form]
     unless form.blank?
-      UserMailer.send("deliver_admin_#{form}", user)
+      if form == "pdf"
+        pdf = params[:user][:tmp_form_pdf]
+        raise "PDF form has blank value" if pdf.blank?
+        UserMailer.send("deliver_admin_#{form}", user, pdf)
+      else
+        UserMailer.send("deliver_admin_#{form}", user)
+      end
     end
   end
   

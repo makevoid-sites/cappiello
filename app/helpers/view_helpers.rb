@@ -2,6 +2,7 @@ module ViewHelpers
   
   include NavHelper
   
+  
   # basic texts
   
   def site_title(content=nil)

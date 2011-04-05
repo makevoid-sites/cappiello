@@ -1,0 +1,17 @@
+= render partial: "style"
+    
+#container
+  %img.logo{ src: "http://accademia-cappiello.it/images/logo_small.png" }
+
+  %h2 PDF scaricato - #{@pdf}
+
+  %p.tit Nome: 
+  %p.val= @user.name
+
+  %p.tit Email: 
+  %p.val= @user.email
+
+  %p.tit Lingua: 
+  %p.val= @user.lang
+  
+  = render partial: "users/user_infos"

@@ -5,19 +5,22 @@ class UserMailer < ActionMailer::Base
     
   default :from => "noreply@accademia-cappiello.it"
   
+  helper :users  
+  
   def welcome(user)
     @user = user
     mail to: user.email, subject: user.en? ? "Accademia Cappiello - Welcome" : "Accademia Cappiello - Benvenuto"
   end
   
-  def admin_pdf(user)
+  def admin_pdf(user, pdf)
     @user = user
-    mail to: ADMIN, subject: "PDF scaricato - #{@user.name}"
+    @pdf = pdf
+    mail to: ADMIN, subject: "PDF scaricato - #{@user.name} - #{pdf}"
   end
   
   def admin_borsa(user)
     @user = user
-    mail to: ADMIN, subject: "Nuova richiesta Borsa di studio - #{@user.name}"
+    mail to: ADMIN, subject: "Richiesta per Borsa di studio - #{@user.name}"
   end
   
   def admin_form(user)

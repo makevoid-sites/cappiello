@@ -46,6 +46,7 @@ role :db,  domain, :primary => true
 
 after :deploy, "deploy:create_symlinks"
 after :deploy, "deploy:create_database_yml"
+after :deploy, "deploy:create_mailer_init"
 
 after :deploy, "deploy:cleanup"
 after :deploy, "chmod:entire"
@@ -66,15 +67,20 @@ namespace :deploy do
   
   desc "Create database yml"
   task :create_database_yml do
-    
-    
-    
-    
     run "ruby -e \"path = '#{current_path}/config'; db_yaml = File.read(path+'/database.yml'); File.open(path+'/database.yml', 'w'){ |f| f.write db_yaml.gsub(/secret/, '#{password}') }\""
     # upload "config/database.yml", "#{current_path}/config/database.yml", via: :scp
 
   end
 
+  
+  desc "Create mailer initializer"
+  task :create_mailer_init do
+    run "ruby -e \"path = '#{current_path}/config/initializers'; db_yaml = File.read(path+'/mailer.rb'); File.open(path+'/mailer.rb', 'w'){ |f| f.write db_yaml.gsub(/secret/, '#{password}') }\""
+    # upload "config/database.yml", "#{current_path}/config/database.yml", via: :scp
+
+  end
+
+  
 end
 
 namespace :chmod do 

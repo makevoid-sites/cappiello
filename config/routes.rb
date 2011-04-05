@@ -46,7 +46,8 @@ Cappiello::Application.routes.draw do
   #     resources :products
   #   end
 
-  get "/pages/:id", to: "pages#show", as: :page   
+  get "/stats", to: "pages#stats", as: :stats
+  get "/pages/:id", to: "pages#show", as: :page
   resources :pages
 
   

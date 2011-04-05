@@ -40,6 +40,10 @@ class PagesController < ApplicationController
     track_page(:course) if @page.course?
   end
   
+  def stats
+    admin_only
+  end
+  
   def edit
     @page = Page.get(params[:id])
     raise NotFound if @page.nil?

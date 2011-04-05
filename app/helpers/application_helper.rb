@@ -3,6 +3,8 @@ module ApplicationHelper
   include Voidtools::FormHelpers
   include UrlHelpers
   include MarkupHelpers
+  include UsersHelper
+
 
   def master?
     # return false if @page.nil?
@@ -48,4 +50,5 @@ module ApplicationHelper
   def markup(text)
     RedCloth.new( text.to_s ).to_html 
   end
+  
 end
