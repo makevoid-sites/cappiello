@@ -15,7 +15,7 @@
       - "#{pdf.gsub(/master_/, '')}"
     - else
       - "#{"en/" if english?}#{pdf}"
-    %h3= link_to label, "/pdf/#{pdf_name}.pdf"
+    %h3= link_to label, "/pdf_open/#{pdf_name}.pdf"
   - else
     %h3= link_to label, js_void
 

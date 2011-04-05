@@ -1,7 +1,7 @@
 class UserMailer < ActionMailer::Base
   
   ADMIN = Rails.env == "development" ? "makevoid@gmail.com" : "accademia-cappiello@dada.it"
-  ADMIN = "makevoid@gmail.com"
+  #ADMIN = "makevoid@gmail.com"
     
   default :from => "noreply@accademia-cappiello.it"
   
@@ -14,7 +14,7 @@ class UserMailer < ActionMailer::Base
   
   def admin_pdf(user, pdf)
     @user = user
-    @pdf = pdf
+    @pdf = pdf.split("_").map{|w| w.capitalize}.join(" ")
     mail to: ADMIN, subject: "PDF scaricato - #{@user.name} - #{pdf}"
   end
   

@@ -44,6 +44,13 @@ class PagesController < ApplicationController
     admin_only
   end
   
+  def pdf
+    logged_only
+    UserMailer.send("deliver_admin_pdf", current_user, params[:name])
+    raise NotFound if params[:name].blank?
+    redirect_to "/pdf/#{params[:name]}.#{params[:format]}"
+  end
+  
   def edit
     @page = Page.get(params[:id])
     raise NotFound if @page.nil?

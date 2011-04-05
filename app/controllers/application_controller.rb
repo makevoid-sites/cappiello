@@ -66,6 +66,10 @@ class ApplicationController < ActionController::Base
     not_found unless admin?
   end
   
+  def logged_only
+    not_found unless logged_in?
+  end
+  
   helper_method :superadmin?, :admin?
   
   def superadmin?

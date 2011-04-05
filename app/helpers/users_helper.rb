@@ -2,7 +2,7 @@ module UsersHelper
   
   #  common in user and user_mailer
   def show_selection(field, label)
-    img = "<img class='check' src='/images/icons/check.png' />" if @user.send(field)
+    img = "<img class='check' src='http://accademia-cappiello.it/images/icons/check.png' />" if @user.send(field)
     haml_tag :p do
       haml_concat "#{label}#{img}"
     end

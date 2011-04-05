@@ -31,7 +31,9 @@
   %p.val= @user.birthplace
 
   %p.tit Il: 
-  %p.val= @user.birthdate
+  %p.val
+    - unless @user.birthdate.nil?
+      = I18n.l @user.birthdate, format: :long 
   
   %p.tit Titolo di studio: 
   %p.val= @user.qualification
