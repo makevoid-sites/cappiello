@@ -3,7 +3,16 @@
 -#- if @page.id != 1 && @page.root? && @page.id != 6 && @page.id != 8 && @page.id != 13 #form
 -#  = image_tag "image4.jpg", id: "gallery"
 
-- if @page.id == 9
+- if @page.id == 1 # home
+  - content_for :jquery do
+    :plain
+      var title = "Accademia Cappiello - Firenze"
+      var stateObj = { action: { name: "clear" } } // source: "..params.." 
+      if (history.replaceState)
+        history.replaceState(stateObj, title, "/")
+
+
+- if @page.id == 9 # contacts
   #likebox
     :plain
       <script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script><fb:like-box href="http://www.facebook.com/pages/Accademia-dArte-e-Design-Leonetto-Cappiello-Firenze/124282164308467" width="292" show_faces="true" stream="true" header="false"></fb:like-box>

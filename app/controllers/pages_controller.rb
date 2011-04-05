@@ -19,7 +19,11 @@ class PagesController < ApplicationController
     @news = Article.news.all(limit: 6)
     @events = Article.events.all(limit: 6, order: [:created_at.desc])
     raise NotFound if @page.nil?
-
+    
+    if params[:source]
+      logger.info "analytics: { source: #{params[:source]} }"
+    end
+    
     render :show
   end
   
