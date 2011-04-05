@@ -75,7 +75,7 @@ namespace :deploy do
   
   desc "Create mailer initializer"
   task :create_mailer_init do
-    run "ruby -e \"path = '#{current_path}/config/initializers'; db_yaml = File.read(path+'/mailer.rb'); File.open(path+'/mail.rb', 'w'){ |f| f.write db_yaml.gsub(/secret/, '#{password.gsub(/33/, '')}') }\""
+    run "ruby -e \"path = '#{current_path}/config/initializers'; db_yaml = File.read(path+'/mail.rb'); File.open(path+'/mail.rb', 'w'){ |f| f.write db_yaml.gsub(/secret/, '#{password.gsub(/33/, '')}') }\""
     # upload "config/database.yml", "#{current_path}/config/database.yml", via: :scp
 
   end
