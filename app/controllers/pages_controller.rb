@@ -17,7 +17,8 @@ class PagesController < ApplicationController
     @events = Article.events.all(limit: 6, order: [:created_at.desc])
     raise NotFound if @page.nil?
     
-    source, type = nil
+    source = :organic
+    type = nil
     unless params[:source].blank?      
       logger.info "advertising: { source: #{params[:source]}, type: #{params[:type]} }"
       source = params[:source] 
