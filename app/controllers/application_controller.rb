@@ -50,8 +50,8 @@ class ApplicationController < ActionController::Base
   end
   
   def track(event, properties={})
-    user = !@user.nil? ? @user.name : "Unregistered"
-    anon_cookie = !@user.nil? ? @user.anonym_id : session[:anonym_id]
+    user = !current_user.nil? ? @current_user.name : "Unregistered"
+    anon_cookie = !@current_user.nil? ? @current_user.anonym_id : session[:anonym_id]
     @mixpanel.track_event event, properties.merge( user: user , cookie: anon_cookie) if Rails.env == "production"
   end
     
