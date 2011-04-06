@@ -40,6 +40,17 @@ class ApplicationController < ActionController::Base
     
   end
   
+  # redirect without www.
+  
+  before_filter :redirect_without_www
+  
+  def redirect_without_www
+    split = request.host.split(".")
+    if split[0] == "www"
+      port = ":3000" if Rails.env == "development"
+      redirect_to "http://#{split[1..-1].join(".")}#{port}#{request.path}"
+    end
+  end
   
   # Mixpanel
 
