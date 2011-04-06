@@ -1,4 +1,11 @@
 %h2 Statistiche
 
+%p Utenti registrati: #{User.all.count}
 
-= link_to "Webmaster Tools", "https://www.google.com/webmasters/tools/internal-links?hl=en&siteUrl=http://accademia-cappiello.it/"
+%ul#stats
+  %li= link_to "analytics", "https://www.google.com/analytics/reporting/?reset=1&id=40845047&pdr=20110306-20110405"
+  %li= link_to "mixpanel - Events", "http://mixpanel.com/report/15577/events#events"
+
+  %li= link_to "mixpanel - Registration Funnels", "http://mixpanel.com/report/15577/funnels"
+
+  %li= link_to "Webmaster Tools", "https://www.google.com/webmasters/tools/internal-links?hl=en&siteUrl=http://accademia-cappiello.it/"
