@@ -18,7 +18,7 @@ class UsersController < ApplicationController
   
   def create
     correct_date_params
-    
+    params[:user][:anonym_id] = session[:anonym_id]
     @user = User.new(params[:user])
     @user.tmp_password = params[:user][:password]
     if @user.save
@@ -27,7 +27,6 @@ class UsersController < ApplicationController
       path = @user.redirect_url unless @user.redirect_url.blank?
       UserMailer.deliver_welcome @user
       send_form_notification @user
-      @user.update anonym_id: session[:anonym_id]
       track :registration
       flash[:notice] = tf("La registrazione è andata a buon fine!", "You registered successfully!") if flash[:notice].blank?
       redirect_to path
