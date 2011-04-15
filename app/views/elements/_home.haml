@@ -1,44 +1,46 @@
 %div#inner_content
   
+
+  #home_right
+    = parse_text markup("vimeo(22238816)")
+    = render partial: "sections/articles"
   = markup tr(@page).text
 
-      
-  
-%div#home_swf
-  =# image_tag "oldflash.png"
-  - Dir.glob("#{Rails.root}/public/images/galleries/home/*.*").sort.each_with_index do |img, idx| 
-    %div
-      = image_tag "galleries/home/#{File.basename(img)}"
-      = image_tag "galleries/home/#{File.basename(img)}", class: "hover #{"hover2" if idx%2==1} #{"hoverEnd" if idx == 6 || idx == 7}"
+-# %div#home_swf
+-#   =# image_tag "oldflash.png"
+-#   - Dir.glob("#{Rails.root}/public/images/galleries/home/*.*").sort.each_with_index do |img, idx| 
+-#     %div
+-#       = image_tag "galleries/home/#{File.basename(img)}"
+-#       = image_tag "galleries/home/#{File.basename(img)}", class: "hover #{"hover2" if idx%2==1} #{"hoverEnd" if idx == 6 || idx == 7}"
 
-= render partial: "sections/articles"
 
-- content_for :jquery do
-  :plain
-    var zIdx = 1;
-    $('#home_swf div').hoverIntent(function(){
-      offset = "-94px";
-      img = $(this).find("img.hover");
-      img.css({ display: "block" });
-      zIdx = zIdx+1;
-      img.css({ zIndex: zIdx });
-      if (img.hasClass("hoverEnd") && img.hasClass("hover2"))
-        img.animate({width: "200%", left: "-100%", top: offset});
-      else if (!img.hasClass("hoverEnd") && img.hasClass("hover2"))
-        img.animate({width: "200%", left: "-100%"});
-      else if (img.hasClass("hoverEnd"))
-        img.animate({width: "200%", top: offset});
-      else
-        img.animate({ width: "200%"});
-    }, function(){
-      img = $(this).find("img.hover");
-      img.css({ zIndex: zIdx-1 });  
-      if (img.hasClass("hoverEnd") && img.hasClass("hover2"))
-        img.animate({ width: "100%", left: "0%", top: "0"});
-      else if (!img.hasClass("hoverEnd") && img.hasClass("hover2"))
-        img.animate({ width: "100%", left: "0%"});
-      else if (img.hasClass("hoverEnd"))
-        img.animate({ width: "100%", top: "0"});
-      else
-        img.animate({ width: "100%"});
-    });
+
+-# - content_for :jquery do
+-#   :plain
+-#     var zIdx = 1;
+-#     $('#home_swf div').hoverIntent(function(){
+-#       offset = "-94px";
+-#       img = $(this).find("img.hover");
+-#       img.css({ display: "block" });
+-#       zIdx = zIdx+1;
+-#       img.css({ zIndex: zIdx });
+-#       if (img.hasClass("hoverEnd") && img.hasClass("hover2"))
+-#         img.animate({width: "200%", left: "-100%", top: offset});
+-#       else if (!img.hasClass("hoverEnd") && img.hasClass("hover2"))
+-#         img.animate({width: "200%", left: "-100%"});
+-#       else if (img.hasClass("hoverEnd"))
+-#         img.animate({width: "200%", top: offset});
+-#       else
+-#         img.animate({ width: "200%"});
+-#     }, function(){
+-#       img = $(this).find("img.hover");
+-#       img.css({ zIndex: zIdx-1 });  
+-#       if (img.hasClass("hoverEnd") && img.hasClass("hover2"))
+-#         img.animate({ width: "100%", left: "0%", top: "0"});
+-#       else if (!img.hasClass("hoverEnd") && img.hasClass("hover2"))
+-#         img.animate({ width: "100%", left: "0%"});
+-#       else if (img.hasClass("hoverEnd"))
+-#         img.animate({ width: "100%", top: "0"});
+-#       else
+-#         img.animate({ width: "100%"});
+-#     });

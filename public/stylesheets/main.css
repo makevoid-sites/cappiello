@@ -132,8 +132,7 @@ a:hover {
   padding: 9px 0 9px 1.2%; }
 
 #inner_content {
-  width: 40%;
-  float: left;
+  width: 100%;
   line-height: 17px; }
   #inner_content a {
     font-weight: bold; }
@@ -214,6 +213,10 @@ a#profile_name {
 #profile_links {
   background: #999999; }
 
+#home_right {
+  width: 400px;
+  float: right; }
+
 #news li {
   clear: both; }
 #news span.title {
@@ -228,8 +231,9 @@ a#profile_name {
 
 #news {
   text-align: right;
-  width: 23%;
-  float: left;
+  width: 360px;
+  float: right;
+  margin-left: 3%;
   font-size: 0.9em; }
   #news h5 {
     border-bottom: 1px solid #545353;
@@ -481,6 +485,12 @@ ul#selection {
   #video iframe {
     width: 360px;
     height: 252px; }
+
+.home #video {
+  float: none; }
+  .home #video iframe {
+    width: 400px;
+    height: 300px; }
 
 #aside {
   background: #c82d5e;
