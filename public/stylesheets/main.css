@@ -214,7 +214,7 @@ a#profile_name {
   background: #999999; }
 
 #home_right {
-  width: 400px;
+  width: 374px;
   float: right; }
 
 #news li {
@@ -489,8 +489,8 @@ ul#selection {
 .home #video {
   float: none; }
   .home #video iframe {
-    width: 400px;
-    height: 300px; }
+    width: 360px;
+    height: 270px; }
 
 #aside {
   background: #c82d5e;
