@@ -1,46 +1,52 @@
-= render partial: "style"
-    
-#container
-  %img.logo{ src: "http://accademia-cappiello.it/images/logo_small.png" }
 
-  %h2 Form Inviato:
+%h2 Form Inviato:
 
-  %p.tit Nome: 
-  %p.val= @user.name
-  
-  .clear
-  = render partial: "users/user_infos"
-  
-  
-  %p.tit Email: 
-  %p.val= @user.email
+%p.tit 
+  Nome: 
+  %span.val= @user.name
 
-  %p.tit Lingua: 
-  %p.val= @user.lang
+.clear
+= render partial: "users/user_infos"
 
-  %p.tit Nato a: 
-  %p.val= @user.birthplace
 
-  %p.tit Il: 
-  %p.val
+%p.tit 
+  Email: 
+  %span.val= @user.email
+
+%p.tit 
+  Lingua: 
+  %span.val= @user.lang == "it" ? "Italiano" : "Inglese"
+
+%p.tit
+  Nato a: 
+  %span.val= @user.birthplace
+
+%p.tit 
+  Il: 
+  %span.val
     - unless @user.birthdate.nil?
-      = I18n.l @user.birthdate, format: :long 
+      = I18n.l @user.birthdate, format: :long
 
-  %p.tit Indirizzo: 
-  %p.val= @user.address
 
-  %p.tit Città: 
-  %p.val= @user.city
+%p.tit 
+  Indirizzo: 
+  %span.val= @user.address
 
-  %p.tit CAP: 
-  %p.val= @user.cap
+%p.tit 
+  Città: 
+  %span.val= @user.city
 
-  %p.tit Telefono: 
-  %p.val= @user.tel
+%p.tit 
+  CAP: 
+  %span.val= @user.cap
 
-  %p.tit Newsletter: 
-  %p.val= @user.newsletter
+%p.tit 
+  Telefono: 
+  %span.val= @user.tel
 
-  %p.tit Titolo di studio: 
-  %p.val= @user.qualification
-  
+
+%p.tit 
+  Newsletter: 
+  %span.val= @user.newsletter ? "Si" : "No"
+%p.tit Titolo di studio: 
+%p.val= @user.qualification

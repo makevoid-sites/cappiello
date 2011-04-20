@@ -1,18 +1,18 @@
-= render partial: "style"
-    
-#container
-  %img.logo{ src: "http://accademia-cappiello.it/images/logo_small.png" }
 
-  %h2 PDF scaricato - #{@pdf}
+%h2 PDF scaricato - #{@pdf}
 
-  %p.tit Nome: 
-  %p.val= @user.name
+%p.tit 
+  Nome: 
+  %span.val= @user.name
 
-  %p.tit Email: 
-  %p.val= @user.email
+%p.tit 
+  Email: 
+  %span.val= @user.email
 
-  %p.tit Lingua: 
-  %p.val= @user.lang
-  
-  .clear
-  = render partial: "users/user_infos"
+%p.tit 
+  Lingua: 
+  %span.val= @user.lang == "it" ? "Italiano" : "Inglese"
+
+
+.clear
+= render partial: "users/user_infos"

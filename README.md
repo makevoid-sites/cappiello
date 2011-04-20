@@ -1,5 +1,8 @@
 # Cappiello
 
+regexp for crazyegg
+
+http:\/\/accademia-cappiello\.it\/pages\/(visual|interior|grafica|autocad|3d_studio|vray|sketchup)
 
 - randomize photo flickr again
 
