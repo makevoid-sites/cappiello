@@ -8,6 +8,7 @@ class UserMailer < ActionMailer::Base
     
   default :from => "noreply@accademia-cappiello.it"
   
+  
   layout "mail"
   
   helper :users  
@@ -18,17 +19,20 @@ class UserMailer < ActionMailer::Base
   end
   
   def admin_pdf(user, pdf)
+    headers['Reply-To'] = user.email
     @user = user
     @pdf = pdf.split("_").map{|w| w.capitalize}.join(" ")
     mail to: ADMIN, subject: "PDF scaricato - #{@user.name} - #{@pdf}"
   end
   
   def admin_borsa(user)
+    headers['Reply-To'] = user.email
     @user = user
     mail to: ADMIN, subject: "Richiesta per Borsa di studio - #{@user.name}"
   end
   
   def admin_form(user)
+    headers['Reply-To'] = user.email
     @user = user
     mail to: ADMIN, subject: "Form Inviato - #{@user.name}"
   end
