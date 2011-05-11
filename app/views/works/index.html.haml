@@ -1,0 +1,15 @@
+%h2 Offerte di Lavoro
+
+- if admin?
+  %p
+    = link_to "Inserisci Offerta", [:new_work], class: "button" 
+
+%p L’Accademia è una istituzione privata che opera direttamente a contatto con le categorie professionali di riferimento. Numerose Associazioni ed Ordini Professionali seguono, infatti, costantemente ed appoggiano l’attività dell’ Accademia riconoscendone l’importante funzione di vivaio per i futuri operatori del settore. La serietà degli studi, l’alto grado di specializzazione fornita, unitamente alla caratteristica dell’insegnamento individualizzato, con un basso numero di studenti per ogni anno accademico, hanno permesso di collocare nel mondo del lavoro, in 50 anni di attività, quasi cinquemila diplomati delle varie discipline e possiamo oggi affermare che la maggior parte di loro ricopre posti di responsabilità nelle aziende dei più svariati settori e nelle libere professioni.
+
+%p Negli ultimi anni il numero delle richieste di diplomati, pervenute direttamente all'Accademia e' notevolmente aumentato ed e' risultato ampiamente superiore al numero degli studenti che frequentano ogni anno i corsi.
+
+
+%h3 Offerte recenti:
+
+%ul#works
+  = render partial: works

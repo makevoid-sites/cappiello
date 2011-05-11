@@ -1,0 +1,4 @@
+%li
+  %p.right= I18n.l(work.created_at.to_date, format: :long)
+  %p= link_to work.name, work
+  %p= link_to work.text[0..200], work

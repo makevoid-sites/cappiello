@@ -1,0 +1,5 @@
+%h2 Modifica Lavoro
+
+= form_for work do |f|
+  = render partial: "form", locals: { f: f }
+  = f.submit "Modifica", class: "submit"

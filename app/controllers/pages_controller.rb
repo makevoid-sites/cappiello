@@ -13,8 +13,8 @@ class PagesController < ApplicationController
   def index
     params[:id] = "1"
     @page = Page.get(params[:id])
-    @news = Article.news.all(limit: 6)
-    @events = Article.events.all(limit: 6, order: [:created_at.desc])
+    @news = Article.news.all(limit: 3, order: [:created_at.desc])
+    @events = Article.events.all(limit: 3, order: [:created_at.desc])
     raise NotFound if @page.nil?
     
     source = :organic
@@ -50,6 +50,13 @@ class PagesController < ApplicationController
     UserMailer.send("deliver_admin_pdf", current_user, params[:name])
     raise NotFound if params[:name].blank?
     redirect_to "/pdf/#{params[:name]}.#{params[:format]}"
+  end
+  
+  def pdf_en
+    logged_only
+    UserMailer.send("deliver_admin_pdf", current_user, params[:name])
+    raise NotFound if params[:name].blank?
+    redirect_to "/pdf/en/#{params[:name]}.#{params[:format]}"
   end
   
   def edit

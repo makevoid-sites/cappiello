@@ -1,0 +1,14 @@
+%h2= work.name
+
+%p
+  - title = "Informazioni riguardo all'offerta di lavoro: #{work.name} - http://accademia-cappiello.it/works/#{work.id}"
+  = link_to "Contattaci", "mailto:accademiacappiello@dada.it?Subject=#{title}", title: title, class: "button"
+
+  = link_to "torna indietro", [:works], class: "button"
+  - if admin?
+    = link_to "Modifica", [:edit, work], class: "button"
+    
+
+%p= work.created_at.to_s(:long)
+
+%p= parse_text markup(work.text)

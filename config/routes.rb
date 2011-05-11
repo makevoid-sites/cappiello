@@ -68,8 +68,10 @@ Cappiello::Application.routes.draw do
   resources :articles
   
   resources :photos
+  resources :works
   
   get "/pdf_open/:name", to: "pages#pdf"
+  get "/pdf_open/en/:name", to: "pages#pdf_en"
   
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.

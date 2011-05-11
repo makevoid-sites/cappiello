@@ -822,3 +822,16 @@ form label.error {
   display: block;
   position: relative;
   top: -5px; }
+
+#content .lavoro .box {
+  background: #222222;
+  padding: 8px 8px 1px; }
+  #content .lavoro .box a {
+    color: #eeeeee;
+    text-shadow: none; }
+  #content .lavoro .box a:hover {
+    color: white;
+    background: transparent; }
+  #content .lavoro .box p.head a {
+    color: #c82d5e;
+    font-size: 1.4em; }
