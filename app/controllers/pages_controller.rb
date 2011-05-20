@@ -13,8 +13,8 @@ class PagesController < ApplicationController
   def index
     params[:id] = "1"
     @page = Page.get(params[:id])
-    @news = Article.news.all(limit: 3, order: [:created_at.desc])
-    @events = Article.events.all(limit: 3, order: [:created_at.desc])
+    @news = Article.news.all(limit: 5, order: [:created_at.asc])
+    @events = Article.events.all(limit: 5, order: [:created_at.asc])
     raise NotFound if @page.nil?
     
     source = :organic

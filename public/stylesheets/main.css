@@ -247,7 +247,7 @@ a#profile_name {
     text-align: left;
     background: #888888;
     color: white;
-    padding: 3px 10px 4px;
+    padding: 3px 10px 0;
     text-transform: uppercase;
     float: right;
     -moz-border-radius-topleft: 4px;
@@ -824,7 +824,7 @@ form label.error {
   top: -5px; }
 
 #content .lavoro .box {
-  background: #222222;
+  background: #555555;
   padding: 8px 8px 1px; }
   #content .lavoro .box a {
     color: #eeeeee;
