@@ -1,5 +1,7 @@
 # Cappiello
 
+todo: wikipedia page with history: http://it.wikipedia.org/w/index.php?title=Accademia_Cappiello&action=edit
+
 regexp for crazyegg
 
 http:\/\/accademia-cappiello\.it\/pages\/(visual|interior|grafica|autocad|3d_studio|vray|sketchup)

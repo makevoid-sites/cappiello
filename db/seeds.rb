@@ -36,6 +36,8 @@ require "#{path}/lib/dm_utils"
 include DmUtils
 dump_to_yaml(Page, "pages2", path)
 
+exit
+
 
 # articles
 
