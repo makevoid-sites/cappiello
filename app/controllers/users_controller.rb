@@ -4,7 +4,7 @@ class UsersController < ApplicationController
   before_filter :admin_only, only: [:index, :destroy]  
   
   def index
-    @users = User.all
+    @users = User.paginate(:page => params[:page] )
   end
   
   def show

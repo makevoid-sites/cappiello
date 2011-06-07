@@ -3,3 +3,8 @@
 %h4 Data ultima modifica - Nome
 %ul#users
   = render @users
+
+.pagination
+  pag:
+  - User.pages.times do |i|
+    %a{ :href => "/users?page=#{i}" }= i+1

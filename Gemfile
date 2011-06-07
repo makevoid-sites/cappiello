@@ -81,7 +81,8 @@ gem "dm-is-tree",         git: "git://github.com/datamapper/dm-is-tree"
 gem "dm-validations-i18n",  git: "git://github.com/makevoid/dm-validations-i18n.git"
  
 #gem 'haml', '~> 3.1.0', :git => "git://github.com/nex3/haml.git"
-gem 'haml', '~> 3.0.18' 
+gem 'haml'
+gem 'sass'
 
 gem "exception_notification", :git => "git://github.com/rails/exception_notification"
 

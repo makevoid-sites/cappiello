@@ -885,3 +885,6 @@ form label.error {
 #works li .date {
   float: right;
   margin-left: 12px; }
+
+.pagination {
+  margin: 10px 0; }

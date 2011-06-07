@@ -41,7 +41,7 @@ class WorksController < ApplicationController
   
   
   def works
-    @works ||= Work.all
+    @works ||= Work.paginate(:page => params[:page] )
   end
   helper_method :works
   

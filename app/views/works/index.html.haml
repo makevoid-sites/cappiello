@@ -14,3 +14,8 @@
 
 %ul#works
   = render partial: works
+  
+.pagination
+  pag:
+  - Work.pages.times do |i|
+    %a{ :href => "/works?page=#{i}" }= i+1  
