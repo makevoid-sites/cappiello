@@ -1,7 +1,6 @@
 class User
   include DataMapper::Resource
-  #require 'voidtools/dm/paginable'
-  require "#{Rails.root}/lib/paginable"
+  require 'voidtools/dm/paginable'
   include Voidtools::Paginable  
   def self.per_page
     20
