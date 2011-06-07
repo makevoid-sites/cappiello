@@ -217,6 +217,7 @@ GEM
       railties (~> 3.0)
       rspec (~> 2.6.0)
     rubyzip (0.9.4)
+    sass (3.1.2)
     selenium-webdriver (0.2.1)
       childprocess (>= 0.1.7)
       ffi (>= 1.0.7)
@@ -259,11 +260,12 @@ DEPENDENCIES
   dm-validations (~> 1.1.0)!
   dm-validations-i18n!
   exception_notification!
-  haml (~> 3.0.18)
+  haml
   launchy
   mixpanel
   railties (~> 3.0.5)
   rspec-rails
+  sass
   steak
   voidtools
   ya2yaml!
