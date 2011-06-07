@@ -719,6 +719,13 @@ input.submit
   a.button:hover
     +color($main)
     text-shadow: none
+  a.button.delete
+    font-weight: bold
+    +color(#CCC)    
+    color: #F00
+  a.button.delete:hover
+    color: #FFF
+    +color(#C00)
   
 input[type='submit'], input.submit, a.button
   +button
@@ -859,16 +866,16 @@ input.radio2
 
 .flickr_button
   margin-right: 10px
-  float: right
-  padding-right: 5px
+  padding: 0 5px
+  float: left
   img
     width: 28px
     margin-top: 5px
-    float: right
+    float: left
   span
     display: block
     line-height: 37px
-    float: right
+    float: left
     margin: 0 10px
   
 // photos
@@ -927,6 +934,7 @@ form label.error
 
 #content
   .lavoro 
+    margin-top: 10px
     .box
       background: #555
       padding: 8px 8px 1px
@@ -939,3 +947,14 @@ form label.error
       p.head a  
         color: $main
         font-size: 1.4em
+
+.workdate
+  float: right
+
+  
+#works li
+  .name
+    font-weight: bold
+  .date
+    float: right
+    margin-left: 12px

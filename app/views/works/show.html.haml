@@ -7,8 +7,10 @@
   = link_to "torna indietro", [:works], class: "button"
   - if admin?
     = link_to "Modifica", [:edit, work], class: "button"
+    = link_to "X", work, class: "button delete", method: :delete, confirm: "Sei sicuro/a di voler cancellare l'annuncio?"
     
 
-%p= work.created_at.to_s(:long)
+%p.workdate 
+  %b= I18n.l(work.created_at.to_date, format: :long)
 
 %p= parse_text markup(work.text)

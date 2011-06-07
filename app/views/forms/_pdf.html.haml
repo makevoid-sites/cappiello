@@ -2,11 +2,15 @@
 
 - content_for :jquery do 
   :plain
-    $(".forms_pdf h3 a").click(function(){
+    $("#standard h3 a").live('click', function(){
       $('.forms_pdf form').toggle();
       $('.forms_pdf').toggleClass("bg");
     })
-
+    
+    var label = $("h3").html()
+    $("#standard h3").remove()
+    $("#standard p ").append("<h3>"+label+"</h3>")
+    $("#standard p:first h3, #standard form p").remove()
   
 .forms_pdf
   - label = tf("Scarica il pdf informativo del corso", "Download the course information pdf")
