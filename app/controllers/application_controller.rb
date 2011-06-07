@@ -126,6 +126,8 @@ class ApplicationController < ActionController::Base
     end
   end
   
+  rescue_from DataMapper::ObjectNotFoundError, :with => :not_found
+  
   def not_found
     render file: "#{Rails.root}/public/404_cont_#{I18n.locale}.html", status: 404
   end

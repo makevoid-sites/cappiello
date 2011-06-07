@@ -69,7 +69,7 @@ h4 {
   background: #dddddd;
   background: -moz-linear-gradient(top, #bbbbbb 0%, #bbbbbb 15%, white 33%, white 80%, #bbbbbb 100%);
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #bbbbbb), color-stop(15%, #bbbbbb), color-stop(33%, white), color-stop(80%, white), color-stop(100%, #bbbbbb));
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='!c1', endColorstr='!c4',GradientType=0 );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$c1', endColorstr='$c4',GradientType=0 );
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#BBBBBB', endColorstr='#FFFFFF',GradientType=0 ); }
 
 a {
@@ -382,7 +382,7 @@ div#home_swf {
     border: 1px solid #871623;
     background: -moz-linear-gradient(top, #7d1622 0%, #a82949 20%, #a82949 80%, #7d1622 100%);
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #7d1622), color-stop(20%, #a82949), color-stop(80%, #a82949), color-stop(100%, #7d1622));
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='!c1', endColorstr='!c1',GradientType=0 );
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$c1', endColorstr='$c1',GradientType=0 );
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#7d1622', endColorstr='#a82949',GradientType=0 ); }
   #nav .subnav li a {
     background: #c82d5e;
@@ -393,7 +393,7 @@ div#home_swf {
     background: #a82949;
     background: -moz-linear-gradient(top, #7d1622 0%, #a82949 20%, #a82949 80%, #7d1622 100%);
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #7d1622), color-stop(20%, #a82949), color-stop(80%, #a82949), color-stop(100%, #7d1622));
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='!c1', endColorstr='!c1',GradientType=0 );
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$c1', endColorstr='$c1',GradientType=0 );
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#7d1622', endColorstr='#a82949',GradientType=0 );
     border: 1px solid #871623; }
 
@@ -415,7 +415,7 @@ div#home_swf {
   border: 1px solid #211949;
   background: -moz-linear-gradient(top, #211949 0%, #2d2264 20%, #2d2264 80%, #211949 100%);
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #211949), color-stop(20%, #2d2264), color-stop(80%, #2d2264), color-stop(100%, #211949));
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='!c1', endColorstr='!c1',GradientType=0 );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$c1', endColorstr='$c1',GradientType=0 );
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#211949', endColorstr='#2d2264',GradientType=0 ); }
 
 .master ul#nav .subnav li a {
@@ -424,7 +424,7 @@ div#home_swf {
 .master ul#nav .subnav li:hover a {
   background: -moz-linear-gradient(top, #211949 0%, #2d2264 20%, #2d2264 80%, #211949 100%);
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #211949), color-stop(20%, #2d2264), color-stop(80%, #2d2264), color-stop(100%, #211949));
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='!c1', endColorstr='!c1',GradientType=0 );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$c1', endColorstr='$c1',GradientType=0 );
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#211949', endColorstr='#2d2264',GradientType=0 ); }
 
 ul.subnav {
@@ -445,7 +445,7 @@ ul.subnav {
   background: #a82949;
   background: -moz-linear-gradient(top, #7d1622 0%, #a82949 20%, #a82949 80%, #7d1622 100%);
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #7d1622), color-stop(20%, #a82949), color-stop(80%, #a82949), color-stop(100%, #7d1622));
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='!c1', endColorstr='!c1',GradientType=0 );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$c1', endColorstr='$c1',GradientType=0 );
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#7d1622', endColorstr='#a82949',GradientType=0 );
   border: 1px solid #871623; }
 
@@ -653,9 +653,9 @@ input[type='submit'], input.submit, a.button {
   text-align: center;
   text-decoration: none;
   font-size: 1.3em;
-  -webkit-border-radius: .5em;
-  -moz-border-radius: .5em;
-  border-radius: .5em;
+  -webkit-border-radius: ".5em";
+  -moz-border-radius: ".5em";
+  border-radius: ".5em";
   border: solid 1px #cccccc;
   -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);

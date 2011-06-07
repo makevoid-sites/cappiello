@@ -46,7 +46,7 @@ class WorksController < ApplicationController
   helper_method :works
   
   def work
-    @works ||= params[:id] ? Work.get(params[:id]) : Work.new(params[:work])
+    @works ||= params[:id] ? Work.get!(params[:id]) : Work.new(params[:work])
   end
   helper_method :work
   # TODO: usare il controller sketch

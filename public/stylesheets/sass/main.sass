@@ -1,8 +1,8 @@
 // @import "buttons"
 @mixin rounded($border)
-  -webkit-border-radius= $border
-  -moz-border-radius= $border
-  border-radius= $border
+  -webkit-border-radius: $border
+  -moz-border-radius: $border
+  border-radius: $border
 
 @mixin shadow
   -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2)
@@ -10,9 +10,9 @@
   box-shadow: 0 1px 2px rgba(0,0,0,.2)
 
 @mixin gradient($top, $bottom)
-  background-color= $bottom
-  background= -webkit-gradient(linear, left top, left bottom, from($top), to($bottom))
-  background= -moz-linear-gradient(top, $top,  $bottom)
+  background-color: $bottom
+  background: -webkit-gradient(linear, left top, left bottom, from($top), to($bottom))
+  background: -moz-linear-gradient(top, $top,  $bottom)
   filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$top}', endColorstr='#{$bottom}')
 
 @mixin button
@@ -37,12 +37,12 @@
 @mixin color($background)
   border: solid 1px darken($background, 3%)
   @include gradient(lighten($background, 13%), $background)
-  color= mix(#fff, $background, 90%)
+  color: mix(#fff, $background, 90%)
   &:hover
     @include gradient(lighten($background, 10%), darken($background, 5%))
   &:active
     @include gradient($background, lighten($background, 10%))
-    color= mix(#fff, $background, 70%)
+    color: mix(#fff, $background, 70%)
 
 button,
 input[type="reset"],
@@ -53,64 +53,64 @@ input[type="file"] > input[type="button"]
     border: none
     
 // mixins
-=border-radius(!radius)
-  border-radius = !radius
-  -moz-border-radius = !radius
-  -webkit-border-radius = !radius
+=border-radius($radius)
+  border-radius: $radius
+  -moz-border-radius: $radius
+  -webkit-border-radius: $radius
   
-=border-radius-bottom(!radius)
-  -moz-border-radius-bottomleft= !radius
-  -moz-border-radius-bottomright= !radius
-  -webkit-border-bottom-left-radius= !radius
-  -webkit-border-bottom-right-radius= !radius
+=border-radius-bottom($radius)
+  -moz-border-radius-bottomleft: $radius
+  -moz-border-radius-bottomright: $radius
+  -webkit-border-bottom-left-radius: $radius
+  -webkit-border-bottom-right-radius: $radius
 
-=border-radius-top(!radius)
-  -moz-border-radius-topleft= !radius
-  -moz-border-radius-topright= !radius
-  -webkit-border-top-left-radius= !radius
-  -webkit-border-top-right-radius= !radius
+=border-radius-top($radius)
+  -moz-border-radius-topleft: $radius
+  -moz-border-radius-topright: $radius
+  -webkit-border-top-left-radius: $radius
+  -webkit-border-top-right-radius: $radius
 
-=simple_gradient(!start_color, !end_color)
-  background: !start_color
-  background: -moz-linear-gradient(top, !start_color 0%, !end_color 100%) 
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,!start_color), color-stop(100%,!end_color))
-  //filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='!start_color', endColorstr='!end_color',GradientType=0 )
+=simple_gradient($start_color, $end_color)
+  background: $start_color
+  background: -moz-linear-gradient(top, $start_color 0%, $end_color 100%) 
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$start_color), color-stop(100%,$end_color))
+  //filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$start_color', endColorstr='$end_color',GradientType=0 )
   
-=simple_gradient_tri(!start, !stop, !end)
-  background: !start
-  background: -moz-linear-gradient(top, !start 0%, !stop 50%, !end 100%) 
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,!start), color-stop(50%,!start), color-stop(100%,!end))
-  //filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='!start', endColorstr='!end',GradientType=0 )
+=simple_gradient_tri($start, $stop, $end)
+  background: $start
+  background: -moz-linear-gradient(top, $start 0%, $stop 50%, $end 100%) 
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$start), color-stop(50%,$start), color-stop(100%,$end))
+  //filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$start', endColorstr='$end',GradientType=0 )
 
-=gradient_tri(!start, !stop, !end, !perc1, !perc2, !perc3)
-  background: !start
-  background: -moz-linear-gradient(top, !start !perc1, !stop !perc2, !end !perc3) 
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(!perc1,!start), color-stop(!perc2,!stop), color-stop(!perc3,!end))
-  //filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='!start', endColorstr='!end',GradientType=0 )
+=gradient_tri($start, $stop, $end, $perc1, $perc2, $perc3)
+  background: $start
+  background: -moz-linear-gradient(top, $start $perc1, $stop $perc2, $end $perc3) 
+  background: -webkit-gradient(linear, left top, left bottom, color-stop($perc1,$start), color-stop($perc2,$stop), color-stop($perc3,$end))
+  //filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$start', endColorstr='$end',GradientType=0 )
 
-=simple_gradient_half(!start_color, !stop_color, !restart_color, !end_color)
-  background: !start_color
-  background: -moz-linear-gradient(top, !start_color 0%, !stop_color 50%, !restart_color 51%, !end_color 100%)
+=simple_gradient_half($start_color, $stop_color, $restart_color, $end_color)
+  background: $start_color
+  background: -moz-linear-gradient(top, $start_color 0%, $stop_color 50%, $restart_color 51%, $end_color 100%)
 
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,!start_color), color-stop(50%,!stop_color), color-stop(51%,!restart_color), color-stop(100%,!end_color))
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$start_color), color-stop(50%,$stop_color), color-stop(51%,$restart_color), color-stop(100%,$end_color))
   
-  //filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='!start_color', endColorstr='!end_color',GradientType=0 )
+  //filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$start_color', endColorstr='$end_color',GradientType=0 )
 
 
-=gradient_bg(!c1, !c2, !c3, !c4)
-  background: -moz-linear-gradient(top, !c1 0%, !c2 15%, !c3 33%, !c3 80%, !c4 100%)
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, !c1), color-stop(15%, !c2), color-stop(33%, !c3), color-stop(80%, !c3), color-stop(100%,  !c4))
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='!c1', endColorstr='!c4',GradientType=0 )
+=gradient_bg($c1, $c2, $c3, $c4)
+  background: -moz-linear-gradient(top, $c1 0%, $c2 15%, $c3 33%, $c3 80%, $c4 100%)
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, $c1), color-stop(15%, $c2), color-stop(33%, $c3), color-stop(80%, $c3), color-stop(100%,  $c4))
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$c1', endColorstr='$c4',GradientType=0 )
   
-=gradient_bg_perc(!c1, !c2, !perc)
-  background: -moz-linear-gradient(top, !c1 0%, !c2 !perc, !c2 100%-!perc, !c1 100%)
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, !c1), color-stop(!perc, !c2), color-stop(100%-!perc, !c2), color-stop(100%, !c1))
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='!c1', endColorstr='!c1',GradientType=0 )  
+=gradient_bg_perc($c1, $c2, $perc)
+  background: -moz-linear-gradient(top, $c1 0%, $c2 $perc, $c2 100%-$perc, $c1 100%)
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, $c1), color-stop($perc, $c2), color-stop(100%-$perc, $c2), color-stop(100%, $c1))
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$c1', endColorstr='$c1',GradientType=0 )  
 
-=box-shadow(!x, !y, !radius, !color)
-  -moz-box-shadow: !x !y !radius !color
-  -webkit-box-shadow: !x !y !radius !color
-  box-shadow: !x !y !radius !color
+=box-shadow($x, $y, $radius, $color)
+  -moz-box-shadow: $x $y $radius $color
+  -webkit-box-shadow: $x $y $radius $color
+  box-shadow: $x $y $radius $color
 
 // clearfix
 
@@ -155,8 +155,8 @@ a
   float: right
 
 // variables
-!content_width = 84.7%
-!left_width = 13%
+$content_width: 84.7%
+$left_width: 13%
 
 $main: #c82d5e
 //$main: #a41747
@@ -182,7 +182,7 @@ h4
   margin: 8px 0 4px 0
 
 #logo
-  width: !left_width
+  width: $left_width
 
 #backg        
   background: #DDD
@@ -215,7 +215,7 @@ a:hover
   color: #333
   min-height: 400px
   margin: 0 0 0 2.3%
-  width: !content_width - 2.1%
+  width: $content_width - 2.1%
   padding: 6px 1%
   +box-shadow(3px, 2px, 10px, #AAA)
   ul li
@@ -390,7 +390,7 @@ a#profile_name
 #banner 
   float: left
   margin: 0 0 0 2.3%
-  width: !content_width
+  width: $content_width
   z-index: 1
   img
     +box-shadow(0px, -3px, 10px, #333)
@@ -462,7 +462,7 @@ div#home_swf
 
 #nav_cont
   float: left
-  width: !left_width
+  width: $left_width
   
 #social
   margin: 10px 0 5px 0
@@ -545,7 +545,7 @@ div#home_swf
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#211949', endColorstr='#2d2264',GradientType=0 )
   
   
-$subnav_width = 150px
+$subnav_width: 150px
 ul.subnav
   position: absolute
   width: $subnav_width
