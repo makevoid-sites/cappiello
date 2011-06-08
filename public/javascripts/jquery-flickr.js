@@ -1,6 +1,10 @@
 // -------------------------------------
-//    JueryFlickr by makevoid  - get flickr photos by photoset and outputs fancybox gallery
+//    jQueryFlickr - get flickr photos by photoset and outputs fancybox gallery
 // ------------------------------------- 
+//  
+// contact @makevoid for feature requests and bugfixes 
+// github  
+//
 //
 // User configuration:
 //
