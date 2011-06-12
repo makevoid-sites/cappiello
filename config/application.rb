@@ -44,6 +44,10 @@ module Cappiello
 
     # Configure sensitive parameters which will be filtered from the log file.
     config.filter_parameters << :password
+    
+    require "#{Rails.root}/lib/annotated_logger"
+    config.logger = AnnotatedLogger.new "#{Rails.root}/log/#{Rails.env}.log"
+    config.active_support.deprecation = :log
   end
 end
 
