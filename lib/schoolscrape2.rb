@@ -13,12 +13,15 @@ URL = "http://www.trampi.istruzione.it/ricScu/cerca.do"
 
 regions = ["ABRUZZO", "BASILICATA", "CALABRIA", "CAMPANIA", "EMILIA ROMAGNA", "FRIULI-VENEZIA ", "LAZIO", "LIGURIA", "LOMBARDIA", "MARCHE", "MOLISE", "PIEMONTE", "PUGLIA", "SARDEGNA", "SICILIA", "TOSCANA", "TRENTINO-ALTO A", "UMBRIA", "VENETO"]
 
+regions = regions - ["TOSCANA", "EMILIA ROMAGNA"]
+#regions = ["ABRUZZO", "BASILICATA"]
+
 def get_region(region)
   @browser.goto(SRC_URL)
   @browser.select_list(:name, "regione").select region
-  sleep(1)
+  sleep(2)
   @browser.select_list(:name, "tipologia").select "SCUOLA SECONDARIA DI II GRADO"
-  sleep(1)
+  sleep(2)
   @browser.select_list(:name, "order").select "DENOMINAZIONE"
   sleep(1)
   @browser.button(:value, "Cerca").click
@@ -38,9 +41,11 @@ def extract
   end
 end
 
-#regions.each do |region|
-get_region("EMILIA ROMAGNA") # region
-results = extract
-#end
+results = []
+
+regions.each do |region|
+  get_region region
+  results += extract
+end
 
 puts results.map{ |r| r[:mail] }.join("\n")
