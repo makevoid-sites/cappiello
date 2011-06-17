@@ -13,7 +13,14 @@
         - when "special_courses" # corsi brevi
           = render partial: "sections/special_courses", locals: { page: page }
         - when "dates_and_times"
-        - when "interior_design"      
+        - when "interior_design"  
+        - when "summer_courses" # corsi estivi   
+          %li
+            %ul.subnav
+              %li= link_to "Visual Design", page_path(id: tf("visual_design_corsi_brevi", "visual_design_short_courses"))
+              %li= link_to "Interior Design", page_path(id: tf("interior_design_corsi_brevi", "interior_design_short_courses"))    
+              %li= link_to tf("Orientamento Artistico", "Art"), page_path(id: tf("estivo_orientamento_artistico", "summer_art"))   
+            = link_to tf("Corsi Estivi", "Summer Courses"), js_void      
         - else
           %li
             = link_to tr(page).title, pag_path(page) 
