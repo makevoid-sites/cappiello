@@ -37,6 +37,7 @@ class UsersController < ApplicationController
   end
   
   def edit
+    return(render text: tf("Error: You're not logged in or you're not editing your profile")) if @user != current_user && !admin?
     @user = User.get(params[:id])
   end
   
