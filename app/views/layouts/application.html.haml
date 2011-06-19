@@ -59,6 +59,9 @@
           = footer_text
     .clear
     :javascript
+      #{crazyegg}
+      #{gauges("4df80dfbf5a1f57c15000001")}
+    :javascript
       $(function(){
             
         $('#profile_tab').hover(function(){
@@ -71,21 +74,4 @@
         });
         
       });
-    - if Rails.env == "production"
-      -# crazyegg analytics
-      :plain
-        <script type="text/javascript">document.write(unescape('%3Cscript type="text/javascript" src="'+document.location.protocol+'//dnn506yrbagrg.cloudfront.net/pages/scripts/0011/5433.js"%3E%3C%2Fscript%3E'))</script>
-      -# gauge.es
-      :plain
-        <script type="text/javascript">
-          (function() {
-            var t   = document.createElement('script');
-            t.type  = 'text/javascript';
-            t.async = true;
-            t.id    = 'gauges-tracker';
-            t.setAttribute('data-site-id', '4df80dfbf5a1f57c15000001');
-            t.src = '//secure.gaug.es/track.js';
-            var s = document.getElementsByTagName('script')[0];
-            s.parentNode.insertBefore(t, s);
-          })();
-        </script>
+    
