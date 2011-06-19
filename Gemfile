@@ -89,7 +89,7 @@ gem "exception_notification", :git => "git://github.com/rails/exception_notifica
 # gem "bluecloth"
 gem "RedCloth"
 
-gem "voidtools"
+gem "voidtools", git: "git://github.com/makevoid/voidtools"
 
 gem "ya2yaml", :git => "git://github.com/afunai/ya2yaml"
 

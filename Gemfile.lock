@@ -127,6 +127,12 @@ GIT
       dm-validations (>= 1.0.2)
 
 GIT
+  remote: git://github.com/makevoid/voidtools
+  revision: 74b01064836b585cdb9dab32709901c86209be9c
+  specs:
+    voidtools (0.2.3)
+
+GIT
   remote: git://github.com/rails/exception_notification
   revision: 192a49a02d63d28b23ed41cebadfedd490929cf1
   specs:
@@ -234,7 +240,6 @@ GEM
       polyglot (>= 0.3.1)
     tzinfo (0.3.28)
     uuidtools (2.1.2)
-    voidtools (0.2.3)
     xpath (0.1.4)
       nokogiri (~> 1.3)
 
@@ -270,5 +275,5 @@ DEPENDENCIES
   rspec-rails
   sass
   steak
-  voidtools
+  voidtools!
   ya2yaml!
