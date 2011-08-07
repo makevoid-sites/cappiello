@@ -888,3 +888,26 @@ form label.error {
 
 .pagination {
   margin: 10px 0; }
+
+#tabs_lavoro {
+  padding-left: 18px; }
+  #tabs_lavoro table {
+    border: 1px solid #999999;
+    text-align: center;
+    margin: 4px 0 14px; }
+    #tabs_lavoro table td, #tabs_lavoro table th {
+      border: 1px solid #999999;
+      border-left: none;
+      border-right: none;
+      background: #fafafa;
+      padding: 1px 8px; }
+    #tabs_lavoro table thead th {
+      background: #486b48;
+      color: white;
+      padding-top: 4px;
+      padding-bottom: 4px; }
+    #tabs_lavoro table tr.total td {
+      padding-top: 4px;
+      padding-bottom: 4px;
+      background: #cc0000;
+      color: white; }
