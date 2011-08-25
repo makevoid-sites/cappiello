@@ -734,12 +734,16 @@ input.radio2 {
 .forms_form .checkboxes_bottom label {
   float: left; }
 
+.pdf_clear {
+  clear: left; }
+
 .forms_pdf {
-  width: 60%;
-  margin: 0 0 15px 0;
-  padding: 0px 0px 10px 0;
-  float: left;
-  background: none; }
+  width: 400px;
+  background: none;
+  float: left; }
+  .forms_pdf form {
+    margin: 0 0 15px 0;
+    padding: 0px 0px 10px 0; }
   .forms_pdf div {
     width: 44%;
     float: left; }
