@@ -194,6 +194,7 @@ GEM
       json
       rack
     multi_json (1.0.3)
+    newrelic_rpm (3.1.1)
     nokogiri (1.5.0)
     polyglot (0.3.2)
     rack (1.2.3)
@@ -270,6 +271,7 @@ DEPENDENCIES
   haml
   launchy
   mixpanel
+  newrelic_rpm
   railties (~> 3.0.5)
   rspec-rails
   sass
