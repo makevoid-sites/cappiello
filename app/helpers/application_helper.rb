@@ -28,7 +28,6 @@ module ApplicationHelper
         pdf = text.gsub(/^pdf_/, '')
         text = "pdf"
       end
-            
       if File.exist? "#{Rails.root}/app/views/forms/_#{text}.html.haml" 
         render partial: "forms/#{text}", locals: { pdf: pdf  }
       else
