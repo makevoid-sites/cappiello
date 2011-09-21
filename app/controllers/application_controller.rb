@@ -17,6 +17,12 @@ class ApplicationController < ActionController::Base
   # require "#{Rails.root}/lib/tracking"
   # include Tracking
   
+  before_filter :fix_txt_accept 
+  
+  def fix_txt_accept
+    request.format = :html if request.format.to_s =~ "text/*"
+  end
+  
   
   
   DataMapper::Validations::I18n.localize! 'it'
