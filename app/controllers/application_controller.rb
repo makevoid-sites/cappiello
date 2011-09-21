@@ -20,7 +20,7 @@ class ApplicationController < ActionController::Base
   before_filter :fix_txt_accept 
   
   def fix_txt_accept
-    request.format = :html if request.format.to_s =~ "text/*"
+    request.format = :html if request.format.to_s =~ /text\/*/
   end
   
   
