@@ -1,7 +1,7 @@
 # encoding: utf-8
 class UsersController < ApplicationController
   
-  before_filter :admin_only, only: [:index, :destroy]  
+  before_filter :admin_only, only: [:index, :destroy, :create, :newsletter]  
   
   def index
     @users = User.paginate(:page => params[:page] )
@@ -60,6 +60,11 @@ class UsersController < ApplicationController
         render :edit
       end
     end
+  end
+  
+  def newsletter
+    # John Dow,john@somedomain.com,Philadelphia,32
+    @users = User.all.map{ |user| "#{user.name},#{user.email},#{user.city}" }
   end
   
   protected

@@ -53,8 +53,17 @@ Cappiello::Application.routes.draw do
   
   #get "/users/:name_url", to: "users#show", as: :user_path
   get "/users/new", to: "users#new", as: :new_user
+  get "/users/newsletter", to: "users#newsletter", as: :user_newsletter
   get "/users/:name_url", to: "users#show", as: :user
-  resources :users
+  resources :users do
+    # just a reminder:
+    #
+    # collection do
+      # get "newsletter"
+    # end 
+    # get 'newsletter', :on => :collection
+  end
+    
   
   get "/login", to: "sessions#new", as: :login_page
   post "/login", to: "sessions#create", as: :login
