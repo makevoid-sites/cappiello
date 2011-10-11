@@ -871,6 +871,10 @@ form label.error {
   position: relative;
   top: -5px; }
 
+.image_left img {
+  float: left;
+  margin: 4px 9px 0 0; }
+
 #content .lavoro {
   margin-top: 10px; }
   #content .lavoro .box {
