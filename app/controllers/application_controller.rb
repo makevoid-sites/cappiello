@@ -1,4 +1,3 @@
-
 class ApplicationController < ActionController::Base
   protect_from_forgery
     
@@ -17,6 +16,12 @@ class ApplicationController < ActionController::Base
   
   # require "#{Rails.root}/lib/tracking"
   # include Tracking
+  
+  before_filter :fix_txt_accept 
+  
+  def fix_txt_accept
+    request.format = :html if request.format.to_s =~ /text\/*/
+  end
   
   
   
@@ -169,7 +174,9 @@ class ApplicationController < ActionController::Base
     english? ? "en" : "it"
   end
   
-  before_filter do
+  before_filter :init_locale
+  
+  def init_locale
     DataMapper::Validations::I18n.localize! current_lang.to_s
     if english?
       DataMapper::Validations::I18n.translate_field_name_with(nil) { |x| x.to_s.humanize }

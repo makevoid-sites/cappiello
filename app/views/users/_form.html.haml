@@ -46,7 +46,7 @@
       = f.text_field :birthplace 
       = f.label :birthdate, tf("Data", "Birthdate")
       .date_select
-        = f.date_select :birthdate, start_year: 1920, end_year: 2000
+        = f.date_select :birthdate, start_year: 1970, end_year: 2000
     
       = f.label :notes, tf("Note", "Other infos")
       = f.text_area :notes

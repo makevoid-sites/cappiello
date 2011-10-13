@@ -11,7 +11,7 @@ class Article
   
   TRANSLATE = %w(title title_url text)
   Lang::LANGS.map do |t|
-    property :"title_#{t}", String, length: 100
+    property :"title_#{t}", String, length: 100, required: true, unique: true
     property :"title_url_#{t}", String, length: 100
     property :"text_#{t}", Text    
   end

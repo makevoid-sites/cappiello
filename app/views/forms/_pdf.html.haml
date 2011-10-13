@@ -8,9 +8,9 @@
     })
     
     var label = $("h3").html()
-    $("#standard h3").remove()
-    $("#standard p ").append("<h3>"+label+"</h3>")
-    $("#standard p:first h3, #standard form p").remove()
+    //$("#standard h3").remove()
+    //$("#standard p ").append("<h3>"+label+"</h3>")
+    //$("#standard p:first h3, #standard form p").remove()
   
 .forms_pdf
   - label = tf("Scarica il pdf informativo del corso", "Download the course information pdf")
@@ -54,3 +54,4 @@
         = f.check_box :confirm, class: "checkbox"
         = f.label :confirm, label, {checked: "checked"}
       = f.submit tf("Scarica", "Download"), class: "submit"
+.pdf_clear

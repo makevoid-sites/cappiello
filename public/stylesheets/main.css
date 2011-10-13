@@ -5,6 +5,11 @@ input[type="submit"]::-moz-focus-inner,
 input[type="file"] > input[type="button"]::-moz-focus-inner {
   border: none; }
 
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
 *, html, body {
   margin: 0;
   padding: 0; }
@@ -429,8 +434,8 @@ div#home_swf {
 
 ul.subnav {
   position: absolute;
-  width: 150px;
-  right: -151px;
+  width: 148px;
+  right: -146px;
   z-index: 3; }
 
 #nav li .subnav.sub2 {
@@ -734,12 +739,15 @@ input.radio2 {
 .forms_form .checkboxes_bottom label {
   float: left; }
 
+.pdf_clear {
+  clear: left; }
+
 .forms_pdf {
-  width: 60%;
-  margin: 0 0 15px 0;
-  padding: 0px 0px 10px 0;
-  float: left;
+  width: 400px;
   background: none; }
+  .forms_pdf form {
+    margin: 0 0 15px 0;
+    padding: 0px 0px 10px 0; }
   .forms_pdf div {
     width: 44%;
     float: left; }
@@ -762,6 +770,7 @@ input.radio2 {
 
 .forms_pdf.bg {
   background: #dddddd;
+  float: left;
   padding-left: 20px; }
 
 #galleria {
@@ -862,6 +871,10 @@ form label.error {
   position: relative;
   top: -5px; }
 
+.image_left img {
+  float: left;
+  margin: 4px 9px 0 0; }
+
 #content .lavoro {
   margin-top: 10px; }
   #content .lavoro .box {
@@ -888,3 +901,26 @@ form label.error {
 
 .pagination {
   margin: 10px 0; }
+
+#tabs_lavoro {
+  padding-left: 18px; }
+  #tabs_lavoro table {
+    border: 1px solid #999999;
+    text-align: center;
+    margin: 4px 0 14px; }
+    #tabs_lavoro table td, #tabs_lavoro table th {
+      border: 1px solid #999999;
+      border-left: none;
+      border-right: none;
+      background: #fafafa;
+      padding: 1px 8px; }
+    #tabs_lavoro table thead th {
+      background: #486b48;
+      color: white;
+      padding-top: 4px;
+      padding-bottom: 4px; }
+    #tabs_lavoro table tr.total td {
+      padding-top: 4px;
+      padding-bottom: 4px;
+      background: #cc0000;
+      color: white; }

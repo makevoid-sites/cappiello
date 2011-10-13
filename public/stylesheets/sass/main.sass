@@ -112,6 +112,34 @@ input[type="file"] > input[type="button"]
   -webkit-box-shadow: $x $y $radius $color
   box-shadow: $x $y $radius $color
 
+// reset
+
+// html, body, div, span, applet, object, iframe,
+// h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+// a, abbr, acronym, address, big, cite, code,
+// del, dfn, em, img, ins, kbd, q, s, samp,
+// small, strike, strong, sub, sup, tt, var,
+// b, u, i, center,
+// dl, dt, dd, ol, ul, li,
+// fieldset, form, label, legend,
+// table, caption, tbody, tfoot, thead, tr, th, td,
+// article, aside, canvas, details, embed, 
+// figure, figcaption, footer, header, hgroup, 
+// menu, nav, output, ruby, section, summary,
+// time, mark, audio, video 
+//   margin: 0
+//   padding: 0
+//   border: 0
+//   font-size: 100%
+//   font: inherit
+//   vertical-align: baseline
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section 
+  display: block
+
+
 // clearfix
 
 *, html, body
@@ -545,11 +573,12 @@ div#home_swf
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#211949', endColorstr='#2d2264',GradientType=0 )
   
   
-$subnav_width: 150px
+//$subnav_width: 150px
+$subnav_width: 148px
 ul.subnav
   position: absolute
   width: $subnav_width
-  right: -$subnav_width - 1px
+  right: -$subnav_width + 2px
   z-index: 3
 
 #nav li 
@@ -790,13 +819,15 @@ input.radio2
     label
       float: left
 
+.pdf_clear
+  clear: left
+  
 .forms_pdf
-  width: 60%
-  margin: 0 0 15px 0
-  padding: 0px 0px 10px 0
-  float: left
+  width: 400px
   background: none
   form  
+    margin: 0 0 15px 0
+    padding: 0px 0px 10px 0
   input, label
   input 
   div 
@@ -821,6 +852,7 @@ input.radio2
       width: 130px
 .forms_pdf.bg
   background: #DDD
+  float: left
   padding-left: 20px
   
 #galleria
@@ -930,6 +962,11 @@ form label.error
   display: block
   position: relative
   top: -5px
+
+.image_left
+  img
+    float: left
+    margin: 4px 9px 0 0
   
 
 #content
@@ -961,3 +998,29 @@ form label.error
     
 .pagination
   margin: 10px 0
+  
+  
+#tabs_lavoro
+  padding-left: 18px
+  table
+    border: 1px solid #999
+    text-align: center
+    margin: 4px 0 14px
+    td, th
+      border: 1px solid #999
+      border-left: none
+      border-right: none  
+      background: #fafafa
+      padding: 1px 8px
+    thead th
+      background: #486B48
+      color: #FFF
+      padding-top: 4px
+      padding-bottom: 4px
+        
+    tr.total
+      td
+        padding-top: 4px
+        padding-bottom: 4px
+        background: #c00
+        color: #FFF
