@@ -23,7 +23,7 @@
   - else
     %h3= link_to label, js_void
 
-    - form_for @user, html: { style: "display: none" } do |f|
+    = form_for @user, html: { style: "display: none" } do |f|
       = f.hidden_field :tmp_form, value: "pdf"
       = f.hidden_field :tmp_form_pdf, value: pdf
       .row
