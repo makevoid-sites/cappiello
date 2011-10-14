@@ -64,7 +64,7 @@ class UsersController < ApplicationController
   
   def newsletter
     # John Dow,john@somedomain.com,Philadelphia,32
-    @users = User.all.map{ |user| "#{user.name},#{user.email},#{user.city}" }
+    @users = User.subscribers.map{ |user| "#{user.name},#{user.email},#{user.city}" }
   end
   
   protected
