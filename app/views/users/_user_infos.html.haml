@@ -15,7 +15,7 @@
   
     %h3 Vorrei ottenere una borsa di studio per:
 
-    %p= @user.interested_in
+    %p.val= @user.interested_in
     
 
     - infos = ["Altri titoli di studio/corsi di specializzazione frequentati", "Esperienze (anche amatoriali) nel campo specifico del corso prescelto", "Esperienze di lavoro maturate", "Cosa mi spinge a compiere studi in questo ambito", "Altre Info. utili, idonee a valutare il mio interesse a partecipare al corso"] 
@@ -23,4 +23,4 @@
       - val = @user.send("info#{i}")
       - unless val.blank?
         %p.tit.bold #{infos[i]}:
-        %p= val
+        %p.val= val

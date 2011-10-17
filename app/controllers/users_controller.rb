@@ -25,7 +25,7 @@ class UsersController < ApplicationController
       session[:user_id] = @user.id
       path = root_path
       path = @user.redirect_url unless @user.redirect_url.blank?
-      UserMailer.deliver_welcome @user
+      UserMailer.welcome(@user).deliver
       send_form_notification @user
       track :registration
       flash[:notice] = tf("La registrazione è andata a buon fine!", "You registered successfully!") if flash[:notice].blank?
@@ -75,9 +75,9 @@ class UsersController < ApplicationController
       if form == "pdf"
         pdf = params[:user][:tmp_form_pdf]
         raise "PDF form has blank value" if pdf.blank?
-        UserMailer.send("deliver_admin_#{form}", user, pdf)
+        UserMailer.send("admin_#{form}", user, pdf).deliver
       else
-        UserMailer.send("deliver_admin_#{form}", user)
+        UserMailer.send("admin_#{form}", user).deliver
       end
     end
   end

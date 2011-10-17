@@ -47,14 +47,14 @@ class PagesController < ApplicationController
   
   def pdf
     logged_only
-    UserMailer.send("deliver_admin_pdf", current_user, params[:name])
+    UserMailer.send("admin_pdf", current_user, params[:name]).deliver
     raise NotFound if params[:name].blank?
     redirect_to "/pdf/#{params[:name]}.#{params[:format]}"
   end
   
   def pdf_en
     logged_only
-    UserMailer.send("deliver_admin_pdf", current_user, params[:name])
+    UserMailer.send("admin_pdf", current_user, params[:name]).deliver
     raise NotFound if params[:name].blank?
     redirect_to "/pdf/en/#{params[:name]}.#{params[:format]}"
   end
