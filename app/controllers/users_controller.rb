@@ -1,7 +1,7 @@
 # encoding: utf-8
 class UsersController < ApplicationController
   
-  before_filter :admin_only, only: [:index, :destroy, :create, :newsletter]  
+  before_filter :admin_only, only: [:index, :destroy, :newsletter]  
   
   def index
     @users = User.paginate(:page => params[:page] )
