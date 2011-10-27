@@ -1,7 +1,7 @@
 = error_messages_for @user
 
 .forms_form
-  - form_for @user do |f|
+  = form_for @user do |f|
     = hidden_field_tag "form", "form"
     = f.hidden_field :tmp_form, value: "form"
     .checkboxes
@@ -46,7 +46,7 @@
       = f.text_field :birthplace 
       = f.label :birthdate, tf("Data", "Birthdate")
       .date_select
-        = f.date_select :birthdate, start_year: 1970, end_year: 2000
+        = f.date_select :birthdate, start_year: 1960, end_year: 2000
     
       = f.label :notes, tf("Note", "Other infos")
       = f.text_area :notes

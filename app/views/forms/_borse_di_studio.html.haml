@@ -1,5 +1,5 @@
 .borse_di_studio
-  - form_for @user do |f|
+  = form_for @user do |f|
     = f.hidden_field :tmp_form, value: "borsa"
     .preradio
   
@@ -22,7 +22,7 @@
       = f.text_field :birthplace, class: "required" 
       = f.label :birthdate, tf("Data", "Birth date")    
       .date_select
-        = f.date_select :birthdate, start_year: 1970, end_year: 2000, class: "required"    
+        = f.date_select :birthdate, start_year: 1960, end_year: 2000, class: "required"    
       = f.label :address, tf("Indirizzo", "Address")  
       = f.text_field :address, class: "required"   
       = f.label :city, tf("Città", "City")  

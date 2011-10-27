@@ -3,8 +3,8 @@ source 'http://rubygems.org'
 RAILS_VERSION = '~> 3.1.0'
 
 DATAMAPPER    = 'git://github.com/datamapper'
-DM_VERSION    = '~> 1.2.0.rc2'
-DM_VERSION2    = '~> 1.2.0.rc1'
+DM_VERSION    = '~> 1.3.0.beta'
+DM_VERSION2    = '~> 1.3.0.beta'
 
 RSPEC         = 'git://github.com/rspec'
 RSPEC_VERSION = '~> 2.6.0'
@@ -73,7 +73,7 @@ end
 # gems to github will be optional.
 
 gem 'dm-core',              DM_VERSION, :git => "#{DATAMAPPER}/dm-core.git"
-# gem 'dm-do-adapter',        DM_VERSION, :git => "#{DATAMAPPER}/dm-do-adapter"
+gem 'dm-do-adapter',        DM_VERSION, :git => "#{DATAMAPPER}/dm-do-adapter"
 #gem 'dm-active_model',      DM_VERSION, :git => "#{DATAMAPPER}/dm-active_model"
 gem 'dm-active_model',      DM_VERSION2, :git => "git://github.com/datamapper/dm-active_model"
 

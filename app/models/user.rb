@@ -40,9 +40,9 @@ class User
   property :int_stage_interior,   Boolean, default: false
   property :notes, Text
   
-  property :qualification, String
+  property :qualification, String, length: 255
   property :grade, String 
-  property :job, String
+  property :job, String, length: 255
   
   property :created_at, DateTime
   property :updated_at, DateTime, index: true
@@ -68,7 +68,11 @@ class User
   
   attr_accessor :confirm, :redirect_url, :tmp_password, :tmp_form, :tmp_form_pdf
 
-
+  
+  def self.subscribers
+    all(newsletter: true)
+  end
+  
   def name_pres
     "#{first_name.capitalize} #{last_name.capitalize}"
   end
