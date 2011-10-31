@@ -42,7 +42,12 @@ module ApplicationHelper
     
     text.scan(TextileEnhancer::REGEX[:image_left]).size.times do 
       text = TextileEnhancer.new(text, :image_left).insert do |text|
-        "<img src='#{text}' class='image_left' />"
+        if text =~ /,/
+          text = text.split(/,/)
+          "<a href='#{text[1]}'><img src='#{text[0]}' class='image_left' /></a>"
+        else
+          "<img src='#{text}' class='image_left' />"
+        end
       end
     end
     

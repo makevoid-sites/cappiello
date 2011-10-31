@@ -16,14 +16,10 @@ class TextileEnhancer
   def insert(content="", &block)
     match = @text.match(@regex)
     
-    #raise REGEX.inspect
     unless match.nil?
       name = match[1]
       @text.sub!(/<p>#{@regex}<\/p>/, block.call(name))
     end
-    
-    #raise 
-    # @text
     
     @text
   end
