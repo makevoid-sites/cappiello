@@ -36,9 +36,9 @@ class PagesController < ApplicationController
     @page = params[:id].inty? ? Page.get(params[:id]) : Page.first( "title_url_#{current_lang}".to_sym => params[:id])
     @user = current_user || User.new
     
+    raise NotFound if @page.nil?
     load_news if @page.id == 1
     
-    raise NotFound if @page.nil?
     track_page(:course) if @page.course?
   end
   
