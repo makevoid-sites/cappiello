@@ -47,6 +47,8 @@ Cappiello::Application.routes.draw do
   #   end
 
   get "/stats", to: "pages#stats", as: :stats
+  
+  get "/pages/form", to: redirect("/pages/info")
   get "/pages/:id", to: "pages#show", as: :page
   resources :pages
 

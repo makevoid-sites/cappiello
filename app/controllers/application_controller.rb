@@ -17,6 +17,15 @@ class ApplicationController < ActionController::Base
   # require "#{Rails.root}/lib/tracking"
   # include Tracking
   
+  
+  helper_method :home_page?
+  
+  def home_page?
+    # old: ["l_accademia", "1", "about_us"]
+    ["news", "35"].include? params[:id]
+  end
+  
+  
   before_filter :fix_txt_accept 
   
   def fix_txt_accept

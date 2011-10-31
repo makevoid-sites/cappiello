@@ -4,6 +4,8 @@ class Page
   property :id, Serial
   property :ptype, String, default: "standard"
   property :master, Boolean, default: false
+  property :hidden, Boolean, default: false
+  property :position, Integer
   
   
   TRANSLATE = %w(title title_url meta_keywords meta_description text)
@@ -16,6 +18,8 @@ class Page
   end
   
   is :tree
+
+  default_scope(:default).update hidden: false, order: :position
 
   def course?
     !root? || master?    

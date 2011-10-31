@@ -14,16 +14,12 @@ module ApplicationHelper
     false
   end
   
-  def home_page?
-    ["l_accademia", "1", "about_us"].include? params[:id]
-  end
-  
   def pages
     @pages ||= Page.all(master: false).roots
   end
   
   def parse_text(text)
-    text = TextileEnhancer.new(text, :form).insert do |text| 
+    TextileEnhancer.new(text, :form).insert do |text| 
       if text =~ /pdf/
         pdf = text.gsub(/^pdf_/, '')
         text = "pdf"
@@ -43,6 +39,14 @@ module ApplicationHelper
     TextileEnhancer.new(text, :vimeo).insert do |text|
       "<div id='video'><iframe src='http://player.vimeo.com/video/#{text}?title=0&amp;byline=0&amp;portrait=0&amp;color=C82D5E' frameborder='0'></iframe></div>"
     end
+    
+    text.scan(TextileEnhancer::REGEX[:image_left]).size.times do 
+      text = TextileEnhancer.new(text, :image_left).insert do |text|
+        "<img src='#{text}' class='image_left' />"
+      end
+    end
+    
+    text
   end
   
   

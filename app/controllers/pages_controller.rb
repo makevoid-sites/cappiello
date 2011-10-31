@@ -11,10 +11,9 @@ class PagesController < ApplicationController
   public
   
   def index
-    params[:id] = "1"
+    params[:id] = "35"
     @page = Page.get(params[:id])
-    @news = Article.news.all(limit: 5, order: [:created_at.asc])
-    @events = Article.events.all(limit: 5, order: [:created_at.asc])
+    load_news
     raise NotFound if @page.nil?
     
     source = :organic
@@ -30,12 +29,14 @@ class PagesController < ApplicationController
   end
   
   def show
-    if ["l_accademia", "about_us", "1"].include? params[:id]
+    if home_page?
       redirect_to root_path; return 
     end  
       
     @page = params[:id].inty? ? Page.get(params[:id]) : Page.first( "title_url_#{current_lang}".to_sym => params[:id])
     @user = current_user || User.new
+    
+    load_news if @page.id == 1
     
     raise NotFound if @page.nil?
     track_page(:course) if @page.course?
@@ -73,6 +74,11 @@ class PagesController < ApplicationController
       flash[:error] = "I dati inseriti non sono sufficenti e/o corretti"
       render :edit
     end
+  end
+  
+  def load_news
+    @news = Article.news.all(limit: 5, order: [:created_at.asc])
+    @events = Article.events.all(limit: 5, order: [:created_at.asc])
   end
   
 end

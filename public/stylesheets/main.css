@@ -121,12 +121,12 @@ a:hover {
 #content p {
   text-shadow: 1px 2px 0px white;
   margin-bottom: 12px;
-  text-align: justify; }
+  text-align: left; }
 
 #content .master p {
   width: 59%; }
 
-#content .home p, #content #aside p, #content .article_cont p {
+#content .home p, #content .news p, #content #aside p, #content .article_cont p {
   width: 100%; }
 
 #content #aside p {
@@ -457,7 +457,7 @@ ul.subnav {
 #inner {
   width: 55%; }
 
-#inner.home {
+#inner.home, #inner.news {
   width: 100%; }
 
 #inner.full {
@@ -467,6 +467,14 @@ ul.subnav {
   margin-top: 30px; }
   #inner.error h2 {
     margin-bottom: 20px; }
+
+.pages.index #inner.home div {
+  font-size: 1em;
+  clear: left; }
+  .pages.index #inner.home div h4 {
+    font-size: 1.2em;
+    padding-top: 20px;
+    margin-bottom: 10px; }
 
 ul#selection {
   width: 280px;
@@ -491,9 +499,9 @@ ul#selection {
     width: 360px;
     height: 252px; }
 
-.home #video {
+.home #video, .news #video {
   float: none; }
-  .home #video iframe {
+  .home #video iframe, .news #video iframe {
     width: 360px;
     height: 270px; }
 
@@ -871,9 +879,12 @@ form label.error {
   position: relative;
   top: -5px; }
 
-.image_left img {
+.image_left img, img.image_left {
   float: left;
   margin: 4px 9px 0 0; }
+
+img.image_left {
+  width: 330px; }
 
 #content .lavoro {
   margin-top: 10px; }
