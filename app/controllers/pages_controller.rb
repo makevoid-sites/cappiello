@@ -77,8 +77,8 @@ class PagesController < ApplicationController
   end
   
   def load_news
-    @news = Article.news.all(limit: 5, order: [:created_at.asc])
-    @events = Article.events.all(limit: 5, order: [:created_at.asc])
+    @news = Article.news.all(limit: 6, order: [:created_at.asc])
+    @events = Article.events.all(limit: 6, order: [:created_at.asc])
   end
   
 end
