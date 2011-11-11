@@ -1,5 +1,9 @@
 class ArticlesController < ApplicationController
 
+  def index
+    @articles = Article.all
+  end
+
   def show
     @article = params[:id].inty? ? Article.get(params[:id]) : Article.first( "title_url_#{current_lang}".to_sym => params[:id])
     return not_found if @article.nil?

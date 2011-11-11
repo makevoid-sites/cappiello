@@ -68,7 +68,7 @@ class ApplicationController < ActionController::Base
   
   # Mixpanel
 
-  before_filter :initialize_mixpanel
+  before_filter :initialize_mixpanel if Rails.env != "development"
 
   def initialize_mixpanel
     @mixpanel = Mixpanel.new(MIXPANEL_TOKEN, request.env, true)

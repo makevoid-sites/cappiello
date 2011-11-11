@@ -913,6 +913,9 @@ img.image_left {
 .pagination {
   margin: 10px 0; }
 
+#articles_index li {
+  display: block; }
+
 #tabs_lavoro {
   padding-left: 18px; }
   #tabs_lavoro table {
