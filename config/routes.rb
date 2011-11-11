@@ -72,7 +72,8 @@ Cappiello::Application.routes.draw do
   get "/logout", to: "sessions#destroy", as: :logout
 
 
-  get "/news/:id", to: "articles#show", as: :news
+  get "/news/:id", to: "articles#show"
+  get "/news", to: "articles#index"
   get "/events/:id", to: "articles#show", as: :event
   get "/news/:year/:month/:day/:id", to: "articles#show", as: :news_date
   get "/events/:year/:month/:day/:id", to: "articles#show", as: :event_date
@@ -93,37 +94,39 @@ Cappiello::Application.routes.draw do
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id(.:format)))'
+
+  # deprecateds
   
-  old_routes = ["/indexMaster.asp",
-   "/eventiDett.asp",
-   "/stages.asp",
-   "/corsiIni.asp",
-   "/newsDett.asp",
-   "/contatti.asp",
-   "/dateOrari.asp",
-   "/news.asp",
-   "/index.asp",
-   "/lavoro.asp",
-   "/corsiSpecial.asp",
-   "/form.asp",
-   "/lavoroOffroDett.asp",
-   "/eventi.asp",
-   "/borse.asp",
-   "/lavoroCercoDett.asp",
-   "/html/eventi.html",
-   "/html/stagesgratis.html",
-   "/html/news_html.asp",
-   "/html/cors_nf.html",
-   "/html/contatto.html",
-   "/html/illustrazione.html",
-   "/html/borse.html",
-   "/html/chis_nf.html",
-   "/html/corsibrevi_nf.html",
-   "/index.html",
-   "/html/lavoro.html",
-   "html/ienf.html"]
-   
-  old_routes.each do |route|
-    match route => redirect("http://accademia-cappiello.it/")
-  end
+  # old_routes = ["/indexMaster.asp",
+  #  "/eventiDett.asp",
+  #  "/stages.asp",
+  #  "/corsiIni.asp",
+  #  "/newsDett.asp",
+  #  "/contatti.asp",
+  #  "/dateOrari.asp",
+  #  "/news.asp",
+  #  "/index.asp",
+  #  "/lavoro.asp",
+  #  "/corsiSpecial.asp",
+  #  "/form.asp",
+  #  "/lavoroOffroDett.asp",
+  #  "/eventi.asp",
+  #  "/borse.asp",
+  #  "/lavoroCercoDett.asp",
+  #  "/html/eventi.html",
+  #  "/html/stagesgratis.html",
+  #  "/html/news_html.asp",
+  #  "/html/cors_nf.html",
+  #  "/html/contatto.html",
+  #  "/html/illustrazione.html",
+  #  "/html/borse.html",
+  #  "/html/chis_nf.html",
+  #  "/html/corsibrevi_nf.html",
+  #  "/index.html",
+  #  "/html/lavoro.html",
+  #  "html/ienf.html"]
+  #  
+  # old_routes.each do |route|
+  #   match route => redirect("http://accademia-cappiello.it/")
+  # end
 end

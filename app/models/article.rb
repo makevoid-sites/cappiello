@@ -17,7 +17,7 @@ class Article
   end
     
   property :created_at, DateTime
-  property :article_type, String, index: true # ["news", "event"]
+  property :article_type, String, index: true, default: "news" # ["news", "event"]
   
   default_scope(:default).update order: [:created_at.desc]
   
@@ -29,7 +29,7 @@ class Article
   end
   
   def tipo
-    article_type == "news" ? "news" : "evento"
+    article_type == "event" ? "event" : "news"
   end
   
   def self.news
