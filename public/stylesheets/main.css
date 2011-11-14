@@ -111,12 +111,11 @@ a:hover {
   #content ul li {
     display: block; }
   #content a {
-    color: black;
+    color: #222222;
     text-shadow: 1px 2px 0px white; }
   #content a:hover {
-    color: #eeeeee;
-    background: #777777;
-    text-shadow: -1px -2px 0px #111111; }
+    color: black;
+    text-shadow: 0px -1px 1px #dddddd; }
 
 #content p {
   text-shadow: 1px 2px 0px white;
@@ -271,8 +270,6 @@ a#profile_name {
     float: left; }
   #news .date {
     float: right; }
-  #news a:hover .date {
-    color: #333333; }
 
 .articles.show .date {
   margin-top: 5px;
