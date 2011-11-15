@@ -36,6 +36,7 @@ class User
   property :int_annuali_interior, Boolean, default: false
   property :int_brevi_visual,     Boolean, default: false
   property :int_brevi_interior,   Boolean, default: false
+  property :int_brevi_graphic,   Boolean, default: false
   property :int_stage_visual,     Boolean, default: false
   property :int_stage_interior,   Boolean, default: false
   property :notes, Text
