@@ -59,13 +59,16 @@ class User
   validates_format_of :email, with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i
   
   validates_with_block :full_name do
-    unless self.saved?
-      if User.first(first_name: self.first_name, last_name: self.last_name).nil?
+    # unless self.saved?
+      users_count = User.count(first_name: self.first_name, last_name: self.last_name)
+      # raise self.new?.inspect
+      num = self.new? ? 1 : 2
+      if users_count < num 
         [true]
       else
         [false, "Un utente con il tuo nome e cognome e' gia' registrato, probabilmente hai gia' un account. Controlla la tua mail - There is another user with your first and last name, probably you already have an account. Check your mail."]
       end
-    end
+    # end
   end
   
   attr_accessor :confirm, :redirect_url, :tmp_password, :tmp_form, :tmp_form_pdf
