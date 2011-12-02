@@ -2,6 +2,8 @@
   
 
   #home_right
+    - if home_page?
+      %h2 &nbsp; 
     = parse_text markup("vimeo(22238816)")
     = render partial: "sections/articles"
   - text = markup tr(@page).text

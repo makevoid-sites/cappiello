@@ -25,8 +25,6 @@ $(function(){
   } else if (agent.match(/MSIE/)) {
     klass = "ie"
   }
-  
-  
-  $("body").addClass klass
+  $("body").addClass(klass)
   
 })
