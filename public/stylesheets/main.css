@@ -360,6 +360,10 @@ div#home_swf {
   #social img {
     width: 24px; }
 
+#map_canvas {
+  width: 485px;
+  height: 320px; }
+
 .chrome #nav li a {
   width: 86%; }
 
