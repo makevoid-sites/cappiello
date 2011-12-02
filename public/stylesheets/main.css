@@ -360,6 +360,12 @@ div#home_swf {
   #social img {
     width: 24px; }
 
+.chrome #nav li a {
+  width: 86%; }
+
+.ie #nav li a {
+  width: 83%; }
+
 #nav {
   text-transform: uppercase;
   -moz-box-shadow: -3px 0px 5px #aaaaaa;
@@ -378,7 +384,6 @@ div#home_swf {
       border-top: 1px solid #c82d5e;
       border-bottom: 1px solid #c82d5e;
       width: 84%;
-      width: 83%;
       text-align: right; }
   #nav li .subnav {
     display: none; }

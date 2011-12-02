@@ -17,4 +17,16 @@ $(function(){
   })
   
   $(".borse_di_studio form").validate()
+  
+  klass = ""
+  agent = navigator.userAgent
+  if (agent.match(/Chrome/)) {
+    klass = "chrome"
+  } else if (agent.match(/MSIE/)) {
+    klass = "ie"
+  }
+  
+  
+  $("body").addClass klass
+  
 })
