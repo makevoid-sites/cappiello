@@ -1,5 +1,10 @@
 # Cappiello
 
+### ore:
+
+newsletter - 4h
+
+
 ### TODO:
 
 - nuova home page 
