@@ -1,70 +1,70 @@
 class PagesController < ApplicationController
 
   after_filter :track_site, only: [:show]
-  
+
   private
-  
+
   def track_site(source = :organic, properties = {}) # add adwords id or fb id & info
     track "site_#{source}", properties
   end
-  
+
   public
-  
+
   def index
     params[:id] = "35"
     @page = Page.get(params[:id])
     load_news
     raise NotFound if @page.nil?
-    
+
     source = :organic
     type = nil
-    unless params[:source].blank?      
+    unless params[:source].blank?
       logger.info "advertising: { source: #{params[:source]}, type: #{params[:type]} }"
-      source = params[:source] 
+      source = params[:source]
       type = params[:type]
-    end 
+    end
     track_site source, { type: type }
-    
+
     render :show
   end
-  
+
   def show
     if home_page?
-      redirect_to root_path; return 
-    end  
-      
+      redirect_to root_path; return
+    end
+
     @page = params[:id].inty? ? Page.get(params[:id]) : Page.first( "title_url_#{current_lang}".to_sym => params[:id])
     @user = current_user || User.new
-    
+
     raise NotFound if @page.nil?
     load_news if @page.id == 1
-    
+
     track_page(:course) if @page.course?
   end
-  
+
   def stats
     admin_only
   end
-  
+
   def pdf
     logged_only
     UserMailer.send("admin_pdf", current_user, params[:name]).deliver
     raise NotFound if params[:name].blank?
     redirect_to "/pdf/#{params[:name]}.#{params[:format]}"
   end
-  
+
   def pdf_en
     logged_only
     UserMailer.send("admin_pdf", current_user, params[:name]).deliver
     raise NotFound if params[:name].blank?
     redirect_to "/pdf/en/#{params[:name]}.#{params[:format]}"
   end
-  
+
   def edit
     @page = Page.get(params[:id])
     raise NotFound if @page.nil?
   end
-  
+
   def update
     @page = Page.get(params[:id])
     raise NotFound if @page.nil?
@@ -75,10 +75,10 @@ class PagesController < ApplicationController
       render :edit
     end
   end
-  
+
   def load_news
     @news = Article.news.all(limit: 5).reverse
     # @events = Article.events.all(limit: 5, order: [:created_at.desc])
   end
-  
+
 end

@@ -8,11 +8,11 @@ class ArticlesController < ApplicationController
     @article = params[:id].inty? ? Article.get(params[:id]) : Article.first( "title_url_#{current_lang}".to_sym => params[:id])
     return not_found if @article.nil?
   end
-  
+
   def new
     @article = Article.new
   end
-  
+
   def create
     correct_date_params
     @article = Article.new(params[:article])
@@ -23,12 +23,12 @@ class ArticlesController < ApplicationController
       render :new
     end
   end
-  
+
   def edit
     @article = Article.get(params[:id])
     return not_found if @article.nil?
   end
-  
+
   def update
     correct_date_params
     @article = Article.get(params[:id])
@@ -40,16 +40,16 @@ class ArticlesController < ApplicationController
       render :edit
     end
   end
-  
+
   def destroy
     @article = Article.get(params[:id])
     return not_found if @article.nil?
     @article.destroy
     redirect_to root_path, notice: "#{@article.tipo.capitalize} eliminato/a!"
   end
-  
+
   protected
-  
+
   def correct_date_params
     obj = :article
     Article.properties.each do |prop|
@@ -65,5 +65,5 @@ class ArticlesController < ApplicationController
       end
     end
   end
-  
+
 end
