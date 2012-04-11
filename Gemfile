@@ -102,3 +102,5 @@ gem "ya2yaml", :git => "git://github.com/afunai/ya2yaml"
 gem "mixpanel"
 
 gem 'newrelic_rpm'
+
+gem "thin"
