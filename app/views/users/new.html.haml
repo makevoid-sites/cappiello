@@ -11,4 +11,7 @@
   = f.text_field :email
   = f.label :password, "Password"
   = f.password_field :password
+
+  = hidden_field_tag :js_enabled
+
   = f.submit "Registrati", class: "submit"

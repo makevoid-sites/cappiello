@@ -1,35 +1,36 @@
 GIT
   remote: git://github.com/afunai/ya2yaml
-  revision: 1ef6b6237a0eb1e5600097427e855171235c56ce
+  revision: 86b8431076b8810747974bd5206d82683b3eb28c
   specs:
-    ya2yaml (0.30)
+    ya2yaml (0.31)
 
 GIT
   remote: git://github.com/datamapper/dm-active_model
-  revision: 303682aa11cf8ed8c96ece496cca1f770ae54ed2
+  revision: aa8927391fb7db6eadd38d9d7bfbf3d663fd87ac
   specs:
     dm-active_model (1.3.0.beta)
-      activemodel (~> 3.1.0)
+      activemodel (~> 3.0)
       dm-core (~> 1.3.0.beta)
 
 GIT
   remote: git://github.com/datamapper/dm-aggregates
-  revision: a45ed12fff9e660f40d2816f211765b5e6fa060a
+  revision: 1bcc44df1f42c4dcae92cc4de2d9569728468103
   specs:
     dm-aggregates (1.3.0.beta)
       dm-core (~> 1.3.0.beta)
 
 GIT
   remote: git://github.com/datamapper/dm-core.git
-  revision: 27b5b044c0dbc70d87667adb5d86ce0e26cc009d
+  revision: 6a703e9707ab838392a1e369aacd8631ecd17a76
   specs:
     dm-core (1.3.0.beta)
       addressable (~> 2.2.6)
-      virtus (~> 0.0.9)
+      backports (~> 2.3.0)
+      virtus (~> 0.2.0)
 
 GIT
   remote: git://github.com/datamapper/dm-do-adapter
-  revision: fa7e68b9e4b1aa593af45377ea512fae55a08123
+  revision: d295d77f3e4b66cc22c10046598b500d8fa24dec
   specs:
     dm-do-adapter (1.3.0.beta)
       data_objects (~> 0.10.6)
@@ -37,21 +38,21 @@ GIT
 
 GIT
   remote: git://github.com/datamapper/dm-is-tree
-  revision: 40f640cb5430d8d99c0f55f5c415c92e57808457
+  revision: 9764928aa0a9f6d59d79f0fa686f2560a2bac1fb
   specs:
     dm-is-tree (1.3.0.beta)
       dm-core (~> 1.3.0.beta)
 
 GIT
   remote: git://github.com/datamapper/dm-migrations
-  revision: 88af5e838e9bb1973e49b4f7adb0f4854d0e9b38
+  revision: 8bfcec08286a12ceee1bc3e5a01da3b5b7d4a74d
   specs:
     dm-migrations (1.3.0.beta)
       dm-core (~> 1.3.0.beta)
 
 GIT
   remote: git://github.com/datamapper/dm-mysql-adapter.git
-  revision: 79bc84f6b19d22bd511ad2e007cf77c09f7e6df8
+  revision: ab08f5f57b77867b882f5fe873574d5a6b1f23be
   specs:
     dm-mysql-adapter (1.3.0.beta)
       dm-do-adapter (~> 1.3.0.beta)
@@ -59,33 +60,32 @@ GIT
 
 GIT
   remote: git://github.com/datamapper/dm-rails.git
-  revision: ebe9f82cdeecc78dae87b99303ad7cd7ec252375
+  revision: 5f3fb01a9d5f5adb17665a3bdabffd396d722e61
   specs:
     dm-rails (1.3.0.beta)
-      actionpack (~> 3.1.0)
+      actionpack (~> 3.0)
       dm-active_model (~> 1.3.0.beta)
-      dm-core (~> 1.3.0.beta)
-      railties (~> 3.1.0)
+      railties (~> 3.0)
 
 GIT
   remote: git://github.com/datamapper/dm-timestamps
-  revision: 01248966c96b51f3e55187ec3530d7f93dfb1ac6
+  revision: 70b58b365a29a26af62fc580be6c57b97c2770ca
   specs:
     dm-timestamps (1.3.0.beta)
       dm-core (~> 1.3.0.beta)
 
 GIT
   remote: git://github.com/datamapper/dm-validations
-  revision: dc6ae7a8ed726018e9e28d68d0df83fcbe4d7d2a
+  revision: 22d10e0e3e7685f0e51a9bad255b972fbd273823
   specs:
-    dm-validations (1.1.1)
+    dm-validations (1.3.0.beta)
       dm-core (~> 1.3.0.beta)
 
 GIT
   remote: git://github.com/jnicklas/capybara.git
-  revision: 8399429874dc9b567e35d39d1bd6d82fba1a85c8
+  revision: 440d0e1250243e55d12812fa1c03fdb440d7b31d
   specs:
-    capybara (1.1.1)
+    capybara (1.1.2)
       mime-types (>= 1.16)
       nokogiri (>= 1.3.3)
       rack (>= 1.0.0)
@@ -102,9 +102,9 @@ GIT
 
 GIT
   remote: git://github.com/makevoid/voidtools
-  revision: 707a87770f52790fdd9fec1518f21dd0069681c7
+  revision: f8377c0e7f2a4c11717a96590bfadaec0fdad5e8
   specs:
-    voidtools (0.2.4)
+    voidtools (0.2.9)
 
 GIT
   remote: git://github.com/rails/exception_notification
@@ -115,62 +115,66 @@ GIT
 GEM
   remote: http://rubygems.org/
   specs:
-    RedCloth (4.2.8)
-    actionmailer (3.1.1)
-      actionpack (= 3.1.1)
+    RedCloth (4.2.9)
+    actionmailer (3.1.4)
+      actionpack (= 3.1.4)
       mail (~> 2.3.0)
-    actionpack (3.1.1)
-      activemodel (= 3.1.1)
-      activesupport (= 3.1.1)
+    actionpack (3.1.4)
+      activemodel (= 3.1.4)
+      activesupport (= 3.1.4)
       builder (~> 3.0.0)
       erubis (~> 2.7.0)
       i18n (~> 0.6)
-      rack (~> 1.3.2)
+      rack (~> 1.3.6)
       rack-cache (~> 1.1)
       rack-mount (~> 0.8.2)
       rack-test (~> 0.6.1)
-      sprockets (~> 2.0.2)
-    activemodel (3.1.1)
-      activesupport (= 3.1.1)
+      sprockets (~> 2.0.3)
+    activemodel (3.1.4)
+      activesupport (= 3.1.4)
       builder (~> 3.0.0)
       i18n (~> 0.6)
-    activesupport (3.1.1)
+    activesupport (3.1.4)
       multi_json (~> 1.0)
-    addressable (2.2.6)
+    addressable (2.2.7)
+    backports (2.3.0)
     builder (3.0.0)
-    childprocess (0.2.2)
+    childprocess (0.3.2)
       ffi (~> 1.0.6)
-    data_objects (0.10.7)
+    daemons (1.1.8)
+    data_objects (0.10.8)
       addressable (~> 2.1)
-    database_cleaner (0.6.7)
+    database_cleaner (0.7.2)
     diff-lcs (1.1.3)
-    do_mysql (0.10.7)
-      data_objects (= 0.10.7)
+    do_mysql (0.10.8)
+      data_objects (= 0.10.8)
     erubis (2.7.0)
     escape (0.0.4)
-    ffi (1.0.10)
-    haml (3.1.3)
+    eventmachine (0.12.10)
+    ffi (1.0.11)
+    haml (3.1.4)
     hike (1.2.1)
     i18n (0.6.0)
-    json (1.6.1)
-    json_pure (1.6.1)
-    launchy (2.0.5)
+    json (1.7.0)
+    launchy (2.1.0)
       addressable (~> 2.2.6)
-    mail (2.3.0)
+    libwebsocket (0.1.3)
+      addressable
+    mail (2.3.3)
       i18n (>= 0.4.0)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
-    mime-types (1.17.2)
-    mixpanel (1.0.0)
+    mime-types (1.18)
+    mixpanel (1.1.3)
       escape
       json
       rack
-    multi_json (1.0.3)
-    newrelic_rpm (3.3.0)
-    nokogiri (1.5.0)
+    multi_json (1.3.4)
+    newrelic_rpm (3.3.4.1)
+    nokogiri (1.5.2)
     polyglot (0.3.3)
-    rack (1.3.5)
-    rack-cache (1.1)
+    rack (1.3.6)
+    rack-cache (1.2)
       rack (>= 0.4)
     rack-mount (0.8.3)
       rack (>= 1.0.0)
@@ -178,50 +182,55 @@ GEM
       rack
     rack-test (0.6.1)
       rack (>= 1.0)
-    railties (3.1.1)
-      actionpack (= 3.1.1)
-      activesupport (= 3.1.1)
+    railties (3.1.4)
+      actionpack (= 3.1.4)
+      activesupport (= 3.1.4)
       rack-ssl (~> 1.3.2)
       rake (>= 0.8.7)
       rdoc (~> 3.4)
       thor (~> 0.14.6)
     rake (0.9.2.2)
-    rdoc (3.11)
+    rdoc (3.12)
       json (~> 1.4)
-    rspec (2.7.0)
-      rspec-core (~> 2.7.0)
-      rspec-expectations (~> 2.7.0)
-      rspec-mocks (~> 2.7.0)
-    rspec-core (2.7.1)
-    rspec-expectations (2.7.0)
-      diff-lcs (~> 1.1.2)
-    rspec-mocks (2.7.0)
-    rspec-rails (2.7.0)
-      actionpack (~> 3.0)
-      activesupport (~> 3.0)
-      railties (~> 3.0)
-      rspec (~> 2.7.0)
-    rubyzip (0.9.4)
-    sass (3.1.10)
-    selenium-webdriver (2.12.1)
-      childprocess (>= 0.2.1)
-      ffi (~> 1.0.9)
-      json_pure
+    rspec (2.9.0)
+      rspec-core (~> 2.9.0)
+      rspec-expectations (~> 2.9.0)
+      rspec-mocks (~> 2.9.0)
+    rspec-core (2.9.0)
+    rspec-expectations (2.9.1)
+      diff-lcs (~> 1.1.3)
+    rspec-mocks (2.9.0)
+    rspec-rails (2.9.0)
+      actionpack (>= 3.0)
+      activesupport (>= 3.0)
+      railties (>= 3.0)
+      rspec (~> 2.9.0)
+    rubyzip (0.9.8)
+    sass (3.1.16)
+    selenium-webdriver (2.21.2)
+      childprocess (>= 0.2.5)
+      ffi (~> 1.0)
+      libwebsocket (~> 0.1.3)
+      multi_json (~> 1.0)
       rubyzip
-    sprockets (2.0.3)
+    sprockets (2.0.4)
       hike (~> 1.2)
       rack (~> 1.0)
       tilt (~> 1.1, != 1.3.0)
     steak (2.0.0)
       capybara (>= 1.0.0)
       rspec-rails (>= 2.5.0)
+    thin (1.3.1)
+      daemons (>= 1.0.9)
+      eventmachine (>= 0.12.6)
+      rack (>= 1.0.0)
     thor (0.14.6)
     tilt (1.3.3)
     treetop (1.4.10)
       polyglot
       polyglot (>= 0.3.1)
-    tzinfo (0.3.31)
-    virtus (0.0.9)
+    tzinfo (0.3.33)
+    virtus (0.2.0)
     xpath (0.1.4)
       nokogiri (~> 1.3)
 
@@ -244,7 +253,7 @@ DEPENDENCIES
   dm-mysql-adapter (~> 1.3.0.beta)!
   dm-rails (~> 1.3.0.beta)!
   dm-timestamps (~> 1.3.0.beta)!
-  dm-validations (~> 1.1.1)!
+  dm-validations (~> 1.3.0.beta)!
   dm-validations-i18n!
   exception_notification!
   haml
@@ -256,6 +265,7 @@ DEPENDENCIES
   rspec-rails
   sass
   steak
+  thin
   tzinfo
   voidtools!
   ya2yaml!

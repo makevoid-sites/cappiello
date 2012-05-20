@@ -48,7 +48,7 @@ gem 'dm-mysql-adapter',     DM_VERSION, :git => "#{DATAMAPPER}/dm-mysql-adapter.
 
 gem 'dm-migrations',        DM_VERSION, :git => "#{DATAMAPPER}/dm-migrations"
 # gem 'dm-types',             DM_VERSION, :git => "#{DATAMAPPER}/dm-types"
-gem 'dm-validations',       DM_VERSION2, :git => "#{DATAMAPPER}/dm-validations"
+gem 'dm-validations',       DM_VERSION, :git => "#{DATAMAPPER}/dm-validations"
 #gem 'dm-constraints',       DM_VERSION, :git => "#{DATAMAPPER}/dm-constraints"
 # gem 'dm-transactions',      DM_VERSION, :git => "#{DATAMAPPER}/dm-transactions.git"
 gem 'dm-aggregates',        DM_VERSION, :git => "#{DATAMAPPER}/dm-aggregates"
@@ -61,6 +61,10 @@ group :development, :test do
   gem 'launchy'
   gem 'steak'
   gem 'database_cleaner'
+end
+
+group :development do
+  gem "thin"
 end
 
 # ------------------------------------------------------------------------------
@@ -80,12 +84,12 @@ gem 'dm-active_model',      DM_VERSION, :git => "git://github.com/datamapper/dm-
 
 gem "dm-is-tree",         git: "git://github.com/datamapper/dm-is-tree"
 # gem "dm-is-protectable"#,  git: "git://github.com/makevoid/dm-is-protectable"
-# 
+#
 # gem 'warden', '~> 0.10.4', :git => "git://github.com/hassox/warden.git"
 # gem 'devise', '~> 1.1.rc1', :git => "git://github.com/plataformatec/devise.git"
 
 gem "dm-validations-i18n",  git: "git://github.com/makevoid/dm-validations-i18n.git"
- 
+
 #gem 'haml', '~> 3.1.0', :git => "git://github.com/nex3/haml.git"
 gem 'haml'
 gem 'sass'
@@ -102,3 +106,4 @@ gem "ya2yaml", :git => "git://github.com/afunai/ya2yaml"
 gem "mixpanel"
 
 gem 'newrelic_rpm'
+

@@ -1,4 +1,6 @@
-$(function(){
+$(function(){ 
+  
+  $("#js_enabled").val("true")
   
   function open_in_textmate(path) {
     app_name = "cappiello"

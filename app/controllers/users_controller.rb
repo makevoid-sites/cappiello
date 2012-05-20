@@ -1,27 +1,27 @@
 # encoding: utf-8
 class UsersController < ApplicationController
-  
-  before_filter :admin_only, only: [:index, :destroy, :newsletter]  
-  
+
+  before_filter :admin_only, only: [:index, :destroy, :newsletter]
+
   def index
     @users = User.paginate(:page => params[:page] )
   end
-  
+
   def show
     @user = params[:name_url].inty? ? User.get(params[:name_url]) : User.first(name_url: params[:name_url])
     return not_found if @user.nil?
   end
-  
+
   def new
     @user = User.new
   end
-  
+
   def create
     correct_date_params
     params[:user][:anonym_id] = session[:anonym_id]
     @user = User.new(params[:user])
     @user.tmp_password = params[:user][:password]
-    if @user.save
+    if params[:js_enabled] == "true" && @user.save
       session[:user_id] = @user.id
       path = root_path
       path = @user.redirect_url unless @user.redirect_url.blank?
@@ -35,12 +35,12 @@ class UsersController < ApplicationController
       render :new
     end
   end
-  
+
   def edit
     @user = User.get(params[:id])
     return(render text: tf("Error: You're not logged in or you're not editing your profile")) if @user != current_user && !admin?
   end
-  
+
   def update
     correct_date_params
     params[:admin] = false if params[:admin] == true
@@ -61,14 +61,14 @@ class UsersController < ApplicationController
       end
     end
   end
-  
+
   def newsletter
     # John Dow,john@somedomain.com,Philadelphia,32
     @users = User.subscribers.map{ |user| "#{user.name},#{user.email},#{user.city}" }
   end
-  
+
   protected
-  
+
   def send_form_notification(user, pdf=nil)
     form = params[:user][:tmp_form]
     unless form.blank?
@@ -81,7 +81,7 @@ class UsersController < ApplicationController
       end
     end
   end
-  
+
   def correct_date_params
     obj = :user
     User.properties.each do |prop|
