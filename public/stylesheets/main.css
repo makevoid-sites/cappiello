@@ -951,3 +951,9 @@ img.image_left {
       padding-bottom: 4px;
       background: #cc0000;
       color: white; }
+
+.fb_like {
+  clear: left;
+  padding: 20px 0 0; }
+  .fb_like iframe {
+    background: #e9e9e9; }
