@@ -3,7 +3,8 @@
   %head
     - unless Rails.env == "production"
       - debug = " anonym_id: #{session[:anonym_id]}"
-    %title= site_title "#{"#{@title} - " unless @title.blank?}#{debug}"
+    - layout_title = site_title "#{"#{@title} - " unless @title.blank?}#{debug}"
+    %title= layout_title
     %meta{ charset: "UTF-8" }/
     %meta{ content: meta_description, name: "description"}/
     %meta{ content: meta_keywords, name: "keywords"}/
@@ -11,10 +12,12 @@
     %meta{ name: 'csrf-token', content: form_authenticity_token}/
     %meta{ name: 'csrf-param', content: 'authenticity_token'}/
     %meta{ name: "google-site-verification", content: "WT1zivsvBTN6dzfaJhbL5JKgi5K__Te3cCcSt3VL6Uw" }/
-    %meta{ property: "og:title", content: "Accademia Cappiello" }
+    %meta{ property: "og:title", content: layout_title }
     %meta{ property: "og:type", content: "website" }/
     %meta{ property: "og:site_name", content: "Accademia Cappiello" }/
-    %meta{ property: "og:image", content: "http://accademia-cappiello.it/images/logo_square.png" }/
+    %meta{ property: "og:image", content: "http://accademia-cappiello.it/images/logo.png" }/
+    %meta{ property: "og:description", content: meta_description }/
+    %meta{ property: "og:url", content: request.host+request.fullpath }/
     %meta{ property: "fb:admins", content: "makevoid" }/
     = stylesheet_link_tag "main", 'fancybox'#, :cache =>  "cache/all"
     = javascript_include_tag "jquery", "jquery-cycle", "jquery-swfobject", "jquery-hoverintent","jquery-flickr", "jquery-mousewheel", "jquery-fancybox", "jquery-validation", "rails", "master"#, :cache => "cache/all"
