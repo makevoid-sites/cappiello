@@ -17,7 +17,7 @@
     %meta{ property: "og:site_name", content: "Accademia Cappiello" }/
     %meta{ property: "og:image", content: "http://accademia-cappiello.it/images/logo.png" }/
     %meta{ property: "og:description", content: meta_description }/
-    %meta{ property: "og:url", content: request.host+request.fullpath }/
+    %meta{ property: "og:url", content: request_url }/
     %meta{ property: "fb:admins", content: "makevoid" }/
     = stylesheet_link_tag "main", 'fancybox'#, :cache =>  "cache/all"
     = javascript_include_tag "jquery", "jquery-cycle", "jquery-swfobject", "jquery-hoverintent","jquery-flickr", "jquery-mousewheel", "jquery-fancybox", "jquery-validation", "rails", "master"#, :cache => "cache/all"
