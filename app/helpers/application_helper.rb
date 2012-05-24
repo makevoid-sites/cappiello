@@ -54,7 +54,7 @@ module ApplicationHelper
     text
   end
 
-  def request_path
+  def request_url
     "http://"+request.host+request.fullpath
   end
 
