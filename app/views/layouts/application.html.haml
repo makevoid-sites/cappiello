@@ -3,11 +3,11 @@
   %head
     - unless Rails.env == "production"
       - debug = " anonym_id: #{session[:anonym_id]}"
-    %title= site_title "#{" - #{@title}" unless @title.blank?}#{debug}"
-    %meta{ charset: "UTF-8" }/    
+    %title= site_title "#{"#{@title} - " unless @title.blank?}#{debug}"
+    %meta{ charset: "UTF-8" }/
     %meta{ content: meta_description, name: "description"}/
     %meta{ content: meta_keywords, name: "keywords"}/
-    %meta{ content: meta_author, name: "author"}/     
+    %meta{ content: meta_author, name: "author"}/
     %meta{ name: 'csrf-token', content: form_authenticity_token}/
     %meta{ name: 'csrf-param', content: 'authenticity_token'}/
     %meta{ name: "google-site-verification", content: "WT1zivsvBTN6dzfaJhbL5JKgi5K__Te3cCcSt3VL6Uw" }/
@@ -17,12 +17,12 @@
     %meta{ property: "og:site_name", content: "Accademia Cappiello" }/
     %meta{ property: "og:image", content: "http://accademia-cappiello.it/images/logo_square.png" }/
     %meta{ property: "fb:admins", content: "makevoid" }/
-    = stylesheet_link_tag "main", 'fancybox'#, :cache =>  "cache/all"       
-    = javascript_include_tag "jquery", "jquery-cycle", "jquery-swfobject", "jquery-hoverintent","jquery-flickr", "jquery-mousewheel", "jquery-fancybox", "jquery-validation", "rails", "master"#, :cache => "cache/all" 
+    = stylesheet_link_tag "main", 'fancybox'#, :cache =>  "cache/all"
+    = javascript_include_tag "jquery", "jquery-cycle", "jquery-swfobject", "jquery-hoverintent","jquery-flickr", "jquery-mousewheel", "jquery-fancybox", "jquery-validation", "rails", "master"#, :cache => "cache/all"
     = yield :head
     %script{ type: "text/javascript" }
       var action = '#{controller.action_name}'
-      var resources = '#{controller.controller_name.pluralize}' 
+      var resources = '#{controller.controller_name.pluralize}'
       = yield :script
       :plain
         function hide_flashes() {
@@ -34,7 +34,7 @@
       :plain
         // if !webkit
         $('#banner').cycle({
-          fx: 'fade' 
+          fx: 'fade'
         });
         setTimeout(hide_flashes, 3000)
       });
@@ -57,32 +57,32 @@
                 map: map
               })
             }
-            
+
             gmap()
           })
-          
+
     - if Rails.env == "production" && !analytics_tracker.blank?
       = render partial: "layouts/analytics"
   %body{ class: "#{controller.controller_name} #{controller.action_name} #{"master" if master?} #{"admin" if admin?}"}
     #backg
-      #container 
+      #container
         = render partial: "sections/login"
         .clear
         - unless flash == {} || flash.nil?
           #flashes
             - flash.map do |key, value|
               - unless value.blank?
-                %div{ :class => key }= value            
+                %div{ :class => key }= value
         #header
           = render partial: "sections/header"
         #sub_container
           = render partial: "sections/nav"
-          #content    
+          #content
             - title
             = yield
             .clear
-          
-        .clear   
+
+        .clear
         #footer
           = footer_text
     .clear
@@ -91,7 +91,7 @@
       #{gauges("4df80dfbf5a1f57c15000001")}
     :javascript
       $(function(){
-            
+
         $('#profile_tab').hover(function(){
           $('#profile_links').show();
           $('#profile_tab').addClass("hover");
@@ -100,6 +100,5 @@
           $('#profile_links').hide();
           $('#profile_tab').removeClass("hover");
         });
-        
+
       });
-    
