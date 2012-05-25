@@ -507,7 +507,8 @@ ul#selection {
 
 #video {
   float: right;
-  margin: 0 2px 5px 15px; }
+  margin: 8px 2px 5px 15px;
+  clear: right; }
   #video iframe {
     width: 360px;
     height: 252px; }
