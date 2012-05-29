@@ -107,3 +107,5 @@ gem "mixpanel"
 
 gem 'newrelic_rpm'
 
+gem "thin"
+

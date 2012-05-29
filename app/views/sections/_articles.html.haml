@@ -11,7 +11,7 @@
         = link_to "Lista News", news_path()
   .clear
   -#
-  -# %h5 
+  -# %h5
   -#   %span Eventi
   -# .eventi
   -#   %ul
@@ -20,10 +20,17 @@
   -#     .insert_article
   -#       = link_to "Inserisci Evento", new_article_path(article_type: "event")
   -# .clear
-  
+
   .lavoro
     .box
-      %p.head
-        = link_to "OPPORTUNITA' DI LAVORO", "/works"
-      %p
-        = link_to "L'accademia aiuta i suoi diplomati ad inserirsi nel mondo del lavoro.", "/works"
+      - unless english?
+        %p.head
+          = link_to "OPPORTUNITA' DI LAVORO", "/works"
+        %p
+          = link_to "L'accademia aiuta i suoi diplomati ad inserirsi nel mondo del lavoro.", "/works"
+      - else
+        %p.head
+          = link_to "Job Opportunities", "/works"
+        %p
+          = link_to "The academy helps his students to enter in the business world.", "/works"
+

@@ -29,7 +29,7 @@ pages.map do |page|
   pp = Page.create(page)
 end
 
-User.create(admin: true, first_name: "Francesco", last_name: "Canessa", nickname: "makevoid", email: "makevoid@gmail.com", password: "finalman")
+User.create(admin: true, first_name: "Francesco", last_name: "Canessa", nickname: "makevoid", email: "makevoid@gmail.com", password: "secret")
 
 
 require "#{path}/lib/dm_utils"

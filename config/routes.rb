@@ -47,12 +47,12 @@ Cappiello::Application.routes.draw do
   #   end
 
   get "/stats", to: "pages#stats", as: :stats
-  
+
   get "/pages/form", to: redirect("/pages/info")
   get "/pages/:id", to: "pages#show", as: :page
   resources :pages
 
-  
+
   #get "/users/:name_url", to: "users#show", as: :user_path
   get "/users/new", to: "users#new", as: :new_user
   get "/users/newsletter", to: "users#newsletter", as: :user_newsletter
@@ -62,11 +62,11 @@ Cappiello::Application.routes.draw do
     #
     # collection do
       # get "newsletter"
-    # end 
+    # end
     # get 'newsletter', :on => :collection
   end
-    
-  
+
+
   get "/login", to: "sessions#new", as: :login_page
   post "/login", to: "sessions#create", as: :login
   get "/logout", to: "sessions#destroy", as: :logout
@@ -75,16 +75,15 @@ Cappiello::Application.routes.draw do
   get "/news/:id", to: "articles#show"
   get "/news", to: "articles#index"
   get "/events/:id", to: "articles#show", as: :event
-  get "/news/:year/:month/:day/:id", to: "articles#show", as: :news_date
-  get "/events/:year/:month/:day/:id", to: "articles#show", as: :event_date
+  get "/news/:id", to: "pages#show", as: :page
   resources :articles
-  
+
   resources :photos
   resources :works
-  
+
   get "/pdf_open/:name", to: "pages#pdf"
   get "/pdf_open/en/:name", to: "pages#pdf_en"
-  
+
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
   root :to => "pages#index"
@@ -96,7 +95,7 @@ Cappiello::Application.routes.draw do
   # match ':controller(/:action(/:id(.:format)))'
 
   # deprecateds
-  
+
   # old_routes = ["/indexMaster.asp",
   #  "/eventiDett.asp",
   #  "/stages.asp",
@@ -125,7 +124,7 @@ Cappiello::Application.routes.draw do
   #  "/index.html",
   #  "/html/lavoro.html",
   #  "html/ienf.html"]
-  #  
+  #
   # old_routes.each do |route|
   #   match route => redirect("http://accademia-cappiello.it/")
   # end

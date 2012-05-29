@@ -13,5 +13,8 @@
   = f.password_field :password
 
   = hidden_field_tag :js_enabled
+  
+  = f.check_box :newsletter
+  = f.label     :newsletter,  tf("desidero ricevere informazioni su iniziative e nuovi corsi", "I want to receive information about new courses")
 
   = f.submit "Registrati", class: "submit"

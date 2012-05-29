@@ -1,7 +1,8 @@
 set :application, "cappiello"
 
 
-set :domain, "kim.makevoid.com" # old: makevoid.com # old: ovh.makevoid.com
+# set :domain, "ovh_old"
+set :domain, "makevoid.com" # old: makevoid.com # old: ovh.makevoid.com
 # set :domain, "kim.makevoid.com"
 set :domain2,      "makevoid.com"
 
