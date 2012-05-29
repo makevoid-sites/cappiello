@@ -75,7 +75,7 @@ Cappiello::Application.routes.draw do
   get "/news/:id", to: "articles#show"
   get "/news", to: "articles#index"
   get "/events/:id", to: "articles#show", as: :event
-  get "/news/:id", to: "pages#show", as: :page
+  get "/news/:id", to: "pages#show", as: :article
   resources :articles
 
   resources :photos
