@@ -72,6 +72,7 @@ namespace :deploy do
   desc "Create symlinks (managing server)"
   task :create_symlinks do
     run "cd #{current_path}/public; ln -s #{deploy_to}/shared/pdf pdf"
+    run "cd #{current_path}/public; ln -s #{deploy_to}/shared/uploads uploads"
   end
 
   desc "Create database yml"
