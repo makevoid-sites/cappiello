@@ -67,6 +67,36 @@ class UsersController < ApplicationController
     @users = User.subscribers.map{ |user| "#{user.name},#{user.email},#{user.city}" }
   end
 
+  # reset password
+
+  def reset_password_form
+  end
+
+  def reset_password_send
+    user = User.first email: params[:email]
+    if user
+      user.reset_password!
+      UserMailer.reset_password(user).deliver
+      render :reset_password_success
+    else
+      error = tf "Non e' stato trovato un'utente registrato con questa email.", "Sorry, no registered user found with this email"
+      render :reset_password_form, error: error
+    end
+  end
+
+  def reset_password_success
+  end
+
+  def reset_password
+    token = params[:token]
+    user = User.get(params[:id])
+    if user.password_reset_token == token
+      "token is valid enter your new password"
+    else
+      "token is invalid"
+    end
+  end
+
   protected
 
   def send_form_notification(user, pdf=nil)
@@ -98,8 +128,4 @@ class UsersController < ApplicationController
     end
   end
 
-  def reset_password
-    token = params[:token]
-    User.find_by
-  end
 end

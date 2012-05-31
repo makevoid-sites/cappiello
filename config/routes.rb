@@ -10,6 +10,11 @@ Cappiello::Application.routes.draw do
   #get "/users/:name_url", to: "users#show", as: :user_path
   get "/users/new", to: "users#new", as: :new_user
   get "/users/newsletter", to: "users#newsletter", as: :user_newsletter
+  get "/users/reset_password_form", to: "users#reset_password_form", as: :reset_password_form
+  get "/users/reset_password_success", to: "users#reset_password_success", as: :reset_password_success
+  post "/users/reset_password_send", to: "users#reset_password_send", as: :reset_password_send
+  post "/users/reset_password", to: "users#reset_password", as: :reset_password
+  get "/users/reset_password/:token", to: "users#reset_password_link", as: :reset_password_link
   get "/users/:name_url", to: "users#show", as: :user
   resources :users do
     # just a reminder:
@@ -19,7 +24,6 @@ Cappiello::Application.routes.draw do
     # end
     # get 'newsletter', :on => :collection
   end
-  get "/users/reset_password/:token", to: "users#reset_password", as: :reset_password
 
   get "/login", to: "sessions#new", as: :login_page
   post "/login", to: "sessions#create", as: :login

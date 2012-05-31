@@ -48,6 +48,8 @@ class User
   property :created_at, DateTime
   property :updated_at, DateTime, index: true
 
+  property :reset_password_token, String
+
   5.times do |i|
     property "info#{i}", Text
   end
@@ -130,6 +132,18 @@ class User
 
   before :create do
     self.name_url = generate_name_url(self.full_name)
+  end
+
+  # reset password
+
+  def reset_password!
+    self.reset_password_token = generate_reset_password_token
+  end
+
+  private
+
+  def generate_reset_password_token
+    Digest::SHA1.hexdigest "#{Time.now.to_i }_antani"
   end
 
 end
