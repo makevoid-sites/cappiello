@@ -97,4 +97,9 @@ class UsersController < ApplicationController
       end
     end
   end
+
+  def reset_password
+    token = params[:token]
+    User.find_by
+  end
 end

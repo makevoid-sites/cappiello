@@ -1,6 +1,8 @@
 .user_infos
   %h3 Voglio ricevere informazioni su:
 
+  = hidden_field_tag :js_enabled
+
   - show_selection :int_annuali_visual, "Corso annuale Visual Design"
   - show_selection :int_annuali_interior, "Corso annuale Interior Design"
   - show_selection :int_brevi_visual, "Corsi brevi Visual Design"

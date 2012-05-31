@@ -1,6 +1,7 @@
 .borse_di_studio
   = form_for @user do |f|
     = f.hidden_field :tmp_form, value: "borsa"
+    = hidden_field_tag :js_enabled
     .preradio
   
       = f.label :interested_in_visual, "VISUAL DESIGN"
