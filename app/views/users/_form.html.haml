@@ -19,9 +19,9 @@
     
       %h3= tf("RICHIESTA DI PARTECIPAZIONE GRATUITA", "REQUEST FREE PARTICIPATION")
       = f.check_box :int_stage_visual
-      = f.label     :int_stage_visual,    "#{tf "stage gratuito", "free stage"} - VISUAL DESIGN"
+      = f.label     :int_stage_visual,    "#{tf "open day", "open day"} - VISUAL DESIGN"
       = f.check_box :int_stage_interior
-      = f.label     :int_stage_interior,  "#{tf "stage gratuito", "free stage"} - INTERIOR DESIGN"
+      = f.label     :int_stage_interior,  "#{tf "open day", "open day"} - INTERIOR DESIGN"
 
     .form
       = f.label :first_name, tf("Nome", "First name")
@@ -55,7 +55,7 @@
     
       .checkboxes_bottom
         = f.check_box :newsletter
-        = f.label     :newsletter,  tf("desidero ricevere informazioni su iniziative e nuovi corsi", "I want to receive information about new courses")
+        = f.label     :newsletter,  tf("Newsletter - tieniti informato su nuovi corsi ed iniziative", "Newsletter - stay informed about new courses and events")
     
         = check_box_tag :authorize
         = label_tag     :authorize,  tf("autorizzo il trattamento dei dati personali", "I authorize the processing of personal data")
