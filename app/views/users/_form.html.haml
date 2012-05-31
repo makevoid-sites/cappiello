@@ -44,13 +44,13 @@
       = f.label :qualification, tf("Titolo di studio", "Degree")  
       = f.text_field :qualification
       
-      = f.label :birthplace, tf("Nato a", "Born")
+      = f.label :birthplace, tf("Luogo di nascita", "Born")
       = f.text_field :birthplace 
-      = f.label :birthdate, tf("Data", "Birthdate")
+      = f.label :birthdate, tf("Data di nascita", "Birthdate")
       .date_select
         = f.date_select :birthdate, start_year: 1960, end_year: 2000
     
-      = f.label :notes, tf("Note", "Other infos")
+      = f.label :notes, tf("Messaggio", "Other infos")
       = f.text_area :notes
     
       .checkboxes_bottom
