@@ -13,7 +13,6 @@
         history.replaceState(stateObj, title, "/")
 
 
-%script{ src: "http://connect.facebook.net/en_US/all.js#xfbml=1" }
 
 
 - if @page.id == 9 # contacts
@@ -29,9 +28,7 @@
     = render partial: "elements/standard"
     =# raise NotFound
 
-.fb_like
-  :plain
-    <fb:like href="#{request_url}" send="true" width="400" show_faces="true"></fb:like>
+= render partial: "elements/share"
 
 -# if admin?
 - content_for :admin do

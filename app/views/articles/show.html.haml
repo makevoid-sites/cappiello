@@ -1,3 +1,5 @@
+
+
 - content_for :admin do
   Articolo:
   = link_to "Modifica", [:edit, @article]
@@ -7,6 +9,9 @@
   - title tr(@article).title + "<span class='date'>#{I18n.l(@article.created_at.to_date, format: :medium)}</span>"
 
   = markup tr(@article).text
+
+  = render partial: "elements/share"
+
 
   .right
     = link_to tf("Torna alla home page", "Back to home page"), root_path
