@@ -64,4 +64,12 @@ module ApplicationHelper
     RedCloth.new( text.to_s ).to_html
   end
 
+  def truncate(string, max=200)
+    if string.size > max
+      "#{string[0..max]}..."
+    else
+      string
+    end
+  end
+
 end

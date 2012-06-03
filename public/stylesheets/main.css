@@ -274,6 +274,15 @@ a#profile_name {
   #news .date {
     float: right; }
 
+#news span {
+  display: inline-block; }
+#news span.title {
+  width: 70%; }
+#news span.date {
+  width: 30%; }
+#news p {
+  clear: both; }
+
 .articles.show .date {
   margin-top: 5px;
   font-size: 0.7em;
@@ -282,6 +291,12 @@ a#profile_name {
 .articles.index .date {
   float: left;
   margin-right: 15px; }
+
+#articles_list li a {
+  font-weight: bold;
+  font-size: 1.1em; }
+#articles_list li p:last-child {
+  margin: 0 0 30px 0; }
 
 #logo {
   float: left;

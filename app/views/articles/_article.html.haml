@@ -2,3 +2,5 @@
 %li
   - text = "<span class='title'>#{tr(article).title}</span> <span class='date'>#{I18n.l(article.created_at.to_date, format: :custom)}</span>"
   = link_to text.html_safe, link
+  %p
+    = markup truncate(article.text)
