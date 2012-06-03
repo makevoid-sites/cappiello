@@ -123,6 +123,14 @@ class User
     encrypt_password
   end
 
+  attr_accessor :action_reset_pass
+  before :update do
+    if self.action_reset_pass
+      encrypt_password
+      self.reset_password_token = nil
+      self.save
+    end
+  end
 
   # name url
 
@@ -138,6 +146,7 @@ class User
 
   def reset_password!
     self.reset_password_token = generate_reset_password_token
+    self.save
   end
 
   private

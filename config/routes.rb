@@ -10,11 +10,14 @@ Cappiello::Application.routes.draw do
   #get "/users/:name_url", to: "users#show", as: :user_path
   get "/users/new", to: "users#new", as: :new_user
   get "/users/newsletter", to: "users#newsletter", as: :user_newsletter
-  get "/users/reset_password_form", to: "users#reset_password_form", as: :reset_password_form
+  get "/users/reset_password_form", to: "users#reset_password_form", as: :reset_password_form_user
   get "/users/reset_password_success", to: "users#reset_password_success", as: :reset_password_success
   post "/users/reset_password_send", to: "users#reset_password_send", as: :reset_password_send
+  # todo: add user to every route?
   post "/users/reset_password", to: "users#reset_password", as: :reset_password
-  get "/users/reset_password/:token", to: "users#reset_password_link", as: :reset_password_link
+  put "/users/:token/change_password", to: "users#change_password", as: :change_password_user
+
+  get "/users/reset_password/:token", to: "users#reset_password_edit", as: :reset_password_edit
   get "/users/:name_url", to: "users#show", as: :user
   resources :users do
     # just a reminder:

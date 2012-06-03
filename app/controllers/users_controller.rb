@@ -43,7 +43,7 @@ class UsersController < ApplicationController
 
   def update
     correct_date_params
-    params[:admin] = false if params[:admin] == true
+    params[:admin] = false
     @user = User.get(params[:id])
     return(render text: tf("Error: You're not logged in or you're not editing your profile")) if @user != current_user && !admin?
     if @user.update(params[:user])
@@ -87,13 +87,17 @@ class UsersController < ApplicationController
   def reset_password_success
   end
 
-  def reset_password
-    token = params[:token]
-    user = User.get(params[:id])
-    if user.password_reset_token == token
-      "token is valid enter your new password"
+  def reset_password_edit
+    @user = User.first reset_password_token: params[:token]
+  end
+
+  def change_password
+    @user = User.first reset_password_token: params[:token]
+    if @user.update(params[:user])
+      session[:user_id] = @user.id
+      redirect_to root_path, notice: tf("La password tua e' stata cambiata!", "Your password has been changed")
     else
-      "token is invalid"
+      render :reset_password_edit
     end
   end
 
