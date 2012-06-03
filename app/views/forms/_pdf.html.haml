@@ -1,17 +1,17 @@
 - pdf = pdf
 
-- content_for :jquery do 
+- content_for :jquery do
   :plain
     $("#standard h3 a").live('click', function(){
       $('.forms_pdf form').toggle();
       $('.forms_pdf').toggleClass("bg");
     })
-    
+
     var label = $("h3").html()
     //$("#standard h3").remove()
     //$("#standard p ").append("<h3>"+label+"</h3>")
     //$("#standard p:first h3, #standard form p").remove()
-  
+
 .forms_pdf
   - label = tf("Scarica il pdf informativo del corso", "Download the course information pdf")
   - if logged_in?
@@ -34,14 +34,14 @@
       %div
         = f.label :first_name, tf("Nome", "First Name")
         = f.text_field :first_name
-      %div  
+      %div
         = f.label :last_name, tf("Cognome", "Last Name")
         = f.text_field :last_name
       .clear
       .row
         = f.label :email, "Email"
         = f.text_field :email
-      .clear  
+      .clear
       .row
         = f.label :password, tf("Scegli una password", "Choose a password")
         = f.password_field :password
@@ -50,8 +50,9 @@
         %div.authorize
           - label = "Autorizzo il trattamento dati".html_safe
           -# label = "Autorizzo il <a href='/pdf/privacy.pdf'>trattamento dati</a>".html_safe
-      
+
         = f.check_box :confirm, class: "checkbox"
         = f.label :confirm, label, {checked: "checked"}
+      = hidden_field_tag :js_enabled
       = f.submit tf("Scarica", "Download"), class: "submit"
 .pdf_clear

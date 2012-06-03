@@ -33,6 +33,12 @@ class ApplicationController < ActionController::Base
   end
 
 
+  before_filter :remember_last_url
+
+  def remember_last_url
+    session[:last_url] = request.path unless ["/login", "/users/new"].include? request.path
+  end
+
 
   DataMapper::Validations::I18n.localize! 'it'
   DataMapper::Validations::I18n.translate_field_name_with :rails

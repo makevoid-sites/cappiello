@@ -9,7 +9,7 @@ class UserMailer < ActionMailer::Base
   ADMIN = Rails.env == "development" ? DEV : PROD
   #ADMIN = "makevoid@gmail.com"
 
-  default :from => "noreply@accademia-cappiello.it"
+  # default from: "noreply@accademia-cappiello.it"
 
 
   layout "mail"

@@ -23,7 +23,7 @@ class UsersController < ApplicationController
     @user.tmp_password = params[:user][:password]
     if params[:js_enabled] == "true" && @user.save
       session[:user_id] = @user.id
-      path = root_path
+      path = session[:last_url] || root_path
       path = @user.redirect_url unless @user.redirect_url.blank?
       UserMailer.welcome(@user).deliver
       send_form_notification @user
