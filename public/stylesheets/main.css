@@ -953,8 +953,19 @@ img.image_left {
       background: #cc0000;
       color: white; }
 
+.share_btns {
+  clear: left;
+  padding: 25px 0 0; }
+
 .fb_like {
   clear: left;
-  padding: 20px 0 0; }
+  margin: 0 0 5px 0; }
   .fb_like iframe {
     background: #e9e9e9; }
+
+.twitter {
+  width: 110px;
+  margin: 0 0 5px 0; }
+
+.twitter, .linkedin {
+  display: inline-block; }
