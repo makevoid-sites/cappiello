@@ -1,5 +1,5 @@
-# MAIL_DEFAULT_FROM = "noreply@accademia-cappiello.it"
-MAIL_DEFAULT_FROM = "cappiello@makevoid.com"
+MAIL_DEFAULT_FROM = "noreply@accademia-cappiello.it"
+# MAIL_DEFAULT_FROM = "cappiello@makevoid.com"
 
 ActionMailer::Base.delivery_method = :smtp
 ActionMailer::Base.smtp_settings = {
