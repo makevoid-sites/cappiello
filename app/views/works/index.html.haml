@@ -12,13 +12,3 @@
     
 %p 
   %b Negli ultimi anni il numero delle richieste di diplomati, pervenute direttamente all'Accademia e' notevolmente aumentato ed e' risultato ampiamente superiore al numero degli studenti che frequentano ogni anno i corsi.
-
-%h3 Offerte recenti:
-
-%ul#works
-  = render partial: works
-  
-.pagination
-  pag:
-  - Work.pages.times do |i|
-    %a{ :href => "/works?page=#{i}" }= i+1  
