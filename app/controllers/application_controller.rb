@@ -36,7 +36,7 @@ class ApplicationController < ActionController::Base
   before_filter :remember_last_url
 
   def remember_last_url
-    session[:last_url] = request.path unless ["/login", "/users/new"].include? request.path
+    session[:last_url] = request.path unless ["/login", "/pages/info"].include? request.path
   end
 
 
