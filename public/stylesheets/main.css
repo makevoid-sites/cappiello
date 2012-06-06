@@ -290,7 +290,8 @@ a#profile_name {
 
 .articles.index .date {
   float: left;
-  margin-right: 15px; }
+  margin-right: 15px;
+  font-size: 0.8em; }
 
 #articles_list li a {
   font-weight: bold;

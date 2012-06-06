@@ -1,10 +1,10 @@
-%h2 Accedi
+%h2= tf "Accedi", "Log in"
 
 = form_tag [:login] do
   = label_tag :email, "Email"
   = text_field_tag :email
   = label_tag :password, "Password"
   = password_field_tag :password
-  = submit_tag "Accedi", class: "submit"
+  = submit_tag tf("Accedi", "Log in"), class: "submit"
 
   = link_to tf("Dimenticato la password?", "Forgot your password?"), [:reset_password_form_user]
