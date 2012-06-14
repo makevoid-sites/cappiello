@@ -14,3 +14,4 @@ tmp/*
 pages2.yml
 *.log
 pxm
+config/database.yml

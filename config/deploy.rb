@@ -78,17 +78,13 @@ namespace :deploy do
 
   desc "Create database yml"
   task :create_database_yml do
-    run "ruby -e \"path = '#{current_path}/config'; db_yaml = File.read(path+'/database.yml'); File.open(path+'/database.yml', 'w'){ |f| f.write db_yaml.gsub(/secret/, File.read(File.expand_path '~/.password').strip) }\""
-    # upload "config/database.yml", "#{current_path}/config/database.yml", via: :scp
-
+    run "ruby -e \"path = '#{current_path}/config'; db_yaml = File.read(path+'/database.default.yml'); File.open(path+'/database.yml', 'w'){ |f| f.write db_yaml.gsub(/secret/, File.read(File.expand_path '~/.password').strip) }\""
   end
 
 
   desc "Create mailer initializer"
   task :create_mailer_init do
     run "ruby -e \"path = '#{current_path}/config/initializers'; db_yaml = File.read(path+'/mail.rb'); File.open(path+'/mail.rb', 'w'){ |f| f.write db_yaml.gsub(/secret/, File.read(File.expand_path '~/.password').strip.gsub(/33/, \'\')) }\""
-    # upload "config/database.yml", "#{current_path}/config/database.yml", via: :scp
-
   end
 
 

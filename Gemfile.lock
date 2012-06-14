@@ -263,3 +263,4 @@ DEPENDENCIES
   thin
   tzinfo
   voidtools!
+  xpath

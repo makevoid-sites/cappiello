@@ -22,6 +22,7 @@ gem "tzinfo"
 #end
 
 gem "json"
+gem "xpath"
 gem "nokogiri"
 
 # 180389872 - 700GB
