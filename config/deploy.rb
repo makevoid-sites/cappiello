@@ -24,8 +24,9 @@ set :repository, "git://github.com/makevoid/cappiello.git"  # pub
 set :scm, "git"
 # needed?
 set :branch, "master"
-set :password,  File.read("/Users/makevoid/.password").strip
-set :scm_passphrase, password  # The deploy user's password
+password_var = File.read("/Users/makevoid/.password").strip
+# set :password,  password_var
+# set :scm_passphrase, password  # The deploy user's password
 
 ssh_options[:forward_agent] = true
 #set :deploy_via, :remote_cache
@@ -77,7 +78,7 @@ namespace :deploy do
 
   desc "Create database yml"
   task :create_database_yml do
-    run "ruby -e \"path = '#{current_path}/config'; db_yaml = File.read(path+'/database.yml'); File.open(path+'/database.yml', 'w'){ |f| f.write db_yaml.gsub(/secret/, '#{password}') }\""
+    run "ruby -e \"path = '#{current_path}/config'; db_yaml = File.read(path+'/database.yml'); File.open(path+'/database.yml', 'w'){ |f| f.write db_yaml.gsub(/secret/, File.read(File.expand_path '~/.password').strip) }\""
     # upload "config/database.yml", "#{current_path}/config/database.yml", via: :scp
 
   end
@@ -85,7 +86,7 @@ namespace :deploy do
 
   desc "Create mailer initializer"
   task :create_mailer_init do
-    run "ruby -e \"path = '#{current_path}/config/initializers'; db_yaml = File.read(path+'/mail.rb'); File.open(path+'/mail.rb', 'w'){ |f| f.write db_yaml.gsub(/secret/, '#{password.gsub(/33/, '')}') }\""
+    run "ruby -e \"path = '#{current_path}/config/initializers'; db_yaml = File.read(path+'/mail.rb'); File.open(path+'/mail.rb', 'w'){ |f| f.write db_yaml.gsub(/secret/, File.read(File.expand_path '~/.password').strip.gsub(/33/, \'\')) }\""
     # upload "config/database.yml", "#{current_path}/config/database.yml", via: :scp
 
   end
@@ -143,7 +144,7 @@ end
 namespace :db do
   desc "Create database"
   task :create do
-    run "mysql -u root --password=#{password} -e 'CREATE DATABASE IF NOT EXISTS #{application}_production;'"
+    run "mysql -u root --password=#{password_var} -e 'CREATE DATABASE IF NOT EXISTS #{application}_production;'"
   end
 
   desc "Seed database"
