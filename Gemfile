@@ -22,6 +22,7 @@ gem "tzinfo"
 #end
 
 gem "json"
+gem "nokogiri"
 
 # 180389872 - 700GB
 # 257699    - 1GB
