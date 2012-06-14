@@ -1,10 +1,4 @@
 GIT
-  remote: git://github.com/afunai/ya2yaml
-  revision: 86b8431076b8810747974bd5206d82683b3eb28c
-  specs:
-    ya2yaml (0.31)
-
-GIT
   remote: git://github.com/datamapper/dm-active_model
   revision: aa8927391fb7db6eadd38d9d7bfbf3d663fd87ac
   specs:
@@ -269,4 +263,3 @@ DEPENDENCIES
   thin
   tzinfo
   voidtools!
-  ya2yaml!

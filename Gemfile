@@ -102,7 +102,7 @@ gem "RedCloth"
 
 gem "voidtools", git: "git://github.com/makevoid/voidtools"
 
-gem "ya2yaml", :git => "git://github.com/afunai/ya2yaml"
+#gem "ya2yaml", :git => "git://github.com/afunai/ya2yaml"
 
 gem "mixpanel"
 
