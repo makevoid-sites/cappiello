@@ -66,7 +66,7 @@ class User
     if self.first_name != self.last_name
       [true]
     else
-      [false, "Il tuo nome dovrebbe essere diverso dal tuo congome..."]
+      [false, "Nome e cognome dovrebbero essere differenti / First and last names should be different"]
     end
   end
 
@@ -78,7 +78,7 @@ class User
       if users_count < num
         [true]
       else
-        [false, "Un utente con il tuo nome e cognome e' gia' registrato, probabilmente hai gia' un account. Controlla la tua mail - There is another user with your first and last name, probably you already have an account. Check your mail."]
+        [false, "Un utente con il tuo nome e cognome e' gia' registrato, probabilmente hai gia' un account. Controlla la tua mail / There is another user with your first and last name, probably you already have an account. Check your mail."]
       end
     # end
   end
