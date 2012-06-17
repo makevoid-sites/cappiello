@@ -50,6 +50,8 @@ class User
 
   property :reset_password_token, String
 
+  property :pdfs_downloaded_array, String, default: ""
+
   5.times do |i|
     property "info#{i}", Text
   end
@@ -98,6 +100,15 @@ class User
 
   def en?
     self.lang == "en"
+  end
+
+  def pdfs_downloaded
+    pdfs_downloaded_array.split(",")
+  end
+
+  def pdfs_downloaded_add(name)
+    pdfs = pdfs_downloaded + [name]
+    update(pdfs_downloaded_array: pdfs.uniq.join(","))
   end
 
   # auth
