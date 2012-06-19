@@ -153,12 +153,12 @@ namespace :db do
     # `rake db:seeds`
     `mysqldump -u root #{application}_development > db/#{application}_development.sql`
     upload "db/#{application}_development.sql", "#{current_path}/db", via: :scp
-    run "mysql -u root --password=#{password} #{application}_production < #{current_path}/db/#{application}_development.sql"
+    run "mysql -u root --password=#{password_var} #{application}_production < #{current_path}/db/#{application}_development.sql"
   end
 
   desc "Get the remote copy of production db"
   task :todev do
-    run "mysqldump -u root --password=#{password} #{application}_production > #{current_path}/db/#{application}_production.sql"
+    run "mysqldump -u root --password=#{password_var} #{application}_production > #{current_path}/db/#{application}_production.sql"
     download "#{current_path}/db/#{application}_production.sql", "db/#{application}_production.sql"
     local_path = `pwd`.strip
     `mysql -u root #{application}_development < #{local_path}/db/#{application}_production.sql`

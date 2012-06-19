@@ -51,14 +51,9 @@ class UsersController < ApplicationController
       flash[:notice] = tf("La registrazione è andata a buon fine!", "You registered successfully!") if flash[:notice].blank?
       redirect_to @user
     else
-      flash[:error] = tf("Non è stato possibile aggiornare il profilo")
-      if params[:form] == "form"
-        @page = Page.first(title_url_en: "form")
-        raise NotFound if @page.nil?
-        render "pages/show"
-      else
-        render :edit
-      end
+      @page = Page.first(title_url_en: "info")
+      flash[:error] = tf("Non è stato possibile aggiornare il profilo", "An error occurred updating your infos")
+      render "pages/show"
     end
   end
 

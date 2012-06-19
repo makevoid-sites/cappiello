@@ -72,4 +72,33 @@ module ApplicationHelper
     end
   end
 
+  # patched form helper
+  TRANSLATIONS = {
+    "First name"  => "Nome",
+    "Last name"   => "Cognome",
+  }
+
+
+  def patch_validation_error(error)
+    TRANSLATIONS.each do |key, value|
+      error.sub! key, value
+    end
+    error
+  end
+
+  def error_messages_for(entity)
+    obj = if entity.is_a? (Symbol) || entity.is_a?(String)
+      instance_variable_get("@#{entity.to_s}")
+    else
+      entity
+    end
+    return nil if obj.errors.map{ |e| e } == []
+    haml_tag :ul, { class: "error_messages" } do
+      obj.errors.map do |err|
+        haml_tag(:li){ haml_concat patch_validation_error(err[0].to_s) }
+      end
+    end
+  end
+
+
 end

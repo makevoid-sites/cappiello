@@ -50,6 +50,8 @@ class User
 
   property :reset_password_token, String
 
+  property :pdfs_downloaded_array, String, default: ""
+
   5.times do |i|
     property "info#{i}", Text
   end
@@ -64,7 +66,7 @@ class User
     if self.first_name != self.last_name
       [true]
     else
-      [false, "Il tuo nome dovrebbe essere diverso dal tuo congome..."]
+      [false, "Nome e cognome dovrebbero essere differenti / First and last names should be different"]
     end
   end
 
@@ -76,7 +78,7 @@ class User
       if users_count < num
         [true]
       else
-        [false, "Un utente con il tuo nome e cognome e' gia' registrato, probabilmente hai gia' un account. Controlla la tua mail - There is another user with your first and last name, probably you already have an account. Check your mail."]
+        [false, "Un utente con il tuo nome e cognome e' gia' registrato, probabilmente hai gia' un account. Controlla la tua mail / There is another user with your first and last name, probably you already have an account. Check your mail."]
       end
     # end
   end
@@ -98,6 +100,15 @@ class User
 
   def en?
     self.lang == "en"
+  end
+
+  def pdfs_downloaded
+    pdfs_downloaded_array.split(",")
+  end
+
+  def pdfs_downloaded_add(name)
+    pdfs = pdfs_downloaded + [name]
+    update(pdfs_downloaded_array: pdfs.uniq.join(","))
   end
 
   # auth

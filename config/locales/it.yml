@@ -1,8 +1,12 @@
 it:
-  first_name: "Nome"
+  data_mapper:
+    attributes:
+      user:
+        first_name: "Nome"
+
   last_name: "Cognome"
   email: "Email"
-  password: "Password"  
+  password: "Password"
   date:
     formats:
       default: "%d-%m-%Y"
@@ -11,7 +15,7 @@ it:
       long: "%d %B %Y"
       custom: "%d %b %Y"
 
-    day_names: 
+    day_names:
       - Domenica
       - Lunedì
       - Martedì
@@ -19,7 +23,7 @@ it:
       - Giovedì
       - Venerdì
       - Sabato
-    abbr_day_names: 
+    abbr_day_names:
       - Dom
       - Lun
       - Mar
@@ -28,7 +32,7 @@ it:
       - Ven
       - Sab
 
-    month_names: 
+    month_names:
       - ~
       - Gennaio
       - Febbraio
@@ -56,10 +60,10 @@ it:
       - Ott
       - Nov
       - Dic
-    order: 
+    order:
       - :day
       - :month
-      - :year 
+      - :year
 
   time:
     formats:
