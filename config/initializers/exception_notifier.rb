@@ -3,7 +3,8 @@ if Rails.env == "production"
   Cappiello::Application.config.middleware.use ExceptionNotifier,
       :email_prefix => "[Cappiello] ",
       :sender_address => %{"Cappiello" <m4kevoid@gmail.com>},
-      :exception_recipients => %w{makevoid@gmail.com}
+      :exception_recipients => %w{makevoid@gmail.com},
+      ignore_exceptions: [ActionView::MissingTemplate]
 end
 
 
