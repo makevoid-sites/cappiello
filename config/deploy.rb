@@ -1,17 +1,20 @@
 set :application, "cappiello"
-set :application, "cappiello_staging"
+set :app_name, "cappiello"
+
+if ENV["ENV"] == "staging"
+  set :app_name, "cappiello_staging"
+end
 
 
-# set :domain, "ovh_old"
-set :domain, "makevoid.com" # old: makevoid.com # old: ovh.makevoid.com
-# set :domain, "kim.makevoid.com"
-set :domain2,      "makevoid.com"
+# look at where are you deploying!
 
-set :repository,  "svn://#{domain2}/svn/#{application}"
 
+
+
+set :domain, "makevoid.com"
 
 set :apps,        "/www"
-set :deploy_to,   "#{apps}/#{application}"
+set :deploy_to,   "#{apps}/#{app_name}"
 
 
 set :use_sudo,    false
@@ -26,8 +29,13 @@ set :repository, "git://github.com/makevoid/cappiello.git"  # pub
 set :scm, "git"
 # needed?
 set :branch, "master"
-password_var = File.read("/Users/makevoid/.password").strip
-# set :password,  password_var
+
+dot_pass = File.expand_path("~/.password")
+File.open(dot_pass, "w"){|f| f.write("secret")} unless File.exist?(dot_pass)
+password_var = File.read(dot_pass).strip
+set :password,  password_var
+
+# end
 # set :scm_passphrase, password  # The deploy user's password
 
 ssh_options[:forward_agent] = true
@@ -67,7 +75,7 @@ namespace :deploy do
 
   desc "Setup newrelic license key"
   task :newrelic_secret do
-    newrelic_key = File.read('/Users/makevoid/Dropbox/.newrelic').strip
+    newrelic_key = File.read(File.expand_path '~/Dropbox/.newrelic').strip
     run "ruby -e \"path = '#{current_path}/config'; db_yaml = File.read(path+'/newrelic.yml'); File.open(path+'/newrelic.yml', 'w'){ |f| f.write db_yaml.gsub(/LICENSE_KEY/, '#{newrelic_key}') }\""
   end
 
@@ -153,16 +161,20 @@ namespace :db do
   desc "Send the local db to production server"
   task :toprod do
     # `rake db:seeds`
+    env = ENV["ENV"] || "production"
     `mysqldump -u root #{application}_development > db/#{application}_development.sql`
     upload "db/#{application}_development.sql", "#{current_path}/db", via: :scp
-    run "mysql -u root --password=#{password_var} #{application}_production < #{current_path}/db/#{application}_development.sql"
+    run "mysql -u root --password=#{password} #{application}_#{env} < #{current_path}/db/#{application}_development.sql"
   end
 
   desc "Get the remote copy of production db"
   task :todev do
-    run "mysqldump -u root --password=#{password_var} #{application}_production > #{current_path}/db/#{application}_production.sql"
-    download "#{current_path}/db/#{application}_production.sql", "db/#{application}_production.sql"
+    run "mysqldump -u root --password=#{password} #{application}_production > #{current_path}/db/#{application}_production.sql"
+    run "cd #{current_path}/db; tar cfj #{application}_production.tar.bz2 #{application}_production.sql; ls -alh #{application}_production.tar.bz2"
+
+    download "#{current_path}/db/#{application}_production.tar.bz2", "db/#{application}_production.tar.bz2"
     local_path = `pwd`.strip
+    `cd #{local_path}/db; tar xvfj #{application}_production.tar.bz2`
     `mysql -u root #{application}_development < #{local_path}/db/#{application}_production.sql`
 
     t = Time.now
