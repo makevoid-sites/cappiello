@@ -1,4 +1,5 @@
 set :application, "cappiello"
+set :application, "cappiello_staging"
 
 
 # set :domain, "ovh_old"
@@ -15,6 +16,7 @@ set :deploy_to,   "#{apps}/#{application}"
 
 set :use_sudo,    false
 set :user,        "www-data"
+
 
 
 #default_run_options[:pty] = true  # Must be set for the password prompt from git to work

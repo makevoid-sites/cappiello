@@ -2,18 +2,25 @@ development:
   database: cappiello_development
   adapter: mysql
   username: root
-  password: 
+  password:
   host:     localhost
 
 test:
   database: cappiello_test
   adapter: mysql
   username: root
-  password: 
+  password:
   host:     localhost
-  
+
 production:
   database: cappiello_production
+  adapter: mysql
+  username: root
+  password: secret
+  host:     localhost
+
+staging:
+  database: cappiello_staging
   adapter: mysql
   username: root
   password: secret
