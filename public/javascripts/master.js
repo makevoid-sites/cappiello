@@ -1,25 +1,25 @@
-$(function(){ 
-  
+$(function(){
+
   $("#js_enabled").val("true")
-  
+
   function open_in_textmate(path) {
     app_name = "cappiello"
     url = "txmt://open?url=file://~/Sites/"+app_name+"/"+path
     document.location = url
   }
-  
+
   $("#edit_css").click(function(){
     file = "public/stylesheets/sass/main.sass"
     open_in_textmate(file)
   })
-  
-  $("#edit_view").click(function(){ 
+
+  $("#edit_view").click(function(){
     file = "app/views/"+resources+"/"+action+".html.haml"
     open_in_textmate(file)
   })
-  
+
   $(".borse_di_studio form").validate()
-  
+
   klass = ""
   agent = navigator.userAgent
   if (agent.match(/Chrome/)) {
@@ -28,5 +28,20 @@ $(function(){
     klass = "ie"
   }
   $("body").addClass(klass)
-  
+
+  $(".offer section").hover(function(){
+    $(this).animate({height: "120px"}, 500).css({cursor: "pointer"})
+  }, function(){
+    $(this).animate({height: "80px"}, 300)
+  }, 100)
+
+  $(".offer section").on("click", function(){
+    $(this).animate({height: "560px"}, 500)
+    var self = this
+    // $(window).scrollTop($(this).offset().top)
+    $('html, body').animate({
+    	scrollTop: $(self).offset().top
+    }, 500)
+  })
+
 })

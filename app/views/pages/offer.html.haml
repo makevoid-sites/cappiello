@@ -1,0 +1,106 @@
+- image_tag = lambda { |path| haml_tag :img, { src: "/images/offer/#{path}.png" } }
+
+
+- title "Offerta formativa"
+
+.visual
+  %h1 Visual Design
+
+  %section
+    %h1= tf "Annuale", "Annual"
+    - image_tag.call "visual_annual"
+    .duration
+      = tf "Durata:", "Duration:"
+      %strong= tf "2 Semestri", "2 Semesters"
+    .text
+      = tf markup("Il *Corso Annuale di Visual Design* è rivolto a coloro che aspirano a diventare professionisti nei settori della Comunicazione Visiva, dell’Illustrazione, della Grafica Editoriale, del Web Design e della Grafica Pubblicitaria.\nIn due semestri consecutivi vengono poste le basi per intraprendere una professione legata alla progettazione visiva, approfondendo le diverse tecniche di creazione, elaborazione e impaginazione, con materie che spaziano dal disegno, alla computer grafica fino alla fotografia."), markup("The *Visual Design Annual Course* is ....")
+
+  %section
+    %h1 Master
+    - image_tag.call "visual_master"
+    .duration
+      = tf "Durata:", "Duration:"
+      %strong= tf "1 Semestre", "1 Semester"
+    .text
+      = tf markup("Il Master in Visual Design è il completamento del percorso di studi che inizia con il Corso Annuale; gli studenti hanno la possibilità di approfondire la preparazione e ottenere al termine del master una qualifica ulteriore.\nAttraverso un programma mirato di esercitazioni pratiche e laboratori, partecipazioni a concorsi, workshop e incontri di approfondimento con scrittori, redattori e illustratori si svilupperanno le competenze necessarie ad avvicinarsi gradualmente al mondo del lavoro.")
+
+  %section
+    %h1= tf("Specialistici", "Postgraduate")
+    - image_tag.call "visual_specials"
+    .duration
+      = tf "Durata:", "Duration:"
+      %strong= tf "2/3 Mesi", "2/3 Months"
+    .text
+      = tf markup("Specializzarsi, aggiornare il proprio curriculum, valorizzare la propria professionalità: I Corsi di Specializzazione sono una risposta efficace per stare al passo con i tempi nel mondo della Grafica e della Comunicazione.")
+
+  %section
+    %h1= tf("Laboratori", "Labs")
+    - image_tag.call "visual_labs"
+    .duration
+      = tf "Durata:", "Duration:"
+      %strong= tf "1 Quadrimestre", "1 Quadrimester"
+    .text
+      = tf markup("Il Laboratorio serale di Visual Design è rivolto a coloro che lavorano o che hanno poco tempo a disposizione ma che vogliono apprendere alcuni degli aspetti fondamentali della Grafica e della Comunicazione Visiva imparando ad utilizzare i principali strumenti della Computer Grafica.")
+
+  %section
+    %h1= tf("Introduttivi", "Introductory")
+    - image_tag.call "visual_intro"
+    .duration
+      = tf "Durata:", "Duration:"
+      %strong= tf "40 Ore", "40 Hours"
+    .text
+      = tf markup("I corsi Introduttivi sono rivolti a coloro che in poco tempo vogliono apprendere le basi della comunicazione visiva attraverso la realizzazione di un progetto di grafica.")
+  %section.last
+
+
+
+- ################################################
+
+.interior
+  %h1 Interior Design
+
+  %section
+    %h1= tf "Annuale", "Annual"
+    - image_tag.call "interior_annual"
+    .duration
+      = tf "Durata:", "Duration:"
+      %strong= tf "2 Semestri", "2 Semesters"
+    .text
+      = tf markup("Il Corso Annuale di Interior Design aiuta lo studente a diventare un Progettista d’Interni che utilizza la propria sensibilità e la propria competenza per interpretare il gusto del cliente e fornire soluzioni abitative in grado di coniugare estetica e funzionalità. Capace di suddividere gli spazi, consigliare materiali e finiture in funzione delle destinazioni d’uso, suggerire mobili e complementi per l’arredamento di ambienti privati, uffici, locali pubblici."), markup("The *Interior Design Annual Course* is ....")
+
+  %section
+    %h1 Master
+    - image_tag.call "interior_master"
+    .duration
+      = tf "Durata:", "Duration:"
+      %strong= tf "1 Semestre", "1 Semester"
+    .text
+      = tf markup("Il Master in Interior Design è il completamento del percorso di studi che inizia con il Corso Annuale; gli studenti hanno la possibilità di approfondire la preparazione e ottenere al termine del master una qualifica ulteriore.\nAttraverso esercitazioni pratiche e workshop, visite presso le aziende produttrici, i negozi, i laboratori artigiani e le fiere internazionali del settore, si svilupperanno le competenze necessarie ad avvicinarsi gradualmente al mondo del lavoro.")
+
+  %section
+    %h1= tf("Specialistici", "Postgraduate")
+    - image_tag.call "interior_specials"
+    .duration
+      = tf "Durata:", "Duration:"
+      %strong= tf "2/3 Mesi", "2/3 Months"
+    .text
+      = tf markup("Pensato per Architetti, Designer e per tutti quei professionisti che intendono approfondire un determinato argomento o che semplicemente vogliono acquisire skill aggiuntivi o dedicarsi all’apprendimento di un software.")
+
+  %section
+    %h1= tf("Laboratori", "Labs")
+    - image_tag.call "interior_labs"
+    .duration
+      = tf "Durata:", "Duration:"
+      %strong= tf "1 Quadrimestre", "1 Quadrimester"
+    .text
+      = tf markup("Il Laboratorio serale di Interior Design è rivolto a coloro che lavorano o che hanno poco tempo a disposizione ma che vogliono progettare un ambiente e arredarlo in modo creativo e funzionale rapidamente, imparando le basi tecniche e gli strumenti utili per dare forma alle idee e tradurle in un vero progetto.")
+
+  %section
+    %h1= tf("Introduttivi", "Introductory")
+    - image_tag.call "interior_intro"
+    .duration
+      = tf "Durata:", "Duration:"
+      %strong= tf "40 Ore", "40 Hours"
+    .text
+      = tf markup("I Corsi Introduttivi di Interior Design sono concepiti per offrire allo studente una panoramica full-immersion della professione, con lo scopo di mettere a fuoco, attraverso la realizzazione di un progetto, i punti salienti dell’attività e offrire una base di partenza a coloro che intendono farne un mestiere.")
+  %section.last

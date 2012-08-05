@@ -51,13 +51,13 @@ input[type="submit"],
 input[type="file"] > input[type="button"]
   &::-moz-focus-inner
     border: none
-    
+
 // mixins
 =border-radius($radius)
   border-radius: $radius
   -moz-border-radius: $radius
   -webkit-border-radius: $radius
-  
+
 =border-radius-bottom($radius)
   -moz-border-radius-bottomleft: $radius
   -moz-border-radius-bottomright: $radius
@@ -72,19 +72,19 @@ input[type="file"] > input[type="button"]
 
 =simple_gradient($start_color, $end_color)
   background: $start_color
-  background: -moz-linear-gradient(top, $start_color 0%, $end_color 100%) 
+  background: -moz-linear-gradient(top, $start_color 0%, $end_color 100%)
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$start_color), color-stop(100%,$end_color))
   //filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$start_color', endColorstr='$end_color',GradientType=0 )
-  
+
 =simple_gradient_tri($start, $stop, $end)
   background: $start
-  background: -moz-linear-gradient(top, $start 0%, $stop 50%, $end 100%) 
+  background: -moz-linear-gradient(top, $start 0%, $stop 50%, $end 100%)
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$start), color-stop(50%,$start), color-stop(100%,$end))
   //filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$start', endColorstr='$end',GradientType=0 )
 
 =gradient_tri($start, $stop, $end, $perc1, $perc2, $perc3)
   background: $start
-  background: -moz-linear-gradient(top, $start $perc1, $stop $perc2, $end $perc3) 
+  background: -moz-linear-gradient(top, $start $perc1, $stop $perc2, $end $perc3)
   background: -webkit-gradient(linear, left top, left bottom, color-stop($perc1,$start), color-stop($perc2,$stop), color-stop($perc3,$end))
   //filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$start', endColorstr='$end',GradientType=0 )
 
@@ -93,7 +93,7 @@ input[type="file"] > input[type="button"]
   background: -moz-linear-gradient(top, $start_color 0%, $stop_color 50%, $restart_color 51%, $end_color 100%)
 
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$start_color), color-stop(50%,$stop_color), color-stop(51%,$restart_color), color-stop(100%,$end_color))
-  
+
   //filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$start_color', endColorstr='$end_color',GradientType=0 )
 
 
@@ -101,11 +101,11 @@ input[type="file"] > input[type="button"]
   background: -moz-linear-gradient(top, $c1 0%, $c2 15%, $c3 33%, $c3 80%, $c4 100%)
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, $c1), color-stop(15%, $c2), color-stop(33%, $c3), color-stop(80%, $c3), color-stop(100%,  $c4))
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$c1', endColorstr='$c4',GradientType=0 )
-  
+
 =gradient_bg_perc($c1, $c2, $perc)
   background: -moz-linear-gradient(top, $c1 0%, $c2 $perc, $c2 100%-$perc, $c1 100%)
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, $c1), color-stop($perc, $c2), color-stop(100%-$perc, $c2), color-stop(100%, $c1))
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$c1', endColorstr='$c1',GradientType=0 )  
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$c1', endColorstr='$c1',GradientType=0 )
 
 =box-shadow($x, $y, $radius, $color)
   -moz-box-shadow: $x $y $radius $color
@@ -123,10 +123,10 @@ input[type="file"] > input[type="button"]
 // dl, dt, dd, ol, ul, li,
 // fieldset, form, label, legend,
 // table, caption, tbody, tfoot, thead, tr, th, td,
-// article, aside, canvas, details, embed, 
-// figure, figcaption, footer, header, hgroup, 
+// article, aside, canvas, details, embed,
+// figure, figcaption, footer, header, hgroup,
 // menu, nav, output, ruby, section, summary,
-// time, mark, audio, video 
+// time, mark, audio, video
 //   margin: 0
 //   padding: 0
 //   border: 0
@@ -135,8 +135,8 @@ input[type="file"] > input[type="button"]
 //   vertical-align: baseline
 
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section 
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section
   display: block
 
 
@@ -146,13 +146,13 @@ footer, header, hgroup, menu, nav, section
   margin: 0
   padding: 0
 
-html, body   
+html, body
   max-height: 100%
   background: #BCBCBC
 img
   border: 0
 
-ul 
+ul
   list-style-type: none
 
 li
@@ -160,20 +160,20 @@ li
 
 .clear
   clear: both
-  
+
 .clearleft
   clear: left
-  
+
 .clearright
   clear: right
 
 .bold
   font-weight: bold
-  
+
 .italic
   font-style: italic
 
-a 
+a
   text-decoration: none
 
 .left
@@ -195,8 +195,8 @@ $bg_content: #E9E9E9
 
 body
   font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif
-  
-h1 
+
+h1
   display: none
 
 h2
@@ -212,7 +212,7 @@ h4
 #logo
   width: $left_width
 
-#backg        
+#backg
   background: #DDD
   +gradient_bg(#BBB, #BBB, #FFF, #BBB)
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#BBBBBB', endColorstr='#FFFFFF',GradientType=0 )
@@ -222,20 +222,20 @@ a
   color: $main
 a:hover
   color: #FFF
-  
+
 #container
   width: 85%
   margin: 0 auto 0 auto
   min-width: 980px
   max-width: 1200px
-  padding: 0 0 0 0 
+  padding: 0 0 0 0
 
 #header
   margin-top: 10px
 
 #sub_container
   margin: 20px 0
-  
+
 #content
   float: left
   width: 63.4%
@@ -248,10 +248,10 @@ a:hover
   +box-shadow(3px, 2px, 10px, #AAA)
   ul li
     display: block
-  a 
+  a
     color: #222
     text-shadow: 1px 2px 0px #FFF
-  a:hover  
+  a:hover
     color: #000
     text-shadow: 0px -1px 1px #ddd
 
@@ -259,24 +259,24 @@ a:hover
   text-shadow: 1px 2px 0px #FFF
   margin-bottom: 12px
   text-align: left
-  
-#content .master p  
-  width: 59%  
-  
-img.flex 
-  width: 53% 
 
-  
+#content .master p
+  width: 59%
+
+img.flex
+  width: 53%
+
+
 #content .home p, #content .news p, #content #aside p, #content .article_cont p
   width: 100%
 
 #content #aside p
   padding-top: 30px
   font-size: 0.95em
-  
+
 #content_left // da leva'
   padding: 9px 0 9px 1.2%
-  
+
 #inner_content
   width: 100%
   line-height: 17px
@@ -285,10 +285,10 @@ img.flex
 
 #inner
   font-size: 0.92em
-  p 
+  p
     //text-align: justify
-  
-  
+
+
 #inner_content p
   margin-right: 0.3%
 
@@ -298,7 +298,7 @@ img.flex
   background: none
   color: #FFF
   +border-radius-bottom(8px)
-  a 
+  a
     color: #FFF
     +border-radius(8px)
     padding: 2px 8px
@@ -320,7 +320,7 @@ img.flex
   +border_radius(10px)
   a
     display: block
-    padding: 6px 10px   
+    padding: 6px 10px
   a:hover
     background: #333
     color: #FFF
@@ -328,7 +328,7 @@ a#profile_name
   font-weight: bold
   color: $main - #222
   +border_radius(10px)
-  
+
 #profile_tab.hover
   +border_radius(10px)
   background: #999
@@ -340,11 +340,11 @@ a#profile_name
     +border_radius_bottom(0px)
     background: #DDD
     color: $main - #222
-  
-  
+
+
 #profile_links
   background: #999
-   
+
 #home_right
   width: 374px
   float: right
@@ -361,8 +361,8 @@ a#profile_name
     display: block
     float: right
     text-align: right
-    
-#news 
+
+#news
   text-align: right
   width: 360px
   float: right
@@ -389,10 +389,10 @@ a#profile_name
     +border-radius-top(4px)
   ul
     padding: 0 5px
-  
+
   li
     display: block
-    padding: 2px 0 
+    padding: 2px 0
     text-align: left
     margin-bottom: 6px
   .insert_article
@@ -400,38 +400,38 @@ a#profile_name
     float: left
   .date
     float: right
-    
-  a:hover .date
-    
 
-#news 
+  a:hover .date
+
+
+#news
   span
     display: inline-block
   span.title
     width: 70%
   span.date
     width: 30%
-  p 
+  p
     clear: both
-  
+
 .articles.show .date
   margin-top: 5px
   font-size: 0.7em
   float: right
-  
+
 .articles.index .date
   float: left
   margin-right: 15px
   font-size: 0.8em
-  
-#articles_list li 
+
+#articles_list li
   a
     font-weight: bold
     font-size: 1.1em
   p:last-child
     margin: 0 0 30px 0
-  
-  
+
+
 #logo
   float: left
   +box-shadow(-3px, -3px, 10px, #777)
@@ -439,8 +439,8 @@ a#profile_name
 #likebox
   float: right
   margin: 0 10px
-  
-#banner 
+
+#banner
   float: left
   margin: 0 0 0 2.3%
   width: $content_width
@@ -450,48 +450,48 @@ a#profile_name
     display: none
   img.first
     display: block
-    
-    
+
+
 // webkit only banner gallery
 //
 // #banner
-//   img 
+//   img
 //   .first
 //   .last
 //     opacity: 0
 //     -webkit-transition: all 1s ease-in-out
 //   .last:hover
 //     -webkit-transition: all 1s ease-in-out
-//     opacity: 1    
-  
+//     opacity: 1
+
 .center
   text-align: center
-  
+
 #gallery
   float: right
   margin: 0 0 0 1.2%
   width: 45%
-  
+
 #imgstages
   float: right
-  margin: 0 1.2% 
+  margin: 0 1.2%
   width: 28%
   img
     width: 100%
-  
+
 #textstages
   width: 74.6%
 
 #banner img
   width: 100%
-  
+
 #wip
   text-align: center
   margin: 0 5%
   width: 40%
 
 
-  
+
 div#home_swf
   float: left
   margin: 0 1% 0 1.2%
@@ -507,7 +507,7 @@ div#home_swf
     display: none
     position: absolute
     top: 0
-  img.hover2  
+  img.hover2
     left: 0
   img.hoverEnd
 
@@ -516,7 +516,7 @@ div#home_swf
 #nav_cont
   float: left
   width: $left_width
-  
+
 #social
   margin: 10px 0 5px 0
   text-align: right
@@ -528,12 +528,12 @@ div#home_swf
   width: 485px
   height: 320px
 
-.chrome #nav li a 
+.chrome #nav li a
   width: 86%
-.ie #nav li a 
+.ie #nav li a
   width: 83%
 
-#nav 
+#nav
   text-transform: uppercase
   +box-shadow(-3px, 0px, 5px, #AAA)
   position: relative
@@ -555,7 +555,7 @@ div#home_swf
     display: none
   li:hover .subnav
     display: block
-        
+
   li#masterbutt a
     background: #392C79
   li:hover, li#masterbutt:hover, li#concorso:hover
@@ -570,25 +570,25 @@ div#home_swf
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c82d5e', endColorstr='#c82d5e',GradientType=0 )
     border: 1px solid $main
     width: auto
-  .subnav li:hover a      
+  .subnav li:hover a
     background: #a82949
     +gradient_bg_perc(#7d1622, #a82949, 20%)
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7d1622', endColorstr='#a82949',GradientType=0 )
     border: 1px solid #871623
-  
+
 
 .subnav
   border: 1px solid #871623
 .master .subnav
-  border: 1px solid #211949  
-  
+  border: 1px solid #211949
+
 
 .master ul#nav
-  li  
+  li
     a
       border: 1px solid #211949
       border-top: 1px solid #211949
-      border-bottom: 1px solid #211949  
+      border-bottom: 1px solid #211949
       background: #392C79
   li#masterbutt a
     background: $main
@@ -602,11 +602,11 @@ div#home_swf
 
 .master ul#nav .subnav li a
   background: #392C79
-.master ul#nav .subnav li:hover a    
+.master ul#nav .subnav li:hover a
   +gradient_bg_perc(#211949, #2d2264, 20%)
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#211949', endColorstr='#2d2264',GradientType=0 )
-  
-  
+
+
 //$subnav_width: 150px
 $subnav_width: 148px
 ul.subnav
@@ -615,7 +615,7 @@ ul.subnav
   right: -$subnav_width + 2px
   z-index: 3
 
-#nav li 
+#nav li
   .subnav.sub2
     display: none
   .subnav li:hover .subnav.sub2
@@ -630,11 +630,11 @@ ul.subnav
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7d1622', endColorstr='#a82949',GradientType=0 )
     border: 1px solid #871623
 
-    
+
 
 #inner
   width: 55%
-  
+
 #inner.home, #inner.news
   width: 100%
 
@@ -643,7 +643,7 @@ ul.subnav
 
 #inner.error
   margin-top: 30px
-  h2 
+  h2
     margin-bottom: 20px
 
 
@@ -655,9 +655,9 @@ ul.subnav
       font-size: 1.2em
       padding-top: 20px
       margin-bottom: 10px
-  
 
-ul#selection 
+
+ul#selection
   width: 280px
   margin: 150px auto
   li
@@ -682,7 +682,7 @@ $video_home_height: 270px
   float: right
   margin: 8px 2px 5px 15px
   clear: right
-  iframe 
+  iframe
     width: $video_width
     height: $video_height
 
@@ -691,7 +691,7 @@ $video_home_height: 270px
   iframe
     width: $video_home_width
     height: $video_home_height
-    
+
 
 #aside
   background: $main
@@ -704,27 +704,27 @@ $video_home_height: 270px
   margin: 0 2px 0 15px
   li
     margin: 4px 0
-  p 
+  p
     text-shadow: none
   a
     color: #FFF
     text-shadow: none
     font-weight: bold
-    
+
 .master #aside
   background: #392C79
 
 
 
 #footer
-  background: $main 
+  background: $main
   padding: 2px 5px 2px 0
   color: #FFF
   font-size: 12px
   text-align: right
   margin: 15px 0 20px
   +box-shadow(0px, 3px, 10px, #444)
-  
+
 .master #footer
   background: #392C79
 
@@ -747,17 +747,17 @@ input, textarea
   font-size: 1.2em
 textarea
   height: 150px
-  
-input.submit  
+
+input.submit
   font-size: 1.5em
   margin: 10px 20% 40px 0
   width: auto
-  float: right  
+  float: right
 
 .date_select
   margin: 5px 0 10px
 
-.new, .edit 
+.new, .edit
   textarea
     height: 450px
 
@@ -775,18 +775,18 @@ textarea.small
     font-size: 1.2em
 
 
-  input.submit  
+  input.submit
     font-size: 1.5em
     margin: 20px 20% 40px 0
     width: auto
     float: right
-  
-input.submit  
+
+input.submit
   font-size: 1.5em
   margin: 10px 18% 40px 0
   width: auto
-  float: right  
-  
+  float: right
+
 #content
   a.button
     color: #FFF
@@ -796,29 +796,29 @@ input.submit
     text-shadow: none
   a.button.delete
     font-weight: bold
-    +color(#CCC)    
+    +color(#CCC)
     color: #F00
   a.button.delete:hover
     color: #FFF
     +color(#C00)
-  
+
 input[type='submit'], input.submit, a.button
   +button
   +color($main)
-  
+
 
 input[type='checkbox'], input.checkbox
   width: 23px
   float: left
-  
-    
+
+
 input.radio
   width: 10px
   margin-right: 50px
 
 
 input.radio2
-  width: 10px 
+  width: 10px
 
 
 #login
@@ -840,25 +840,25 @@ input.radio2
   .second
     float: left
     width: 48%
-    
+
 .forms_form
   .checkboxes
     float: left
     width: 40%
     label
       float: left
-    input 
+    input
       float: left
       clear: left
       width: 30px
-    h3 
+    h3
       clear: left
       margin: 0 0 5px 0
   .form
     width: 55%
     float: right
   .checkboxes_bottom
-    input 
+    input
       float: left
       clear: left
       width: 30px
@@ -867,16 +867,16 @@ input.radio2
 
 .pdf_clear
   clear: left
-  
+
 .forms_pdf
   width: 400px
   background: none
-  form  
+  form
     margin: 0 0 15px 0
     padding: 0px 0px 10px 0
   input, label
-  input 
-  div 
+  input
+  div
     width: 44%
     float: left
   .email, .row
@@ -886,7 +886,7 @@ input.radio2
     float: right
     margin: 10px 16% 20px 0
 
-  .authorize    
+  .authorize
     float: left
     margin-top: 17px
     label
@@ -900,16 +900,16 @@ input.radio2
   background: #DDD
   float: left
   padding-left: 20px
-  
+
 #galleria
   img
     float: left
     width: 100px
     padding: 0 15px 10px 0
   clear: left
-  
+
 #flashes
-  div 
+  div
     text-align: center
     margin: 0 auto 12px
     padding: 4px 10px
@@ -923,14 +923,14 @@ input.radio2
     background: #FBB
     color: #B11
     border: 1px solid #050
-    
+
 
 #textile_ref
   margin: 10px
   padding: 10px
   background: $bg_content - #111
   float: left
-  
+
 .complete
   font-size: 1.2em
 
@@ -938,7 +938,7 @@ input.radio2
 .error_messages
   li
     color: #AD0100
-    
+
 .icon
   width: 30px
 
@@ -955,7 +955,7 @@ input.radio2
     line-height: 37px
     float: left
     margin: 0 10px
-  
+
 // photos
 
 #photos
@@ -972,16 +972,16 @@ input.radio2
     background: none
     opacity: 0.8
   a:hover img
-    border: 1px solid #999    
+    border: 1px solid #999
 
 // user
 
 .users.show
   .user_infos
     margin: 30px 0 10px
-  #content  
+  #content
     p
-      font-size: 1em  
+      font-size: 1em
       margin: 0
       padding: 0
     h3
@@ -990,18 +990,18 @@ input.radio2
       font-size: 1.3em
       margin-bottom: 10px
     .user_infos
-      p 
+      p
         margin: 3px 0 5px
       img
         margin-left: 8px
         position: relative
         top: 4px
     .user_details
-      p.b 
+      p.b
         font-weight: bold
         font-size: 0.9em
         margin: 10px 0 3px
-        
+
 form label.error
   margin-bottom: 10px
   color: #D00
@@ -1017,35 +1017,35 @@ img.image_left
   width: 330px
 
 #content
-  .lavoro 
+  .lavoro
     margin-top: 10px
     .box
       background: #555
       padding: 8px 8px 1px
       a
-        color: #EEE        
+        color: #EEE
         text-shadow: none
       a:hover
-        color: #FFF    
+        color: #FFF
         background: transparent
-      p.head a  
+      p.head a
         color: $main
         font-size: 1.4em
 
 .workdate
   float: right
 
-  
+
 #works li
   .name
     font-weight: bold
   .date
     float: right
     margin-left: 12px
-    
+
 .pagination
   margin: 10px 0
-  
+
 
 #articles_index
   li
@@ -1060,7 +1060,7 @@ img.image_left
     td, th
       border: 1px solid #999
       border-left: none
-      border-right: none  
+      border-right: none
       background: #fafafa
       padding: 1px 8px
     thead th
@@ -1068,7 +1068,7 @@ img.image_left
       color: #FFF
       padding-top: 4px
       padding-bottom: 4px
-        
+
     tr.total
       td
         padding-top: 4px
@@ -1079,7 +1079,7 @@ img.image_left
 .share_btns
   clear: left
   padding: 25px 0 0
-  
+
 .fb_like
   clear: left
   margin: 0 0 5px 0
@@ -1089,8 +1089,66 @@ img.image_left
 .twitter
   width: 110px
   margin: 0 0 5px 0
-  
+
 .twitter, .linkedin, .fb_like
   display: inline-block
-  
-  
+
+$visual: #ffa700
+$interior: #b8d600
+
+.offer #content
+  box-sizing: border-box
+  h1
+    display: block
+    font-size: 1.2em
+    text-transform: uppercase
+    padding: 0 6px 4px
+  p
+    margin: 0 0 6px
+  .visual, .interior
+    +border_radius(12px)
+    padding: 5px 3px 4px
+    margin: 0 0.5% 10px
+    width: 48%
+    display: inline-block
+    float: left
+  .visual section
+    .text
+      border-bottom: 3px solid $visual
+    h1
+      border: 4px solid $visual
+  .interior section
+    .text
+      border-bottom: 3px solid $interior
+    h1
+      border: 4px solid $interior
+  section
+    background: #fff
+    padding: 4px 6px 10px
+    height: 80px
+    overflow: hidden
+    h1
+      padding: 4px 8px
+      font-size: 1.05em
+      +border_radius(12px)
+      margin: 0 0 4px
+    img
+      width: 100%
+      max-height: 350px
+      +border_radius(8px)
+  section:last-child
+    +border_radius_bottom(10px)
+  .visual
+    background: $visual
+    border: $visual
+  .interior
+    background: $interior
+    border: $interior
+    border_radius: 15px
+  .duration
+    text-transform: uppercase
+    margin: 2px 0 5px 0
+  section.last
+    height: 1px
+  section.open
+    height: 600px

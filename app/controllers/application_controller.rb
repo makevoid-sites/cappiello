@@ -152,7 +152,7 @@ class ApplicationController < ActionController::Base
     render file: "#{Rails.root}/public/404_cont_#{I18n.locale}.html", status: 404
   end
 
-  # english version
+  # i18n - 2 languages
 
   helper_method :tr, :tf
 
@@ -199,6 +199,22 @@ class ApplicationController < ActionController::Base
       DataMapper::Validations::I18n.translate_field_name_with :rails
     end
   end
+
+  # before_filter :smooth_language_change
+  #
+  # def smooth_language_change
+  #   if refered_domain_is_local && current_lang != referer_lang
+  #     redirect_to #...
+  #   end
+  # end
+  #
+  # def referer_lang
+  #   request.referer =~ /en\./ ? "en" : "it"
+  # end
+  #
+  # def refered_domain_is_local
+  #   request.referer.match request.domain if request.referer
+  # end
 
   # subdomain and language
 

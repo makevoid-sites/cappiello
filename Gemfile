@@ -111,3 +111,8 @@ gem 'newrelic_rpm'
 
 gem "thin"
 
+group :development do
+  gem "guard"
+  gem "guard-livereload"
+end
+
