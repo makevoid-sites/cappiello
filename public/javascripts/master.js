@@ -29,19 +29,20 @@ $(function(){
   }
   $("body").addClass(klass)
 
-  $(".offer section").hover(function(){
+  $(".offer section").hoverIntent(function(){
     $(this).animate({height: "120px"}, 500).css({cursor: "pointer"})
   }, function(){
-    $(this).animate({height: "80px"}, 300)
-  }, 100)
+    $(this).animate({height: "80px"}, 700)
+  }, 1)
 
   $(".offer section").on("click", function(){
-    $(this).animate({height: "560px"}, 500)
     var self = this
-    // $(window).scrollTop($(this).offset().top)
-    $('html, body').animate({
-    	scrollTop: $(self).offset().top
-    }, 500)
+    $(this).animate({height: "560px"}, 300, function(){
+
+        $('html, body').animate({
+        	scrollTop: $(self).offset().top
+        }, 300)
+    })
   })
 
 })
