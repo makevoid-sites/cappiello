@@ -25,14 +25,14 @@
                 %ul.subnav.sub2
                   %li= link_to "Visual Design", page_path(id: tf("visual_design_corsi_brevi", "visual_design_short_courses"))
                   %li= link_to "Interior Design", page_path(id: tf("interior_design_corsi_brevi", "interior_design_short_courses"))
-                = link_to tf("Corsi Brevi", "Short Courses"), js_void
+                = link_to tf("Corsi Brevissimi", "Short Courses"), js_void
               %li
                 %ul.subnav.sub2
                   %li= link_to "Visual Design", page_path(id: tf("estivo_visual_design", "summer_visual_design"))
                   %li= link_to "Interior Design", page_path(id: tf("estivo_interior_design", "summer_interior_design"))
                   %li= link_to tf("Orientamento Artistico", "Art"), page_path(id: tf("estivo_orientamento_artistico", "summer_art"))
                 = link_to tf("Corsi Estivi", "Summer Courses"), js_void
-            = link_to tf("Corsi brevi", "Short Courses"), js_void
+            = link_to tf("Corsi brevissimi", "Short Courses"), js_void
         - else
           %li
             = link_to tr(page).title, pag_path(page)
