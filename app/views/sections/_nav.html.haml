@@ -4,13 +4,19 @@
     %ul#nav
       - pages.each_with_index do |page, idx|
         - case page.title_url_en
-        - when "visual_design" # corsi annuali
+        - when "annual_courses"
           %li
             %ul.subnav
               %li= link_to "Visual Design", page_path(id: tf("visual_design_corsi_annuali", "visual_design_annual_training"))
               %li= link_to "Interior Design", page_path(id: tf("interior_design_corsi_annuali", "interior_design_annual_training"))
             = link_to tf("Corsi Annuali", "Annual Courses"), js_void
-        - when "special_courses" # corsi brevi
+        - when "master_courses"
+          %li
+            %ul.subnav
+              %li= link_to "Visual Design", page_path(id: tf("visual_design_corso_master", "visual_design_master_course"))
+              %li= link_to "Interior Design", page_path(id: tf("interior_design_corso_master", "interior_design_master_course"))
+            = link_to tf("Corsi Master", "Master Courses"), js_void
+        - when "specialstic_courses"
           = render partial: "sections/special_courses", locals: { page: page }
         - when "dates_and_times"
         - when "interior_design"
@@ -19,16 +25,26 @@
             %ul.subnav
               %li
                 %ul.subnav.sub2
-                  %li= link_to "Visual Design", page_path(id: tf("visual_design_corsi_brevi", "visual_design_short_courses"))
-                  %li= link_to "Interior Design", page_path(id: tf("interior_design_corsi_brevi", "interior_design_short_courses"))
-                = link_to tf("Corsi Brevi", "Short Courses"), js_void
+                  %li= link_to tf("Corsi Brevi", "Short Courses"), page_path(id: tf("visual_design_corsi_brevi", "visual_design_short_courses"))
+                  %li= link_to tf("Corsi Estivi", "Summer Courses"), page_path(id: tf("estivo_visual_design", "summer_visual_design"))
+                = link_to tf("Visual Design"), js_void
               %li
                 %ul.subnav.sub2
-                  %li= link_to "Visual Design", page_path(id: tf("estivo_visual_design", "summer_visual_design"))
-                  %li= link_to "Interior Design", page_path(id: tf("estivo_interior_design", "summer_interior_design"))
-                  %li= link_to tf("Orientamento Artistico", "Art"), page_path(id: tf("estivo_orientamento_artistico", "summer_art"))
-                = link_to tf("Corsi Estivi", "Summer Courses"), js_void
+
+                  %li= link_to tf("Corsi Brevi", "Short Courses"), page_path(id: tf("interior_design_corsi_brevi", "interior_design_short_courses"))
+                  %li= link_to tf("Corsi Estivi", "Summer Courses"), page_path(id: tf("estivo_interior_design", "summer_interior_design"))
+                = link_to tf("Interior Design"), js_void
             = link_to tf("Corsi brevi", "Short Courses"), js_void
+
+        - when "labs"
+          %li
+            %ul.subnav
+              %li
+                = link_to tf("Visual Design"), page_path(id: tf("laboratorio_visual_design", "visual_design_lab"))
+              %li
+                = link_to tf("Interior Design"), page_path(id: tf("laboratorio_interior_design", "interior_design_lab"))
+            = link_to tf("Laboratori", "Labs"), js_void
+
         - else
           %li
             = link_to tr(page).title, pag_path(page)
