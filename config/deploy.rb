@@ -167,19 +167,20 @@ namespace :db do
     run "mysql -u root --password=#{password} #{application}_#{env} < #{current_path}/db/#{application}_development.sql"
   end
 
-  desc "Get the remote copy of production db"
+  desc "Get the remote copy of remote db"
   task :todev do
-    run "mysqldump -u root --password=#{password} #{application}_production > #{current_path}/db/#{application}_production.sql"
-    run "cd #{current_path}/db; tar cfj #{application}_production.tar.bz2 #{application}_production.sql; ls -alh #{application}_production.tar.bz2"
+    remote_env = ENV["ENV"] || "production"
+    run "mysqldump -u root --password=#{password} #{application}_#{remote_env} > #{current_path}/db/#{application}_#{remote_env}.sql"
+    run "cd #{current_path}/db; tar cfj #{application}_#{remote_env}.tar.bz2 #{application}_#{remote_env}.sql; ls -alh #{application}_#{remote_env}.tar.bz2"
 
-    download "#{current_path}/db/#{application}_production.tar.bz2", "db/#{application}_production.tar.bz2"
+    download "#{current_path}/db/#{application}_#{remote_env}.tar.bz2", "db/#{application}_#{remote_env}.tar.bz2"
     local_path = `pwd`.strip
-    `cd #{local_path}/db; tar xvfj #{application}_production.tar.bz2`
-    `mysql -u root #{application}_development < #{local_path}/db/#{application}_production.sql`
+    `cd #{local_path}/db; tar xvfj #{application}_#{remote_env}.tar.bz2`
+    `mysql -u root #{application}_development < #{local_path}/db/#{application}_#{remote_env}.sql`
 
     t = Time.now
-    file = "#{application}_production_#{t.strftime("%Y_%m_%d")}.sql"
-    `mv db/#{application}_production.sql db/#{file}`
+    file = "#{application}_#{remote_env}_#{t.strftime("%Y_%m_%d")}.sql"
+    `mv db/#{application}_#{remote_env}.sql db/#{file}`
 
     if ENV["BACKUP"] != "" || !ENV["BACKUP"].nil?
       `cp db/#{file} ~/db_backups/`
