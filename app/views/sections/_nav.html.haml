@@ -3,10 +3,6 @@
   #nav_cont
     %ul#nav
       - pages.each_with_index do |page, idx|
-        - if idx == 2
-          %li
-            = link_to tf("Offerta formativa", "Training"), [:offer]
-
         - case page.title_url_en
         - when "visual_design" # corsi annuali
           %li
