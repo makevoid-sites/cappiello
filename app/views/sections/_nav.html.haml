@@ -17,26 +17,36 @@
               %li= link_to "Interior Design", page_path(id: tf("interior_design_corso_master", "interior_design_master_course"))
             = link_to tf("Corsi Master", "Master Courses"), js_void
         - when "specialstic_courses"
-          = render partial: "sections/special_courses", locals: { page: page }
+          %li
+            %ul.subnav
+              %li
+                %ul.subnav.sub2
+                  %li= link_to tf("Grafica Editoriale", "Editorial Graphics"), page_path(id: tf("grafica_editoriale", "press_graphics"))
+                  %li= link_to tf("Illustrazione", "Illustration"), page_path(id: tf("illustrazione_visual_design", "visual_design_illustration"))
+                  %li= link_to tf("Photoshop", "Photoshop"), page_path(id: tf("photoshop_visual_design", "visual_design_photoshop"))
+                  %li= link_to tf("Web Design", "Web Design"), page_path(id: tf("web_design_visual_design", "visual_design_webdesign"))
+                = link_to tf("Visual Design"), js_void
+              %li
+                %ul.subnav.sub2
+                  %li= link_to tf("Modellazione 3D", "3D modelling"), page_path(id: tf("interior_design_modellazione_3d", "interior_design_3d_modelling"))
+                  %li= link_to tf("Rendering", "Rendering"), page_path(id: tf("rendering_interior_design", "interior_design_rendering"))
+                  %li= link_to tf("Sketch-Up", "Sketch-Up"), page_path(id: tf("sketch_up_interior_design", "interior_design_sketchup"))
+                  %li= link_to tf("Autocad", "Autocad"), page_path(id: tf("autocad_interior_design", "interior_design_autocad"))
+                  %li= link_to tf("3D Studio Max", "3D Studio Max"), page_path(id: tf("3d_studio_max_interior_design", "interior_design_3dstudiomax"))
+                  %li= link_to tf("V-Ray", "V-Ray"), page_path(id: tf("v-ray", "vray"))
+                = link_to tf("Interior Design"), js_void
+                
+            = link_to tf("Corsi specialistici", "Specialist Courses"), js_void
+
         - when "dates_and_times"
         - when "interior_design"
         - when "summer_courses" # corsi estivi
           %li
             %ul.subnav
-              %li
-                %ul.subnav.sub2
-                  %li= link_to tf("Corsi Brevi", "Short Courses"), page_path(id: tf("visual_design_corsi_brevi", "visual_design_short_courses"))
-                  %li= link_to tf("Corsi Estivi", "Summer Courses"), page_path(id: tf("estivo_visual_design", "summer_visual_design"))
-                = link_to tf("Visual Design"), js_void
-              %li
-                %ul.subnav.sub2
-
-                  %li= link_to tf("Corsi Brevi", "Short Courses"), page_path(id: tf("interior_design_corsi_brevi", "interior_design_short_courses"))
-                  %li= link_to tf("Corsi Estivi", "Summer Courses"), page_path(id: tf("estivo_interior_design", "summer_interior_design"))
-                = link_to tf("Interior Design"), js_void
+              %li= link_to tf("Visual Design", "Short Courses"), page_path(id: tf("visual_design_corsi_brevi", "visual_design_short_courses"))
+              %li= link_to tf("Interior Design", "Short Courses"), page_path(id: tf("interior_design_corsi_brevi", "interior_design_short_courses"))
             = link_to tf("Corsi brevi", "Short Courses"), js_void
-
-        - when "labs"
+        - when "workshops"
           %li
             %ul.subnav
               %li
