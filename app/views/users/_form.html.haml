@@ -9,21 +9,31 @@
     .checkboxes
       %h3= tf("RICHIESTA INFORMAZIONI", "INFORMATION REQUEST")
       = f.check_box :int_annuali_visual
-      = f.label     :int_annuali_visual,    "#{tf "corsi annuali", "annual courses"} - VISUAL DESIGN"
+      = f.label     :int_annuali_visual,    "VISUAL DESIGN - #{tf "corsi annuali", "annual courses"}"
       = f.check_box :int_annuali_interior
-      = f.label     :int_annuali_interior,  "#{tf "corsi annuali", "annual courses"} - INTERIOR DESIGN"
+      = f.label     :int_annuali_interior,  "INTERIOR DESIGN - #{tf "corsi annuali", "annual courses"}"
+      = f.check_box :int_master_visual
+      = f.label     :int_master_visual,    "VISUAL DESIGN - #{tf "master", "master"}"
+      = f.check_box :int_master_interior
+      = f.label     :int_master_interior,  "INTERIOR DESIGN -#{tf "master", "master"}"
+      = f.check_box :int_special_visual
+      = f.label     :int_special_visual,    "VISUAL DESIGN - #{tf "corsi speciali", "special courses"}"
+      = f.check_box :int_special_interior
+      = f.label     :int_special_interior,  "INTERIOR DESIGN -#{tf "corsi speciali", "special courses"}"
+      = f.check_box :int_workshop_visual
+      = f.label     :int_workshop_visual,    "VISUAL DESIGN - #{tf "laboratorio serale", "workshop"}"
+      = f.check_box :int_workshop_interior
+      = f.label     :int_workshop_interior,  "INTERIOR DESIGN -#{tf "laboratorio serale", "workshop"}"
       = f.check_box :int_brevi_visual
-      = f.label     :int_brevi_visual,    "#{tf "corsi brevi", "short courses"} - VISUAL DESIGN"
+      = f.label     :int_brevi_visual,    "VISUAL DESIGN - #{tf "corsi brevi", "short courses"}"
       = f.check_box :int_brevi_interior
-      = f.label     :int_brevi_interior,  "#{tf "corsi brevi", "short courses"} - INTERIOR DESIGN"
-      = f.check_box :int_brevi_graphic
-      = f.label     :int_brevi_graphic,  "#{tf "corsi brevi", "short courses"} - GRAFICA EDITORIALE"
-
-      %h3= tf("RICHIESTA DI PARTECIPAZIONE GRATUITA", "REQUEST FREE PARTICIPATION")
+      = f.label     :int_brevi_interior,  "INTERIOR DESIGN -#{tf "corsi brevi", "short courses"}"
+      
+      %h3= tf("PARTECIPAZIONE OPEN DAY GRATUITO", "PARTICIPATION FREE OPEN DAY")
       = f.check_box :int_stage_visual
-      = f.label     :int_stage_visual,    "#{tf "open day", "open day"} - VISUAL DESIGN"
+      = f.label     :int_stage_visual,    "#{tf "OPEN DAY", "OPEN DAY"} VISUAL DESIGN"
       = f.check_box :int_stage_interior
-      = f.label     :int_stage_interior,  "#{tf "open day", "open day"} - INTERIOR DESIGN"
+      = f.label     :int_stage_interior,  "#{tf "OPEN DAY", "OPEN DAY"} INTERIOR DESIGN"
 
     .form
       = f.label :first_name, tf("Nome", "First name")
