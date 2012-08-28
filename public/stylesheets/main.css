@@ -770,6 +770,10 @@ input.radio2 {
 .forms_form .form {
   width: 55%;
   float: right; }
+  
+  .forms_form .tutor .form {
+  width: 100%;
+  float: right; }
 .forms_form .checkboxes_bottom input {
   float: left;
   clear: left;
