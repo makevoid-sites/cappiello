@@ -1,7 +1,7 @@
 - error_messages_for(@user)
 
 .forms_form
-  = form_for @user do |f|
+  = form_for (@user, :html => { :class => "tutor_form"} ) do |f|
     = hidden_field_tag "form", "form"
     = f.hidden_field :tmp_form, value: "form"
     = hidden_field_tag :js_enabled
@@ -46,5 +46,5 @@
       .clear
 
 
-      = f.submit tf("Invia", "Send"), class: "submit"
+      = f.submit tf("Invia la richiesta", "Send the request"), class: "submit"
 
