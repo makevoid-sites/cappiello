@@ -8,7 +8,7 @@
   - content_for :jquery do
     :plain
       var title = "Accademia Cappiello - Firenze"
-      var stateObj = { action: { name: "clear" } } // source: "..params.." 
+      var stateObj = { action: { name: "clear" } } // source: "..params.."
       if (history.replaceState)
         history.replaceState(stateObj, title, "/")
 
@@ -19,9 +19,10 @@
   #likebox
     :plain
       <fb:like-box href="http://www.facebook.com/pages/Accademia-dArte-e-Design-Leonetto-Cappiello-Firenze/124282164308467" width="292" show_faces="false" stream="true" header="false"></fb:like-box>
-  
+
 - # borse di studio, form
-#inner{ class: "#{"home" if home_page? || @page.id == 1} #{"full" unless @page.root? && @page.id != 6 && @page.id != 8 && @page.id != 13 && @page.id != 10 && @page.id != 29 && @page.id != 7 && @page.id != 5 && @page.id != 4 && @page.id != 30 && @page.id != 51}" }
+- ids_full_class = [6, 8, 13, 10, 29, 7, 5, 4, 30, 51]
+#inner{ class: "#{"home" if home_page? || @page.id == 1} #{"full" if !@page.root? || ids_full_class.include?(@page.id)}" }
   - if @page.id == 1 || @page.id == 35 # news
     = render partial: "elements/home"
   - else
@@ -34,4 +35,4 @@
 - content_for :admin do
   Pagina:
   = link_to "Modifica", [:edit, @page]
-= #params.inspect 
+= #params.inspect
