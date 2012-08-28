@@ -1,9 +1,9 @@
 - error_messages_for(@user)
 
 .forms_form
-  = form_for (@user, :html => { :class => "tutor_form"} ) do |f|
+  = form_for(@user, :html => { :class => "tutor"} ) do |f|
     = hidden_field_tag "form", "form"
-    = f.hidden_field :tmp_form, value: "form"
+    = f.hidden_field :tmp_form, value: "tutor"
     = hidden_field_tag :js_enabled
 
     .form
