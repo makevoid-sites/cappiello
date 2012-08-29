@@ -14,12 +14,22 @@
 
 .forms_pdf
   - label = tf("Scarica il pdf informativo del corso", "Download the course information pdf")
+
   - if logged_in?
-    - pdf_name = if pdf =~ /master_/
-      - "#{pdf.gsub(/master_/, '')}"
+
+    - if pdf.match /^email_/
+      - pdf_name = pdf.gsub /^email_/, ''
+      %h3
+        %a{ href: "mailto:#{UserMailer::ADMIN}?subject=Richiesta invio pdf: #{pdf}&body=Vorrei ricevere il seguente pdf appena pronto: #{pdf_name.humanize}." }
+          = tf "Richiedi il programma in pdf", "Request the pdf for the program"
+      = tf "Ti sarà inviato via email quanto prima.", "We will send you an email as soon as possible."
     - else
-      - "#{"en/" if english?}#{pdf}"
-    %h3= link_to label, "/pdf_open/#{pdf_name}.pdf"
+      - pdf_name = if pdf =~ /master_/
+        - "#{pdf.gsub(/master_/, '')}"
+      - else
+        - "#{"en/" if english?}#{pdf}"
+      %h3= link_to label, "/pdf_open/#{pdf_name}.pdf"
+
   - else
     %h3= link_to label, js_void
 
