@@ -1,0 +1,52 @@
+
+%h2 Form di richiesta incontro con Tutor inviato:
+
+%p.tit 
+  Nome: 
+  %span.val= @user.name
+
+.clear
+= render partial: "users/user_infos"
+
+
+%p.tit 
+  Email: 
+  %span.val= @user.email
+
+%p.tit 
+  Lingua: 
+  %span.val= @user.lang == "it" ? "Italiano" : "Inglese"
+
+%p.tit
+  Nato a: 
+  %span.val= @user.birthplace
+
+%p.tit 
+  Il: 
+  %span.val
+    - unless @user.birthdate.nil?
+      = I18n.l @user.birthdate, format: :long
+
+
+%p.tit 
+  Indirizzo: 
+  %span.val= @user.address
+
+%p.tit 
+  Città: 
+  %span.val= @user.city
+
+%p.tit 
+  CAP: 
+  %span.val= @user.cap
+
+%p.tit 
+  Telefono: 
+  %span.val= @user.tel
+
+
+%p.tit 
+  Newsletter: 
+  %span.val= @user.newsletter ? "Si" : "No"
+%p.tit Titolo di studio: 
+%p.val= @user.qualification
