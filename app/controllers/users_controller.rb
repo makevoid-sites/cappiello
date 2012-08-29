@@ -49,11 +49,11 @@ class UsersController < ApplicationController
     if @user.update(params[:user])
       send_form_notification @user
       flash[:notice] = tf("La registrazione è andata a buon fine!", "You registered successfully!") if flash[:notice].blank?
-      if params[:user][:tmp_form_pdf] == "tutor"
-		 redirect_to "/pages/form_confirmation"
-	  else
-		 redirect_to @user
-	  end
+	if params[:user][:tmp_form] == "tutor"
+		redirect_to "/pages/form_confirmation"
+	else
+		redirect_to @user
+	end
     else
       @page = Page.first(title_url_en: "info")
       flash[:error] = tf("Non è stato possibile aggiornare il profilo", "An error occurred updating your infos")

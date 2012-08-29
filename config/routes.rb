@@ -2,6 +2,7 @@ Cappiello::Application.routes.draw do
 
   get "/stats", to: "pages#stats", as: :stats
 
+  get "/pages/form_confirmation", to: "pages#form_confirmation", as: :form_confirmation
   get "/pages/offerta_formativa", to: "pages#offer", as: :offer
   get "/pages/training_offer", to: "pages#offer", as: :offer_en
 
