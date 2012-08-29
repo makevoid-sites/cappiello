@@ -7,7 +7,7 @@
     = hidden_field_tag :js_enabled
 
     .form
-      %h3= tf("RICHIESTA APPUNTAMENTO CON TUTOR", "TUTOR APPOINTMENT REQUEST")
+      %p= tf("Compilando questo modulo potrete richiedere un incontro in Accademia con il nostro tutor, il quale potrà rispondere alle vostre domande e orientarvi nella scelta dei corsi e del piano formativo", "By completing this form you can request a meeting at the Academy with our tutor, who can answer your questions and guide you in the choice of courses and training plan")
       = f.label :first_name, tf("Nome", "First name")
       = f.text_field :first_name
       = f.label :last_name, tf("Cognome", "Last name")
