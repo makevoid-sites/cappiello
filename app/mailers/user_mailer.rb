@@ -38,6 +38,12 @@ class UserMailer < ActionMailer::Base
     @user = user
     mail to: ADMIN, subject: "Richiesta per Borsa di studio - #{@user.name}"
   end
+  
+  def admin_tutor(user)
+    headers['Reply-To'] = user.email
+    @user = user
+    mail to: ADMIN, subject: "Form Tutor - Richiesta Incontro - #{@user.name}"
+  end
 
   def admin_form(user)
     headers['Reply-To'] = user.email
