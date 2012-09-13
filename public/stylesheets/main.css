@@ -545,7 +545,10 @@ ul#selection {
   padding: 10px 10px;
   margin: 0 2px 0 15px; }
   #aside li {
-    margin: 4px 0; }
+    margin: 10px; }
+  #content #aside ul {
+    list-style-type: square;
+    }
   #aside p {
     text-shadow: none; }
   #aside a {
