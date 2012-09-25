@@ -4,7 +4,7 @@
   #home_right
     - if home_page?
       %h2 &nbsp; 
-    = parse_text markup("<a href=\"/concorsi/\"><img src=\"http://accademia-cappiello.it/uploads/bando-quadrato.png\" alt=\"Concorso per Idee - reinterpretare il logo dell\Accademia d\'Arte e Design Leonetto Cappiello\" /></a>")
+    = parse_text markup("<a href=\"/pages/concorsi/\"><img src=\"http://accademia-cappiello.it/uploads/bando-quadrato.png\" alt=\"Concorso per Idee - reinterpretare il logo dell\Accademia d\'Arte e Design Leonetto Cappiello\" /></a>")
     = render partial: "sections/articles"
   - text = markup tr(@page).text
   = parse_text text
