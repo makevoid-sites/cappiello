@@ -535,6 +535,14 @@ ul#selection {
     width: 360px;
     height: 270px; }
 
+#aside-container {
+  clear: right;
+  float: right;
+  display: block;
+  width: 360px;
+  color: white;
+  padding: 0 0;
+  margin: -26px 0px 0 15px; }
 #aside {
   background: #c82d5e;
   clear: right;
@@ -544,11 +552,9 @@ ul#selection {
   color: white;
   padding: 10px 10px;
   margin: 0 2px 0 15px; }
+
   #aside li {
-    margin: 10px; }
-  #content #aside ul {
-    list-style-type: square;
-    }
+    margin: 6px 0; }
   #aside p {
     text-shadow: none; }
   #aside a {
