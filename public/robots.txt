@@ -3,3 +3,16 @@
 # To ban all spiders from the entire site uncomment the next two lines:
 # User-Agent: *
 # Disallow: /
+
+User-Agent: *
+Disallow: /pages/sketchup_avanzato	
+Disallow: /pages/sketchup_base	
+Disallow: /pages/3d_studio_max_base	
+Disallow: /pages/3d_studio_max_avanzato	
+Disallow: /pages/autocad_3d_2	
+Disallow: /pages/autocad_3d_1	
+Disallow: /pages/autocad_2d_base	
+Disallow: /pages/autocad_2d_pro	
+Disallow: /pages/autocad_2d_intermedio
+Disallow: /users
+
