@@ -79,7 +79,7 @@ class ApplicationController < ActionController::Base
   before_filter :initialize_mixpanel if Rails.env != "development"
 
   def initialize_mixpanel
-    @mixpanel = Mixpanel::Tracker.new(MIXPANEL_TOKEN, request.env, true)
+    @mixpanel = Mixpanel::Tracker.new(MIXPANEL_TOKEN, request.env, { async: true })
   end
 
   def track(event, properties={})
