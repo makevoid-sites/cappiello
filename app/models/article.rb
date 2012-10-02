@@ -35,7 +35,7 @@ class Article
   end
 
   def self.news
-    all(article_type: "news")
+    all(article_type: "news", :created_at.gt => Time.now)
   end
 
   def self.events

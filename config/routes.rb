@@ -41,7 +41,7 @@ Cappiello::Application.routes.draw do
   get "/news", to: "articles#index"
   get "/events/:id", to: "articles#show", as: :event
   get "/news/:id", to: "pages#show", as: :article
-  put "/news/:id", to: "articles#update"
+  resources :news, controller: :articles
   resources :articles
 
   resources :photos
