@@ -58,6 +58,8 @@ class User
 
   property :pdfs_downloaded_array, String, default: ""
 
+  property :country, String, index: true
+
   5.times do |i|
     property "info#{i}", Text
   end

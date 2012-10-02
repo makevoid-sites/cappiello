@@ -7,7 +7,7 @@
     = hidden_field_tag :js_enabled
 
     .form
-      %p= tf("Compilando questo modulo potrete richiedere un incontro in Accademia con il nostro tutor, il quale potrà rispondere alle vostre domande e orientarvi nella scelta dei corsi e del piano formativo", "By completing this form you can request a meeting at the Academy with our tutor, who can answer your questions and guide you in the choice of courses and training plan")
+      %p= tf("Compilando questo modulo potrete richiedere un incontro in Accademia con il nostro tutor, il quale potrà rispondere alle vostre domande e orientarvi nella scelta dei corsi e del piano formativo", "By filling this form you can request a meeting at the Academy with our tutor, who can answer your questions and guide you in the choice of courses and training plan")
       = f.label :first_name, tf("Nome", "First name")
       = f.text_field :first_name
       = f.label :last_name, tf("Cognome", "Last name")
@@ -24,6 +24,9 @@
       = f.label :cap, tf("CAP", "ZIP")
       = f.text_field :cap
       = f.label :tel, tf("Telefono", "Phone")
+      = f.label :country, tf("Paese", "Country")
+      - country = !@user.country && current_lang == "it" ? "Italy" : @user.country
+      = f.select :country, options_for_select(Country.all, selected: country), include_blank: true
       = f.text_field :tel
       = f.label :qualification, tf("Titolo di studio", "Degree")
       = f.text_field :qualification

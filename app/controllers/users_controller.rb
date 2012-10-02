@@ -32,7 +32,8 @@ class UsersController < ApplicationController
       redirect_to path
     else
       flash[:error] = tf("Non è stato possibile completare la registrazione", "An error occurred during the registration")
-      render :new
+      @page = Page.get 8 # info
+      render 'pages/show'
     end
   end
 

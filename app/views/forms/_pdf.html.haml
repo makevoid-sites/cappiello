@@ -55,6 +55,11 @@
       .row
         = f.label :password, tf("Scegli una password", "Choose a password")
         = f.password_field :password
+      .row
+      .clear
+        = f.label :country, tf("Paese", "Country")
+        - country = !@user.country && current_lang == "it" ? "Italy" : @user.country
+        = f.select :country, options_for_select(Country.all, selected: country), include_blank: true
       = f.hidden_field :redirect_url, value: request.path
       /
         %div.authorize

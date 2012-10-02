@@ -11,6 +11,9 @@
   = f.text_field :email
   = f.label :password, "Password"
   = f.password_field :password
+  = f.label :country, tf("Paese", "Country")
+  - country = !@user.country && current_lang == "it" ? "Italy" : @user.country
+  = f.select :country, options_for_select(Country.all, selected: country), include_blank: true
 
   = hidden_field_tag :js_enabled
   
