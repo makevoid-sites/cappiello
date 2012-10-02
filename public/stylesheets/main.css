@@ -776,6 +776,9 @@ input.radio2 {
   width: 30px; }
 .forms_form .checkboxes_bottom label {
   float: left; }
+.forms_form .tutor .form {
+  width: 100%;
+  float: right; }
 
 .pdf_clear {
   clear: left; }
