@@ -45,4 +45,16 @@ $(function(){
     })
   })
 
+  function hide_flashes() {
+    $('#flashes').slideUp("slow");
+  }
+
+  // banner
+
+  // if !webkit
+  $('#banner').cycle({
+    fx: 'fade'
+  });
+  setTimeout(hide_flashes, 3000)
+
 })

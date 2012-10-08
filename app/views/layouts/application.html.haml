@@ -25,43 +25,11 @@
     %script{ type: "text/javascript" }
       var action = '#{controller.action_name}'
       var resources = '#{controller.controller_name.pluralize}'
-      = yield :script
-      :plain
-        function hide_flashes() {
-          $('#flashes').slideUp("slow");
-        }
 
-      $(function(){
-      = yield :jquery
-      :plain
-        // if !webkit
-        $('#banner').cycle({
-          fx: 'fade'
-        });
-        setTimeout(hide_flashes, 3000)
-      });
     - if @page && @page.id == 9 # contacts
       %script{ src: "http://maps.google.com/maps/api/js?sensor=false" }
-      %script{ type: "text/javascript" }
-        :plain
-          $(function(){
-            function gmap() {
-              var mapDiv = document.getElementById('map_canvas')
-              var latLng = new google.maps.LatLng(43.76389, 11.269234)
-              var map = new google.maps.Map(mapDiv, {
-                center: latLng,
-                zoom: 15,
-                mapTypeId: google.maps.MapTypeId.ROADMAP
-              })
-                console.log(map)
-              var marker = new google.maps.Marker({
-                position: latLng,
-                map: map
-              })
-            }
+      %script{ type: "text/javascript", src: "gmap.js" }
 
-            gmap()
-          })
 
     - if Rails.env == "production" && !analytics_tracker.blank?
       = render partial: "layouts/analytics"
