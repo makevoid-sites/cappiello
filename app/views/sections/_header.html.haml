@@ -6,15 +6,11 @@
   - else
     = image_tag "logo.png", id: "logo"
 #banner
-  - files = Dir.glob("#{Rails.root}/public/images/banner/#{master? ? "master" : "main"}/*").sort
-  -# files = files.sort_by { rand } # randomize
-  -# files = files[0..6] # limit
-  - banner = Banner.new files
-  - files.each_with_index do |file, idx|
+  - banner = Banner.new
+  - banner.files.each_with_index do |file, idx|
     - options = {}
     - options[:class] = "first" if idx == 0
     - page = banner.page(file)
     - options[:"data-page-url"] = tr(page).title_url if page
-    = image_tag file.gsub("#{Rails.root}/public", ''), options
-    -# image_tag "banner/2.png"#, class: "last"
+    = image_tag file, options
 .clear

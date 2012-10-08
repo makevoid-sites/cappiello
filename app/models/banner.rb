@@ -1,9 +1,10 @@
 class Banner
   LINKS = eval File.read("#{Rails.root}/config/banner_links.rb")
 
-  def initialize(paths)
+  def initialize
     @images = []
-    paths.map do |file|
+
+    files.map do |file|
       image = {}
       image[:path] = file
       name = File.basename(file, ".png")
@@ -18,6 +19,10 @@ class Banner
     @images.each do |image|
       image[:page] = pages.get image[:page_id]
     end
+  end
+
+  def files
+    LINKS.map{ |name, id| "banner/main/#{name}.png" }
   end
 
   def page(path)
