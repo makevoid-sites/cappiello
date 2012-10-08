@@ -1,9 +1,9 @@
 # nome file immagine => id della pagina
 {
   "1"   => 1,
-  "webdesign"   => 45,
+  "web_design"   => 45,
   "2"   => nil,
-  "grficaeditoriale"   => 30,
+  "grafica_editoriale"   => 30,
   "3"   => nil,
   "illustrazione"   => 43,
   "4"   => nil,
