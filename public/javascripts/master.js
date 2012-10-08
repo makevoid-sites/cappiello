@@ -57,4 +57,10 @@ $(function(){
   });
   setTimeout(hide_flashes, 3000)
 
+  $('#banner img').on("click", function(){
+    var page_url = $(this).data("page-url")
+    if (page_url)
+      window.location = "/pages/"+page_url
+  })
+
 })

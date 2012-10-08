@@ -321,6 +321,8 @@ a#profile_name {
     display: none; }
   #banner img.first {
     display: block; }
+  #banner img[data-page-url] {
+    cursor: pointer; }
 
 .center {
   text-align: center; }
