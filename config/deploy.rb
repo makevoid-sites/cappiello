@@ -39,7 +39,7 @@ set :password,  password_var
 # set :scm_passphrase, password  # The deploy user's password
 
 ssh_options[:forward_agent] = true
-#set :deploy_via, :remote_cache
+set :deploy_via, :remote_cache
 
 
 #
