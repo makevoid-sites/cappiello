@@ -1,9 +1,9 @@
 # nome file immagine => id della pagina
 {
   "9"   => nil,
-  "webdesign"   => 45,
+  "web_design"   => 45,
   "2"   => nil,
-  "grficaeditoriale"   => 30,
+  "grafica_editoriale"   => 30,
   "11"  => nil,
   "illustrazione"   => 43,
   "4"   => nil,
@@ -11,7 +11,7 @@
   "5"   => nil,
   "photoshop"   => 44,
   "12"  => nil,
-  "3dstudiomax"   => 50,
+  "3d_studio_max"   => 50,
   "7"   => nil,
   "sketchup"   => 48,
   "13"  => nil,
