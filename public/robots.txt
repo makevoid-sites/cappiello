@@ -14,5 +14,11 @@ Disallow: /pages/autocad_3d_1
 Disallow: /pages/autocad_2d_base	
 Disallow: /pages/autocad_2d_pro	
 Disallow: /pages/autocad_2d_intermedio
+Disallow: /pages/estivo_orientamento_artistico
+Disallow: /pages/estivo_visual_design
+Disallow: /pages/estivo_interior_design
+Disallow: /pages/corsi_estivi
 Disallow: /users
+Disallow: /login
+
 
