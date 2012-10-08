@@ -1,5 +1,12 @@
 class Banner
-  LINKS = eval File.read("#{Rails.root}/config/banner_links.rb")
+
+  def self.read_banner_links
+    eval File.read("#{Rails.root}/config/banner_links.rb")
+  rescue
+    {}
+  end
+
+  LINKS = read_banner_links
 
   def initialize
     @images = []
