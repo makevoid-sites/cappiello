@@ -53,7 +53,10 @@ $(function(){
 
   // if !webkit
   $('#banner').cycle({
-    fx: 'fade'
+    fx: 'fade',
+    speed:    1000,
+    timeout:  5000,
+    pause:    true
   });
   setTimeout(hide_flashes, 3000)
 
