@@ -15,4 +15,3 @@ pages2.yml
 *.log
 pxm
 config/database.yml
-gcc-4.2
