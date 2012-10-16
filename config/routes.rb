@@ -7,6 +7,7 @@ Cappiello::Application.routes.draw do
   get "/pages/training_offer", to: "pages#offer", as: :offer_en
 
   get "/pages/form", to: redirect("/pages/info")
+  get "/pages/web_design_visual_design", to: redirect("/pages/corso_web_design")
   get "/pages/:id", to: "pages#show", as: :page
   resources :pages
 
