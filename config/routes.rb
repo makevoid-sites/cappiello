@@ -8,6 +8,14 @@ Cappiello::Application.routes.draw do
 
   get "/pages/form", to: redirect("/pages/info")
   get "/pages/web_design_visual_design", to: redirect("/pages/corso_web_design")
+  get "/pages/autocad_interior_design", to: redirect("/pages/corso_autocad_interior_design")
+  get "/pages/v-ray", to: redirect("/pages/corso_v-ray")
+  get "/pages/grafica_editoriale", to: redirect("/pages/corso_grafica_editoriale")
+  get "/pages/pages/illustrazione_visual_design", to: redirect("/pages/corso_illustrazione_visual_design")
+  get "/pages/photoshop_visual_design", to: redirect("/pages/corso_photoshop")
+  get "/pages/rendering_interior_design", to: redirect("/pages/corso_rendering_interior_design")
+  get "/pages/sketch_up_interior_design", to: redirect("/pages/corso_sketch_up_interior_design")
+  get "/pages/3d_studio_max_interior_design", to: redirect("/pages/corso_3d_studio_max_interior_design")
   get "/pages/:id", to: "pages#show", as: :page
   resources :pages
 
