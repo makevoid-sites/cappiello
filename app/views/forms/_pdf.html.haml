@@ -2,15 +2,12 @@
 
 - content_for :jquery do
   :plain
-    $("#standard h3 a").live('click', function(){
+    $(".forms_pdf h3 a").on('click', function(){
       $('.forms_pdf form').toggle();
       $('.forms_pdf').toggleClass("bg");
     })
 
     var label = $("h3").html()
-    //$("#standard h3").remove()
-    //$("#standard p ").append("<h3>"+label+"</h3>")
-    //$("#standard p:first h3, #standard form p").remove()
 
 .forms_pdf
   - label = tf("Scarica il pdf informativo del corso (è necessario essere registrati al sito. Se non sei registrato vai alla sezione INFO per registrarti)", "Download the course information pdf (you must be registered to the site. Go to the INFO page to register.")
