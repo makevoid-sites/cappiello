@@ -58,6 +58,16 @@ module ApplicationHelper
     "http://"+request.host+request.fullpath
   end
 
+  # og
+
+  def og_image
+    if @page && File.exist?("#{Rails.root}/public/images/og_images/#{@page.id}.png")
+      "http://accademia-cappiello.it/images/og_images/#{@page.id}.png"
+    else
+      "http://accademia-cappiello.it/images/logo.png"
+    end
+  end
+
   # markup (redlcth)
 
   def markup(text)
