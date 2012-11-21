@@ -1,8 +1,6 @@
 Cappiello::Application.routes.draw do
 
-  if request.host == "accademiacappiello.it"
-    get "/:star", to: redirect { |params| "http://accademia-cappiello.it/#{params[:star]}" }, constraints: { star: /.*/ }
-  end
+  get "/:star", to: redirect { |params| "http://accademia-cappiello.it/#{params[:star]}" }, constraints: { star: /.*/, domain: "accademiacappiello.it" }
 
   get "/stats", to: "pages#stats", as: :stats
 
