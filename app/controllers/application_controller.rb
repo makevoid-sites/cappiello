@@ -42,7 +42,7 @@ class ApplicationController < ActionController::Base
   end
 
 
-  DataMapper::Validations::I18n.localize! 'it'
+  DataMapper::Validations::I18n.localize! "it"
   DataMapper::Validations::I18n.translate_field_name_with :rails
   # track non registered users with cookie
   after_filter :set_anonym_cookie
