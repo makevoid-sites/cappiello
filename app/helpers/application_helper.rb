@@ -32,7 +32,7 @@ module ApplicationHelper
     end
 
     TextileEnhancer.new(text, :gallery).insert do |text|
-      "<div id='photos' data-set_id='#{text}' ></div><a href='http://www.flickr.com/photos/accademiacappiello/sets/#{text}/' class='flickr_button'><img src='/images/icons/flickr_icon.png' /><span>Lavori degli studenti</span></a>"
+      "<div id='photos' data-set_id='#{text}' ></div><a href='http://www.flickr.com/photos/accademiacappiello/sets/#{text}/' class='flickr_button'><img src='/images/icons/flickr_icon.png' /><span>Galleria immagini</span></a>"
     end
 
 

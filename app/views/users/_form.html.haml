@@ -7,7 +7,8 @@
     = hidden_field_tag :js_enabled
 
     .checkboxes
-      %h3= tf("RICHIESTA INFORMAZIONI", "INFORMATION REQUEST")
+      %div.clear
+      %h3.info_title= tf("RICHIESTA INFORMAZIONI", "INFORMATION REQUEST")
       = f.check_box :int_annuali_visual
       = f.label     :int_annuali_visual,    "VISUAL DESIGN - #{tf "corsi annuali", "annual courses"}"
       = f.check_box :int_annuali_interior
@@ -28,8 +29,8 @@
       = f.label     :int_brevi_visual,    "VISUAL DESIGN - #{tf "corsi brevi", "short courses"}"
       = f.check_box :int_brevi_interior
       = f.label     :int_brevi_interior,  "INTERIOR DESIGN -#{tf "corsi brevi", "short courses"}"
-      
-      %h3= tf("PARTECIPAZIONE OPEN DAY GRATUITO", "PARTICIPATION FREE OPEN DAY")
+      %div.clear
+      %h3.open_day= tf("PARTECIPAZIONE OPEN DAY GRATUITO", "PARTICIPATION FREE OPEN DAY")
       = f.check_box :int_stage_visual
       = f.label     :int_stage_visual,    "#{tf "OPEN DAY", "OPEN DAY"} VISUAL DESIGN"
       = f.check_box :int_stage_interior
