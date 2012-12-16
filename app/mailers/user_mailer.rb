@@ -4,7 +4,7 @@ class UserMailer < ActionMailer::Base
   #DEV = "cappiello@makevoid.com"
 
   # PROD = %w(makevoid@gmail.com accademiacappiello@dada.it)
-  PROD = %w(accademiacappiello@dada.it)
+  PROD = %w(info@accademiacappiello.it)
 
   ADMIN = Rails.env == "development" ? DEV : PROD
   #ADMIN = "makevoid@gmail.com"
