@@ -10,7 +10,7 @@
     var label = $("h3").html()
 
 .forms_pdf
-  - label = tf("Scarica il pdf informativo del corso", "Download the course information pdf")
+  - label = tf("Scarica il pdf del corso", "Download the course pdf")
 
   - if logged_in?
 
@@ -68,3 +68,8 @@
       = hidden_field_tag :js_enabled
       = f.submit tf("Scarica", "Download"), class: "submit"
 .pdf_clear
+
+.info_request
+  %h3
+    %a{ href: "/pages/info?section=#{pdf_to_section(pdf)}" }
+      Richiedi informazioni

@@ -1,4 +1,6 @@
 - error_messages_for(@user)
+- @user.try :send, "int_#{params["section"]}=", true if params["section"]
+
 
 .forms_form
   = form_for @user do |f|
