@@ -66,4 +66,30 @@ $(function(){
       window.location = "/pages/"+page_url
   })
 
+
+  // slider generica
+
+  // if !webkit
+  $('#slider1').cycle({
+    fx: 'fade',
+    speed:    1000,
+    timeout:  5000,
+    pause:    true
+  });
+  setTimeout(hide_flashes, 3000)
+$('#slider2').cycle({
+    fx: 'fade',
+    speed:    1000,
+    timeout:  5000,
+    pause:    true
+  });
+  setTimeout(hide_flashes, 3000)
+$('#slider3').cycle({
+    fx: 'fade',
+    speed:    1000,
+    timeout:  5000,
+    pause:    true
+  });
+  setTimeout(hide_flashes, 3000)
+
 })
