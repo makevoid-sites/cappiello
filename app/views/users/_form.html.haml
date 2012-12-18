@@ -1,5 +1,9 @@
 - error_messages_for(@user)
-- @user.try :send, "int_#{params["section"]}=", true if params["section"]
+
+- if params["section"]
+  - method = "int_#{params["section"]}="
+  - if @user.respond_to?(method)
+    - @user.send method, true
 
 
 .forms_form
