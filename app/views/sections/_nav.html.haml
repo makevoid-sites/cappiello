@@ -56,6 +56,19 @@
                 = link_to tf("Interior Design"), page_path(id: tf("laboratorio_interior_design", "interior_design_workshop"))
             = link_to tf("Laboratori", "Workshops"), js_void
 
+        - when "info"
+          %li
+            %ul.subnav
+              %li
+                = link_to tf("Informazioni", "Info"), page_path(id: tf("info", "info"))
+              %li
+                = link_to tf("Incontra un Tutor", "Meet the Tutor"), page_path(id: tf("incontro-tutor", "tutor-appointment"))
+              - if page.id != 52 || english?
+                %li
+                  = link_to tf("Info per stranieri", "Student Help"), page_path(id: tf("info", "info"))
+              
+            = link_to tf("Info", "info"), js_void
+        
         - else
           - if page.id != 52 || english?
             %li
