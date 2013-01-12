@@ -1,7 +1,7 @@
 class ArticlesController < ApplicationController
 
   def index
-    @articles = Article.all
+    @articles = Article.all article_type: section.singularize
   end
 
   def show
@@ -17,7 +17,7 @@ class ArticlesController < ApplicationController
     correct_date_params
     @article = Article.new(params[:article])
     if @article.save
-      redirect_to @article, notice: "#{@article.tipo.capitalize} inserito/a!"
+      redirect_to @article.path(self), notice: "#{@article.tipo.capitalize} inserito/a!"
     else
       flash[:error] = "Errore nell'inserimento della news/evento"
       render :new
@@ -34,7 +34,7 @@ class ArticlesController < ApplicationController
     @article = Article.get(params[:id])
     return not_found if @article.nil?
     if @article.update(params[:article])
-      redirect_to @article, notice: "#{@article.tipo.capitalize} modificato/a!"
+      redirect_to @article.path(self), notice: "#{@article.tipo.capitalize} modificato/a!"
     else
       flash[:error] = "Errore nella modifica della news/evento"
       render :edit
