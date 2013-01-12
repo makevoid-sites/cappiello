@@ -3,6 +3,9 @@
   #nav_cont
     %ul#nav
       - pages.each_with_index do |page, idx|
+        - if idx == 1
+          %li
+            = link_to "Blog", [:posts]
         - case page.title_url_en
         - when "annual_courses"
           %li
@@ -66,9 +69,9 @@
               - if page.id != 52 || english?
                 %li
                   = link_to tf("Info per stranieri", "Student Help"), page_path(id: tf("info", "info"))
-              
+
             = link_to tf("Info", "info"), js_void
-        
+
         - else
           - if page.id != 52 || english?
             %li
