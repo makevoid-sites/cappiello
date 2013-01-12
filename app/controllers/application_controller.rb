@@ -17,12 +17,6 @@ class ApplicationController < ActionController::Base
   # require "#{Rails.root}/lib/tracking"
   # include Tracking
 
-  helper_method :section
-
-  def section
-    request.path.split("/")[1]
-  end
-
 
   helper_method :home_page?
 

@@ -1,14 +1,3 @@
-%h2
-  - if section == "news"
-    News
-  - else
-    Blog
-    
 %ul#articles_list
+  %h2 News
   = render @articles
-
-  - if admin?
-    .insert_article
-      = link_to "Inserisci Blog Post", new_article_path(article_type: "post")
-      |
-      = link_to "Vai al blog", [:posts]

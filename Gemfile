@@ -72,9 +72,6 @@ end
 
 group :development do
   gem "thin"
-  gem "guard"
-  gem "guard-livereload"
-  gem "rerun"
 end
 
 # ------------------------------------------------------------------------------
@@ -119,4 +116,8 @@ gem 'newrelic_rpm'
 
 gem "thin"
 
+group :development do
+  gem "guard"
+  gem "guard-livereload"
+end
 

@@ -1,4 +1,4 @@
-- title "Inserisci #{params[:article_type] == "news" ? "News" : "Blog Post" }"
+- title "Inserisci #{params[:article_type] ? "News" : "Evento" }"
 
 = form_for @article do |f|
   = f.hidden_field :article_type, value: params[:article_type]

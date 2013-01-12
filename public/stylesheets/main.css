@@ -288,25 +288,10 @@ a#profile_name {
   font-size: 0.7em;
   float: right; }
 
-.articles.show #content img {
-  width: 42%;
-  margin: 0 0 1% 1%; }
-.articles.show #content img:first-child {
-  width: 35%;
-  margin: 0 1% 1% 0;
-  float: left; }
-
 .articles.index .date {
-  float: right;
+  float: left;
   margin-right: 15px;
   font-size: 0.8em; }
-.articles.index #articles_list li {
-  margin: 10px 0 30px; }
-
-.articles.index #content img {
-  width: 25%;
-  margin: 0 1% 1% 0;
-  float: left; }
 
 #articles_list li a {
   font-weight: bold;

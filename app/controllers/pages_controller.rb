@@ -80,7 +80,7 @@ class PagesController < ApplicationController
 
   def load_news
     @news = Article.news.all(limit: 5).reverse
-    @posts = Article.posts.all(limit: 5)
+    # @events = Article.events.all(limit: 5, order: [:created_at.desc])
   end
 
   def offer

@@ -30,27 +30,15 @@ class Article
     end
   end
 
-  def path(context)
-    if article_type == "post"
-      context.post_path self
-    else
-      context.article_path self
-    end
-  end
-
   def tipo
-    article_type == "post" ? "post" : "news"
+    article_type == "event" ? "event" : "news"
   end
 
   def self.news
     all(article_type: "news", :created_at.gt => Time.now)
   end
 
-  def self.posts
-    all(article_type: "post")
+  def self.events
+    all(article_type: "event")
   end
-
-  # def self.events
-  #   all(article_type: "event")
-  # end
 end
