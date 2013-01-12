@@ -1,6 +1,8 @@
 Cappiello::Application.routes.draw do
 
-  get "/:star", to: redirect { |params| "http://accademia-cappiello.it/#{params[:star]}" }, constraints: { star: /.*/, domain: "accademiacappiello.it" }
+  unless Rails.env == "staging"
+    get "/:star", to: redirect { |params| "http://accademia-cappiello.it/#{params[:star]}" }, constraints: { star: /.*/, domain: "accademiacappiello.it" }
+  end
 
   get "/stats", to: "pages#stats", as: :stats
 
