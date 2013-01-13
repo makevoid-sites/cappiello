@@ -17,6 +17,12 @@ class ApplicationController < ActionController::Base
   # require "#{Rails.root}/lib/tracking"
   # include Tracking
 
+  helper_method :section
+
+  def section
+    request.path.split("/")[1]
+  end
+
 
   helper_method :home_page?
 
@@ -220,7 +226,7 @@ class ApplicationController < ActionController::Base
 
   # subdomain and language
 
-  helper_method :host_and_port, :subdomain, :english?
+  helper_method :host_and_port, :subdomain, :english?, :italian?
 
   def subdomain
     "en"
@@ -228,6 +234,10 @@ class ApplicationController < ActionController::Base
 
   def english?
     request.host.split(".")[0] == subdomain
+  end
+
+  def italian?
+    !english?
   end
 
   def app_host

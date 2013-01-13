@@ -1,5 +1,9 @@
 - error_messages_for(@user)
-- @user.try :send, "int_#{params["section"]}=", true if params["section"]
+
+- if params["section"]
+  - method = "int_#{params["section"]}="
+  - if @user.respond_to?(method)
+    - @user.send method, true
 
 
 .forms_form
@@ -20,9 +24,9 @@
       = f.check_box :int_master_interior
       = f.label     :int_master_interior,  "INTERIOR DESIGN -#{tf "master", "master"}"
       = f.check_box :int_special_visual
-      = f.label     :int_special_visual,    "VISUAL DESIGN - #{tf "corsi speciali", "special courses"}"
+      = f.label     :int_special_visual,    "VISUAL DESIGN - #{tf "corsi specialistici", "specialist courses"}"
       = f.check_box :int_special_interior
-      = f.label     :int_special_interior,  "INTERIOR DESIGN -#{tf "corsi speciali", "special courses"}"
+      = f.label     :int_special_interior,  "INTERIOR DESIGN -#{tf "corsi specialistici", "specialist courses"}"
       = f.check_box :int_workshop_visual
       = f.label     :int_workshop_visual,    "VISUAL DESIGN - #{tf "laboratorio serale", "workshop"}"
       = f.check_box :int_workshop_interior

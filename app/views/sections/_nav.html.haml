@@ -3,6 +3,9 @@
   #nav_cont
     %ul#nav
       - pages.each_with_index do |page, idx|
+        - if idx == 1
+          %li
+            = link_to "Blog", [:posts]
         - case page.title_url_en
         - when "annual_courses"
           %li
@@ -28,14 +31,15 @@
                 = link_to tf("Visual Design"), js_void
               %li
                 %ul.subnav.sub2
-                  %li= link_to tf("Modellazione 3D", "3D modelling"), page_path(id: tf("interior_design_modellazione_3d", "interior_design_3d_modelling"))
+                  - if italian?
+                    %li= link_to tf("Modellazione 3D", "3D modelling"), page_path(id: tf("interior_design_modellazione_3d", "interior_design_3d_modelling"))
                   %li= link_to tf("Rendering", "Rendering"), page_path(id: tf("corso_rendering_interior_design", "interior_design_rendering"))
                   %li= link_to tf("Sketch-Up", "Sketch-Up"), page_path(id: tf("corso_sketch_up_interior_design", "interior_design_sketchup"))
                   %li= link_to tf("Autocad", "Autocad"), page_path(id: tf("corso_autocad_interior_design", "interior_design_autocad"))
                   %li= link_to tf("3D Studio Max", "3D Studio Max"), page_path(id: tf("corso_3d_studio_max_interior_design", "interior_design_3dstudiomax"))
                   %li= link_to tf("V-Ray", "V-Ray"), page_path(id: tf("corso_v-ray", "vray_course"))
                 = link_to tf("Interior Design"), js_void
-                
+
             = link_to tf("Corsi specialistici", "Specialist Courses"), js_void
 
         - when "dates_and_times"
@@ -55,9 +59,23 @@
                 = link_to tf("Interior Design"), page_path(id: tf("laboratorio_interior_design", "interior_design_workshop"))
             = link_to tf("Laboratori", "Workshops"), js_void
 
-        - else
+        - when "info"
           %li
-            = link_to tr(page).title, pag_path(page)
+            %ul.subnav
+              %li
+                = link_to tf("Informazioni", "Info"), page_path(id: tf("info", "info"))
+              %li
+                = link_to tf("Incontra un Tutor", "Meet the Tutor"), page_path(id: tf("incontro-tutor", "tutor-appointment"))
+              - if page.id != 52 || english?
+                %li
+                  = link_to tf("Info per stranieri", "Student Help"), page_path(id: tf("info", "info"))
+
+            = link_to tf("Info", "info"), js_void
+
+        - else
+          - if page.id != 52 || english?
+            %li
+              = link_to tr(page).title, pag_path(page)
 
 
     #social

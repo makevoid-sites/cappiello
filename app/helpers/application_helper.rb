@@ -14,26 +14,6 @@ module ApplicationHelper
     false
   end
 
-  PDFS = { # non mi garba megliko metterli nel db o usare gli id
-    # pdf => section
-    "visual_design_annual" => "annuali_visual",
-    "interior_design_annual" => "annuali_interior",
-    "visual_design_corso_master" => "master_visual",
-    "" => "master_interior",
-    "" => "special_visual",
-    "" => "special_interior",
-    "" => "workshop_visual",
-    "" => "workshop_interior",
-    "" => "brevi_visual",
-    "" => "brevi_interior",
-    "" => "stage_visual",
-    "" => "stage_interior",
-  }
-
-  def pdf_to_section(pdf)
-    PDFS.fetch pdf
-  end
-
   def pages
     @pages ||= Page.all(master: false).roots
   end

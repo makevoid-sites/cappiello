@@ -69,7 +69,8 @@
       = f.submit tf("Scarica", "Download"), class: "submit"
 .pdf_clear
 
+
 .info_request
   %h3
-    %a{ href: "/pages/info?section=#{pdf_to_section(pdf)}" }
+    %a{ href: "/pages/info?section=#{@page.int_name}" }
       Richiedi informazioni

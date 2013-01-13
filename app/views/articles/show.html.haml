@@ -1,5 +1,3 @@
-
-
 - content_for :admin do
   Articolo:
   = link_to "Modifica", [:edit, @article]
@@ -14,4 +12,9 @@
 
 
   .right
-    = link_to tf("Torna alla pagina News", "Back to News page"), [:news]
+    = tf "Vai a:", "Go to:"
+    = link_to "News", [:news]
+    |
+    = link_to "Blog", [:posts]
+
+  .clear
