@@ -4,7 +4,7 @@ if Rails.env == "production"
       :email_prefix => "[Cappiello] ",
       :sender_address => %{"Cappiello" <m4kevoid@gmail.com>},
       :exception_recipients => %w{makevoid@gmail.com nicco@filarete.net},
-      ignore_exceptions: [ActionView::MissingTemplate]
+      ignore_exceptions: [ActionView::MissingTemplate, URI::InvalidURIError]
 end
 
 
