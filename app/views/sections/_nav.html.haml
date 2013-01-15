@@ -24,7 +24,7 @@
             %ul.subnav
               %li
                 %ul.subnav.sub2
-                  %li= link_to tf("Grafica Editoriale", "Editorial Graphics"), page_path(id: tf("corso_grafica_editoriale", "press_graphics_course"))
+                  %li= link_to tf("Grafica Editoriale", "Press Graphics"), page_path(id: tf("corso_grafica_editoriale", "press_graphics_course"))
                   %li= link_to tf("Illustrazione", "Illustration"), page_path(id: tf("corso_illustrazione_visual_design", "visual_design_illustration"))
                   %li= link_to tf("Photoshop", "Photoshop"), page_path(id: tf("corso_photoshop", "visual_design_photoshop"))
                   %li= link_to tf("Web Design", "Web Design"), page_path(id: tf("corso_web_design", "web_design_course"))
@@ -47,8 +47,8 @@
         - when "summer_courses" # corsi estivi
           %li
             %ul.subnav
-              %li= link_to tf("Visual Design", "Short Courses"), page_path(id: tf("visual_design_corsi_brevi", "visual_design_short_courses"))
-              %li= link_to tf("Interior Design", "Short Courses"), page_path(id: tf("interior_design_corsi_brevi", "interior_design_short_courses"))
+              %li= link_to tf("Visual Design", "Visual Short"), page_path(id: tf("visual_design_corsi_brevi", "visual_design_short_courses"))
+              %li= link_to tf("Interior Design", "Interior Short"), page_path(id: tf("interior_design_corsi_brevi", "interior_design_short_courses"))
             = link_to tf("Corsi brevi", "Short Courses"), js_void
         - when "workshops"
           %li
