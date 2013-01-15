@@ -4,6 +4,8 @@
   = link_to text.html_safe, link
   - unless home_page?
     %p
-      = markup truncate(article.text)
+      - text = article.text
+      - text = truncate text if section == "news"
+      = markup text
 
   .clear
