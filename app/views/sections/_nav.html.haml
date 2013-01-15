@@ -73,9 +73,8 @@
             = link_to tf("Info", "info"), js_void
 
         - else
-          - if page.id != 52 || english?
-            %li
-              = link_to tr(page).title, pag_path(page)
+          %li
+            = link_to tr(page).title, pag_path(page)
 
 
     #social
