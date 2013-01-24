@@ -827,7 +827,7 @@ input.radio2 {
 
 .forms_form .checkboxes {
   float: left;
-  width: 40%; }
+  width: 45%; }
   .forms_form .checkboxes label {
     float: left; }
   .forms_form .checkboxes input {
@@ -841,7 +841,7 @@ input.radio2 {
     clear: left;
     margin: 30px 0 15px 0; }
 .forms_form .form {
-  width: 55%;
+  width: 50%;
   float: right; }
 .forms_form .checkboxes_bottom input {
   float: left;

@@ -46,6 +46,7 @@ class User
   property :int_brevi_graphic,   Boolean, default: false
   property :int_stage_visual,     Boolean, default: false
   property :int_stage_interior,   Boolean, default: false
+  property :int_stage_web,   Boolean, default: false
   property :notes, Text
 
   property :qualification, String, length: 255
