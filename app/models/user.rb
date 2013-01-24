@@ -34,6 +34,7 @@ class User
   property :interested_in, String, index: true
   property :int_annuali_visual,   Boolean, default: false
   property :int_annuali_interior, Boolean, default: false
+  property :int_annuali_web, Boolean, default: false
   property :int_master_visual,   Boolean, default: false
   property :int_master_interior, Boolean, default: false
   property :int_special_visual,   Boolean, default: false
