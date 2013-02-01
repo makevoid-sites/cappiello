@@ -3,6 +3,9 @@
   #nav_cont
     %ul#nav
       - pages.each_with_index do |page, idx|
+        - if idx == 1      
+          %li
+            = link_to "Blog", [:posts]
         - case page.title_url_en
         - when "annual_courses"
           %li
