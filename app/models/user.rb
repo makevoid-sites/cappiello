@@ -86,7 +86,7 @@ class User
       if users_count < num
         [true]
       else
-        [false, "Un utente con il tuo nome e cognome e' gia' registrato, probabilmente hai gia' un account. Controlla la tua mail / There is another user with your first and last name, probably you already have an account. Check your mail."]
+        [false, "Un utente con il tuo nome e cognome e' gia' registrato, probabilmente hai gia' un account. Prova a effettuare il <a href='/login'>login</a>. / There is another user with your first and last name, probably you already have an account. Try to <a href='/login'>login</a>."]
       end
     # end
   end
