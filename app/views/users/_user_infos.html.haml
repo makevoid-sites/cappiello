@@ -18,8 +18,9 @@
 
   %h3 Voglio partecipare a:
 
-  - show_selection :int_stage_visual, "Stage Visual Design"
-  - show_selection :int_stage_interior, "Stage Interior Design"
+  - show_selection :int_stage_visual, "Open Day Visual Design"
+  - show_selection :int_stage_interior, "Open Day Interior Design"
+  - show_selection :int_stage_web, "Open Day Digital Communication & Design"
   
   - unless @user.interested_in.blank?
   
