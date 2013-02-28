@@ -63,11 +63,11 @@ gem 'dm-timestamps',        DM_VERSION, :git => "#{DATAMAPPER}/dm-timestamps"
 # gem 'dm-observer',          DM_VERSION, :git => "#{DATAMAPPER}/dm-observer"
 
 group :development, :test do
-  gem 'rspec-rails'
-  gem 'capybara', :git => 'git://github.com/jnicklas/capybara.git'
-  gem 'launchy'
-  gem 'steak'
-  gem 'database_cleaner'
+  # gem 'rspec-rails'
+  # gem 'capybara', :git => 'git://github.com/jnicklas/capybara.git'
+  # gem 'launchy'
+  # gem 'steak'
+  # gem 'database_cleaner'
 end
 
 group :development do
