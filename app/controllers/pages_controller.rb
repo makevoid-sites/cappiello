@@ -79,8 +79,8 @@ class PagesController < ApplicationController
   end
 
   def load_news
-    @news = Article.news.all(limit: 5).reverse
-    @posts = Article.posts.all(limit: 5)
+    @news = Article.news.all(limit: 8).reverse
+    @posts = Article.posts.all(limit: 8)
   end
 
   def offer
