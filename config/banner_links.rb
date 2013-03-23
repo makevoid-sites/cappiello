@@ -1,7 +1,8 @@
 # nome file immagine => id della pagina
 {
-  "visual_frame"   => 55,
   "9"   => nil,
+  "visual_frame"   => 55,
+  "13"  => nil,
   "web_design"   => 45,
   "2"   => nil,
   "grafica_editoriale"   => 30,
@@ -15,6 +16,5 @@
   "3d_studio_max"   => 50,
   "7"   => nil,
   "sketchup"   => 48,
-  "13"  => nil,
   
 }
