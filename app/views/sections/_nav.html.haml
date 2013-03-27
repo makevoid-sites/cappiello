@@ -70,8 +70,9 @@
             = link_to tf("Info", "info"), js_void
 
         - else
-          %li
-            = link_to tr(page).title, pag_path(page)
+          - unless page.id == 35 # news
+            %li
+              = link_to tr(page).title, pag_path(page)
 
 
     #social
