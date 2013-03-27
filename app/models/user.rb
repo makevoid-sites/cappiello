@@ -34,6 +34,7 @@ class User
   property :interested_in, String, index: true
   property :int_annuali_visual,   Boolean, default: false
   property :int_annuali_interior, Boolean, default: false
+  property :int_annuali_web, Boolean, default: false
   property :int_master_visual,   Boolean, default: false
   property :int_master_interior, Boolean, default: false
   property :int_special_visual,   Boolean, default: false
@@ -45,6 +46,7 @@ class User
   property :int_brevi_graphic,   Boolean, default: false
   property :int_stage_visual,     Boolean, default: false
   property :int_stage_interior,   Boolean, default: false
+  property :int_stage_web,   Boolean, default: false
   property :notes, Text
 
   property :qualification, String, length: 255

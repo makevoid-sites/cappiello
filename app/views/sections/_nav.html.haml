@@ -3,12 +3,16 @@
   #nav_cont
     %ul#nav
       - pages.each_with_index do |page, idx|
+        - if idx == 1      
+          %li
+            = link_to "Blog", [:posts]
         - case page.title_url_en
         - when "annual_courses"
           %li
             %ul.subnav
               %li= link_to "Visual Design", page_path(id: tf("visual_design_corsi_annuali", "visual_design_annual_training"))
               %li= link_to "Interior Design", page_path(id: tf("interior_design_corsi_annuali", "interior_design_annual_training"))
+              %li= link_to "Web e Nuovi Media", page_path(id: tf("digital_communication_design_annuale", "web_communication_design"))
             = link_to tf("Corsi Annuali", "Annual Courses"), js_void
         - when "master_courses"
           %li
@@ -23,8 +27,9 @@
                 %ul.subnav.sub2
                   %li= link_to tf("Grafica Editoriale", "Press Graphics"), page_path(id: tf("corso_grafica_editoriale", "press_graphics_course"))
                   %li= link_to tf("Illustrazione", "Illustration"), page_path(id: tf("corso_illustrazione_visual_design", "visual_design_illustration"))
-                  %li= link_to tf("Photoshop", "Photoshop"), page_path(id: tf("corso_photoshop", "visual_design_photoshop"))
                   %li= link_to tf("Web Design", "Web Design"), page_path(id: tf("corso_web_design", "web_design_course"))
+                  %li= link_to tf("Visual Frame", "Visual Frame"), page_path(id: tf("corso_video_editing_visualframe", "visual_frame_video_editing"))
+                  %li= link_to tf("Pittura Creativa", "Creative Painting"), page_path(id: tf("corso_pittura_creativa", "creative_painting"))
                 = link_to tf("Visual Design"), js_void
               %li
                 %ul.subnav.sub2
@@ -65,7 +70,7 @@
                 = link_to tf("Incontra un Tutor", "Meet the Tutor"), page_path(id: tf("incontro-tutor", "tutor-appointment"))
               - if english?
                 %li
-                  = link_to tf("Info per stranieri", "Student Help"), page_path(id: tf("info", "info"))
+                  = link_to tf("Info per stranieri", "Student Help"), page_path(id: tf("students-info", "students-info"))
 
             = link_to tf("Info", "info"), js_void
 

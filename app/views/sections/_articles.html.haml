@@ -11,17 +11,17 @@
         = link_to "Lista News", [:news]
   .clear
 
-  %h5
-    %span Blog
-  .eventi
-    %ul
-      = render partial: "articles/article", collection: @posts
-    - if admin?
-      .insert_article
-        = link_to "Inserisci Blog Post", new_article_path(article_type: "post")
-        |
-        = link_to "Vai al blog", [:posts]
-  .clear
+  -#  %h5
+  -#    %span Blog
+  -#  .eventi
+  -#    %ul
+  -#      = render partial: "articles/article", collection: @posts
+  -#    - if admin?
+  -#      .insert_article
+  -#        = link_to "Inserisci Blog Post", new_article_path(article_type: "post")
+  -#        |
+  -#        = link_to "Vai al blog", [:posts]
+  -#  .clear
 
   .lavoro
     .box
