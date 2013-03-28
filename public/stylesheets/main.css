@@ -301,7 +301,10 @@ a#profile_name {
   margin-right: 15px;
   font-size: 0.8em; }
 .articles.index #articles_list li {
-  margin: 10px 0 30px; }
+  margin: 10px 0 30px;
+  padding: 20px;
+  background-color: #efefef;
+  border-bottom: 1px solid #bfbfbf; }
 
 .articles.index #content img {
   width: 25%;
