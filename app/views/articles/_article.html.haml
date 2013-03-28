@@ -5,7 +5,7 @@
   - unless home_page?
     %p
       - text = article.text
-      - text = truncate text if section == "news"
+      - text = truncate text if %w(news pages).include? section
       = markup text
 
   .clear
