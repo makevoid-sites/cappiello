@@ -6,6 +6,9 @@
     %p
       - text = article.text
       - text = truncate text if %w(news pages).include? section
-      = markup text
+      - text = markup text
+      - dom = Nokogiri.HTML text
+      - dom.search("img").each(&:remove)
+      = dom.inner_html
 
   .clear
