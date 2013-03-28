@@ -303,7 +303,8 @@ a#profile_name {
 .articles.index #articles_list li {
   margin: 10px 0 30px;
   padding: 20px;
-  background-color: #efefef; }
+  background-color: #efefef;
+  border-bottom: 1px solid #bfbfbf; }
 
 .articles.index #content img {
   width: 25%;
