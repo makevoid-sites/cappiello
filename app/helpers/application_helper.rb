@@ -37,8 +37,8 @@ module ApplicationHelper
 
 
     TextileEnhancer.new(text, :vimeo).insert do |text|
-      #"<div id='video'><iframe src='http://player.vimeo.com/video/#{text}?title=0&amp;byline=0&amp;portrait=0&amp;color=C82D5E' frameborder='0'></iframe></div>"
-      "<div id='video'><a href='http://accademia-cappiello.it/news/festeggiamo_la_nuova_sede_con_i_corsi_annuali_special_edition_' title='Corsi annuali Speciali Edition' taeget='_blank'><img alt='Corsi annuali Speciali Edition' class='first' src='http://accademia-cappiello.it/uploads/banner-right-SE.png?1352742482'></a></div>"
+      "<div id='video'><iframe src='http://player.vimeo.com/video/#{text}?title=0&amp;byline=0&amp;portrait=0&amp;color=C82D5E' frameborder='0'></iframe></div>"
+      #"<div id='video'><a href='http://accademia-cappiello.it/news/festeggiamo_la_nuova_sede_con_i_corsi_annuali_special_edition_' title='Corsi annuali Speciali Edition' taeget='_blank'><img alt='Corsi annuali Speciali Edition' class='first' src='http://accademia-cappiello.it/uploads/banner-right-SE.png?1352742482'></a></div>"
     end
 
     text.scan(TextileEnhancer::REGEX[:image_left]).size.times do
