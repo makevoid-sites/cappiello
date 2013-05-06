@@ -596,16 +596,15 @@ ul.subnav {
     .pages.index #inner.home div.inevidenza-container div.inevidenza-box div.inevidenza-image {
       clear: both;
       float: left;
-      width: 100%;
-      padding-right: 10px; }
+      width: 100%; }
       .pages.index #inner.home div.inevidenza-container div.inevidenza-box div.inevidenza-image img {
         width: 100%;
         max-width: 100%; }
   .pages.index #inner.home div.inevidenza-container div.inevidenza-box-small {
     clear: none;
     float: left;
-    width: 18%;
-    height: 18%;
+    width: 18.6%;
+    height: 18.6%;
     padding: 0.8%; }
     .pages.index #inner.home div.inevidenza-container div.inevidenza-box-small p {
       margin: 0px; }
@@ -618,8 +617,7 @@ ul.subnav {
     .pages.index #inner.home div.inevidenza-container div.inevidenza-box-small div.inevidenza-image {
       clear: both;
       float: left;
-      width: 100%;
-      padding-right: 0.8px; }
+      width: 100%; }
       .pages.index #inner.home div.inevidenza-container div.inevidenza-box-small div.inevidenza-image img {
         width: 100%;
         max-width: 100%; }
