@@ -2,7 +2,7 @@
 %li
   - text = "<span class='title'>#{tr(article).title}</span> <span class='date'>#{I18n.l(article.created_at.to_date, format: :custom)}</span>"
   = link_to text.html_safe, link
-  - unless home_page?
+  - unless home_page? || ( @page && @page.id == 1 )
     %p
       - text = article.text
       - text = truncate text if %w(news pages).include? section
