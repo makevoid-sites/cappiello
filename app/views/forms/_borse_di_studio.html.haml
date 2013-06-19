@@ -4,7 +4,7 @@
     = hidden_field_tag :js_enabled
     .preradio
   
-      = f.label :interested_in_visual, "VISUAL DESIGN"
+      = f.label :interested_in_visual, "#{tf "GRAFICA PUBBLICITARIA", "GRAPHIC DESIGN"}"
       = f.radio_button :interested_in, "visual", class: "radio" 
       = f.label :interested_in_interior, "INTERIOR DESIGN"
       = f.radio_button :interested_in, "interior", class: "radio"
