@@ -20,6 +20,8 @@ Cappiello::Application.routes.draw do
   get "/pages/rendering_interior_design", to: redirect("/pages/corso_rendering_interior_design")
   get "/pages/sketch_up_interior_design", to: redirect("/pages/corso_sketch_up_interior_design")
   get "/pages/3d_studio_max_interior_design", to: redirect("/pages/corso_3d_studio_max_interior_design")
+  get "/pages/stage_gratuiti", to: redirect("/pages/open_days")
+  get "/pages/visual_design_corsi_annuali", to: redirect("/pages/grafica_pubblicitaria_corsi_annuali")
   get "/pages/:id", to: "pages#show", as: :page
   resources :pages
 
