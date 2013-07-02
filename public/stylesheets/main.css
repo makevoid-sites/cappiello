@@ -285,11 +285,15 @@ a#profile_name {
 #news p {
   clear: both; }
 
+.articles.show h2 {
+  padding-right: 120px; }
+
 .articles.show .date {
   font-size: 1em;
   position: relative;
-  top: -23px;
-  float: right; }
+  top: -30px;
+  float: right;
+  font-weight: bold; }
 
 .articles.show #content img {
   width: 42%;
