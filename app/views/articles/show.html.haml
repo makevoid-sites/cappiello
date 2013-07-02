@@ -2,9 +2,13 @@
   Articolo:
   = link_to "Modifica", [:edit, @article]
   = link_to "Elimina", @article, method: :delete
+  
+= "<span class='date'>#{I18n.l(@article.created_at.to_date, format: :long)}</span>"
 
-.article_cont
-  - title tr(@article).title + "<span class='date'>#{I18n.l(@article.created_at.to_date, format: :medium)}</span>"
+.article_cont  
+  - title tr(@article).title
+  
+  
 
   = markup tr(@article).text
 
