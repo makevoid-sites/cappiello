@@ -2,6 +2,7 @@
 {
   "9"   => nil,
   "visual_frame"   => 55,
+  "illuminotecnica"   => 56,
   "13"  => nil,
   "web_design"   => 45,
   "2"   => nil,
