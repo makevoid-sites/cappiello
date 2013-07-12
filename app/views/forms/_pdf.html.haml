@@ -10,7 +10,7 @@
     var label = $("h3").html()
 
 .forms_pdf
-  - label = tf("Scarica il pdf del corso", "Download the course pdf")
+  - label = tf("Scarica il pdf informativo del corso", "Download the course pdf")
 
   - if logged_in?
 
@@ -34,6 +34,8 @@
       = f.hidden_field :tmp_form, value: "pdf"
       = f.hidden_field :tmp_form_pdf, value: pdf
       .row
+        %p
+          = tf "Prima di fornirti il pdf informativo ti chiediamo di fornirci il tuo nome e la tua mail per poterti informare su promozioni e borse di studio.", "Before downloading the information pdf for this course we ask you to provide us your name and email to be able to inform you about offers and scholarships"
         %p
           = tf "Se sei già registrato", "If you are already registered"
           = link_to tf("effettua il Login", "Log in here"), [:login]
