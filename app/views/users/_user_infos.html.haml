@@ -3,24 +3,24 @@
 
   = hidden_field_tag :js_enabled
 
-  - show_selection :int_annuali_visual, "Corso annuale Visual Design"
+  - show_selection :int_annuali_visual, "Corso annuale Grafica Pubblicitaria"
   - show_selection :int_annuali_interior, "Corso annuale Interior Design"
-  - show_selection :int_annuali_web, "Corso annuale Digital Communication & Design"
-  - show_selection :int_master_visual, "Master Visual Design"
+  - show_selection :int_annuali_web, "Corso annuale Digital Communication"
+  - show_selection :int_master_visual, "Master Graphic Design"
   - show_selection :int_master_interior, "Master Interior Design"
-  - show_selection :int_special_visual, "Corsi specialistici Visual Design"
+  - show_selection :int_special_visual, "Corsi specialistici Grafica Pubblicitaria"
   - show_selection :int_special_interior, "Corsi specialistici Interior Design"
-  - show_selection :int_brevi_visual, "Corsi brevi Visual Design"
+  - show_selection :int_brevi_visual, "Corsi brevi Grafica Pubblicitaria"
   - show_selection :int_brevi_interior, "Corsi brevi Interior Design"
   - show_selection :int_brevi_graphic, "Corsi brevi Grafica Editoriale"
-  - show_selection :int_workshop_visual, "Laboratorio Visual Design"
+  - show_selection :int_workshop_visual, "Laboratorio Grafica Pubblicitaria"
   - show_selection :int_workshop_interior, "Laboratorio Interior Design"
 
   %h3 Voglio partecipare a:
 
-  - show_selection :int_stage_visual, "Open Day Visual Design"
+  - show_selection :int_stage_visual, "Open Day Grafica Pubblicitaria"
   - show_selection :int_stage_interior, "Open Day Interior Design"
-  - show_selection :int_stage_web, "Open Day Digital Communication & Design"
+  - show_selection :int_stage_web, "Open Day Digital Communication"
   
   - unless @user.interested_in.blank?
   

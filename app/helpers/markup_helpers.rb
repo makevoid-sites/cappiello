@@ -21,7 +21,7 @@ end
 module SeoHelper
   
   def default_keywords
-    english? ? "accademia, accademia cappiello, art school cappiello, leonetto cappiello, visual design, interior design, courses" : "accademia, accademia cappiello, scuola arte cappiello, leonetto cappiello, visual design, interior design, courses"
+    english? ? "accademia, accademia cappiello, art school cappiello, leonetto cappiello, grafica pubblicitaria, interior design, courses" : "accademia, accademia cappiello, scuola arte cappiello, leonetto cappiello, grafica pubblicitaria, interior design, courses"
   end
   
   def default_description
