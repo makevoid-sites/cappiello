@@ -8,6 +8,6 @@
       - text = truncate text if %w(news pages).include? section
       - text = markup text
       - dom = Nokogiri.HTML text
-      = dom.inner_html
+      = parse_text dom.inner_html
 
   .clear
