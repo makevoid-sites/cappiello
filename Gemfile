@@ -75,6 +75,8 @@ group :development do
   gem "guard"
   gem "guard-livereload"
   gem "rerun"
+ 
+  gem "capistrano", "2.15.5"
 end
 
 # ------------------------------------------------------------------------------
