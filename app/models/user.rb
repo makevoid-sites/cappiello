@@ -37,8 +37,9 @@ class User
   property :int_annuali_web, Boolean, default: false
   property :int_master_visual,   Boolean, default: false
   property :int_master_interior, Boolean, default: false
-  property :int_special_visual,   Boolean, default: false
-  property :int_special_interior, Boolean, default: false
+  property :int_evening,   Boolean, default: false
+  property :int_evening_visual,   Boolean, default: false
+  property :int_evening_interior, Boolean, default: false
   property :int_brevi_visual,     Boolean, default: false
   property :int_brevi_interior,   Boolean, default: false
   property :int_workshop_visual,   Boolean, default: false
@@ -47,6 +48,7 @@ class User
   property :int_stage_visual,     Boolean, default: false
   property :int_stage_interior,   Boolean, default: false
   property :int_stage_web,   Boolean, default: false
+  property :int_stage_evening,   Boolean, default: false
   property :notes, Text
 
   property :qualification, String, length: 255

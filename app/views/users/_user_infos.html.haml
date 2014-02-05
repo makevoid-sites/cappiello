@@ -8,19 +8,18 @@
   - show_selection :int_annuali_web, "Corso annuale Digital Communication"
   - show_selection :int_master_visual, "Master Graphic Design"
   - show_selection :int_master_interior, "Master Interior Design"
-  - show_selection :int_special_visual, "Corsi specialistici Grafica Pubblicitaria"
-  - show_selection :int_special_interior, "Corsi specialistici Interior Design"
+  - show_selection :int_evening, "Corsi Serali"
+  - show_selection :int_evening_visual, "Corsi serali Grafica Pubblicitaria"
+  - show_selection :int_evening_interior, "Corsi serali Interior Design"
   - show_selection :int_brevi_visual, "Corsi brevi Grafica Pubblicitaria"
   - show_selection :int_brevi_interior, "Corsi brevi Interior Design"
-  - show_selection :int_brevi_graphic, "Corsi brevi Grafica Editoriale"
-  - show_selection :int_workshop_visual, "Laboratorio Grafica Pubblicitaria"
-  - show_selection :int_workshop_interior, "Laboratorio Interior Design"
-
+  
   %h3 Voglio partecipare a:
 
   - show_selection :int_stage_visual, "Open Day Grafica Pubblicitaria"
   - show_selection :int_stage_interior, "Open Day Interior Design"
   - show_selection :int_stage_web, "Open Day Digital Communication"
+  - show_selection :int_stage_evening, "Open Day Corsi Serali"
   
   - unless @user.interested_in.blank?
   
