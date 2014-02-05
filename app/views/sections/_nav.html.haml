@@ -28,17 +28,7 @@
             %ul.subnav
               %li= link_to tf("Grafica Pubblicitaria", "Graphic Design"), page_path(id: tf("visual_design_corsi_brevi", "visual_design_short_courses"))
               %li= link_to tf("Interior Design", "Interior Short"), page_path(id: tf("interior_design_corsi_brevi", "interior_design_short_courses"))
-              %li= link_to tf("Exhibition Design", "Exhibition Design"), page_path(id: tf("corso_exhibition_design", "exhibition_design_course"))
-              %li= link_to tf("Illuminotecnica", "Lighting"), page_path(id: tf("corso_illuminotecnica", "lighting_course"))
-              %li= link_to tf("Visual Frame", "Visual Frame"), page_path(id: tf("corso_video_editing_visualframe", "visual_frame_video_editing"))
-              %li= link_to tf("Grafica Editoriale", "Press Graphics"), page_path(id: tf("corso_grafica_editoriale", "press_graphics_course"))
-              %li= link_to tf("Web Design", "Web Design"), page_path(id: tf("corso_web_design", "web_design_course"))
-              %li= link_to tf("Pittura Creativa", "Creative Painting"), page_path(id: tf("corso_pittura_creativa", "creative_painting"))
-              %li= link_to tf("Illustrazione", "Illustration"), page_path(id: tf("corso_illustrazione_visual_design", "visual_design_illustration"))
-              %li= link_to tf("Modellazione 3D", "3D modelling"), page_path(id: tf("interior_design_modellazione_3d", "interior_design_3d_modelling"))
-              %li= link_to tf("Sketch-Up", "Sketch-Up"), page_path(id: tf("corso_sketch_up_interior_design", "interior_design_sketchup"))
             = link_to tf("Corsi brevi", "Short/Summer Courses"), js_void
-
         - when "workshops"
           %li
             %ul.subnav
@@ -46,8 +36,17 @@
                 = link_to tf("Grafica Pubblicitaria", "Graphic Design"), page_path(id: tf("laboratorio_visual_design", "visual_design_workshop"))
               %li
                 = link_to tf("Interior Design", "Interior Design"), page_path(id: tf("laboratorio_interior_design", "interior_design_workshop"))
+              %li
+                = link_to tf("Exhibition Design", "Exhibition Design"), page_path(id: tf("corso_exhibition_design", "exhibition_design_course"))
+              %li
+                = link_to tf("Illuminotecnica", "Lighting"), page_path(id: tf("corso_illuminotecnica", "lighting_course"))
+              %li
+                = link_to tf("Video Editing", "Video Editing"), page_path(id: tf("corso_video_editing_visualframe", "visual_frame_video_editing"))
+              %li
+                = link_to tf("Web Design", "Web Design"), page_path(id: tf("corso_web_design", "web_design_course"))
+              %li
+                = link_to tf("Progettare il punto vendita", "Design the space of sale"), page_path(id: tf("corso_progettazione_spazio_vendita", "design_space_sale_course"))  
             = link_to tf("Corsi Serali", "Evening classes"), js_void
-
         - when "info"
           %li
             %ul.subnav

@@ -1090,14 +1090,14 @@ img.image_left {
       background: #fafafa;
       padding: 1px 8px; }
     #tabs_lavoro table thead th {
-      background: #486b48;
+      background: #999999;
       color: white;
       padding-top: 4px;
       padding-bottom: 4px; }
     #tabs_lavoro table tr.total td {
       padding-top: 4px;
       padding-bottom: 4px;
-      background: #cc0000;
+      background: #c82d5e;
       color: white; }
 
 .share_btns {

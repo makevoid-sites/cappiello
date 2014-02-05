@@ -52,6 +52,12 @@ GEM
     addressable (2.2.8)
     arel (2.2.3)
     builder (3.0.3)
+    capistrano (2.15.5)
+      highline
+      net-scp (>= 1.0.0)
+      net-sftp (>= 2.0.0)
+      net-ssh (>= 2.0.14)
+      net-ssh-gateway (>= 1.1.0)
     daemons (1.1.9)
     data_objects (0.10.12)
       addressable (~> 2.1)
@@ -97,6 +103,7 @@ GEM
       guard (>= 1.1.0)
       multi_json (~> 1.0)
     haml (3.1.7)
+    highline (1.6.20)
     hike (1.2.1)
     i18n (0.6.1)
     json (1.7.5)
@@ -111,6 +118,13 @@ GEM
       json
       rack
     multi_json (1.2.0)
+    net-scp (1.1.2)
+      net-ssh (>= 2.6.5)
+    net-sftp (2.1.2)
+      net-ssh (>= 2.6.5)
+    net-ssh (2.7.0)
+    net-ssh-gateway (1.2.0)
+      net-ssh (>= 2.6.5)
     newrelic_rpm (3.4.2.1)
     nokogiri (1.5.6)
     polyglot (0.3.3)
@@ -172,6 +186,7 @@ DEPENDENCIES
   activeresource
   activesupport (~> 3.1.8)
   arel
+  capistrano (= 2.15.5)
   dm-active_model
   dm-aggregates
   dm-core
