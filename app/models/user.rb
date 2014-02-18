@@ -40,8 +40,6 @@ class User
   property :int_evening,   Boolean, default: false
   property :int_brevi_visual,     Boolean, default: false
   property :int_brevi_interior,   Boolean, default: false
-  property :int_evening_visual,   Boolean, default: false
-  property :int_evening_interior, Boolean, default: false
   property :int_workshop_visual,   Boolean, default: false
   property :int_workshop_interior, Boolean, default: false
   property :int_brevi_graphic,   Boolean, default: false
