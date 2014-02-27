@@ -43,7 +43,7 @@ class Article
   end
 
   def self.news
-    all(article_type: "news", :created_at.gt => Time.now)
+    all(article_type: "news", :created_at.gt => Date.today-1)
   end
 
   def self.posts
