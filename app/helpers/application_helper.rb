@@ -67,7 +67,7 @@ module ApplicationHelper
     elsif @article && File.exist?("#{Rails.root}/public/uploads/og_images_articles/#{@article.id}.png")
       "http://accademia-cappiello.it/uploads/og_images_articles/#{@article.id}.png"
     else
-      "http://accademia-cappiello.it/images/logo.png"
+      # "http://accademia-cappiello.it/images/logo.png"
     end
   end
 
