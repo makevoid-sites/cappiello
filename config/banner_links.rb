@@ -2,6 +2,7 @@
 {
   "9"   => nil,
   "visual_frame"   => 55,
+  "12"  => nil,
   "illuminotecnica"   => 56,
   "13"  => nil,
   "web_design"   => 45,
@@ -12,10 +13,6 @@
   "4"   => nil,
   "pittura_creativa"   => 54,
   "5"   => nil,
-  "vray"   => 13,
-  "12"  => nil,
-  "3d_studio_max"   => 50,
   "7"   => nil,
-  "sketchup"   => 48,
   
 }
