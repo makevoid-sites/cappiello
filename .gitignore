@@ -2,6 +2,7 @@ public/pdf
 .bundle
 .sql
 db/cappiello_*
+db/*.sql
 .log
 .DS_Store
 .svn
