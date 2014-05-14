@@ -100,7 +100,7 @@ gem "dm-is-tree"#,         git: "git://github.com/datamapper/dm-is-tree"
 # gem 'warden', '~> 0.10.4', :git => "git://github.com/hassox/warden.git"
 # gem 'devise', '~> 1.1.rc1', :git => "git://github.com/plataformatec/devise.git"
 
-gem "dm-validations-i18n",  git: "git://github.com/makevoid/dm-validations-i18n.git"
+gem "dm-validations-i18n",  git: "https://github.com/komagata/dm-validations-i18n"
 
 #gem 'haml', '~> 3.1.0', :git => "git://github.com/nex3/haml.git"
 gem 'haml'
@@ -117,8 +117,7 @@ gem "voidtools", git: "git://github.com/makevoid/voidtools"
 
 gem "mixpanel"
 
-gem 'newrelic_rpm'
+# gem 'newrelic_rpm'
 
-gem "thin"
 
 

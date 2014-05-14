@@ -1,11 +1,4 @@
 GIT
-  remote: git://github.com/makevoid/dm-validations-i18n.git
-  revision: 182a1239e230f3adf3022ac0e1db47c42068cd95
-  specs:
-    dm-validations-i18n (0.3.1)
-      dm-validations (>= 1.0.2)
-
-GIT
   remote: git://github.com/makevoid/voidtools
   revision: d2cd5e571946dd6896d0745dbd820664d42eeaa6
   specs:
@@ -16,6 +9,13 @@ GIT
   revision: 192a49a02d63d28b23ed41cebadfedd490929cf1
   specs:
     exception_notification (1.0.0)
+
+GIT
+  remote: https://github.com/komagata/dm-validations-i18n
+  revision: da1b6046796ce2fbb76b34ff52b8682c5fb02d47
+  specs:
+    dm-validations-i18n (0.3.10)
+      dm-validations (~> 1.2)
 
 GEM
   remote: http://rubygems.org/
@@ -125,7 +125,6 @@ GEM
     net-ssh (2.7.0)
     net-ssh-gateway (1.2.0)
       net-ssh (>= 2.6.5)
-    newrelic_rpm (3.4.2.1)
     nokogiri (1.5.6)
     polyglot (0.3.3)
     rack (1.3.6)
@@ -204,7 +203,6 @@ DEPENDENCIES
   haml
   json
   mixpanel
-  newrelic_rpm
   nokogiri
   rails (~> 3.1.8)
   railties (~> 3.1.8)

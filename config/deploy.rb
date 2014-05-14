@@ -60,7 +60,7 @@ role :db,  domain, :primary => true
 after :deploy, "deploy:create_symlinks"
 after :deploy, "deploy:create_database_yml"
 after :deploy, "deploy:create_mailer_init"
-after :deploy, "deploy:newrelic_secret"
+# after :deploy, "deploy:newrelic_secret"
 
 after :deploy, "deploy:cleanup"
 after :deploy, "chmod:entire"
