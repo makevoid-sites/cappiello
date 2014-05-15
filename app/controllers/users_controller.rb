@@ -19,12 +19,12 @@ class UsersController < ApplicationController
   def create
     correct_date_params
     params[:user][:anonym_id] = session[:anonym_id]
-    @user = User.new(params[:user])
-    @user.tmp_password = params[:user][:password]
     file = params[:user][:cv]
     params[:user].delete :cv
+    @user = User.new(params[:user])
+    @user.tmp_password = params[:user][:password]
     if params[:js_enabled] == "true" && @user.save
-       dest = "#{Rails.root}/public/users_cv/#{@user.id}.pdf"
+      dest = "#{Rails.root}/public/users_cv/#{@user.id}.pdf"
       FileUtils.cp file.path, dest
       session[:user_id] = @user.id
       path = session[:last_url] || root_path
