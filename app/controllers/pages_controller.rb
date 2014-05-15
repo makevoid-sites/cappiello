@@ -12,7 +12,7 @@ class PagesController < ApplicationController
 
   def index
     params[:id] = "35"
-    @page = Page.get(params[:id])
+    @page = Page.get(params[:id].to_i)
     load_news
     raise NotFound if @page.nil?
 
