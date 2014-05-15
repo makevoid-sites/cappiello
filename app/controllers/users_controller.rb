@@ -19,13 +19,18 @@ class UsersController < ApplicationController
   def create
     correct_date_params
     params[:user][:anonym_id] = session[:anonym_id]
+
     file = params[:user][:cv]
     params[:user].delete :cv
+
     @user = User.new(params[:user])
     @user.tmp_password = params[:user][:password]
+
     if params[:js_enabled] == "true" && @user.save
+
       dest = "#{Rails.root}/public/users_cv/#{@user.id}.pdf"
-      FileUtils.cp file.path, dest
+      FileUtils.cp file.path, dest if file
+
       session[:user_id] = @user.id
       path = session[:last_url] || root_path
       path = @user.redirect_url unless @user.redirect_url.blank?
@@ -51,11 +56,13 @@ class UsersController < ApplicationController
     params[:admin] = false
     @user = User.get(params[:id].to_i)
     return(render text: tf("Error: You're not logged in or you're not editing your profile")) if  @user != current_user && !admin?
+
     file = params[:user][:cv]
     params[:user].delete :cv
     if @user.update(params[:user])
       dest = "#{Rails.root}/public/users_cv/#{@user.id}.pdf"
-      FileUtils.cp file.path, dest
+      FileUtils.cp file.path, dest if file
+
       send_form_notification @user
       flash[:notice] = tf("La registrazione è andata a buon fine!", "You registered successfully!") if flash[:notice].blank?
 	if params[:user][:tmp_form] == "tutor"
