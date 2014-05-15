@@ -155,6 +155,18 @@ class User
     end
   end
 
+  def cv?
+    File.exists? "#{Rails.root}/public#{cv}"
+  end
+
+  def cv
+    "/users_cv/#{id}.pdf"
+  end
+
+  def cv_url
+    "http://accademia-cappiello.it#{cv}"
+  end
+
   # name url
 
   def generate_name_url(name)

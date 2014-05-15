@@ -1,5 +1,5 @@
 .borse_di_studio
-  = form_for @user do |f|
+  = form_for @user, multipart: true do |f|
     = f.hidden_field :tmp_form, value: "borsa"
     = hidden_field_tag :js_enabled
     .preradio
@@ -41,7 +41,7 @@
       = f.label :job, tf("Attuale occupazione", "Current employment")
       = f.text_field :job
 
-      = f.label :cv, "CV"
+      = f.label :cv, tf("CV (formato PDF necessario)", "CV (in PDF format only)")
       = f.file_field :cv
     .second
 

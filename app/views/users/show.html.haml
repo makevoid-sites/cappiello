@@ -1,13 +1,13 @@
-%h2 
-  - unless @user == current_user 
+%h2
+  - unless @user == current_user
     Profilo
-  - else 
+  - else
     Il mio profilo
 
 %p.name= @user.full_name
 
 .cont_nav
-  - unless @user == current_user 
+  - unless @user == current_user
     = link_to "Utenti", [:users], class: "button"
     = link_to "Modifica", [:edit, @user], class: "button"
   - else
@@ -27,7 +27,15 @@
     - I18n.l date, format: :long unless date.nil?
   - show_field :qualification, "Titolo di studio"
 
+%h4.tit
+  PDF:
+%p
+  - if @user.cv?
+    %a{ href: @user.cv_url }= @user.cv_url
+  - else
+    Non presente
 
+%br
 
 - if superadmin?
   .admin
