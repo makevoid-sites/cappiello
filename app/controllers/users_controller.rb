@@ -8,7 +8,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = params[:name_url].inty? ? User.get(params[:name_url]) : User.first(name_url: params[:name_url])
+    @user = params[:name_url].inty? ? User.get(params[:name_url].to_i) : User.first(name_url: params[:name_url])
     return not_found if @user.nil?
   end
 
@@ -21,6 +21,8 @@ class UsersController < ApplicationController
     params[:user][:anonym_id] = session[:anonym_id]
     @user = User.new(params[:user])
     @user.tmp_password = params[:user][:password]
+    file = params[:user][:cv]
+    raise file.read
     if params[:js_enabled] == "true" && @user.save
       session[:user_id] = @user.id
       path = session[:last_url] || root_path
@@ -38,15 +40,15 @@ class UsersController < ApplicationController
   end
 
   def edit
-    @user = User.get(params[:id])
+    @user = User.get(params[:id].to_i)
     return(render text: tf("Error: You're not logged in or you're not editing your profile")) if @user != current_user && !admin?
   end
 
   def update
     correct_date_params
     params[:admin] = false
-    @user = User.get(params[:id])
-    return(render text: tf("Error: You're not logged in or you're not editing your profile")) if @user != current_user && !admin?
+    @user = User.get(params[:id].to_i)
+    return(render text: tf("Error: You're not logged in or you're not editing your profile")) if  @user != current_user && !admin?
     if @user.update(params[:user])
       send_form_notification @user
       flash[:notice] = tf("La registrazione è andata a buon fine!", "You registered successfully!") if flash[:notice].blank?

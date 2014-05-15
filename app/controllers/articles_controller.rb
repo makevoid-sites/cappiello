@@ -5,7 +5,7 @@ class ArticlesController < ApplicationController
   end
 
   def show
-    @article = params[:id].inty? ? Article.get(params[:id]) : Article.first( "title_url_#{current_lang}".to_sym => params[:id])
+    @article = params[:id].inty? ? Article.get(params[:id].to_i) : Article.first( "title_url_#{current_lang}".to_sym => params[:id].to_i)
     return not_found if @article.nil?
   end
 
@@ -25,13 +25,13 @@ class ArticlesController < ApplicationController
   end
 
   def edit
-    @article = Article.get(params[:id])
+    @article = Article.get(params[:id].to_i)
     return not_found if @article.nil?
   end
 
   def update
     correct_date_params
-    @article = Article.get(params[:id])
+    @article = Article.get(params[:id].to_i)
     return not_found if @article.nil?
     if @article.update(params[:article])
       redirect_to @article.path(self), notice: "#{@article.tipo.capitalize} modificato/a!"
@@ -42,7 +42,7 @@ class ArticlesController < ApplicationController
   end
 
   def destroy
-    @article = Article.get(params[:id])
+    @article = Article.get(params[:id].to_i)
     return not_found if @article.nil?
     @article.destroy
     redirect_to root_path, notice: "#{@article.tipo.capitalize} eliminato/a!"

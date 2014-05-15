@@ -30,7 +30,7 @@ class ApplicationController < ActionController::Base
 
   def home_page?
     # old: ["l_accademia", "1", "about_us"]
-    ["news", "35"].include? params[:id]
+    ["news", "35"].include? params[:id].to_i
   end
 
 

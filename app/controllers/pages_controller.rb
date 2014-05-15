@@ -63,12 +63,12 @@ class PagesController < ApplicationController
   end
 
   def edit
-    @page = Page.get(params[:id])
+    @page = Page.get(params[:id].to_i)
     raise NotFound if @page.nil?
   end
 
   def update
-    @page = Page.get(params[:id])
+    @page = Page.get(params[:id].to_i)
     raise NotFound if @page.nil?
     if @page.update(params[:page])
       redirect_to @page, notice: "Pagina modificata!"

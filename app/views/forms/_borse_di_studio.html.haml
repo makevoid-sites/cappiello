@@ -3,43 +3,46 @@
     = f.hidden_field :tmp_form, value: "borsa"
     = hidden_field_tag :js_enabled
     .preradio
-  
+
       = f.label :interested_in_visual, "#{tf "GRAFICA PUBBLICITARIA", "GRAPHIC DESIGN"}"
-      = f.radio_button :interested_in, "visual", class: "radio" 
+      = f.radio_button :interested_in, "visual", class: "radio"
       = f.label :interested_in_interior, "INTERIOR DESIGN"
       = f.radio_button :interested_in, "interior", class: "radio"
       = f.label :interested_in_web, "DIGITAL COMMUNICATION & DESIGN"
-      = f.radio_button :interested_in, "web", class: "radio2" 
-  
+      = f.radio_button :interested_in, "web", class: "radio2"
+
     .first
       = f.label :first_name, tf("Nome", "Name")
       = f.text_field :first_name, class: "required"
       = f.label :last_name, tf("Cognome", "Surname")
       = f.text_field :last_name, class: "required"
       = f.label :email, "Email"
-      = f.text_field :email, class: "required" 
-      - unless logged_in?     
+      = f.text_field :email, class: "required"
+      - unless logged_in?
         = f.label :password, tf("Scegli una password", "Choose a password")
         = f.password_field :password, class: "required"
       = f.label :birthplace, tf("Nato a", "Born in")
-      = f.text_field :birthplace, class: "required" 
-      = f.label :birthdate, tf("Data", "Birth date")    
+      = f.text_field :birthplace, class: "required"
+      = f.label :birthdate, tf("Data", "Birth date")
       .date_select
-        = f.date_select :birthdate, start_year: 1940, end_year: 2000, class: "required"    
-      = f.label :address, tf("Indirizzo", "Address")  
-      = f.text_field :address, class: "required"   
-      = f.label :city, tf("Città", "City")  
-      = f.text_field :city          
-      = f.label :cap, tf("CAP", "ZIP")  
-      = f.text_field :cap, class: "required"           
-      = f.label :tel, tf("Telefono", "Phone")  
-      = f.text_field :tel, class: "required"           
-      = f.label :qualification, tf("Titolo di studio", "Degree")  
-      = f.text_field :qualification, class: "required" 
-      = f.label :grade, tf("Votazione", "Vote")  
-      = f.text_field :grade 
-      = f.label :job, tf("Attuale occupazione", "Current employment")  
-      = f.text_field :job  
+        = f.date_select :birthdate, start_year: 1940, end_year: 2000, class: "required"
+      = f.label :address, tf("Indirizzo", "Address")
+      = f.text_field :address, class: "required"
+      = f.label :city, tf("Città", "City")
+      = f.text_field :city
+      = f.label :cap, tf("CAP", "ZIP")
+      = f.text_field :cap, class: "required"
+      = f.label :tel, tf("Telefono", "Phone")
+      = f.text_field :tel, class: "required"
+      = f.label :qualification, tf("Titolo di studio", "Degree")
+      = f.text_field :qualification, class: "required"
+      = f.label :grade, tf("Votazione", "Vote")
+      = f.text_field :grade
+      = f.label :job, tf("Attuale occupazione", "Current employment")
+      = f.text_field :job
+
+      = f.label :cv, "CV"
+      = f.file_field :cv
     .second
 
       - infos = ["Altri titoli di studio/corsi di specializzazione frequentati", "Esperienze (anche amatoriali) nel campo specifico del corso prescelto", "Esperienze di lavoro maturate", "Cosa mi spinge a compiere studi in questo ambito", "Altre Info. utili, idonee a valutare il mio interesse a partecipare al corso"] # Sono in grado di esibire lavori da me svolti attinenti al corso prescelto
