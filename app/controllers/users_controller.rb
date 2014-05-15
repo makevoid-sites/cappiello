@@ -22,9 +22,10 @@ class UsersController < ApplicationController
     @user = User.new(params[:user])
     @user.tmp_password = params[:user][:password]
     file = params[:user][:cv]
-    params[:user][:cv] = nil
+    params[:user].delete :cv
     if params[:js_enabled] == "true" && @user.save
-      File.open("public/users_cv/#{@user.id}.pdf", "w"){ |f| f.write file.read }
+       dest = "#{Rails.root}/public/users_cv/#{@user.id}.pdf"
+      FileUtils.cp file.path, dest
       session[:user_id] = @user.id
       path = session[:last_url] || root_path
       path = @user.redirect_url unless @user.redirect_url.blank?
