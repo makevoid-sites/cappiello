@@ -41,10 +41,14 @@
       = f.label :job, tf("Attuale occupazione", "Current employment")
       = f.text_field :job
 
-      = f.label :cv, tf("CV (formato PDF necessario)", "CV (in PDF format only)")
+      = f.label :cv, tf("CV (necessario, in formato PDF)", "CV (required, PDF file format)")
       = f.file_field :cv
-    .second
+      = f.label :portfolio, tf("Portfolio lavori (facoltativo, in formato PDF)", "Works portfolio (optional, PDF file format)")
+      = f.file_field :portfolio
+      = f.label :user_image, tf("Foto che ti rappresenta (necessaria)", "Photo of you (required)")
+      = f.file_field :user_image
 
+    .second
       - infos = ["Altri titoli di studio/corsi di specializzazione frequentati", "Esperienze (anche amatoriali) nel campo specifico del corso prescelto", "Esperienze di lavoro maturate", "Cosa mi spinge a compiere studi in questo ambito", "Altre Info. utili, idonee a valutare il mio interesse a partecipare al corso"] # Sono in grado di esibire lavori da me svolti attinenti al corso prescelto
       - infos_en = ["Other qualifications / specialization courses you attended", "Experiences (even amateur) in the specific course chosen", "Work experience gained", "What drives me to make studies in this area", "Other Useful Info, exist to assess my interest in attending this course"] # I can show my work to be done related to the chosen course
       - 5.times do |i|

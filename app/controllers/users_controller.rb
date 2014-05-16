@@ -20,8 +20,12 @@ class UsersController < ApplicationController
     correct_date_params
     params[:user][:anonym_id] = session[:anonym_id]
 
-    file = params[:user][:cv]
+    file_cv = params[:user][:cv]
     params[:user].delete :cv
+    file_portfolio = params[:user][:portfolio]
+    params[:user].delete :portfolio
+    file_user_image = params[:user][:user_image]
+    params[:user].delete :user_image
 
     @user = User.new(params[:user])
     @user.tmp_password = params[:user][:password]
@@ -29,7 +33,11 @@ class UsersController < ApplicationController
     if params[:js_enabled] == "true" && @user.save
 
       dest = "#{Rails.root}/public/users_cv/#{@user.id}.pdf"
-      FileUtils.cp file.path, dest if file
+      FileUtils.cp file_cv.path, dest if file_cv
+      dest = "#{Rails.root}/public/users_portfolio/#{@user.id}.pdf"
+      FileUtils.cp file_portfolio.path, dest if file_portfolio
+      dest = "#{Rails.root}/public/users_images/#{@user.id}.pdf"
+      FileUtils.cp file_user_image.path, dest if file_user_image
 
       session[:user_id] = @user.id
       path = session[:last_url] || root_path
@@ -57,11 +65,22 @@ class UsersController < ApplicationController
     @user = User.get(params[:id].to_i)
     return(render text: tf("Error: You're not logged in or you're not editing your profile")) if  @user != current_user && !admin?
 
-    file = params[:user][:cv]
+    file_cv = params[:user][:cv]
     params[:user].delete :cv
+    file_portfolio = params[:user][:portfolio]
+    params[:user].delete :portfolio
+    file_user_image = params[:user][:user_image]
+    params[:user].delete :user_image
+
     if @user.update(params[:user])
+
       dest = "#{Rails.root}/public/users_cv/#{@user.id}.pdf"
-      FileUtils.cp file.path, dest if file
+      FileUtils.cp file_cv.path, dest if file_cv
+      dest = "#{Rails.root}/public/users_portfolio/#{@user.id}.pdf"
+      FileUtils.cp file_portfolio.path, dest if file_portfolio
+      dest = "#{Rails.root}/public/users_images/#{@user.id}.pdf"
+      FileUtils.cp file_user_image.path, dest if file_user_image
+
 
       send_form_notification @user
       flash[:notice] = tf("La registrazione è andata a buon fine!", "You registered successfully!") if flash[:notice].blank?

@@ -18,3 +18,5 @@ pxm
 config/database.yml
 gcc-4.2
 public/users_cv
+public/users_portfolio
+public/users_images
