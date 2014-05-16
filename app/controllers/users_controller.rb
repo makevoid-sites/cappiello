@@ -36,7 +36,7 @@ class UsersController < ApplicationController
       FileUtils.cp file_cv.path, dest if file_cv
       dest = "#{Rails.root}/public/users_portfolio/#{@user.id}.pdf"
       FileUtils.cp file_portfolio.path, dest if file_portfolio
-      dest = "#{Rails.root}/public/users_images/#{@user.id}.pdf"
+      dest = "#{Rails.root}/public/users_images/#{@user.id}.jpg"
       FileUtils.cp file_user_image.path, dest if file_user_image
 
       session[:user_id] = @user.id
@@ -78,7 +78,7 @@ class UsersController < ApplicationController
       FileUtils.cp file_cv.path, dest if file_cv
       dest = "#{Rails.root}/public/users_portfolio/#{@user.id}.pdf"
       FileUtils.cp file_portfolio.path, dest if file_portfolio
-      dest = "#{Rails.root}/public/users_images/#{@user.id}.pdf"
+      dest = "#{Rails.root}/public/users_images/#{@user.id}.jpg"
       FileUtils.cp file_user_image.path, dest if file_user_image
 
 

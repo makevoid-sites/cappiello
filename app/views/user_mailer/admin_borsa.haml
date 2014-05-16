@@ -67,12 +67,29 @@
 
 
 
+-# duplicate of users/show
+
 %p.tit
-  PDF:
+  CV:
   - if @user.cv?
     %a{ href: @user.cv_url }= @user.cv_url
   - else
     Non presente
+
+%p.tit
+  Portfolio:
+  - if @user.portfolio?
+    %a{ href: @user.portfolio_url }= @user.portfolio_url
+  - else
+    Non presente
+
+%p.tit
+  Foto:
+  - if @user.user_image?
+    %a{ href: @user.user_image_url }= @user.user_image_url
+  - else
+    Non presente
+
 
 
 .clear

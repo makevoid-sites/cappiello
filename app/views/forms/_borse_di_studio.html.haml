@@ -45,7 +45,7 @@
       = f.file_field :cv
       = f.label :portfolio, tf("Portfolio lavori (facoltativo, in formato PDF)", "Works portfolio (optional, PDF file format)")
       = f.file_field :portfolio
-      = f.label :user_image, tf("Foto che ti rappresenta (necessaria)", "Photo of you (required)")
+      = f.label :user_image, tf("Foto che ti rappresenta (necessaria, formato JPG)", "Photo of you (required, format JPG)")
       = f.file_field :user_image
 
     .second
@@ -54,5 +54,8 @@
       - 5.times do |i|
         = f.label "info#{i}", tf(infos[i], infos_en[i])
         = f.text_area "info#{i}"
+
+    / redirects back here after failed login
+    = f.hidden_field :redirect_url, value: request.path
 
     = f.submit tf("Invia", "Send"), class: "submit"
