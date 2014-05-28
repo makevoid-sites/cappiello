@@ -25,7 +25,7 @@
       = f.text_field :birthplace, class: "required"
       = f.label :birthdate, tf("Data", "Birth date")
       .date_select
-        = f.date_select :birthdate, start_year: 1940, end_year: 2000, class: "required"
+        = f.date_select :birthdate, start_year: 1940, end_year: 2010, class: "required"
       = f.label :address, tf("Indirizzo", "Address")
       = f.text_field :address, class: "required"
       = f.label :city, tf("Città", "City")
@@ -41,11 +41,11 @@
       = f.label :job, tf("Attuale occupazione", "Current employment")
       = f.text_field :job
 
-      = f.label :cv, tf("CV (necessario, in formato PDF)", "CV (required, PDF file format)")
+      = f.label :cv, tf("Curriculum Vitae (obbligatorio, in formato PDF)", "CV (required, PDF file format)")
       = f.file_field :cv
       = f.label :portfolio, tf("Portfolio lavori (facoltativo, in formato PDF)", "Works portfolio (optional, PDF file format)")
       = f.file_field :portfolio
-      = f.label :user_image, tf("Foto che ti rappresenta (necessaria, formato JPG)", "Photo of you (required, format JPG)")
+      = f.label :user_image, tf("Lavoro - Autoritratto (obbligatorio, formato JPG o PDF)", "Work - Self-portait (required, PDF or JPG)")
       = f.file_field :user_image
 
     .second

@@ -65,12 +65,13 @@ class UsersController < ApplicationController
     @user = User.get(params[:id].to_i)
     return(render text: tf("Error: You're not logged in or you're not editing your profile")) if  @user != current_user && !admin?
 
-    file_cv = params[:user][:cv]
+    #file_cv = params[:user][:cv]
     params[:user].delete :cv
-    file_portfolio = params[:user][:portfolio]
+    #file_portfolio = params[:user][:portfolio]
     params[:user].delete :portfolio
-    file_user_image = params[:user][:user_image]
+    #file_user_image = params[:user][:user_image]
     params[:user].delete :user_image
+    file_cv, file_portfolio, file_user_image = nil
 
     if @user.update(params[:user])
 
