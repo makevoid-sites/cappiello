@@ -52,7 +52,8 @@ a {
   float: right; }
 
 body {
-  font-family: "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif; }
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  letter-spacing: 0.5px; }
 
 h1 {
   display: none; }
@@ -112,13 +113,13 @@ a:hover {
     display: block; }
   #content a {
     color: #222222;
-    text-shadow: 1px 2px 0px white; }
+    /*text-shadow: 1px 2px 0px #FFF */ }
   #content a:hover {
     color: black;
-    text-shadow: 0px -1px 1px #dddddd; }
+    /*text-shadow: 0px -1px 1px #ddd */ }
 
 #content p {
-  text-shadow: 1px 2px 0px white;
+  /*text-shadow: 1px 2px 0px #FFF */
   margin-bottom: 12px;
   text-align: left; }
 
@@ -250,7 +251,7 @@ a#profile_name {
     height: 19px; }
   #news .news, #news .eventi, #news .lavoro {
     margin: 0 0 10px;
-    text-shadow: 2px 2px 2px white; }
+    /*text-shadow: 2px 2px 2px #FFF */ }
   #news h5 span {
     display: block;
     text-align: left;
