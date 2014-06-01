@@ -104,11 +104,11 @@ class ApplicationController < ActionController::Base
   # Auth(orization)
 
   def admin_only
-    not_found unless admin?
+    raise NotFound unless admin?
   end
 
   def logged_only
-    not_found unless logged_in?
+    raise NotFound unless logged_in?
   end
 
   helper_method :superadmin?, :admin?

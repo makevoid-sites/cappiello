@@ -27,7 +27,7 @@ class UserMailer < ActionMailer::Base
   end
 
   def admin_pdf(user, pdf)
-    headers['Reply-To'] = user.email
+    headers['Reply-To'] = user.email 
     @user = user
     @pdf = pdf.split("_").map{|w| w.capitalize}.join(" ")
     mail to: ADMIN, subject: "PDF scaricato - #{@user.name} - #{@pdf}"
