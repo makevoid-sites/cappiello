@@ -155,6 +155,46 @@ class User
     end
   end
 
+  # user pdf uploads
+
+  APP_HOST = Rails.env == "development" ? "localhost:3000" : "accademia-cappiello.it"
+
+  def cv?
+    File.exists? "#{Rails.root}/public#{cv}"
+  end
+
+  def cv
+    "/users_cv/#{id}.pdf"
+  end
+
+  def cv_url
+    "http://#{APP_HOST}#{cv}"
+  end
+
+  def portfolio?
+    File.exists? "#{Rails.root}/public#{portfolio}"
+  end
+
+  def portfolio
+    "/users_portfolio/#{id}.pdf"
+  end
+
+  def portfolio_url
+    "http://#{APP_HOST}#{portfolio}"
+  end
+
+  def user_image?
+    File.exists? "#{Rails.root}/public#{user_image}"
+  end
+
+  def user_image
+    File.exists?("#{Rails.root}/public/users_images/#{id}.jpg") ? "/users_images/#{id}.jpg" : "/users_images/#{id}.png"
+  end
+
+  def user_image_url
+    "http://#{APP_HOST}#{user_image}"
+  end
+
   # name url
 
   def generate_name_url(name)

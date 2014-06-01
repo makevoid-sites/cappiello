@@ -83,6 +83,10 @@ namespace :deploy do
   desc "Create symlinks (managing server)"
   task :create_symlinks do
     run "cd #{current_path}/public; ln -s #{deploy_to}/shared/pdf pdf"
+    run "cd #{current_path}/public; ln -s #{deploy_to}/shared/users_cv"
+    run "cd #{current_path}/public; ln -s #{deploy_to}/shared/users_portfolio"
+    run "cd #{current_path}/public; ln -s #{deploy_to}/shared/users_images"
+
     run "cd #{current_path}/public; ln -s #{deploy_to}/shared/uploads uploads"
   end
 
