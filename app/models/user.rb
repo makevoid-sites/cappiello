@@ -198,7 +198,7 @@ class User
   # name url
 
   def generate_name_url(name)
-    name.downcase.gsub(/'/, "").gsub(/\s/, "_")
+    name.downcase.gsub(/'|\./, "").gsub(/\s/, "_")
   end
 
   before :create do
