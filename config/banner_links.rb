@@ -1,6 +1,7 @@
 # nome file immagine => id della pagina
 {
   "9"   => nil,
+  "becreative"   => 6,
   "2"   => nil,
   "visual_frame"   => 55,
   "12"  => nil,
