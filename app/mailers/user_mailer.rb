@@ -1,6 +1,7 @@
 class UserMailer < ActionMailer::Base
 
-  DEV = "nicco@filarete.it"
+  #DEV = "nicco@filarete.it"
+  DEV = "makevoid@gmail.com"
   #DEV = "cappiello@makevoid.com"
 
   # PROD = %w(makevoid@gmail.com accademiacappiello@dada.it)

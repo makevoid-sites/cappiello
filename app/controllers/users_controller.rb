@@ -36,9 +36,12 @@ class UsersController < ApplicationController
       FileUtils.cp file_cv.path, dest if file_cv
       dest = "#{Rails.root}/public/users_portfolio/#{@user.id}.pdf"
       FileUtils.cp file_portfolio.path, dest if file_portfolio
-      dest = "#{Rails.root}/public/users_images/#{@user.id}.jpg"
-      FileUtils.cp file_user_image.path, dest if file_user_image
-
+      if file_user_image
+        format = file_user_image.content_type == "application/pdf" ? "pdf" : "jpg"
+        dest = "#{Rails.root}/public/users_images/#{@user.id}.#{format}"
+        FileUtils.cp file_user_image.path, dest
+      end
+      
       session[:user_id] = @user.id
       path = session[:last_url] || root_path
       path = @user.redirect_url unless @user.redirect_url.blank?
@@ -65,13 +68,13 @@ class UsersController < ApplicationController
     @user = User.get(params[:id].to_i)
     return(render text: tf("Error: You're not logged in or you're not editing your profile")) if  @user != current_user && !admin?
 
-    #file_cv = params[:user][:cv]
+    file_cv = params[:user][:cv]
     params[:user].delete :cv
-    #file_portfolio = params[:user][:portfolio]
+    file_portfolio = params[:user][:portfolio]
     params[:user].delete :portfolio
-    #file_user_image = params[:user][:user_image]
+    file_user_image = params[:user][:user_image]
     params[:user].delete :user_image
-    file_cv, file_portfolio, file_user_image = nil
+    # file_cv, file_portfolio, file_user_image = nil
 
     if @user.update(params[:user])
 
@@ -79,9 +82,11 @@ class UsersController < ApplicationController
       FileUtils.cp file_cv.path, dest if file_cv
       dest = "#{Rails.root}/public/users_portfolio/#{@user.id}.pdf"
       FileUtils.cp file_portfolio.path, dest if file_portfolio
-      dest = "#{Rails.root}/public/users_images/#{@user.id}.jpg"
-      FileUtils.cp file_user_image.path, dest if file_user_image
-
+      if file_user_image
+        format = file_user_image.content_type == "application/pdf" ? "pdf" : "jpg"
+        dest = "#{Rails.root}/public/users_images/#{@user.id}.#{format}"
+        FileUtils.cp file_user_image.path, dest
+      end
 
       send_form_notification @user
       flash[:notice] = tf("L'invio e' andato a buon fine!", "You sent the informations successfully!") if flash[:notice].blank?
@@ -91,6 +96,7 @@ class UsersController < ApplicationController
     	else
     		redirect_to @user
     	end
+    	
     else
       @page = Page.first(title_url_en: "info")
       flash[:error] = tf("Non è stato possibile aggiornare il profilo", "An error occurred updating your infos")

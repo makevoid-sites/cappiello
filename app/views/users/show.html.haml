@@ -11,14 +11,18 @@
     = link_to "Utenti", [:users], class: "button"
     = link_to "Modifica", [:edit, @user], class: "button"
   - else
-    = link_to "Modifica", "/pages/form", class: "button"
+    = link_to  tf("Modifica", "Edit"), "/pages/form", class: "button"
+
+%br
+%a.button{ href: "javascript:history.back(1)" }= tf "o torna indietro", "or go back"
+
 
 = render partial: "user_infos"
 
 .user_details
   %h3 Dettagli:
   - show_field :email, "Email"
-  - show_field :address, "Indirizzo"
+  - show_field :address, tf("Indirizzo", "Address")
   - show_field :city, "Città"
   - show_field :cap, "CAP"
   - show_field :tel, "Telefono"

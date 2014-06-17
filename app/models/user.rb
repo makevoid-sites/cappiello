@@ -188,7 +188,7 @@ class User
   end
 
   def user_image
-    File.exists?("#{Rails.root}/public/users_images/#{id}.jpg") ? "/users_images/#{id}.jpg" : "/users_images/#{id}.png"
+    File.exists?("#{Rails.root}/public/users_images/#{id}.jpg") ? "/users_images/#{id}.jpg" : "/users_images/#{id}.pdf"
   end
 
   def user_image_url
