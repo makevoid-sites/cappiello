@@ -157,6 +157,8 @@ GEM
     rerun (0.7.1)
       listen
     sass (3.2.1)
+    skylight (0.3.21)
+      activesupport (>= 3.0.0)
     sprockets (2.0.4)
       hike (~> 1.2)
       rack (~> 1.0)
@@ -208,6 +210,7 @@ DEPENDENCIES
   railties (~> 3.1.8)
   rerun
   sass
+  skylight
   thin
   tzinfo
   voidtools!
