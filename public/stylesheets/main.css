@@ -296,14 +296,6 @@ a#profile_name {
   float: right;
   font-weight: bold; }
 
-.articles.show #content img {
-  width: 42%;
-  margin: 0 0 1% 1%; }
-.articles.show #content img:first-child {
-  width: 35%;
-  margin: 0 1% 1% 0;
-  float: left; }
-
 .articles.index .date {
   float: right;
   margin-right: 15px;
