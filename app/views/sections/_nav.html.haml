@@ -7,8 +7,6 @@
           %li
             = link_to "News", [:posts]
         - case page.title_url_en
-        - if idx == 20		
-          %li%li= link_to "Workshop", page_path(id: tf("workshop_foto_video_moda", "workshop_fashion_foto_video"))
         - when "annual_courses"
           %li
             %ul.subnav
@@ -65,7 +63,7 @@
             = link_to tf("Info", "info"), js_void
 
         - else
-          - unless page.id == 35 || page.id == 63 # news
+          - unless page.id == 35 # news
             %li
               = link_to tr(page).title, pag_path(page)
 
