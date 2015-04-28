@@ -31,6 +31,10 @@
               -# - if english?
               -#   %li= link_to tf("Interior Design in Inglese", "Interior Design in English"), page_path(id: tf("corso_interior_design_inglese", "interior_design_english"))
             = link_to tf("Corsi brevi", "Short/Summer Courses"), js_void
+        - when "workshops" # corsi estivi
+          %li
+            %ul.subnav
+              %li= link_to tf("Foto/video Moda", "Fashion foto/video"), page_path(id: tf("workshop_week-endworkshop_week-end"))
         - when "workshops"
           %li
             %ul.subnav
