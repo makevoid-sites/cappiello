@@ -7,6 +7,8 @@
           %li
             = link_to "News", [:posts]
         - case page.title_url_en
+        - if idx == 20		
+          %li%li= link_to "Workshop", page_path(id: tf("workshop_foto_video_moda", "workshop_fashion_foto_video"))
         - when "annual_courses"
           %li
             %ul.subnav
@@ -31,10 +33,6 @@
               -# - if english?
               -#   %li= link_to tf("Interior Design in Inglese", "Interior Design in English"), page_path(id: tf("corso_interior_design_inglese", "interior_design_english"))
             = link_to tf("Corsi brevi", "Short/Summer Courses"), js_void
-        - when "workshops" # corsi estivi
-          %li
-            %ul.subnav
-              %li= link_to tf("Foto/video Moda", "Fashion foto/video"), page_path(id: tf("workshop_week-endworkshop_week-end"))
         - when "workshops"
           %li
             %ul.subnav
