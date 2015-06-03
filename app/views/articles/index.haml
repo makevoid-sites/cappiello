@@ -3,8 +3,11 @@
     News
   - else
     Blog
-    
+
 %ul#articles_list
+
+  =# @articles.to_html('/items', size: 10)
+
   = render @articles
 
   - if admin?

@@ -2,6 +2,7 @@ class ArticlesController < ApplicationController
 
   def index
     @articles = Article.all article_type: section.singularize
+    @articles.page(params[:page]).pager
   end
 
   def show
