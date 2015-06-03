@@ -83,7 +83,13 @@ class PagesController < ApplicationController
     @posts = Article.posts.all(limit: 8)
   end
 
+  # static pages
+
   def offer
+
+  end
+
+  def cookies
 
   end
 

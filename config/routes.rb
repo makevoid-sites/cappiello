@@ -9,6 +9,7 @@ Cappiello::Application.routes.draw do
   get "/pages/form_confirmation", to: "pages#form_confirmation", as: :form_confirmation
   get "/pages/offerta_formativa", to: "pages#offer", as: :offer
   get "/pages/training_offer", to: "pages#offer", as: :offer_en
+  get "/cookies", to: "pages#cookies"
 
   get "/pages/form", to: redirect("/pages/info")
   get "/pages/web_design_visual_design", to: redirect("/pages/corso_web_design")

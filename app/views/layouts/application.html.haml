@@ -39,6 +39,52 @@
   %body{ class: "#{controller.controller_name} #{controller.action_name} #{"master" if master?} #{"admin" if admin?}"}
     #backg
       #container
+        - if current_lang == "it"
+          :css
+            .hidden {
+              display: none;
+            }
+            .cookie_bar {
+              background: rgba(250, 250, 250, 1);
+              padding: 10px;
+              font-size: 0.7em;
+              position: fixed;
+              bottom: 0;
+              z-index: 100;
+              width: 85%;
+              opacity: 0.8;
+            }
+            .cookie_bar:hover {
+              opacity: 1;
+            }
+            .cookie_bar > .button {
+              font-size: 0.8em;
+            }
+            .cookie_bar a:hover:not(.button) {
+              color: purple;
+            }
+
+          .cookie_bar
+            Questo sito utilizza i cookies di navigazione google analytics.
+            %br
+            %a{ href: "/cookies" }
+              Ottieni maggiori informazioni sulla tua privacy e su un metodo per bloccare i cookie di profilazione.
+            Oppure
+            %a.button{ href: js_void } Consenti l'uso dei cookie.
+
+          :javascript
+            var bar = document.querySelector(".cookie_bar")
+            var hideBar = function() {
+              bar.classList.add("hidden")
+              localStorage.cap_cookie_ok = true
+            }
+            if (!localStorage.cap_cookie_ok) {
+              var btn = document.querySelector(".cookie_bar > .button")
+              btn.addEventListener("click", hideBar)
+            } else {
+              bar.classList.add("hidden")
+            }
+
         = render partial: "sections/login"
         .clear
         - unless flash == {} || flash.nil?

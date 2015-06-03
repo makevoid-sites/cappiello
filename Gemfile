@@ -30,10 +30,8 @@ gem "json"
 gem "xpath"
 gem "nokogiri"
 
-# 180389872 - 700GB
-# 257699    - 1GB
-# 77309945  - 300GB
-# 154619890 - 600GB
+
+gem "maruku"
 
 #gem 'dm-rails',             DM_VERSION, :git => "#{DATAMAPPER}/dm-rails.git"
 gem 'dm-rails'#,             DM_VERSION, :git => "git://github.com/datamapper/dm-rails.git"
@@ -75,7 +73,7 @@ group :development do
   gem "guard"
   gem "guard-livereload"
   gem "rerun"
- 
+
   gem "capistrano", "2.15.5"
 end
 
@@ -121,4 +119,3 @@ gem "mixpanel"
 
 
 gem "skylight"
-

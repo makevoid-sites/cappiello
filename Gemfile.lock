@@ -112,6 +112,7 @@ GEM
       i18n (>= 0.4.0)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
+    maruku (0.7.2)
     mime-types (1.19)
     mixpanel (2.1.0)
       escape
@@ -204,6 +205,7 @@ DEPENDENCIES
   guard-livereload
   haml
   json
+  maruku
   mixpanel
   nokogiri
   rails (~> 3.1.8)
