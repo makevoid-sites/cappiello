@@ -53,7 +53,7 @@
         - if @user.portfolio?
           %a{ href: @user.portfolio_url }= @user.portfolio_url
 
-      -# = f.label :user_image, tf("Progetto per Contest Be Creative (obbligatorio, formato JPG o PDF)", "Project for Be Creative Contest (required, PDF or JPG)")
+      = f.label :user_image, tf("Progetto per Contest Be Creative (obbligatorio, formato JPG o PDF)", "Project for Be Creative Contest (required, PDF or JPG)")
       = f.file_field :user_image
 
       %p.tit
