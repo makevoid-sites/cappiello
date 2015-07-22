@@ -8,7 +8,7 @@
       = f.radio_button :interested_in, "visual", class: "radio"
       = f.label :interested_in_interior, "INTERIOR DESIGN"
       = f.radio_button :interested_in, "interior", class: "radio"
-      = f.label :interested_in_web, "DIGITAL COMMUNICATION & DESIGN"
+      = f.label :interested_in_web, "DIGITAL COMMUNICATION"
       = f.radio_button :interested_in, "web", class: "radio2"
 
     .first
@@ -47,13 +47,13 @@
         - if @user.cv?
           %a{ href: @user.cv_url }= @user.cv_url
 
-      = f.label :portfolio, tf("Portfolio lavori (facoltativo, in formato PDF)", "Works portfolio (optional, PDF file format)")
+      = f.label :portfolio, tf("Portfolio lavori (obbligatorio, in formato PDF)", "Works portfolio (required, PDF file format)")
       = f.file_field :portfolio
       %p.tit
         - if @user.portfolio?
           %a{ href: @user.portfolio_url }= @user.portfolio_url
 
-      = f.label :user_image, tf("Lavoro - Autoritratto (obbligatorio, formato JPG o PDF)", "Work - Self-portait (required, PDF or JPG)")
+      -# = f.label :user_image, tf("Progetto per Contest Be Creative (obbligatorio, formato JPG o PDF)", "Project for Be Creative Contest (required, PDF or JPG)")
       = f.file_field :user_image
 
       %p.tit
