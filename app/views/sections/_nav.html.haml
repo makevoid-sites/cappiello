@@ -65,7 +65,7 @@
             = link_to tf("Info", "info"), js_void
 
         - else
-          - unless page.id == 35 # news
+          - unless page.id == 35 || page.id == 63 # news e workshop
             %li
               = link_to tr(page).title, pag_path(page)
 
