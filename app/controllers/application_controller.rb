@@ -3,6 +3,9 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
 
+  layout File.read("#{Rails.root}/config/layout.conf").strip
+
+
   # catch_404
   # around_filter do |controller, action_block|
   #   controller do
