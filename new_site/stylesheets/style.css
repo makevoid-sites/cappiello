@@ -48,6 +48,10 @@ small, small *{
   background-color: #D32B59;
   color:white;
 }
+/*Backgrounds*/
+.bg-primary{
+  background-color:#D32859;
+}
 /*Colors*/
 .color-primary{
   color:#D32B59;
@@ -57,4 +61,22 @@ small, small *{
   max-width:1000px;
   float:none;
   margin:0 auto;
+}
+/*IDs*/
+#btnMenu{
+  line-height: 43px;
+  width:40px;
+  font-size:20px;
+}
+/*Responsive*/
+/*tablet*/
+@media screen and (max-width:800px) {
+  .center-content-tablet{
+    text-align: center;
+  }
+  .line-full-tablet{
+    width:100%;
+    padding:0 0 0 0;
+    float:none;
+  }
 }
