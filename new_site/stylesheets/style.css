@@ -6,10 +6,8 @@ body *,html *{
 h1,h2,h3,h4,strong,b{
   font-weight:500;
 }
-h1{
-  font-size: 20px;
-}
 a{
+    color:#D32B59;
     transition:all .1s linear;
 }
 small, small *{
@@ -72,6 +70,15 @@ small, small *{
   float:none;
   margin:0 auto;
 }
+.widget{
+  width:31.33%;
+  margin:0 1%;
+  float:left;
+  box-shadow:0 2px 2px rgba(0,0,0,.2);
+}
+.widget:hover{
+  box-shadow:0 0px 4px rgba(0,0,0,.2);
+}
 /*IDs*/
 #menuMobile{
   background: rgba(255,255,255,.95);
@@ -93,6 +100,11 @@ small, small *{
 @media screen and (max-width:800px) {
   .center-content-tablet{
     text-align: center;
+  }
+  .widget{
+    width:100%;
+    margin:0 0 0 0;
+    margin-bottom: 20px;
   }
   .line-full-tablet{
     width:100%;
