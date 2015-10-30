@@ -19,6 +19,9 @@ small, small *{
   margin-top:6px;
 }
 /*Utils*/
+.fullheight{
+  min-height: 100%;
+}
 .font-smaller{
   font-size:11px;
 }
@@ -35,9 +38,8 @@ small, small *{
   min-width: 200px;
 }
 .top-menu-social a{
-  margin-right:18px;
+  margin-right:3%;
   font-size:18px;
-  margin-left:-8px;
   color:rgba(255,255,255,.5);
 }
 .top-menu-social a:hover{
@@ -71,6 +73,16 @@ small, small *{
   margin:0 auto;
 }
 /*IDs*/
+#menuMobile{
+  background: white;
+}
+#menuMobile a{
+  line-height: 30px;
+}
+#btnMenu.rotate{
+  transition-duration: .2s;
+  transform: rotate(180deg);
+}
 #btnMenu{
   line-height: 43px;
   width:40px;
