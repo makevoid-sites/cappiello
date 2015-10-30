@@ -27,9 +27,16 @@ small, small *{
   background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAI0lEQVQIW2NkwAT/GdHE/gP5jMiCYAGQIpggXAAmiCIAEgQAAE4FBbECyZcAAAAASUVORK5CYII=');
 }
 /*Extra*/
+.article img{
+  float:left;
+  margin: 0 2% 1% 0;
+  width:50%;
+  max-width:300px;
+}
 .top-menu-social a{
-  margin:0 3% 0 0;
+  margin-right:18px;
   font-size:18px;
+  margin-left:-8px;
   color:rgba(255,255,255,.5);
 }
 .top-menu-social a:hover{
@@ -37,8 +44,8 @@ small, small *{
 }
 .header-menu a{
   font-size:15px;
-  padding:8px 10px;
-  margin-left:1%;
+  padding:7px 9px;
+  margin-right:.5%;
   color:rgba(0,0,0, .5);
 }
 .header-menu a:hover{
