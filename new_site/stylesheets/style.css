@@ -60,6 +60,15 @@ small, small *{
 .bg-primary{
   background-color:#D32859;
 }
+.bg-primary-2{
+  background-color:#F3366F;
+}
+.bg-primary-3{
+  background-color:#D4728F;
+}
+.bg-primary-4{
+  background-color:#A14669;
+}
 /*Colors*/
 .color-primary{
   color:#D32B59;
