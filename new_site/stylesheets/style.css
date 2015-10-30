@@ -74,16 +74,16 @@ small, small *{
 }
 /*IDs*/
 #menuMobile{
-  background: white;
+  background: rgba(255,255,255,.95);
 }
 #menuMobile a{
   line-height: 30px;
 }
 #btnMenu.rotate{
-  transition-duration: .2s;
   transform: rotate(180deg);
 }
 #btnMenu{
+  transition-duration: .2s;
   line-height: 43px;
   width:40px;
   font-size:20px;
