@@ -1,35 +1,143 @@
-- unless @page.id == 35 # news
-  - title tr(@page).title
-
--#- if @page.id != 1 && @page.root? && @page.id != 6 && @page.id != 8 && @page.id != 13 #form
--#  = image_tag "image4.jpg", id: "gallery"
-
-- if @page.id == 35 # news
-  - content_for :jquery do
-    :plain
-      var title = "Accademia Cappiello - Firenze"
-      var stateObj = { action: { name: "clear" } } // source: "..params.."
-      if (history.replaceState)
-        history.replaceState(stateObj, title, "/")
-
-- if @page.id == 9 # contacts
-  #likebox
-    :plain
-      <fb:like-box href="http://www.facebook.com/pages/Accademia-dArte-e-Design-Leonetto-Cappiello-Firenze/124282164308467" width="492" show_faces="false" stream="true" header="false"></fb:like-box>
-
-- # borse di studio, form
-- ids_full_class = [6, 8, 13, 10, 29, 7, 5, 4, 30, 51, 58, 61, 63]
-#inner{ class: "#{"home" if home_page? || @page.id == 1} #{"full" if !@page.root? || ids_full_class.include?(@page.id)}" }
-  - if @page.id == 1 || @page.id == 35 # news
-    = render partial: "elements/home"
-  - else
-    = render partial: "elements/standard"
-    =# raise NotFound
-
-= render partial: "elements/share"
-
--# if admin?
-- content_for :admin do
-  Pagina:
-  = link_to "Modifica", [:edit, @page]
-= #params.inspect
+/ ACCADEMIA
+.line.bg-white
+  .line-compress.line-max
+    .separator30
+    %h1.line.center-content-tablet L'Accademia
+    .separator10
+    .separator15.pattern
+    .separator30
+    .line.article
+      %img{:src => "http://farm9.static.flickr.com/8126/8657296175_fbc6f3a697_b.jpg"}/
+      Dal 1956 l’Accademia d’Arte e design Leonetto Cappiello è il luogo ideale per esprimere la propria creatività e per tradurla in una reale opportunità di lavoro. Qui si insegna a dare forma, la migliore possibile, alle idee, perchè ogni professione, anche la più creativa, non si può improvvisare. Ha bisogno di basi, di nozioni, di tecniche.
+      L’Accademia, intitolata al grande cartellonista livornese Leonetto Cappiello attivo a Parigi ai primi del ‘900, è stata una delle prime Accademie, se non la prima in italia, ad ottenere il riconoscimento del Ministero della Pubblica istruzione tramite il Consorzio Provinciale per l’istruzione Tecnica di Firenze con provvedimento n. 1368 del 28 Agosto 1956
+  .separator50
+/ end ACCADEMIA
+/ CORSI
+.line.bg-muted-inverse
+  .line-compress.line-max
+    .separator30
+    %h1.line.color-white.center-content-tablet I Corsi
+    .separator10
+    .separator15.pattern
+    .separator30
+    .line.article
+      .widget.bg-white
+        %iframe{:allowfullscreen => "", :frameborder => "0", :src => "https://www.youtube.com/embed/KICyR3BZWwE", :width => "100%"}
+        .separator15
+        .line-compress
+          .line-compress
+            %h3 Corso 1
+            .separator5
+            %h6 Il corso hau na descrizione finta, a breve
+            .separator30
+            %a.push-right.toggle-opacity-hover{:href => "#"}
+              Info
+        .separator15
+      .widget.bg-white
+        %iframe{:allowfullscreen => "", :frameborder => "0", :src => "https://www.youtube.com/embed/KICyR3BZWwE", :width => "100%"}
+        .separator15
+        .line-compress
+          .line-compress
+            %h3 Corso 2
+            .separator5
+            %h6 Il corso hau na descrizione finta, a breve
+            .separator30
+            %a.push-right.toggle-opacity-hover{:href => "#"}
+              Info
+        .separator15
+      .widget.bg-white
+        %iframe{:allowfullscreen => "", :frameborder => "0", :src => "https://www.youtube.com/embed/KICyR3BZWwE", :width => "100%"}
+        .separator15
+        .line-compress
+          .line-compress
+            %h3 Corso 3
+            .separator5
+            %h6 Il corso hau na descrizione finta, a breve
+            .separator30
+            %a.push-right.toggle-opacity-hover{:href => "#"}
+              Info
+        .separator15
+  .separator50
+/ end CORSI
+/ --------------end content
+/ GALLERY
+.line.bg-white
+  .line-compress.line-max
+    .separator30
+    %h1.line.center-content-tablet La Gallery
+    .separator10
+    .separator15.pattern
+    .separator30
+    .line.center-content
+      .col5.line-tablet
+        %a.bg-white.no-radius.col5.color-black.toggle-opacity-inverse-hover
+          .separator3
+          Grafica Pubblicitaria
+          .separator3
+        %a.bg-primary-2.color-white.no-radius.col5.toggle-opacity-inverse-hover
+          .separator3
+          Interior Design
+          .separator3
+      .separator10.tablet.mobile
+      .col5.line-tablet
+        %a.bg-primary-3.color-white.no-radius.col5.toggle-opacity-inverse-hover
+          .separator3
+          Digital Communication
+          .separator3
+        %a.bg-primary-4.color-white.no-radius.col5.toggle-opacity-inverse-hover
+          .separator3
+          Eventi
+          .separator3
+    .separator30
+    .line.article qui la gallery
+  .separator50
+/ GALLERY
+/ footer
+%footer.footer.line-compress.line-max.center-content-tablet
+  .separator30
+  .col5.line-tablet
+    .col5.color-white
+      .separator30
+      %h3 Column 1
+      %ul
+        %li
+          %a.color-white.toggle-opacity-hover{:href => "#"} Link
+        %li
+          %a.color-white.toggle-opacity-hover{:href => "#"} Link
+        %li
+          %a.color-white.toggle-opacity-hover{:href => "#"} Link
+    .col5.color-white
+      .separator30
+      %h3 Column 2
+      %ul
+        %li
+          %a.color-white.toggle-opacity-hover{:href => "#"} Link
+        %li
+          %a.color-white.toggle-opacity-hover{:href => "#"} Link
+        %li
+          %a.color-white.toggle-opacity-hover{:href => "#"} Link
+  .col5.line-tablet
+    .col5.color-white
+      .separator30
+      %h3 Column 3
+      %ul
+        %li
+          %a.color-white.toggle-opacity-hover{:href => "#"} Link
+        %li
+          %a.color-white.toggle-opacity-hover{:href => "#"} Link
+        %li
+          %a.color-white.toggle-opacity-hover{:href => "#"} Link
+    .col5.color-white
+      .separator30
+      %h3 Column 4
+      %ul
+        %li
+          %a.color-white.toggle-opacity-hover{:href => "#"} Link
+        %li
+          %a.color-white.toggle-opacity-hover{:href => "#"} Link
+        %li
+          %a.color-white.toggle-opacity-hover{:href => "#"} Link
+  .separator100
+  .color-muted-inverse.font-smaller.center-content © 2015 Accademia Cappiello - Firenze
+  .separator50
+/ end footer
