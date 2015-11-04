@@ -26,8 +26,8 @@
     %meta{ property: "og:url", content: request_url }/
     %meta{ property: "fb:admins", content: "1218562195" }/
     -# TODO UI downloadare e vendorizzare
-    %script{:src => "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js", :type => "text/javascript"}
-    = javascript_include_tag "jquery-cycle", "jquery-swfobject", "jquery-flickr", "jquery-mousewheel", "jquery-fancybox"
+    -# %script{:src => "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js", :type => "text/javascript"}
+    = javascript_include_tag "jquery", "jquery-cycle", "jquery-swfobject", "jquery-flickr", "jquery-mousewheel", "jquery-fancybox"
     = yield :head
     %script{ type: "text/javascript" }
       var action = '#{controller.action_name}'

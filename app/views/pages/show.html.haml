@@ -141,3 +141,7 @@
   .color-muted-inverse.font-smaller.center-content © 2015 Accademia Cappiello - Firenze
   .separator50
 / end footer
+
+#standard
+  - text = markup tr(@page).text
+  = parse_text(text)
