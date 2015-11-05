@@ -29,6 +29,16 @@ class Page
     parent_id.nil?
   end
 
+  def self.find_by_url(title_url_or_it)
+    title = title_url_or_it
+    page = Page.all(  title_url_it: title)  |
+      Page.all(title_url_en: title)
+    page.first
+  end
+
+  # alias :load_page :find_by_url
+
+
   before :create do
     Lang::LANGS.map do |t|
       self.send("title_url_#{t}=", self.send("title_#{t}").title_urlize)

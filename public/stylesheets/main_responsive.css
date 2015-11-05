@@ -120,3 +120,14 @@ small {
     width: 100%;
     padding: 0 0 0 0;
     float: none; } }
+.article #photos {
+  box-sizing: border-box;
+  margin-top: 20px; }
+  .article #photos img {
+    margin: 1%;
+    float: left;
+    width: 14.5%;
+    min-width: 50px; }
+
+.flickr_button {
+  display: none; }

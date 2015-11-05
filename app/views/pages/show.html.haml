@@ -1,15 +1,38 @@
+:ruby
+  def load_content(page_name)
+    page = Page.find_by_url page_name
+    text = markup tr(page).text
+    parse_text text
+  end
+
 / ACCADEMIA
 .line.bg-white
   .line-compress.line-max
     .separator30
-    %h1.line.center-content-tablet L'Accademia
+    %h1.line.center-content-tablet
+      - if @page
+        = tr(@page).title
+      - else
+        Inserire titolo
     .separator10
     .separator15.pattern
     .separator30
     .line.article
-      %img{:src => "http://farm9.static.flickr.com/8126/8657296175_fbc6f3a697_b.jpg"}/
-      Dal 1956 l’Accademia d’Arte e design Leonetto Cappiello è il luogo ideale per esprimere la propria creatività e per tradurla in una reale opportunità di lavoro. Qui si insegna a dare forma, la migliore possibile, alle idee, perchè ogni professione, anche la più creativa, non si può improvvisare. Ha bisogno di basi, di nozioni, di tecniche.
-      L’Accademia, intitolata al grande cartellonista livornese Leonetto Cappiello attivo a Parigi ai primi del ‘900, è stata una delle prime Accademie, se non la prima in italia, ad ottenere il riconoscimento del Ministero della Pubblica istruzione tramite il Consorzio Provinciale per l’istruzione Tecnica di Firenze con provvedimento n. 1368 del 28 Agosto 1956
+      -#.db_content.cont_main
+
+      - path_split = request.path.split "/"
+      - path_one = path_split[1] # /pages ... etc
+      - path_two = path_split[2] # /name of the page (/pages/name)
+      - if request.path == "/"
+        = load_content "l_accademia"
+      - elsif path_one == "pages"
+        = load_content path_two
+      - elsif
+        %h1 Don't know what to load here... sorry!
+
+      -# %img{:src => "http://farm9.static.flickr.com/8126/8657296175_fbc6f3a697_b.jpg"}/
+      -# Dal 1956 l’Accademia d’Arte e design Leonetto Cappiello è il luogo ideale per esprimere la propria creatività e per tradurla in una reale opportunità di lavoro. Qui si insegna a dare forma, la migliore possibile, alle idee, perchè ogni professione, anche la più creativa, non si può improvvisare. Ha bisogno di basi, di nozioni, di tecniche.
+      -# L’Accademia, intitolata al grande cartellonista livornese Leonetto Cappiello attivo a Parigi ai primi del ‘900, è stata una delle prime Accademie, se non la prima in italia, ad ottenere il riconoscimento del Ministero della Pubblica istruzione tramite il Consorzio Provinciale per l’istruzione Tecnica di Firenze con provvedimento n. 1368 del 28 Agosto 1956
   .separator50
 / end ACCADEMIA
 / CORSI
@@ -142,6 +165,10 @@
   .separator50
 / end footer
 
-#standard
-  - text = markup tr(@page).text
-  = parse_text(text)
+
+
+
+
+-# #standard
+-#   - text = markup tr(@page).text
+-#   = parse_text text
