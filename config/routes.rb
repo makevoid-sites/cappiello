@@ -25,6 +25,7 @@ Cappiello::Application.routes.draw do
   get "/pages/visual_design_corsi_annuali", to: redirect("/pages/grafica_pubblicitaria_corsi_annuali")
   get "/pages/:id", to: "pages#show", as: :page
   resources :pages
+  resources :pages_new, path: '/pag'
 
 
   #get "/users/:name_url", to: "users#show", as: :user_path

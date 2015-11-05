@@ -1,8 +1,12 @@
 :ruby
+  def home_url
+    "/pages/l_accademia"
+  end
+
   def nav_link_raw(label, link, mobile:)
     url = url_for link
     unless mobile
-      haml_tag(:a, href: url, class: "#{"active" if request.path == url}") do
+      haml_tag(:a, href: url, class: "#{url_active url}") do
         haml_concat label
       end
     else
@@ -13,6 +17,10 @@
     end
   end
 
+  def url_active(url)
+    "active" if request.path == url || request.path == "/" && url == home_url
+  end
+
   # php style
 
 
@@ -20,9 +28,21 @@
     {
       home: {
         label:   "L'Accademia",
-        url:     "/pages/l_accademia",
+        url:     home_url,
         url_en:  "/pages/about_us",
         # page: Page.find_by_url "l_accademia"
+      },
+      corsi: {
+        label:    "Corsi",
+        label_en: "Courses",
+        url:      "/pag/corsi",
+        url_en:   "/pag/courses",
+      },
+      calendario: {
+        label:    "Calendario",
+        label_en: "Calendar",
+        url:      "/pag/calendario",
+        url_en:   "/pag/calendar",
       },
       news: {
         label: "News",
@@ -187,9 +207,9 @@
               .separator50
               .separator30
               - nav_link :home
-              %a{:href => "#"} Corsi
+              - nav_link :corsi
               - nav_link :news
-              %a{:href => "#"} Calendario
+              - nav_link :calendario
               - nav_link :borse_di_studio
               - nav_link :open_days
               - nav_link :contatti

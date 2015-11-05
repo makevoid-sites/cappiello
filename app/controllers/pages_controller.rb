@@ -1,12 +1,12 @@
 class PagesController < ApplicationController
 
-  after_filter :track_site, only: [:show]
+  # after_filter :track_site, only: [:show]
 
-  private
+  # private
 
-  def track_site(source = :organic, properties = {}) # add adwords id or fb id & info
-    track "site_#{source}", properties
-  end
+  # def track_site(source = :organic, properties = {}) # add adwords id or fb id & info
+  #   track "site_#{source}", properties
+  # end
 
   public
 
@@ -23,7 +23,7 @@ class PagesController < ApplicationController
       source = params[:source]
       type = params[:type]
     end
-    track_site source, { type: type }
+    # track_site source, { type: type }
 
     render :show
   end
@@ -39,7 +39,7 @@ class PagesController < ApplicationController
     raise NotFound if @page.nil?
     load_news if @page.id == 1
 
-    track_page(:course) if @page.course?
+    # track_page(:course) if @page.course?
   end
 
   def stats
