@@ -16,7 +16,7 @@ footer, header, hgroup, menu, nav, section {
 
 html, body {
   max-height: 100%;
-  background: #bcbcbc; }
+  background: rgb(222, 222, 222); }
 
 img {
   border: 0; }
@@ -36,8 +36,8 @@ li {
 .clearright {
   clear: right; }
 
-.bold {
-  font-weight: bold; }
+.500 {
+  font-weight: 500; }
 
 .italic {
   font-style: italic; }
@@ -71,13 +71,13 @@ h4 {
 #logo {
   width: 13%; }
 
-#backg {
-  background: #dddddd;
+/*#backg {
+  background: rgb(222, 222, 222);
   background: -moz-linear-gradient(top, #bbbbbb 0%, #bbbbbb 15%, white 33%, white 80%, #bbbbbb 100%);
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #bbbbbb), color-stop(15%, #bbbbbb), color-stop(33%, white), color-stop(80%, white), color-stop(100%, #bbbbbb));
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$c1', endColorstr='$c4',GradientType=0 );
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#BBBBBB', endColorstr='#FFFFFF',GradientType=0 ); }
-
+*/
 a {
   color: #c82d5e; }
 
@@ -106,9 +106,9 @@ a:hover {
   margin: 0 0 0 2.3%;
   width: 82.6%;
   padding: 6px 1%;
-  -moz-box-shadow: 3px 2px 10px #aaaaaa;
+  /*-moz-box-shadow: 3px 2px 10px #aaaaaa;
   -webkit-box-shadow: 3px 2px 10px #aaaaaa;
-  box-shadow: 3px 2px 10px #aaaaaa; }
+  box-shadow: 3px 2px 10px #aaaaaa;*/ }
   #content ul li {
     display: block; }
   #content a {
@@ -143,7 +143,7 @@ img.flex {
   width: 100%;
   line-height: 17px; }
   #inner_content a {
-    font-weight: bold; }
+    font-weight: 500; }
 
 #inner {
   font-size: 0.92em; }
@@ -166,7 +166,7 @@ img.flex {
     -webkit-border-radius: 8px;
     padding: 2px 8px; }
   #admin .left {
-    font-weight: bold; }
+    font-weight: 500; }
     #admin .left a {
       font-weight: normal;
       background: #999999; }
@@ -190,7 +190,7 @@ img.flex {
     color: white; }
 
 a#profile_name {
-  font-weight: bold;
+  font-weight: 500;
   color: #a60b3c;
   border-radius: 10px;
   -moz-border-radius: 10px;
@@ -203,9 +203,9 @@ a#profile_name {
   background: #999999;
   height: 100px;
   border: 1px solid #cccccc;
-  -moz-box-shadow: 3px 3px 8px #777777;
+  /*-moz-box-shadow: 3px 3px 8px #777777;
   -webkit-box-shadow: 3px 3px 8px #777777;
-  box-shadow: 3px 3px 8px #777777; }
+  box-shadow: 3px 3px 8px #777777;*/ }
   #profile_tab.hover a#profile_name {
     -moz-border-radius-topleft: 10px;
     -moz-border-radius-topright: 10px;
@@ -294,7 +294,7 @@ a#profile_name {
   position: relative;
   top: -30px;
   float: right;
-  font-weight: bold; }
+  font-weight: 500; }
 
 .articles.index .date {
   float: right;
@@ -312,16 +312,16 @@ a#profile_name {
   float: left; }
 
 #articles_list li a {
-  font-weight: bold;
+  font-weight: 500;
   font-size: 1.1em; }
 #articles_list li p:last-child {
   margin: 0 0 30px 0; }
 
 #logo {
   float: left;
-  -moz-box-shadow: -3px -3px 10px #777777;
+  /*-moz-box-shadow: -3px -3px 10px #777777;
   -webkit-box-shadow: -3px -3px 10px #777777;
-  box-shadow: -3px -3px 10px #777777; }
+  box-shadow: -3px -3px 10px #777777; */ }
 
 #likebox {
   float: right;
@@ -333,9 +333,9 @@ a#profile_name {
   width: 84.7%;
   z-index: 1; }
   #banner img {
-    -moz-box-shadow: 0px -3px 10px #333333;
+    /*-moz-box-shadow: 0px -3px 10px #333333;
     -webkit-box-shadow: 0px -3px 10px #333333;
-    box-shadow: 0px -3px 10px #333333;
+    box-shadow: 0px -3px 10px #333333;*/
     display: none; }
   #banner img.first {
     display: block; }
@@ -349,9 +349,9 @@ a#profile_name {
   height: 512px;
   width: 84.7%; }
   #slider1 img {
-    -moz-box-shadow: 0px -3px 10px #333333;
+    /*-moz-box-shadow: 0px -3px 10px #333333;
     -webkit-box-shadow: 0px -3px 10px #333333;
-    box-shadow: 0px -3px 10px #333333;
+    box-shadow: 0px -3px 10px #333333; */
     display: none;
     height: 512px; }
   #slider1 img.first {
@@ -366,9 +366,9 @@ a#profile_name {
   width: 84.7%;
   height: 512px; }
   #slider2 img {
-    -moz-box-shadow: 0px -3px 10px #333333;
+    /*-moz-box-shadow: 0px -3px 10px #333333;
     -webkit-box-shadow: 0px -3px 10px #333333;
-    box-shadow: 0px -3px 10px #333333;
+    box-shadow: 0px -3px 10px #333333;*/
     display: none;
     height: 512px; }
   #slider2 img.first {
@@ -382,9 +382,9 @@ a#profile_name {
   width: 84.7%;
   height: 512px; }
   #slider3 img {
-    -moz-box-shadow: 0px -3px 10px #333333;
+    /*-moz-box-shadow: 0px -3px 10px #333333;
     -webkit-box-shadow: 0px -3px 10px #333333;
-    box-shadow: 0px -3px 10px #333333;
+    box-shadow: 0px -3px 10px #333333;*/
     display: none;
     height: 512px; }
   #slider3 img.first {
@@ -458,21 +458,21 @@ div#home_swf {
 
 #nav {
   text-transform: uppercase;
-  -moz-box-shadow: -3px 0px 5px #aaaaaa;
+  /*-moz-box-shadow: -3px 0px 5px #aaaaaa;
   -webkit-box-shadow: -3px 0px 5px #aaaaaa;
-  box-shadow: -3px 0px 5px #aaaaaa;
+  box-shadow: -3px 0px 5px #aaaaaa;*/
   position: relative; }
   #nav li {
     text-align: right; }
     #nav li a {
       display: block;
       background: #c82d5e;
-      padding: 10px 10px 10px 10px;
+      padding: 12px 12px 12px 12px;
       color: white;
       font-size: 13px;
-      border: 1px solid #871623;
-      border-top: 1px solid #c82d5e;
-      border-bottom: 1px solid #c82d5e;
+      border: 0px solid #871623;
+      border-top: 0px solid #c82d5e;
+      border-bottom: 0px solid #c82d5e;
       width: 84%;
       text-align: right; }
   #nav li .subnav {
@@ -483,11 +483,13 @@ div#home_swf {
     background: #392c79; }
   #nav li:hover a, #nav li#masterbutt:hover a, #nav li#concorso:hover a {
     background: #b42c4e;
-    border: 1px solid #871623;
-    background: -moz-linear-gradient(top, #7d1622 0%, #a82949 20%, #a82949 80%, #7d1622 100%);
+    border: 0px solid #871623;
+    /*background: -moz-linear-gradient(top, #7d1622 0%, #a82949 20%, #a82949 80%, #7d1622 100%);
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #7d1622), color-stop(20%, #a82949), color-stop(80%, #a82949), color-stop(100%, #7d1622));
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$c1', endColorstr='$c1',GradientType=0 );
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#7d1622', endColorstr='#a82949',GradientType=0 ); }
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#7d1622', endColorstr='#a82949',GradientType=0 ); */
+    background-color: #C97781;
+    }
   #nav .subnav li a {
     background: #c82d5e;
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#c82d5e', endColorstr='#c82d5e',GradientType=0 );
@@ -666,7 +668,7 @@ ul#selection {
   #aside a {
     color: white;
     text-shadow: none;
-    font-weight: bold; }
+    font-weight: 500; }
 
 .master #aside {
   background: #392c79; }
@@ -678,9 +680,9 @@ ul#selection {
   font-size: 12px;
   text-align: right;
   margin: 15px 0 20px;
-  -moz-box-shadow: 0px 3px 10px #444444;
+  /*-moz-box-shadow: 0px 3px 10px #444444;
   -webkit-box-shadow: 0px 3px 10px #444444;
-  box-shadow: 0px 3px 10px #444444; }
+  box-shadow: 0px 3px 10px #444444;*/ }
 
 .master #footer {
   background: #392c79; }
@@ -695,7 +697,7 @@ input, textarea, select#user_country {
 
 label {
   font-size: 0.85em;
-  font-weight: bold; }
+  font-weight: 500; }
 
 input, textarea, select#user_country {
   margin: 4px 0 10px;
@@ -724,7 +726,7 @@ textarea.small {
   padding: 10px; }
 .admin label {
   font-size: 1.2em;
-  font-weight: bold; }
+  font-weight: 500; }
 .admin input, .admin textarea {
   margin: 3px 0 10px;
   padding: 6px 10px;
@@ -764,7 +766,7 @@ input.submit {
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#c82d5e', endColorstr='#d8507b');
     color: #eec0ce; }
 #content a.button.delete {
-  font-weight: bold;
+  font-weight: 500;
   border: solid 1px #c4c4c4;
   background-color: #cccccc;
   background: -webkit-gradient(linear, left top, left bottom, from(#ededed), to(#cccccc));
@@ -1022,7 +1024,7 @@ input.radio2 {
   position: relative;
   top: 4px; }
 .users.show #content .user_details p.b {
-  font-weight: bold;
+  font-weight: 500;
   font-size: 0.9em;
   margin: 10px 0 3px; }
 
@@ -1059,7 +1061,7 @@ img.image_left {
   float: right; }
 
 #works li .name {
-  font-weight: bold; }
+  font-weight: 500; }
 #works li .date {
   float: right;
   margin-left: 12px; }
