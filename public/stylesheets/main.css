@@ -60,7 +60,8 @@ h1 {
 
 h2 {
   margin-bottom: 10px;
-  font-size: 1.3em; }
+  font-size: 1.3em;
+  max-width: 60%; }
 
 h3 {
   margin: 10px 0 5px 0; }
@@ -660,7 +661,7 @@ ul#selection {
   width: 340px;
   color: white;
   padding: 10px 10px;
-  margin: 0 2px 0 15px; }
+  margin: -27px 2px 0 15px; }
   #aside li {
     margin: 4px 0; }
   #aside p {
