@@ -4,9 +4,13 @@ body *, html * {
   font-weight: 300;
   font-family: "Open Sans", sans-serif; }
 
+#map_canvas{
+  min-height:350px;
+  width:auto;
+}
+
 h1, h2, h3, h4, strong, b {
   font-weight: 500; }
-
 a {
   color: #d32b59;
   transition: all 0.1s linear; }
