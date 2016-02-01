@@ -1,5 +1,6 @@
 :ruby
   def load_content(page_name)
+    raise page_name.inspect
     puts "DEBUG PIPPO: page_name: #{page_name.inspect}"
     page = Page.find_by_url page_name
     text = markup tr(page).text
