@@ -131,7 +131,8 @@
           .separator10
           %a.btn.btn-small.bg-muted.color-white Corsi
           .separator10
-          - nav_link :news, mobile: true
+          - nav_link :news
+          .separator10
           %a.btn.btn-small.bg-muted.color-white Calendario
           .separator10
           %a.btn.btn-small.bg-muted.color-white Borse di Studio
@@ -199,14 +200,14 @@
         .separator15
         .line-compress.line-max.header
           .col2.line-tablet.center-content-tablet
-            %a{:href => "/"}
+            %a{:href => "/pag/l_accademia"}
               %img{:src => "data:image/png;base64,#{logo_base64}", :width => "120"}/
 
           .col8.center-content.desktop
             .header-menu.desktop
               .separator50
               .separator30
-              - nav_link :home
+              - nav_link :l_accademia
               - nav_link :corsi
               - nav_link :news
               - nav_link :calendario
