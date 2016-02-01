@@ -6,40 +6,31 @@
     .separator15.pattern
     .separator30
     .line.article
-      .widget.bg-white
-        %iframe{:allowfullscreen => "", :frameborder => "0", :src => "https://www.youtube.com/embed/KICyR3BZWwE", :width => "100%"}
-        .separator15
-        .line-compress
+      :ruby
+        corsi = [
+          { name: "Corso 1" },
+          { name: "Corso 2" },
+          { name: "Corso 3" },
+          { name: "Corso 4" },
+          { name: "Corso 5" },
+          { name: "Corso 6" },
+          { name: "Corso 7" },
+          { name: "Corso 8" },
+          { name: "Corso 9" },
+        ]
+      - for corso in corsi
+        .widget.bg-white
+          %iframe{:allowfullscreen => "", :frameborder => "0", :src => "https://www.youtube.com/embed/KICyR3BZWwE", :width => "100%"}
+          .separator15
           .line-compress
-            %h3 Corso 1
-            .separator5
-            %h6 Il corso hau na descrizione finta, a breve
-            .separator30
-            %a.push-right.toggle-opacity-hover{:href => "/pag/corso_id.haml"}
-              Info
-        .separator15
-      .widget.bg-white
-        %iframe{:allowfullscreen => "", :frameborder => "0", :src => "https://www.youtube.com/embed/KICyR3BZWwE", :width => "100%"}
-        .separator15
-        .line-compress
-          .line-compress
-            %h3 Corso 2
-            .separator5
-            %h6 Il corso hau na descrizione finta, a breve
-            .separator30
-            %a.push-right.toggle-opacity-hover{:href => "/pag/corso_id.haml"}
-              Info
-        .separator15
-      .widget.bg-white
-        %iframe{:allowfullscreen => "", :frameborder => "0", :src => "https://www.youtube.com/embed/KICyR3BZWwE", :width => "100%"}
-        .separator15
-        .line-compress
-          .line-compress
-            %h3 Corso 3
-            .separator5
-            %h6 Il corso hau na descrizione finta, a breve
-            .separator30
-            %a.push-right.toggle-opacity-hover{:href => "/pag/corso_id.haml"}
-              Info
-        .separator15
+            .line-compress
+              %h3= corso[:name]
+              .separator5
+              %h6 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tristique leo sit amet viverra egestas. Aliquam venenatis nisi lectus, et vulputate leo pulvinar in.
+              .separator30
+              %a.push-right.toggle-opacity-hover{:href => "/pag/corso_id.haml"}
+                Info
+          .separator15
+
   .separator50
+  .separator30

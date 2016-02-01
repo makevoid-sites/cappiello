@@ -121,8 +121,10 @@
       $(function(){
       = yield :jquery
       })
-    %script{ src: "http://maps.google.com/maps/api/js" }
-    %script{ type: "text/javascript", src: " /javascripts/gmap.js" }
+
+    - if request.path.split("/")[2] == "contatti"
+      %script{ src: "http://maps.google.com/maps/api/js" }
+      %script{ type: "text/javascript", src: " /javascripts/gmap.js" }
 
   %body.bg-black{ class: "#{controller.controller_name} #{controller.action_name} #{"master" if master?} #{"admin" if admin?}"}
     / mobile menu
