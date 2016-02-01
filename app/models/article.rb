@@ -21,7 +21,7 @@ class Article
   property :created_at, DateTime
   property :article_type, String, index: true, default: "news" # ["news", "event"]
 
-  # default_scope(:default).update order: [:created_at.desc]
+  default_scope(:default).update order: [:created_at.desc]
 
 
   before :create do
