@@ -6,9 +6,7 @@
     .separator30
     %h1.line.center-content-tablet
       = link_to text.html_safe, link
-    .separator10
-    .separator15.pattern
-    .separator30
+
     .line.article
       %p
         - unless home_page? || ( @page && @page.id == 1 )
@@ -17,6 +15,8 @@
           - text = markup text
           - dom = Nokogiri.HTML text
           = parse_text dom.inner_html
+  .separator30
+  .separator15.pattern
   .separator50
 
 

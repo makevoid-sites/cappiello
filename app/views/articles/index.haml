@@ -1,16 +1,26 @@
-%h2
-  - if section == "news"
-    News
-  - else
-    Blog
+%h1
 
-= render @articles
+.line.bg-white
+  .line-compress.line-max
+    .separator30
+    %h1.line.center-content-tablet
+      - if section == "news"
+        News
+      - else
+        Blog
+    .separator10
 
-- if admin?
-  .insert_article
-    = link_to "Inserisci Blog Post", new_article_path(article_type: "post")
-    |
-    = link_to "Vai al blog", [:posts]
+    .separator10
+    .separator15.pattern
+    .separator30
+
+    = render @articles
+
+    - if admin?
+      .insert_article
+        = link_to "Inserisci Blog Post", new_article_path(article_type: "post")
+        |
+        = link_to "Vai al blog", [:posts]
 
 .line.bg-white
   .line-compress.line-max
