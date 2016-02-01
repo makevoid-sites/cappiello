@@ -180,7 +180,7 @@ class ApplicationController < ActionController::Base
     end
 
     def method_missing(method)
-      puts "DEBUG pippo -- method: #{method}, lang: #{lang}, self: #{self}, class: #{self.class}"
+      # puts "DEBUG pippo -- method: #{method}, lang: #{lang}, self: #{self}, class: #{self.class}"
       if method.to_s == "to_ary"
         super
       else

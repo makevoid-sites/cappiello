@@ -46,6 +46,8 @@ gem 'dm-rails'#,             DM_VERSION, :git => "git://github.com/datamapper/dm
 #
 # for a rather complete list of available datamapper adapters and plugins
 
+gem "mysql2"
+
 gem 'dm-mysql-adapter'#,     DM_VERSION, :git => "#{DATAMAPPER}/dm-mysql-adapter.git"
 # gem 'dm-postgres-adapter',  DM_VERSION, :git => "#{DATAMAPPER}/dm-postgres-adapter.git"
 # gem 'dm-oracle-adapter',    DM_VERSION, :git => "#{DATAMAPPER}/dm-oracle-adapter.git"

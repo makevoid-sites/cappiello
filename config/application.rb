@@ -11,6 +11,8 @@ require 'action_mailer/railtie'
 # Auto-require default libraries and those for the current Rails environment.
 Bundler.require :default, Rails.env
 
+DataMapper::Logger.new(STDOUT, :debug)
+
 module Cappiello
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.
