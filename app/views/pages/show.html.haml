@@ -1,5 +1,6 @@
 :ruby
   def load_content(page_name)
+    - puts "DEBUG PIPPO: page_name: #{page_name.inspect}"
     page = Page.find_by_url page_name
     text = markup tr(page).text
     parse_text text
@@ -26,7 +27,6 @@
       - if request.path == "/"
         = load_content "l_accademia"
       - elsif path_one == "pages"
-        - puts "DEBUG PIPPO: path two: #{path_two}"
         = load_content path_two || "l_accademia"
       - elsif
         %h1 Don't know what to load here... sorry!
