@@ -19,7 +19,7 @@ class Page
 
   is :tree
 
-  default_scope(:default).update hidden: false, order: :position
+  # default_scope(:default).update hidden: false, order: :position
 
   def course?
     !root? || master?
