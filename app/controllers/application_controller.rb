@@ -180,7 +180,7 @@ class ApplicationController < ActionController::Base
     end
 
     def method_missing(method)
-      if self.class::TRANSLATE.include? method.to_s
+      if (self.class || Page)::TRANSLATE.include? method.to_s
         self.send("#{method}_#{lang}")
       end
     end
