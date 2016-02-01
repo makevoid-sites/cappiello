@@ -1,73 +1,113 @@
-.borse_di_studio
+.separator30
+.line
   = form_for @user, multipart: true do |f|
-    = f.hidden_field :tmp_form, value: "borsa"
-    = hidden_field_tag :js_enabled
-    .preradio
-
-      = f.label :interested_in_visual, "#{tf "GRAFICA PUBBLICITARIA", "GRAPHIC DESIGN"}"
+    .line.preradio
       = f.radio_button :interested_in, "visual", class: "radio"
-      = f.label :interested_in_interior, "INTERIOR DESIGN"
+      = f.label :interested_in_visual, "#{tf "GRAFICA PUBBLICITARIA", "GRAPHIC DESIGN"}"
+      &nbsp;
+      &nbsp;
       = f.radio_button :interested_in, "interior", class: "radio"
-      = f.label :interested_in_web, "DIGITAL COMMUNICATION"
+      = f.label :interested_in_interior, "INTERIOR DESIGN"
+      &nbsp;&nbsp;
       = f.radio_button :interested_in, "web", class: "radio2"
+      = f.label :interested_in_web, "DIGITAL COMMUNICATION"
+    .separator15
+    .col5.line-tablet.borse_di_studio
+      .col9.line-tablet
+        = f.hidden_field :tmp_form, value: "borsa"
+        = hidden_field_tag :js_enabled
 
-    .first
-      = f.label :first_name, tf("Nome", "Name")
-      = f.text_field :first_name, class: "required"
-      = f.label :last_name, tf("Cognome", "Surname")
-      = f.text_field :last_name, class: "required"
-      = f.label :email, "Email"
-      = f.text_field :email, class: "required"
-      - unless logged_in?
-        = f.label :password, tf("Scegli una password", "Choose a password")
-        = f.password_field :password, class: "required"
-      = f.label :birthplace, tf("Nato a", "Born in")
-      = f.text_field :birthplace, class: "required"
-      = f.label :birthdate, tf("Data", "Birth date")
-      .date_select
-        = f.date_select :birthdate, start_year: 1940, end_year: 2010, class: "required"
-      = f.label :address, tf("Indirizzo", "Address")
-      = f.text_field :address, class: "required"
-      = f.label :city, tf("Città", "City")
-      = f.text_field :city
-      = f.label :cap, tf("CAP", "ZIP")
-      = f.text_field :cap, class: "required"
-      = f.label :tel, tf("Telefono", "Phone")
-      = f.text_field :tel, class: "required"
-      = f.label :qualification, tf("Titolo di studio", "Degree")
-      = f.text_field :qualification, class: "required"
-      = f.label :grade, tf("Votazione", "Vote")
-      = f.text_field :grade
-      = f.label :job, tf("Attuale occupazione", "Current employment")
-      = f.text_field :job
+        .first
+          = f.label :first_name, tf("Nome", "Name")
+          .separator5
+          = f.text_field :first_name, class: "required"
+          .separator15
+          = f.label :last_name, tf("Cognome", "Surname")
+          .separator5
+          = f.text_field :last_name, class: "required"
+          .separator15
+          = f.label :email, "Email"
+          .separator5
+          = f.text_field :email, class: "required"
+          .separator15
+          - unless logged_in?
+            = f.label :password, tf("Scegli una password", "Choose a password")
+            .separator5
+            = f.password_field :password, class: "required"
+            .separator15
+          = f.label :birthplace, tf("Nato a", "Born in")
+          .separator5
+          = f.text_field :birthplace, class: "required"
+          .separator15
+          = f.label :birthdate, tf("Data", "Birth date")
+          .separator5
+          .date_select
+            = f.date_select :birthdate, start_year: 1940, end_year: 2010, class: "required"
+            .separator5
+    .col5.line-tablet
+      .col9.line-tablet
+        = f.label :address, tf("Indirizzo", "Address")
+        .separator5
+        = f.text_field :address, class: "required"
+        .separator15
+        = f.label :city, tf("Città", "City")
+        .separator5
+        = f.text_field :city
+        .separator15
+        = f.label :cap, tf("CAP", "ZIP")
+        .separator5
+        = f.text_field :cap, class: "required"
+        .separator15
+        = f.label :tel, tf("Telefono", "Phone")
+        .separator5
+        = f.text_field :tel, class: "required"
+        .separator15
+        = f.label :qualification, tf("Titolo di studio", "Degree")
+        .separator5
+        = f.text_field :qualification, class: "required"
+        .separator15
+        = f.label :grade, tf("Votazione", "Vote")
+        .separator5
+        = f.text_field :grade
+        .separator15
+        = f.label :job, tf("Attuale occupazione", "Current employment")
+        .separator5
+        = f.text_field :job
+        .separator15
 
-      -# = f.label :cv, tf("Curriculum Vitae (obbligatorio, in formato PDF)", "CV (required, PDF file format)")
-      -# = f.file_field :cv
-      -# %p.tit
-      -#   - if @user.cv?
-      -#     %a{ href: @user.cv_url }= @user.cv_url
-      -#
-      -# = f.label :portfolio, tf("Portfolio lavori (obbligatorio, in formato PDF)", "Works portfolio (required, PDF file format)")
-      -# = f.file_field :portfolio
-      -# %p.tit
-      -#   - if @user.portfolio?
-      -#     %a{ href: @user.portfolio_url }= @user.portfolio_url
-      -#
-      -# = f.label :user_image, tf("Progetto per Contest Be Creative (obbligatorio, formato JPG o PDF)", "Project for Be Creative Contest (required, PDF or JPG)")
-      -# = f.file_field :user_image
-      -#
-      -# %p.tit
-      -#   - if @user.user_image?
-      -#     %a{ href: @user.user_image_url }= @user.user_image_url
+        -# = f.label :cv, tf("Curriculum Vitae (obbligatorio, in formato PDF)", "CV (required, PDF file format)")
+        -# = f.file_field :cv
+        -# %p.tit
+        -#   - if @user.cv?
+        -#     %a{ href: @user.cv_url }= @user.cv_url
+        -#
+        -# = f.label :portfolio, tf("Portfolio lavori (obbligatorio, in formato PDF)", "Works portfolio (required, PDF file format)")
+        -# = f.file_field :portfolio
+        -# %p.tit
+        -#   - if @user.portfolio?
+        -#     %a{ href: @user.portfolio_url }= @user.portfolio_url
+        -#
+        -# = f.label :user_image, tf("Progetto per Contest Be Creative (obbligatorio, formato JPG o PDF)", "Project for Be Creative Contest (required, PDF or JPG)")
+        -# = f.file_field :user_image
+        -#
+        -# %p.tit
+        -#   - if @user.user_image?
+        -#     %a{ href: @user.user_image_url }= @user.user_image_url
 
     .second
       - infos = ["Altri titoli di studio/corsi di specializzazione frequentati", "Esperienze (anche amatoriali) nel campo specifico del corso prescelto", "Esperienze di lavoro maturate", "Cosa mi spinge a compiere studi in questo ambito", "Altre Info. utili, idonee a valutare il mio interesse a partecipare al corso"] # Sono in grado di esibire lavori da me svolti attinenti al corso prescelto
+      .separator5
       - infos_en = ["Other qualifications / specialization courses you attended", "Experiences (even amateur) in the specific course chosen", "Work experience gained", "What drives me to make studies in this area", "Other Useful Info, exist to assess my interest in attending this course"] # I can show my work to be done related to the chosen course
+      .separator5
       - 5.times do |i|
         = f.label "info#{i}", tf(infos[i], infos_en[i])
+        .separator5
         = f.text_area "info#{i}"
+        .separator15
 
-    / redirects back here after failed login
-    = f.hidden_field :redirect_url, value: request.path
-
-    = f.submit tf("Invia", "Send"), class: "submit"
+      / redirects back here after failed login
+      = f.hidden_field :redirect_url, value: request.path
+    .line
+      .col4.line-tablet
+        %button.btn.btn-medium.btn-primary.radius3.color-white.bg-primary
+          = f.submit tf("Invia", "Send"), class: "submit color-white bg-primary no-border"
