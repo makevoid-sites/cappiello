@@ -181,8 +181,12 @@ class ApplicationController < ActionController::Base
 
     def method_missing(method)
       puts "DEBUG pippo -- method: #{method}, lang: #{lang}, self: #{self}, class: #{self.class}"
-      if (self ? self.class : Page)::TRANSLATE.include? method.to_s
-        self.send("#{method}_#{lang}")
+      if method == "to_ary"
+        super
+      else
+        if (self ? self.class : Page)::TRANSLATE.include? method.to_s
+          self.send("#{method}_#{lang}")
+        end
       end
     end
   end
