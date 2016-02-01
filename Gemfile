@@ -121,3 +121,7 @@ gem "mixpanel"
 
 
 gem "skylight"
+
+group :development do 
+gem "puma"
+end
