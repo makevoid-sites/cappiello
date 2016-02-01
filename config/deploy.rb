@@ -1,9 +1,10 @@
 set :application, "cappiello"
-set :app_name, "cappiello"
+# set :app_name, "cappiello"
+set :app_name, "cappiello_staging"
 
-if ENV["ENV"] == "staging"
-  set :app_name, "cappiello_staging"
-end
+# if ENV["ENV"] == "staging"
+#   set :app_name, "cappiello_staging"
+# end
 
 
 # look at where are you deploying!
@@ -28,7 +29,7 @@ set :repository, "git://github.com/makevoid/cappiello.git"  # pub
 # set :repository, "git@github.com:makevoid/cappiello.git"  # Your clone URL
 set :scm, "git"
 # needed?
-set :branch, "master"
+set :branch, "responsive_layout"
 
 dot_pass = File.expand_path("~/.password")
 File.open(dot_pass, "w"){|f| f.write("secret")} unless File.exist?(dot_pass)
