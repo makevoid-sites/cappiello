@@ -26,7 +26,8 @@
       - if request.path == "/"
         = load_content "l_accademia"
       - elsif path_one == "pages"
-        = load_content path_two
+        - puts "DEBUG PIPPO: path two: #{path_two}"
+        = load_content path_two || "l_accademia"
       - elsif
         %h1 Don't know what to load here... sorry!
 
