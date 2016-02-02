@@ -2,7 +2,7 @@
 - text = "<span class='title'>#{tr(article).title}</span> <span class='date'>#{I18n.l(article.created_at.to_date, format: :custom)}</span>"
 
 .line.bg-white
-  .line-compress.line-max
+  .line.line-max
     .separator30
     %h1.line.center-content-tablet
       = link_to text.html_safe, link
