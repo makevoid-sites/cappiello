@@ -24,7 +24,7 @@ set :user,        "www-data"
 
 
 #default_run_options[:pty] = true  # Must be set for the password prompt from git to work
-set :repository, "git://github.com/makevoid/cappiello.git"  # pub
+set :repository, "git://github.com/makevoid-sites/cappiello.git"  # pub
 # private
 # set :repository, "git@github.com:makevoid/cappiello.git"  # Your clone URL
 set :scm, "git"
@@ -109,6 +109,10 @@ namespace :chmod do
   desc "chmod entire dir"
   task :entire do
     run "cd #{current_path}; chown www-data:www-data -R *"
+    run "cd #{current_path}; git checkout responsive_layout"
+    run "cd #{current_path}; git pull origin responsive_layout"
+    run "cd #{current_path}; bundle"
+    run "cd #{current_path}; touch tmp/restart.txt"
   end
 end
 

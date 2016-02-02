@@ -87,11 +87,11 @@ class ApplicationController < ActionController::Base
 
   # Mixpanel
 
-  before_filter :initialize_mixpanel if Rails.env != "development"
+  # before_filter :initialize_mixpanel if Rails.env != "development"
 
-  def initialize_mixpanel
-    @mixpanel = Mixpanel::Tracker.new(MIXPANEL_TOKEN, request.env, { async: true })
-  end
+  # def initialize_mixpanel
+  #   @mixpanel = Mixpanel::Tracker.new(MIXPANEL_TOKEN, request.env, { async: true })
+  # end
 
   def track(event, properties={})
     user = !current_user.nil? ? @current_user.name : "Unregistered"
