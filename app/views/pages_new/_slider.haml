@@ -1,5 +1,12 @@
 / slider
 .line.bg-muted-inverse
   .line-compress.line-max
-    %img{:src => "http://accademia-cappiello.it/images/banner/main/pittura_creativa.png?1445262499", :width => "100%"}/
+    - banner = Banner.new
+    - banner.files.each_with_index do |file, idx|
+      - options = {}
+      - options[:class] = "first" if idx == 0
+      - page = banner.page(file)
+      - options[:"data-page-url"] = tr(page).title_url if page
+      = image_tag file, options
+    //%img{:src => "http://accademia-cappiello.it/images/banner/main/pittura_creativa.png?1445262499", :width => "100%"}/
 / end slider
