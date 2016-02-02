@@ -274,7 +274,7 @@
         var google_conversion_id = 1048016950;
         var google_custom_params = window.google_tag_params;
         var google_remarketing_only = true;
-      - unless Rails.env == "production"
+      - if Rails.env == "production"
         %script{:src => "//www.googleadservices.com/pagead/conversion.js", :type => "text/javascript"}
         %noscript
           %div{:style => "display:inline;"}
