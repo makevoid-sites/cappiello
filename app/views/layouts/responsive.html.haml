@@ -240,7 +240,36 @@
       = yield
       -# ------------
 
+      #cookies.cookie_bar.line-compress.color-white.fixed.bottom
+        .separator15
+        .line.line-max
+          .line-compress
+            .col7
+              .col9
+                .separator5
+                %a.color-white{ href: "/cookies" }
+                  Ottieni maggiori informazioni sulla tua privacy e su un metodo per bloccare i cookie di profilazione.
+                Oppure
+            .col3
+              .separator10
+              %a#cookie_btn.center-content.button.btn.btn-small.bg-primary.color-white.radius3{ href: js_void }
+                .separator2
+                Consenti l'uso dei cookie.
+                .separator2
+        .separator15
       #fb-root
+      :javascript
+        var bar = document.querySelector(".cookie_bar")
+        var hideBar = function() {
+          bar.classList.add("hidden")
+          localStorage.cap_cookie_ok = true
+        }
+        if (!localStorage.cap_cookie_ok) {
+          var btn = document.querySelector("#cookie_btn")
+          btn.addEventListener("click", hideBar)
+        } else {
+          bar.classList.add("hidden")
+        }
       :javascript
         var google_conversion_id = 1048016950;
         var google_custom_params = window.google_tag_params;

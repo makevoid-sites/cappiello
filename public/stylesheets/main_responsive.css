@@ -3,7 +3,9 @@ body *, html * {
   letter-spacing: "";
   font-weight: 300;
   font-family: "Open Sans", sans-serif; }
-
+#cookies{
+  background: rgba(0, 0, 0, .8);
+}
 #map_canvas{
   min-height:350px;
   width:auto;
