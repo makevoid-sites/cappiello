@@ -10,6 +10,17 @@ body *, html * {
   min-height:350px;
   width:auto;
 }
+#banner{
+  height:200px;
+  clear: both;
+  float: none;
+  margin: 0 auto;
+  z-index:0;
+}
+#banner img{
+  width:100%;
+  clear: both;
+}
 p {
   margin-top: 10px;
 }
