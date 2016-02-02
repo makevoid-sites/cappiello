@@ -18,7 +18,8 @@ $(function(){
     open_in_textmate(file)
   })
 
-  $(".borse_di_studio form").validate()
+  if ($(".borse_di_studio form").length > 0)
+    $(".borse_di_studio form").validate()
 
   klass = ""
   agent = navigator.userAgent
@@ -29,21 +30,24 @@ $(function(){
   }
   $("body").addClass(klass)
 
-  $(".offer section").hoverIntent(function(){
-    $(this).animate({height: "120px"}, 500).css({cursor: "pointer"})
-  }, function(){
-    $(this).animate({height: "80px"}, 700)
-  }, 1)
+  if ($(".offer section").length > 0) {
 
-  $(".offer section").on("click", function(){
-    var self = this
-    $(this).animate({height: "560px"}, 300, function(){
+    $(".offer section").hoverIntent(function(){
+      $(this).animate({height: "120px"}, 500).css({cursor: "pointer"})
+    }, function(){
+      $(this).animate({height: "80px"}, 700)
+    }, 1)
 
-        $('html, body').animate({
-        	scrollTop: $(self).offset().top
-        }, 300)
+    $(".offer section").on("click", function(){
+      var self = this
+      $(this).animate({height: "560px"}, 300, function(){
+
+          $('html, body').animate({
+          	scrollTop: $(self).offset().top
+          }, 300)
+      })
     })
-  })
+  }
 
   function hide_flashes() {
     $('#flashes').slideUp("slow");
@@ -51,45 +55,48 @@ $(function(){
 
   // banner
 
-  // if !webkit
-  $('#banner').cycle({
-    fx: 'fade',
-    speed:    1000,
-    timeout:  5000,
-    pause:    true
-  });
-  setTimeout(hide_flashes, 3000)
+  if ($('#banner').length > 0) {
 
-  $('#banner img').on("click", function(){
-    var page_url = $(this).data("page-url")
-    if (page_url)
-      window.location = "/pages/"+page_url
-  })
+    // if !webkit
+    $('#banner').cycle({
+      fx: 'fade',
+      speed:    1000,
+      timeout:  5000,
+      pause:    true
+    });
+    setTimeout(hide_flashes, 3000)
+
+    $('#banner img').on("click", function(){
+      var page_url = $(this).data("page-url")
+      if (page_url)
+        window.location = "/pages/"+page_url
+    })
+  }
 
 
   // slider generica
-
-  // if !webkit
-  $('#slider1').cycle({
-    fx: 'fade',
-    speed:    1000,
-    timeout:  5000,
-    pause:    true
-  });
-  setTimeout(hide_flashes, 3000)
-$('#slider2').cycle({
-    fx: 'fade',
-    speed:    1000,
-    timeout:  5000,
-    pause:    true
-  });
-  setTimeout(hide_flashes, 3000)
-$('#slider3').cycle({
-    fx: 'fade',
-    speed:    1000,
-    timeout:  5000,
-    pause:    true
-  });
+// 
+//   // if !webkit
+//   $('#slider1').cycle({
+//     fx: 'fade',
+//     speed:    1000,
+//     timeout:  5000,
+//     pause:    true
+//   });
+//   setTimeout(hide_flashes, 3000)
+// $('#slider2').cycle({
+//     fx: 'fade',
+//     speed:    1000,
+//     timeout:  5000,
+//     pause:    true
+//   });
+//   setTimeout(hide_flashes, 3000)
+// $('#slider3').cycle({
+//     fx: 'fade',
+//     speed:    1000,
+//     timeout:  5000,
+//     pause:    true
+//   });
   setTimeout(hide_flashes, 3000)
 
 })
