@@ -32,6 +32,12 @@
         url_en:  "/pages/about_us",
         # page: Page.find_by_url "l_accademia"
       },
+      gallery: {
+        label:   "La Gallery",
+        url: '/pag/_gallery',
+        url_en:  "/pag/_gallery",
+        # page: Page.find_by_url "l_accademia"
+      },
       corsi: {
         label:    "Corsi",
         label_en: "Courses",
@@ -141,7 +147,7 @@
           .separator10
           - nav_link :news
           .separator10
-          %a.btn.btn-small.bg-muted.color-white Calendario
+          %a.btn.btn-small.bg-muted.color-white Gallery
           .separator10
           %a.btn.btn-small.bg-muted.color-white Borse di Studio
           .separator10
@@ -218,7 +224,7 @@
               - nav_link :l_accademia
               - nav_link :corsi
               - nav_link :news
-              - nav_link :calendario
+              - nav_link :gallery
               - nav_link :borse_di_studio
               - nav_link :open_days
               - nav_link :contatti
