@@ -5,7 +5,8 @@ $(function(){
     var map = new google.maps.Map(mapDiv, {
       center: latLng,
       zoom: 15,
-      mapTypeId: google.maps.MapTypeId.ROADMAP
+      mapTypeId: google.maps.MapTypeId.ROADMAP,
+      scrollwheel: false,
     })
       console.log(map)
     var marker = new google.maps.Marker({
