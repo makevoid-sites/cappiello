@@ -95,13 +95,16 @@ $(function(){
         // current sizes B for fullscreen (rel) and
         full_screen_size = "b"
         normal_size = "q"  // large square
-        $("#photos").append("<a class='gallery_link"+klass+"' data-href='"+photo_url(photo, full_screen_size)+"'><img src='"+photo_url(photo, normal_size)+"'></a>")
+        $("#photos").append("<a class='gallery_link"+klass+" fancybox' rel='group' data-href='"+photo_url(photo, full_screen_size)+"' href='"+photo_url(photo, full_screen_size)+"' ><img src='"+photo_url(photo, normal_size)+"'></a>")
 
-        $("a.gallery_link").on("click", function(evt){
-          var elem = $(evt.target)
-          console.log("gallery_link", elem.data("href"))
-          // window.location = elem.data("href")
-        })
+        // TODO: ?
+
+        // $("a.gallery_link").on("click", function(evt){
+        //   var elem = $(evt.currentTarget)
+        //   console.log("gallery_link", elem.data("href"))
+        //   // window.location = elem.data("href")
+        //
+        // })
 
         if (idx+1 >= photo_size)
           return false

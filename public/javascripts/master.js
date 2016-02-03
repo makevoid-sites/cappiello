@@ -75,7 +75,7 @@ $(function(){
 
 
   // slider generica
-// 
+//
 //   // if !webkit
 //   $('#slider1').cycle({
 //     fx: 'fade',
@@ -98,5 +98,7 @@ $(function(){
 //     pause:    true
 //   });
   setTimeout(hide_flashes, 3000)
+
+  $(".fancybox").fancybox();
 
 })
