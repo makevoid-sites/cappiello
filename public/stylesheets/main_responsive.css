@@ -4,7 +4,7 @@ body *, html * {
   font-weight: 300;
   font-family: "Open Sans", sans-serif; }
 #cookies{
-  background: rgba(0, 0, 0, .8);
+  background: rgba(0, 0, 0, .7);
 }
 #map_canvas{
   min-height:350px;
@@ -20,6 +20,13 @@ body *, html * {
 #banner img{
   width:100%;
   clear: both;
+}
+#slide{
+  background: url('http://localhost:3000/images/banner/main/2.png?1449853459');
+  background-size:cover;
+  background-repeat:no-repeat;
+  min-height:500px;
+  height:100vh;
 }
 p {
   margin-top: 10px;
@@ -63,12 +70,14 @@ small {
   color: rgba(255, 255, 255, 0.5); }
   .top-menu-social a:hover {
     color: white; }
-
+.slogan{
+  font-size:24px;
+}
 .header-menu a {
   font-size: 14.5px;
   padding: 7px 9px;
   margin-right: 1%;
-  color: rgba(0, 0, 0, 0.5); }
+  color: white; }
   .header-menu a:hover {
     background-color: rgba(0, 0, 0, 0.1); }
   .header-menu a.active {
