@@ -184,10 +184,13 @@ color: #d32b59; }
 .separator1 {
 min-height: 1px; }
 /*Layout */
-.line-max {
+.line-max, .line-footer {
 max-width: 1300px;
 float: none;
 margin: 0 auto; }
+.line-footer{
+  max-width: 900px;
+}
 
 .widget {
 width: 31.33%;
