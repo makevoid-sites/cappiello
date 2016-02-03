@@ -280,9 +280,11 @@
         var DynamicMenuBar = function DynamicMenuBar () {
           console.log('Scroll Top', $(window).scrollTop());
           if ($(window).scrollTop() > 100) {
+            $('.slogan').fadeOut(0);
             $('#top-menu').addClass('scrolling');
           } else if ($(window).scrollTop() <= 100){
             $('#top-menu').removeClass('scrolling');
+            $('.slogan').fadeIn(600);
           }
         };
         $(window).on('scroll resize', function () {
