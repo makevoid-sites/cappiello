@@ -129,7 +129,7 @@
       = yield :jquery
       })
 
-    - if Rails.env == "production" # || request.path.split("/")[2] == "contatti" || 
+    - if Rails.env == "staging" # || request.path.split("/")[2] == "contatti" || 
       %script{ src: "http://maps.google.com/maps/api/js" }
       %script{ type: "text/javascript", src: " /javascripts/gmap.js" }
 
