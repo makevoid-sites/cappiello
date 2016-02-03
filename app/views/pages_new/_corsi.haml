@@ -19,7 +19,7 @@
           { name: "Corso 8" },
           { name: "Corso 9" },
         ]
-      - for corso in corsi
+      - corsi.each_with_index do |corso, idx|
         .widget.bg-white
           %iframe{:allowfullscreen => "", :frameborder => "0", :src => "https://www.youtube.com/embed/KICyR3BZWwE", :width => "100%"}
           .separator15
@@ -31,6 +31,8 @@
               .separator30
               %a.push-right.toggle-opacity-hover{:href => "/pag/corso_id.haml"}
                 Info
+          .separator15
+        - if idx % 3 == 0
           .separator15
 
   .separator50
