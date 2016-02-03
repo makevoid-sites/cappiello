@@ -224,9 +224,12 @@
               .separator15
               .separator10
               - nav_link :l_accademia
-              - nav_link :corsi
+
+              %a{ href: "#corsi" } Corsi
+              -# nav_link :corsi
               - nav_link :news
-              - nav_link :gallery
+              %a{ href: "#gallery" } La Gallery
+              -# nav_link :gallery
               - nav_link :borse_di_studio
               - nav_link :open_days
               - nav_link :contatti
