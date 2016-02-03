@@ -7,6 +7,7 @@ font-family: "Open Sans", Helvetica Neue, Arial, sans-serif; }
 font-family: 'Montserrat';
 }
 #cookies{
+  z-index:999999;
 background: rgba(0, 0, 0, .7);
 }
 #map_canvas{

@@ -267,7 +267,7 @@
       = yield
       -# ------------
 
-      #cookies.cookie_bar.line-compress.color-white.fixed.bottom
+      #cookies.cookie_bar.line-compress.color-white.fixed.top
         .separator15
         .line.line-max
           .line-compress
@@ -277,8 +277,9 @@
                 %a.color-white{ href: "/cookies" }
                   Ottieni maggiori informazioni sulla tua privacy e su un metodo per bloccare i cookie di profilazione.
                 Oppure
-            .col3
-              .separator10
+            .col3.line-tablet
+              .separator15.tablet.mobile
+              .separator2
               %a#cookie_btn.center-content.button.btn.btn-small.bg-primary.color-white.radius3{ href: js_void }
                 .separator2
                 Consenti l'uso dei cookie.
