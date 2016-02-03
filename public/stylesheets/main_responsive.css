@@ -110,8 +110,8 @@ cursor: pointer;
   min-width: 200px;
   max-width:210px;
 }
-.header.scrolling , .header-scrolling *{
-  transition: all .25s linear;
+.header.scrolling{
+  transition: all .15s linear;
 }
 .header.scrolling .no-scroll{
   display: none;
