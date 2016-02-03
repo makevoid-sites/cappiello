@@ -151,7 +151,15 @@ background-color: rgba(0, 0, 0, 0.1); }
 .header-menu a.active {
 background-color: #d32b59;
 color: white; }
-
+.header.scrolling .header-menu a{
+  min-height:300px;
+}
+.header.scrolling .header-menu a.active{
+  background: rgba(0,0,0, .2);
+  color:white;
+  font-weight: bold;
+  padding:50px 10px;
+}
 /*Backgrounds */
 .bg-primary {
 background-color: #d32859; }
