@@ -216,8 +216,8 @@
         .line-compress.line-max.header#top-menu
           .col2.line-tablet.center-content-tablet
             %a{:href => "/pag/l_accademia"}
-              %img.scroll{:src => "/images/logo.png", :width => "220"}
-              %img.no-scroll{:src => "/images/logo-white.png", :width => "220"}
+              %img.logo.scroll{:src => "/images/logo.png"}
+              %img.logo.no-scroll{:src => "/images/logo-white.png"}
 
           .col8.right-content.desktop
             .header-menu.desktop
@@ -284,9 +284,11 @@
         var DynamicMenuBar = function DynamicMenuBar () {
           console.log('Scroll Top', $(window).scrollTop());
           if ($(window).scrollTop() > 100) {
+
             $('.slogan').fadeOut(0);
             $('#top-menu').addClass('scrolling');
           } else if ($(window).scrollTop() <= 100){
+
             $('#top-menu').removeClass('scrolling');
             $('.slogan').fadeIn(600);
           }
