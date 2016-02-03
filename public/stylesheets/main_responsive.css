@@ -74,7 +74,11 @@ float: left;
 margin: 0 2% 1% 0;
 width: 50%;
 max-width: 300px;
-min-width: 200px; }
+min-width: 200px;
+}
+.article-img{
+  width:100%;
+}
 .top-menu {
   max-width: 1300px;
 }
