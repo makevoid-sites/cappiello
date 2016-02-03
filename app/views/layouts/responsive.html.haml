@@ -129,7 +129,7 @@
       = yield :jquery
       })
 
-    - if Rails.env == "staging" # || request.path.split("/")[2] == "contatti" || 
+    - if Rails.env == "staging" # || request.path.split("/")[2] == "contatti" ||
       %script{ src: "http://maps.google.com/maps/api/js" }
       %script{ type: "text/javascript", src: " /javascripts/gmap.js" }
 
@@ -232,7 +232,8 @@
               -# nav_link :gallery
               - nav_link :borse_di_studio
               - nav_link :open_days
-              - nav_link :contatti
+              %a{ href: "#contatti" } Contatti
+              -# nav_link :contatti
           .separator100
           .separator50
           .separator30
