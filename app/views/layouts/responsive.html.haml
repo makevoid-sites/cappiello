@@ -96,6 +96,7 @@
     %meta{:charset => "utf-8"}/
     %meta{:content => "initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width", :name => "viewport"}/
     %link{:href => "/stylesheets/vendor/csshelper/csshelper.css", :rel => "stylesheet"}/
+    %link{:href=> "https://fonts.googleapis.com/css?family=Montserrat:400,700", :rel => "stylesheet"}
     %link{:href => "/stylesheets/vendor/font-awesome/font-awesome.min.css", :rel => "stylesheet"}/
     -# TODO UI salvare il font
     %link{:href => "https://fonts.googleapis.com/css?family=Open+Sans:400,700italic,700,600italic,600,400italic,300italic,300&subset=latin,cyrillic-ext", :rel => "stylesheet", :type => "text/css"}/
@@ -210,14 +211,14 @@
           .separator1
       / end social nav
       / header and menu
-      #slide.line.bg-white
+      #slide.line.bg-white.font-custom
         .separator15
         .line-compress.line-max.header
           .col2.line-tablet.center-content-tablet
             %a{:href => "/pag/l_accademia"}
               %img{:src => "/images/logo.png", :width => "220"}/
 
-          .col8.center-content.desktop
+          .col8.right-content.desktop
             .header-menu.desktop
               .separator15
               .separator10
@@ -230,7 +231,7 @@
               - nav_link :contatti
           .separator30
           %h1.slogan.color-white
-            Welcome to accademia
+            Dal 1956 l’Accademia d’Arte e Design Leonetto Cappiello è il luogo ideale per esprimere la propria creatività
         .separator15
       / end header and menu
 
