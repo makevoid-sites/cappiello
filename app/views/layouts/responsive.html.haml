@@ -241,7 +241,7 @@
             %i.fa.fa-play-circle.play-home-video.color-white
           .separator100
           .separator30.desktop
-          .slogan
+          .slogan.line
             .line.center-content-tablet
               %img.logo.no-scroll{:src => "/images/logo-white.png"}
             .separator30.mobile
@@ -267,7 +267,7 @@
       = yield
       -# ------------
 
-      #cookies.cookie_bar.line-compress.color-white.fixed.top
+      #cookies.cookie_bar.line-compress.color-white.fixed.top.hidden
         .separator15
         .line.line-max
           .line-compress
@@ -306,15 +306,18 @@
         DynamicMenuBar();
       :javascript
         var bar = document.querySelector(".cookie_bar")
-        var hideBar = function() {
+          , btn = document.querySelector("#cookie_btn")
+          , hideBar = function() {
+
           bar.classList.add("hidden")
-          localStorage.cap_cookie_ok = true
-        }
+
+          localStorage.cap_cookie_ok = true;
+        };
+
         if (!localStorage.cap_cookie_ok) {
-          var btn = document.querySelector("#cookie_btn")
+
+          bar.classList.remove("hidden")
           btn.addEventListener("click", hideBar)
-        } else {
-          bar.classList.add("hidden")
         }
       :javascript
         var google_conversion_id = 1048016950;
