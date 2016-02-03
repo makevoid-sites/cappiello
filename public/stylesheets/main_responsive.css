@@ -147,17 +147,19 @@ padding: 7px 9px;
 margin-left: 1%;
 color: white; }
 .header-menu a:hover {
-background-color: rgba(0, 0, 0, 0.1); }
+background-color: rgba(0, 0, 0, 0.08); }
 .header-menu a.active {
 background-color: #d32b59;
 color: white; }
-.header.scrolling .header-menu a{
-  min-height:300px;
-}
 .header.scrolling .header-menu a.active{
-  background: rgba(0,0,0, .2);
+  background: rgba(0,0,0, .16);
   color:white;
   font-weight: bold;
+  text-shadow: 1px 1px rgba(0,0,0, .2);
+}
+.header.scrolling .header-menu a,.header.scrolling .header-menu a.active,.header.scrolling .header-menu a:hover{
+  margin:0 auto;
+  font-size: 14px;
   padding:50px 10px;
 }
 /*Backgrounds */
