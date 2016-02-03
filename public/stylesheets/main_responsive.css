@@ -3,7 +3,7 @@ body *, html * {
   letter-spacing: "";
   font-weight: 300;
   font-family: "Open Sans", Helvetica Neue, Arial, sans-serif; }
-  .font-custom *{
+  .font-custom{
     font-family: 'Montserrat';
   }
 #cookies{
@@ -83,7 +83,17 @@ small {
   .top-menu-social a:hover {
     color: white; }
 .slogan{
+  position:absolute;
+  bottom:30px;
   font-size:24px;
+}
+.play-home-video{
+  font-size:100px;
+  opacity:.6;
+}
+.play-home-video:hover, .play-home-video:active{
+opacity:1;
+cursor: pointer;
 }
 .header-menu a {
   font-size: 13px;
@@ -116,7 +126,6 @@ small {
 /*Utils */
 .separator1 {
   min-height: 1px; }
-
 /*Layout */
 .line-max {
   max-width: 1000px;
