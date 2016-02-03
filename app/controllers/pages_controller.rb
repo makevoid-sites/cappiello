@@ -11,21 +11,22 @@ class PagesController < ApplicationController
   public
 
   def index
-    params[:id] = "35"
-    @page = Page.get(params[:id].to_i)
-    load_news
-    raise NotFound if @page.nil?
-
-    source = :organic
-    type = nil
-    unless params[:source].blank?
-      logger.info "advertising: { source: #{params[:source]}, type: #{params[:type]} }"
-      source = params[:source]
-      type = params[:type]
-    end
-    # track_site source, { type: type }
-
-    render :show
+    redirect_to "/pag/l_accademia"
+    # params[:id] = "35"
+    # @page = Page.get(params[:id].to_i)
+    # load_news
+    # raise NotFound if @page.nil?
+    #
+    # source = :organic
+    # type = nil
+    # unless params[:source].blank?
+    #   logger.info "advertising: { source: #{params[:source]}, type: #{params[:type]} }"
+    #   source = params[:source]
+    #   type = params[:type]
+    # end
+    # # track_site source, { type: type }
+    #
+    # render :show
   end
 
   def show
