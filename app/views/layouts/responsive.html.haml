@@ -134,7 +134,10 @@
       %script{ src: "http://maps.google.com/maps/api/js" }
       %script{ type: "text/javascript", src: " /javascripts/gmap.js" }
 
-  %body.bg-black{ class: "#{controller.controller_name} #{controller.action_name} #{"master" if master?} #{"admin" if admin?} #{request.path.split("/")[2]}"}
+  - path = request.path.split("/")[2]
+  - path = "l_accademia" if ["/", ""].include request.path
+  - not_home = path != "l_accademia"
+  %body.bg-black{ class: "#{controller.controller_name} #{controller.action_name} #{"master" if master?} #{"admin" if admin?} #{path} #{"not-home" if not_home}"}
     #cookies.cookie_bar.line-compress.color-white.hidden.fixed.top
       .separator5
       .line
