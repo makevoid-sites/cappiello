@@ -324,7 +324,14 @@
                 "autoDimension": true,
                 "overlayOpacity": 1,
                 'href' : this.href.replace(new RegExp("watch\\?v=", "i"), 'v/'),
-                'swf' : { 'wmode' : 'transparent', 'allowfullscreen' : 'true' }
+                'swf' : { 'wmode' : 'transparent', 'allowfullscreen' : 'true' },
+                'helpers' : {
+                'overlay' : {
+                'css' : {
+                'background' : 'black'
+                }
+                }
+                }
             });
         e.preventDefault();
         });
