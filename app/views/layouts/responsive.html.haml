@@ -135,6 +135,24 @@
       %script{ type: "text/javascript", src: " /javascripts/gmap.js" }
 
   %body.bg-black{ class: "#{controller.controller_name} #{controller.action_name} #{"master" if master?} #{"admin" if admin?}"}
+    #cookies.cookie_bar.line-compress.color-white.hidden.fixed.top
+      .separator5
+      .line
+        .line
+          .col7.line-tablet.center-content-tablet
+            .line
+              .separator5
+              %a.color-white{ href: "/cookies" }
+                Ottieni maggiori informazioni sulla tua privacy e su un metodo per bloccare i cookie di profilazione.
+              Oppure
+          .col3.line-tablet.right-content.center-content-tablet
+            .separator15.tablet.mobile
+            .separator5
+            %button#cookie_btn.v-middle.center-content.button.bg-primary.color-white.radius5{ href: js_void }
+              .separator2
+              &nbsp;&nbsp;Consenti l'uso dei cookie.&nbsp;&nbsp;
+              .separator2
+      .separator10
     / mobile menu
     %a#btnMenu.absolute.top.right.color-white.mobile.tablet.center-content.layer4{:href => "javascript:void(0)", :onclick => "$(this).toggleClass('rotate bg-primary'); $('#menuMobile').toggleClass('hide');"}
       %i.fa.fa-bars
@@ -216,6 +234,7 @@
         .separator15
         .line-compress.line-max.header#top-menu
           .col2.line-tablet.center-content-tablet
+            .separator50.mobile.no-scroll
             %a{:href => "/pag/l_accademia"}
               %img.logo.scroll{:src => "/images/logo.png"}
               %img.logo.no-scroll{:src => "/images/logo-white.png"}
@@ -236,7 +255,7 @@
               %a{ href: "#contatti" } Contatti
               -# nav_link :contatti
           .separator100
-          .separator50
+          .separator50.desktop
           .separator30
           %a.line.center-content{:href=> js_void}
             %i.fa.fa-play-circle.play-home-video.color-white
@@ -244,7 +263,6 @@
           .separator30.desktop
           .slogan.line
             .line.center-content-tablet
-
             .separator30.mobile
             .separator15
             %h1.color-white.font-custom.center-content-tablet
@@ -268,24 +286,6 @@
       = yield
       -# ------------
 
-      #cookies.cookie_bar.line-compress.color-white.fixed.top.hidden
-        .separator15
-        .line.line-max
-          .line-compress
-            .col7
-              .col9
-                .separator5
-                %a.color-white{ href: "/cookies" }
-                  Ottieni maggiori informazioni sulla tua privacy e su un metodo per bloccare i cookie di profilazione.
-                Oppure
-            .col3.line-tablet
-              .separator15.tablet.mobile
-              .separator2
-              %a#cookie_btn.center-content.button.btn.btn-small.bg-primary.color-white.radius3{ href: js_void }
-                .separator2
-                Consenti l'uso dei cookie.
-                .separator2
-        .separator15
       #fb-root
       :javascript
         var DynamicMenuBar = function DynamicMenuBar () {
