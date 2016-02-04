@@ -172,7 +172,7 @@
           .separator10
           %a.btn.btn-small.bg-muted.color-white Gallery
           .separator10
-          %a.btn.btn-small.bg-muted.color-white Borse di Studio
+          %a.btn.btn-small.bg-muted.color-white{:href => "#borse_di_studio"} Borse di Studio
           .separator10
           %a.btn.btn-small.bg-muted.color-white Open Day
           .separator10
@@ -180,7 +180,7 @@
           .separator15
           %a.btn.btn-small.color-white.bg-primary Area utenti
         .separator15
-        %a.color-white{:href => "/pag/contatti"}
+        %a.color-white{:href => "#contatti"}
           %i.fa.fa-phone
           Telefono
          
@@ -247,15 +247,12 @@
               .separator15
               .separator10
               - nav_link :l_accademia
-
-              %a{ href: "/#corsi" } Corsi
-              -# nav_link :corsi
+              %a{ href: "#corsi" } Corsi
               - nav_link :news
-              %a{ href: "/#gallery" } La Gallery
-              -# nav_link :gallery
-              - nav_link :borse_di_studio
+              %a{ href: "#gallery" } La Gallery
+              %a{ href: "#borse-di-studio" } Borse di studio
               - nav_link :open_days
-              %a{ href: "/#contatti" } Contatti
+              %a{ href: "#contatti" } Contatti
               -# nav_link :contatti
           .separator100
           .separator50.desktop
@@ -337,6 +334,12 @@
                 }
             });
         e.preventDefault();
+        });
+      :javascript
+        $('.header-menu a').on('click', function () {
+
+          $('.header-menu a').removeClass('active');
+          $(this).addClass('active');
         });
       :javascript
         var bar = document.querySelector(".cookie_bar")
