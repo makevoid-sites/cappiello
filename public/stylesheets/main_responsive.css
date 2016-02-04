@@ -155,10 +155,10 @@ color: white; }
 .header-menu a:hover {
 background-color: rgba(0, 0, 0, 0.08); }
 .header.scrolling .header-menu a.active{
-  background: rgba(0,0,0, .16);
+  background-color: rgba(0, 0, 0, 0.15);
   color:white;
   font-weight: bold;
-  text-shadow: 1px 1px rgba(0,0,0, .2);
+  text-shadow: 1px 1px rgba(0,0,0, .2), 1px 0 60px rgba(0,0,0, .2);
 }
 .header.scrolling .header-menu a,.header.scrolling .header-menu a.active,.header.scrolling .header-menu a:hover{
   margin:0 auto;
@@ -191,7 +191,7 @@ max-width: 1300px;
 float: none;
 margin: 0 auto; }
 .line-footer{
-  max-width: 900px;
+  max-width: 1000px;
 }
 
 .widget {
