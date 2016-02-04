@@ -247,12 +247,12 @@
               .separator15
               .separator10
               - nav_link :l_accademia
-              %a{ href: "#corsi" } Corsi
+              %a#link-corsi{ href: "#corsi" } Corsi
               - nav_link :news
-              %a{ href: "#gallery" } La Gallery
-              %a{ href: "#borse-di-studio" } Borse di studio
+              %a#link-gallery{ href: "#gallery" } La Gallery
+              %a#link-borse-di-studio{ href: "#borse-di-studio" } Borse di studio
               - nav_link :open_days
-              %a{ href: "#contatti" } Contatti
+              %a#link-contatti{ href: "#contatti" } Contatti
               -# nav_link :contatti
           .separator100
           .separator50.desktop
@@ -336,6 +336,12 @@
         e.preventDefault();
         });
       :javascript
+
+        if (window.location.hash) {
+          $('.header-menu a').removeClass('active');
+          $('.header-menu #link-' + window.location.hash.replace('#', '')).addClass('active');
+        }
+
         $('.header-menu a').on('click', function () {
 
           $('.header-menu a').removeClass('active');
