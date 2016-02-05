@@ -193,7 +193,7 @@
       / social top nav
       .mobile.tablet
         .separator5
-      .line.line-max.bg-black.color-white
+      #top-menu-social.line.line-max.bg-black.color-white
         .line-compress.top-menu.line-max
           .separator5
           .top-menu-social.col4
@@ -299,8 +299,11 @@
           }
         };
         $(window).on('scroll resize', function () {
-
-          DynamicMenuBar();
+          if (!$('body').hasClass('not-home')) {
+            DynamicMenuBar();
+          } else {
+          $('#top-menu').addClass('scrolling');
+          }
         });
         DynamicMenuBar();
       :javascript
@@ -351,6 +354,7 @@
           $('.header-menu a').removeClass('active');
           $(this).addClass('active');
         });
+
       :javascript
         var bar = document.querySelector(".cookie_bar")
           , btn = document.querySelector("#cookie_btn")

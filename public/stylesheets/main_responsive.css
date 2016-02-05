@@ -121,7 +121,7 @@ cursor: pointer;
 .header .scroll{
   display: none;
 }
-.header.scrolling .scroll {
+.header.scrolling .scroll{
   display: inherit;
 }
 .header.scrolling{
@@ -228,7 +228,8 @@ transform: rotate(180deg); }
 /*tablet */
 @media screen and (max-width: 800px) {
 .center-content-tablet {
-text-align: center; }
+text-align: center;
+}
 
 .widget {
 width: 100%;
@@ -250,3 +251,13 @@ min-width: 50px; }
 
 .flickr_button {
 display: none; }
+
+.not-home #slide {
+  min-height:50px;
+  max-height: 50px;
+  overflow: hidden;
+  background:white;
+}
+.not-home #slide .logo:last-child, .not-home #top-menu-social {
+  display: none;
+}
