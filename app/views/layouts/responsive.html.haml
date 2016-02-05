@@ -161,31 +161,29 @@
       %i.fa.fa-bars
     %a
       #menuMobile.overlay.over-y-scroll.color-white.center-content.hide.layer2
-        .separator50
         .separator30
+        .separator10
         .col6.offset-left2.radius3
-          %a.btn.btn-small.bg-muted.color-white Accademia
+          %a.btn.btn-small.bg-muted.color-white{:href => "/pag/l_accademia"} Accademia
           .separator10
-          %a.btn.btn-small.bg-muted.color-white Corsi
+          %a#link-mobile-corsi.btn.btn-small.bg-muted.color-white{:href => "#corsi"} Corsi
           .separator10
           - nav_link :news
           .separator10
-          %a.btn.btn-small.bg-muted.color-white Gallery
+          %a#link-mobile-gallery.btn.btn-small.bg-muted.color-white{:href => "#gallery"} Gallery
           .separator10
-          %a.btn.btn-small.bg-muted.color-white{:href => "#borse_di_studio"} Borse di Studio
+          %a#link-mobile-borse-di-studio.btn.btn-small.bg-muted.color-white{:href => "#borse_di_studio"} Borse di Studio
           .separator10
           %a.btn.btn-small.bg-muted.color-white Open Day
           .separator10
-          %a.btn.btn-small.bg-muted.color-white Contatti
+          %a#link-mobile-contatti.btn.btn-small.bg-muted.color-white{:href => "#contatti"} Contatti
           .separator15
           %a.btn.btn-small.color-white.bg-primary Area utenti
         .separator15
         %a.color-white{:href => "#contatti"}
           %i.fa.fa-phone
           Telefono
-         
-         
-         
+        &nbsp;&nbsp;
         %a.color-white{:href => "mailto:info@accademiacappiello.it"}
           %i.fa.fa-envelope-o
           Email
@@ -338,12 +336,18 @@
       :javascript
 
         if (window.location.hash) {
-          $('.header-menu a').removeClass('active');
-          $('.header-menu #link-' + window.location.hash.replace('#', '')).addClass('active');
+          $('.header-menu a, #menuMobile a').removeClass('active');
+          $('.header-menu #link-' + window.location.hash.replace('#', '') + ', #menuMobile #link-mobile-' + window.location.hash.replace('#', '')).addClass('active');
         }
 
-        $('.header-menu a').on('click', function () {
+        $('.header-menu a, #menuMobile a').on('click', function () {
 
+          if (!$('#menuMobile').hasClass('hide')) {
+            $('#btnMenu').toggleClass('rotate bg-primary');
+            $('#menuMobile').addClass('hide');
+          }
+
+          $('#menuMobile a').removeClass('active');
           $('.header-menu a').removeClass('active');
           $(this).addClass('active');
         });
