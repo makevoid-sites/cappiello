@@ -258,6 +258,9 @@ display: none; }
   overflow: hidden;
   background:white;
 }
-.not-home #slide .logo:last-child, .not-home #top-menu-social {
-  display: none;
+.not-home #slide .logo:last-child, .not-home #top-menu-social , .not-home .slogan{
+  display: none !important;
+}
+.not-home{
+  background: white;
 }
