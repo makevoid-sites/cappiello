@@ -253,8 +253,8 @@ min-width: 50px; }
 display: none; }
 
 .not-home #slide {
-  min-height:50px;
-  max-height: 50px;
+  min-height:80px;
+  max-height: 80px;
   overflow: hidden;
   background:white;
 }
