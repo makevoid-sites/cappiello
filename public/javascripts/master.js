@@ -99,6 +99,25 @@ $(function(){
 //   });
   setTimeout(hide_flashes, 3000)
 
-  $(".fancybox").fancybox();
+  $(".fancybox").fancybox({
+          "padding" : 0,
+          "margin": 20,
+          "fitToView": true,
+          "scrolling": "no",
+          "closeBtn": true,
+          "scrollOutside": false,
+          'centerOnScroll': true,
+          'hideOnOverlayClick': true,
+          "enableEscapeButton": true,
+          "autoDimension": true,
+          "overlayOpacity": 1,
+          'helpers' : {
+          'overlay' : {
+          'css' : {
+          'background' : 'black'
+          }
+          }
+          }
+      });
 
 })
