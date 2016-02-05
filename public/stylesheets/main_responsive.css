@@ -259,7 +259,7 @@ display: none; }
   background:white;
 }
 .not-home #slide .logo:last-child, .not-home #top-menu-social , .not-home .slogan{
-  display: none !important;
+  display: none;
 }
 .not-home{
   background: white;

@@ -308,6 +308,8 @@
         if (!$('body').hasClass('not-home')) {
 
           DynamicMenuBar();
+        } else {
+          $('#top-menu').addClass('scrolling');
         }
       :javascript
         $("#video-home").on('click', function(e) {
