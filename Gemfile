@@ -119,9 +119,10 @@ gem "mixpanel"
 
 # gem 'newrelic_rpm'
 
+gem "coffee-script"
 
 gem "skylight"
 
-group :development do 
+group :development do
 gem "puma"
 end

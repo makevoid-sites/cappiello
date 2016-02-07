@@ -59,6 +59,10 @@ GEM
       net-ssh (>= 2.0.14)
       net-ssh-gateway (>= 1.1.0)
     coderay (1.1.0)
+    coffee-script (2.4.1)
+      coffee-script-source
+      execjs
+    coffee-script-source (1.10.0)
     daemons (1.2.3)
     data_objects (0.10.17)
       addressable (~> 2.1)
@@ -96,6 +100,7 @@ GEM
     erubis (2.7.0)
     escape (0.0.4)
     eventmachine (1.0.9.1)
+    execjs (2.6.0)
     ffi (1.9.10)
     formatador (0.2.5)
     guard (1.8.2)
@@ -213,6 +218,7 @@ DEPENDENCIES
   activesupport (~> 3.1.8)
   arel
   capistrano (= 2.15.5)
+  coffee-script
   dm-active_model
   dm-aggregates
   dm-core

@@ -49,9 +49,9 @@ $(function(){
 
 
   //$("#photos").append("<img src='"+photo_url+"'>")
-  function FlickrGallery() {
+  window.FlickrGallery = function FlickrGallery() {
 
-    this.init = function() {
+    this.init = function(callback) {
       var photoset_id = $("#photos").attr("data-set_id")
       var api_url = "https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key="+api_key+"&photoset_id="+photoset_id+"&format=json&nojsoncallback=1"
 
@@ -74,6 +74,9 @@ $(function(){
       // })
 
       $.getJSON(api_url, function(data) {
+
+        if (callback)
+          callback()
 
         $.each(data.photoset.photo, function(idx, photo) {
           photos.add(photo)
