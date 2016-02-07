@@ -250,7 +250,9 @@ padding: 0 0 0 0;
 float: none; } }
 .article #photos {
 box-sizing: border-box;
-margin-top: 20px; }
+margin-top: 20px;
+min-height:400px;
+}
 .article #photos img {
 margin: 1%;
 float: left;
