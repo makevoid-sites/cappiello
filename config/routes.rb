@@ -26,6 +26,8 @@ Cappiello::Application.routes.draw do
   get "/pages/:id", to: "pages#show", as: :page
   resources :pages
   resources :pages_new, path: '/pag'
+  resources :courses,   path: '/c'
+  # get "/c/:id", to: "courses#show", as: :course
 
 
   #get "/users/:name_url", to: "users#show", as: :user_path

@@ -1,0 +1,107 @@
+:ruby
+  id = params[:id]
+  page = NuPage.find id
+  corso = { # TODO: translation
+    name:       page.title_it,
+    title_url:  page.title_url_it,
+    text:       page.text_it,
+  }
+  corso = MH.new corso
+
+.line.bg-white
+  .line-compress.line-max
+    .separator15
+    %h1.line.center-content.article-title.font-custom
+      = corso.name
+    .separator10
+    .separator15.pattern
+    .separator30
+    .line.article
+      %iframe{:allowfullscreen => "", :frameborder => "0", :src => "https://www.youtube.com/embed/KICyR3BZWwE", :height=> "400", :width => "100%"}
+    .col6.line-tablet
+      .col9.line-tablet
+        .separator15
+        %h3
+          -# Una descrizione del corso
+          -# .separator15
+          %div
+            -# :markdown
+            -#   #{corso.text}
+            :ruby
+              noko = Nokogiri::HTML(corso.text)
+              aside = noko.search("#aside").first.inner_html
+
+              noko = Nokogiri::HTML(corso.text)
+              noko.search("#aside").remove()
+
+              main = noko.inner_html
+
+              gal_match = /flickr_gallery\((\d+)\)/
+
+              gallery_id = main.match gal_match
+              main.gsub! gal_match, ''
+              gallery_id = gallery_id[1] if gallery_id
+
+
+            = Maruku.new(main).to_html
+
+            .separator15
+
+            :css
+              #photos img {
+                width: 23%;
+                margin: 3%;
+              }
+            - if gallery_id
+              #photos{ :"data-set_id" => gallery_id }
+
+
+          .separator50
+    .col4.line-tablet
+      .separator15
+      .line-compress.line-tablet.bg-black.color-white
+        .line-compress.line-tablet
+          .separator15
+          = Maruku.new(aside).to_html
+          /
+            .separator15
+            Info:
+            .separator15
+            Info:
+            .separator15
+          .separator15
+      / QUALCHE FOTO DEL CORSO?
+      .separator50
+
+
+
+
+/
+  .line.bg-white
+    .line-compress.line-max
+      .separator15
+      %h3.line.center-content-tablet Insegnamenti
+      .separator10
+      .separator15.pattern
+      .separator30
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      .separator30
+      %h3.line.center-content-tablet Docenti
+      .separator10
+      .separator15.pattern
+      .separator30
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      .separator30
+      %h3.line.center-content-tablet Sbocchi Occupazionali
+      .separator10
+      .separator15.pattern
+      .separator30
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      .separator30
+      %h3.line.center-content-tablet Metodologia
+      .separator10
+      .separator15.pattern
+      .separator30
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+    .separator50

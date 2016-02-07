@@ -1,0 +1,14 @@
+ptype: standard
+master: false
+position: 
+int_name: workshop_moda
+hidden: false
+parent_id: 38
+title_it: Workshop Foto/Video backstage di Moda
+meta_description_it: Workshop di fotografia e video backstage di moda consistente in una simulazione di un incarico sul quale elaborare un progetto di comunicazione visiva assieme a fotografo, modella, stylist, makeup artist.
+meta_keywords_it: workshop moda, backstage di moda, fotografia di moda, corso fotografia, corso fotografia moda, fashion workshop, corso foto moda 
+title_url_it: workshop_foto_video_moda
+title_en: Fashion Photo/video backstage Workshop
+meta_description_en: fashion photo and video backstage workshop in a week-end
+meta_keywords_en: fashion workshop, fashion photography, fashion video backstage, fashion course
+title_url_en: workshop_fashion_foto_video

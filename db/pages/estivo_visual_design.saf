@@ -1,0 +1,14 @@
+ptype: standard
+master: false
+position: 21
+int_name: 
+hidden: false
+parent_id: 31
+title_it: Corso Estivo Visual Design
+meta_description_it: Il corso breve di Visual Design ha lo scopo di introdurre le basi della comunicazione visiva attraverso la realizzazione di un progetto di grafica
+meta_keywords_it: corso estivo, visual design, estate
+title_url_it: estivo_visual_design
+title_en: Summer Courses - Visual Design
+meta_description_en: The Visual Design short course aims to introduce the basics of visual communication through the implementation of a proposed design
+meta_keywords_en: summer course, visual design
+title_url_en: summer_visual_design

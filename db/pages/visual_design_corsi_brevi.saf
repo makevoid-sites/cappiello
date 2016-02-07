@@ -1,0 +1,14 @@
+ptype: standard
+master: false
+position: 
+int_name: brevi_visual
+hidden: false
+parent_id: 2
+title_it: Corso Breve Grafica Pubblicitaria
+meta_description_it: Il corso breve di Grafica Pubblicitaria ha lo scopo di introdurre le basi della comunicazione visiva attraverso la realizzazione di un progetto
+meta_keywords_it: grafica pubblicitaria, corsi, grafica, accademia cappiello, scuola grafica, corso breve
+title_url_it: visual_design_corsi_brevi
+title_en: Graphic Design - Short Cours
+meta_description_en: The Graphic Design short course aims to introduce the basics of visual communication through the implementation of a proposed design
+meta_keywords_en: graphic design, courses, accademia cappiello, design school, short courses
+title_url_en: visual_design_short_courses

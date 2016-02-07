@@ -120,9 +120,12 @@ gem "mixpanel"
 # gem 'newrelic_rpm'
 
 gem "coffee-script"
+gem "hashie", require: "hashie/mash"
 
-gem "skylight"
+group :production do
+  gem "skylight"
+end
 
 group :development do
-gem "puma"
+  gem "puma"
 end

@@ -1,0 +1,14 @@
+ptype: standard
+master: false
+position: 
+int_name: workshop_interior
+hidden: false
+parent_id: 37
+title_it: Corso serale Interior Design
+meta_description_it: Il corso serale di Arredamento è rivolto a coloro che lavorano o che hanno poco tempo a disposizione ma che vogliono arrivare a progettare un ambiente e ad arredarlo in modo creativo e funzionale rapidamente, imparando le basi tecniche e gli strumenti utili per dare forma alle idee e tradurle in un vero progetto di arredamento d'interni.
+ meta_keywords_it: arredamento, arredamento d'interni, laboratorio, laboratorio arredamento, workshop arredamento, firenze
+title_url_it: laboratorio_interior_design
+title_en: Interior Design - Workshop
+meta_description_en: The Evening Workshop in Interior Design is aimed at people who are already working and don’t have a lot of free time but want to be able to rapidly design an interior and furnish it in a creative and functional manner, mastering the basic techniques and tools to give shape to their ideas and translate them into an authentic design project.
+meta_keywords_en: interior design, workshop, workshop firenze
+title_url_en: interior_design_workshop

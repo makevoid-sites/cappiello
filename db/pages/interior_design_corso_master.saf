@@ -1,0 +1,14 @@
+ptype: standard
+master: false
+position: 
+int_name: master_interior
+hidden: false
+parent_id: 36
+title_it: Master di specializzazione in Interior design
+meta_description_it: Il Master in Interior Design è il naturale completamento del percorso di studi che inizia con il Corso Annuale; gli studenti hanno qui la possibilità di approfondire la preparazione e ottenere al termine del master una qualifica ulteriore.
+meta_keywords_it: master interior design, master arredamento, interior design firenze
+title_url_it: interior_design_corso_master
+title_en: Interior Design - Master
+meta_description_en: The Master in Interior Design is the natural continuation of the course of studies begun with the One-Year Course; students have the chance to extend their preparation and obtain a further qualification at the end of the Master.
+meta_keywords_en: master interior design, master course interior design, interior design florence
+title_url_en: interior_design_master_course

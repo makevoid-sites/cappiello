@@ -1,0 +1,14 @@
+ptype: standard
+master: true
+position: 
+int_name: 
+hidden: false
+parent_id: 11
+title_it: Autocad 2D Base
+meta_description_it: L'Accademia propone un corso suddiviso in 3 moduli che affronta la parte bidimensionale della progettazione CAD e si rivolge a tutti coloro che vogliono utilizzare AutoCAD per la progettazione e l'architettura di interni
+meta_keywords_it: autocad, corsi, accademia cappiello, 3d, modellazione, rendering, scuola, cad
+title_url_it: autocad_2d_base
+title_en: Autocad 2D 1st level
+meta_description_en: The Academy offers a course divided into three modules that address the part of two-dimensional CAD design and is intended for all those who want to use AutoCAD for design and interior architecture
+meta_keywords_en: autocad, courses, accademia cappiello, 3d, modeling, rendering, scuola, cad
+title_url_en: autocad_2d_1st_level

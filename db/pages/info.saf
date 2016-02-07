@@ -1,0 +1,14 @@
+ptype: standard
+master: false
+position: 10
+int_name: 
+hidden: false
+parent_id: 
+title_it: Info
+meta_description_it: Richiesta informazioni e partecipazione ai corsi
+meta_keywords_it: form, richiesta informazioni, partecipazione, accesso corsi, accademia cappiello
+title_url_it: info
+title_en: Info
+meta_description_en: Informations request and courses attendance
+meta_keywords_en: info, form, informations, attendance, courses access, accademia cappiello
+title_url_en: info

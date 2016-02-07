@@ -1,0 +1,14 @@
+ptype: standard
+master: true
+position: 15
+int_name: 
+hidden: false
+parent_id: 
+title_it: Corso V-Ray
+meta_description_it: VRay è un motore di rendering disponibile per numerosi software, tra cui 3D STUDIO MAX. Il master dell'Accademia offre l'opportunità di imparare ad usare Vray per renderizzare progetti di architettura di interni realizzati proprio con 3D Studio.
+meta_keywords_it: vray, v-ray, 3ds max, corsi, master, accademia cappiello, 3d, modellazione, rendering, scuola, max
+title_url_it: corso_v-ray
+title_en: V-Ray
+meta_description_en: V-Ray is a rendering engine available for many software, including 3D Studio MAX. The master of the Academy offers the opportunity to learn how to use Vray to render projects as an interior designer just made with 3D Studio.
+meta_keywords_en: vray, v-ray, 3ds max, courses, master, accademia cappiello, 3d, modeling, rendering, school, max
+title_url_en: vray_course

@@ -1,0 +1,14 @@
+ptype: standard
+master: false
+position: 10
+int_name: 
+hidden: false
+parent_id: 8
+title_it: Incontra Tutor 
+meta_description_it: Richiesta Appuntamento 
+meta_keywords_it: form, richiesta informazioni, partecipazione, accesso corsi, accademia cappiello
+title_url_it: incontro-tutor
+title_en: Meet the Tutor
+meta_description_en: Tutor appointment request
+meta_keywords_en: info, form, informations, attendance, courses access, accademia cappiello
+title_url_en: tutor-appointment

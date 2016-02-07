@@ -1,0 +1,15 @@
+ptype: standard
+master: false
+position: 
+int_name: workshop_visual
+hidden: false
+parent_id: 37
+title_it: Corso serale Grafica Pubblicitaria
+meta_description_it: l corso serale in Grafica Pubblicitaria nasce per rispondere alle richieste di quanti, pur non avendo tempo da dedicare ad uno studio approfondito della comunicazione visiva, desiderano conoscere i meccanismi base della grafica digitale e della progettazione, apprendendo così le nozioni fondamentali.
+meta_keywords_it: corso serale grafica, grafica pubblicitaria, laboratorio graphic design, corso serale, graphic design, firenze
+title_url_it: laboratorio_visual_design
+title_en: Graphic Design - Workshop
+meta_description_en: The practical workshops organised during the course will help students to master the basic techniques for generating promotional information.
+Students will be guided through the learning process so that, at the end of the course of lessons, they will be capable of organising documents of commercial information and self-advertising.
+meta_keywords_en: design workshop, visual design, evening workshop, florence
+title_url_en: visual_design_workshop

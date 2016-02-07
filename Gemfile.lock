@@ -115,6 +115,7 @@ GEM
       multi_json (~> 1.7)
     haml (4.0.7)
       tilt
+    hashie (3.4.3)
     highline (1.7.8)
     hike (1.2.3)
     http_parser.rb (0.6.0)
@@ -234,6 +235,7 @@ DEPENDENCIES
   guard
   guard-livereload
   haml
+  hashie
   json
   maruku
   mixpanel

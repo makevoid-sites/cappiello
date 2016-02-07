@@ -1,0 +1,14 @@
+ptype: standard
+master: false
+position: 
+int_name: 
+hidden: false
+parent_id: 2
+title_it: Corso Rendering
+meta_description_it: Una serie di lezioni pratiche per imparare tutte le principali funzioni e gli strumenti utili a produrre immagini capaci di presentare e comunicare il progetto.
+ meta_keywords_it: rendering, corso arredamento, accademia cappiello firenze
+title_url_it: corso_rendering_interior_design
+title_en: Rendering
+meta_description_en: A series of practical lessons to learn all the main functions and tools for producing images for the presentation and communication of the project.
+ meta_keywords_en: rendering course, interior design, course, florence
+title_url_en: interior_design_rendering

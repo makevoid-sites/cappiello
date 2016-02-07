@@ -1,0 +1,14 @@
+ptype: standard
+master: false
+position: 20
+int_name: 
+hidden: false
+parent_id: 
+title_it: Date e Orari
+meta_description_it: Le date e gli orari dei corsi di quest'anno in Visual Design, Interior design, dei master e degli stage.
+meta_keywords_it: date, orari, corsi, visual, interior, stages, accademia cappiello, design
+title_url_it: date_e_orari
+title_en: Dates and Times
+meta_description_en: In this page you can find the courses dates for Visual Design, Interior design, stages and masters courses.
+meta_keywords_en: dates, events, corsi, visual, interior, stages, accademia cappiello, design
+title_url_en: dates_and_times

@@ -10,17 +10,43 @@
     .separator30
     .line.article
       :ruby
-        corsi = [
-          { name: "Corso 1" },
-          { name: "Corso 2" },
-          { name: "Corso 3" },
-          { name: "Corso 4" },
-          { name: "Corso 5" },
-          { name: "Corso 6" },
-          { name: "Corso 7" },
-          { name: "Corso 8" },
-          { name: "Corso 9" },
-        ]
+        # raise NuPage.all.inspect
+        pages = NuPage.all_saf
+
+        pages.reject! do |page|
+          page.parent_id.blank?
+        end
+
+        pages.reject! do |page|
+          %w(
+            l_accademia
+            borse_di_studio
+            contatti
+            corsi_annuali
+            corsi_esitvi
+            corsi_master
+            date_e_orari
+            formula_master
+            incontro-tutor
+            info
+            laboratori
+            news
+            open_days
+
+            corso_3d_studio_max_interior_design
+            corso_autocad_interior_design
+          ).include? page.title_url_it
+        end
+
+        corsi = []
+        pages.each do |page|
+          corsi << { # TODO: translation
+            name:       page.title_it,
+            desc_small: page.meta_description_it,
+            title_url:  page.title_url_it,
+          }
+        end
+
       - corsi.each_with_index do |corso, idx|
         .widget.bg-white
           %iframe{:allowfullscreen => "", :frameborder => "0", :src => "https://www.youtube.com/embed/KICyR3BZWwE", :width => "100%"}
@@ -29,9 +55,9 @@
             .line-compress
               %h3= corso[:name]
               .separator5
-              %h6 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tristique leo sit amet viverra egestas. Aliquam venenatis nisi lectus, et vulputate leo pulvinar in.
+              %h6= corso[:desc_small]
               .separator30
-              %a.push-right.toggle-opacity-hover{:href => "/pag/corso_id.haml"}
+              %a.push-right.toggle-opacity-hover{:href => "/c/#{corso[:title_url]}"}
                 Info
           .separator15
         - if idx % 3 == 2
