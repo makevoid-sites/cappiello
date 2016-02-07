@@ -151,8 +151,8 @@ color:black;
 }
 .header-menu a {
 font-weight: 500;
-font-size: 13px;
-padding: 7px 2%;
+font-size: 14px;
+padding: 7px 1.5%;
 margin:0 auto;
 color: white;
 transition:none;
@@ -259,7 +259,11 @@ min-width: 50px; }
 
 .flickr_button {
 display: none; }
-
+.gallery_loading{
+  line-height: 200px;
+  min-height:400px;
+  font-size: 18px;
+}
 .not-home #slide {
   min-height:80px;
   max-height: 80px;
