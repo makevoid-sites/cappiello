@@ -71,5 +71,7 @@ Cappiello::Application.routes.draw do
   get "/pdf_open/:name", to: "pages#pdf"
   get "/pdf_open/en/:name", to: "pages#pdf_en"
 
+  
+
   root :to => "pages#index"
 end

@@ -129,3 +129,8 @@ end
 group :development do
   gem "puma"
 end
+
+group :sinatra do
+  gem "haml"
+  gem "sinatra"
+end
