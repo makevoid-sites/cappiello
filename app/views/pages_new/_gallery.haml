@@ -41,13 +41,14 @@
       $("#photos").html("")
 
 
-    $(".f_menu a").on "click", ->
+    $(".f_menu a").on "click", (evt) ->
       clearPhotos()
 
       # TODO: add loading
       $("#photos").html("<div class='gallery_loading center-content'> Loading...</div>")
 
-      id = $(this).data "set_id"
+      id = $(evt.currentTarget).data "set_id"
+      console.log id
       $("#photos").data "set_id", id
 
       gallery = new FlickrGallery()

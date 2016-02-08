@@ -33,7 +33,8 @@
     .separator15.pattern
     .separator30
     .line.article
-      %iframe{:allowfullscreen => "", :frameborder => "0", :src => "https://www.youtube.com/embed/KICyR3BZWwE", :height=> "400", :width => "100%"}
+      .widget-pic{:style => "background: url(/images/corsi/#{corso[:title_url]}.jpg) no-repeat center center; background-size:cover; height: 400px;"}
+      -# %iframe{:allowfullscreen => "", :frameborder => "0", :src => "https://www.youtube.com/embed/KICyR3BZWwE", :height=> "400", :width => "100%"}
     .col6.line-tablet
       .col9.line-tablet
         .separator15
@@ -43,7 +44,15 @@
           %div
             -# :markdown
             -#   #{corso.text}
-            = Maruku.new(main).to_html
+            -# - main_text = Maruku.new(main).to_html
+            -# - main_text = main_text.gsub("\n", "<br>")
+            -# = main_text
+            = markup main
+
+            -# - main_text = Maruku.new(main).to_html
+            -# - main_text = main_text.split("\n").join("</p><p>")
+            -# = "<p>#{main_text}</p>"
+
 
             .separator15
 
@@ -61,7 +70,8 @@
       .line-compress.line-tablet.bg-black.color-white
         .line-compress.line-tablet
           .separator15
-          = Maruku.new(aside).to_html
+          = markup aside
+          -# = Maruku.new(aside).to_html
           /
             .separator15
             Info:
