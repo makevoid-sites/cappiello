@@ -100,7 +100,13 @@ color: white;
 z-index:0;
 position:absolute;
 bottom:30px;
-font-size:24px;
+}
+.slogan h1{
+
+  font-size:2.05em;
+}
+.slogan h2{
+  font-size: 1.3em;
 }
 .play-home-video{
   position: absolute;

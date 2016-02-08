@@ -191,51 +191,54 @@
         .separator30
       / end mobile menu
       / social top nav
-      .mobile.tablet
-        .separator5
-      #top-menu-social.line.line-max.bg-black.color-white
-        .line-compress.top-menu.line-max
-          .separator5
-          .top-menu-social.col4
-            %a{:href => "https://www.facebook.com/accademiaartedesigncappiello", :target => "_blank"}
-              %i.fa.fa-facebook-official
-            %a{:href => "http://twitter.com/Acc_Cappiello", :target => "_blank"}
-              %i.fa.fa-twitter
-            %a{:href => "http://instagram.com/accademiacappiello", :target => "_blank"}
-              %i.fa.fa-instagram
-            %a{:href => "http://www.flickr.com/photos/accademiacappiello/", :target => "_blank"}
-              %i.fa.fa-flickr
-            %a{:href => "http://vimeo.com/user5798268", :target => "_blank"}
-              %i.fa.fa-vimeo
-            .separator3
-            .separator1
-          .col5.push-right
-            .desktop
-              .separator5
-              %small
-                %ul.line.right-content
-                  %li.col6.right-content
-                    %a.color-primary.toggle-opacity-inverse-hover{:href => "#"}
-                      AREA UTENTI
-                  %li.col4.right-content
-                    %a.color-white.toggle-opacity-hover{:href => "/pag/contatti"}
-                      %i.fa.fa-phone.color-white
-                      Telefono
-                     
-                    %a.color-white.toggle-opacity-hover{:href => "mailto:info@accademiacappiello.it"}
-                      %i.fa.fa-at.color-white
-                      Email
-          .separator3
-        .mobile.tablet
-          .separator3
-          .separator1
       / end social nav
       / header and menu
       #slide.line.bg-white
+        #top-menu-social.line.line-max.bg-mute.color-white
+          .line-compress.top-menu.line-max
+            .separator5
+            .top-menu-social.col4
+              &nbsp;
+              %a{:href => "https://www.facebook.com/accademiaartedesigncappiello", :target => "_blank"}
+                %i.fa.fa-facebook-official
+              %a{:href => "http://twitter.com/Acc_Cappiello", :target => "_blank"}
+                %i.fa.fa-twitter
+              %a{:href => "http://instagram.com/accademiacappiello", :target => "_blank"}
+                %i.fa.fa-instagram
+              %a{:href => "http://www.flickr.com/photos/accademiacappiello/", :target => "_blank"}
+                %i.fa.fa-flickr
+              %a{:href => "http://vimeo.com/user5798268", :target => "_blank"}
+                %i.fa.fa-vimeo
+              .separator3
+              .separator1
+            .col5.push-right
+              .desktop
+                .separator5
+                %span
+                  %ul.line.right-content
+
+                    %li.col4.right-content
+
+                    %li.col6.right-content
+                      %a.bg-muted.color-white.radius20.toggle-opacity-inverse-hover{:href => "#"}
+                        %small
+                          &nbsp;&nbsp; AREA UTENTI &nbsp;&nbsp;
+
+                      %a.color-white.toggle-opacity-inverse-hover{:href => "/pag/contatti"}
+                        &nbsp;
+                        %i.fa.fa-phone.color-white
+                          Telefono &nbsp;&nbsp;
+                      %a.color-white.toggle-opacity-inverse-hover{:href => "mailto:info@accademiacappiello.it"}
+                        %i.fa.fa-envelope.color-white
+                        &nbsp;&nbsp;Email &nbsp;&nbsp;
+            .separator3
+          .mobile.tablet
+            .separator3
+            .separator1
         .separator15
         .line-compress.line-max.header#top-menu
           .col2.line-tablet.center-content-tablet
-            .separator50.mobile.no-scroll
+            .separator50.mobile.tablet.no-scroll
             %a{:href => "/pag/l_accademia"}
               %img.logo.scroll{:src => "/images/logo.png"}
               %img.logo.no-scroll{:src => "/images/logo-white.png"}
