@@ -57,8 +57,11 @@
               .separator5
               .widget-desc
                 %h6= corso[:desc_small]
-              %a.push-right.toggle-opacity-hover{:href => "/c/#{corso[:title_url]}"}
-                Maggiori Informazioni
+              .line
+                .col7.line-tablet
+                .col3.line-tablet
+                  %a.btn.bg-primary.center-content.line-tablet.color-white.push-right.toggle-opacity-inverse-hover{:href => "/c/#{corso[:title_url]}"}
+                    Informazioni
           .separator15
         - if idx % 3 == 2
           .separator30
