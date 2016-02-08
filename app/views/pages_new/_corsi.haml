@@ -55,13 +55,12 @@
             .line-compress
               %h3= corso[:name]
               .separator5
-              %h6= corso[:desc_small]
-              .separator30
+              .widget-desc
+                %h6= corso[:desc_small]
               %a.push-right.toggle-opacity-hover{:href => "/c/#{corso[:title_url]}"}
-                Info
+                Maggiori Informazioni
           .separator15
         - if idx % 3 == 2
           .separator30
-
   .separator50
   .separator30

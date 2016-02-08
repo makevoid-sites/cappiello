@@ -202,7 +202,16 @@ margin: 0 auto; }
 width: 31.33%;
 margin: 0 1%;
 float: left;
-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2); }
+box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+overflow: hidden;
+height:360px;
+max-height:360px;
+}
+.widget-desc{
+  overflow:hidden;
+  min-height: 130px;
+  height:130px;
+}
 .widget:hover {
 box-shadow: 0 0px 4px rgba(0, 0, 0, 0.2); }
 .img-media{
