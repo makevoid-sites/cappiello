@@ -63,8 +63,7 @@
 
       - corsi.each_with_index do |corso, idx|
         .widget.bg-white
-
-          %img.article-img{ src: "/images/corsi/#{corso[:title_url]}.jpg" }
+          .widget-pic{:style => "background: url(/images/corsi/#{corso[:title_url]}.jpg) no-repeat center center; background-size:cover;"}
           -# %iframe{:allowfullscreen => "", :frameborder => "0", :src => "https://www.youtube.com/embed/KICyR3BZWwE", :width => "100%"}
           .separator15
           .line-compress
