@@ -209,8 +209,8 @@ max-height:360px;
 }
 .widget-desc{
   overflow:hidden;
-  min-height: 150px;
-  height:150px;
+  min-height: 130px;
+  height:130px;
 }
 .widget:hover {
 box-shadow: 0 0px 4px rgba(0, 0, 0, 0.2); }
