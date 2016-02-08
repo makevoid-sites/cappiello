@@ -209,8 +209,8 @@ max-height:360px;
 }
 .widget-desc{
   overflow:hidden;
-  min-height: 130px;
-  height:130px;
+  min-height: 150px;
+  height:150px;
 }
 .widget:hover {
 box-shadow: 0 0px 4px rgba(0, 0, 0, 0.2); }
@@ -272,8 +272,12 @@ min-width: 50px; }
 display: none; }
 .gallery_loading{
   line-height: 200px;
-  min-height:400px;
+  min-height:415px;
   font-size: 18px;
+}
+.f_gallery{
+  max-height:415px;
+  overflow-y:hidden;
 }
 .not-home #slide {
   min-height:80px;
