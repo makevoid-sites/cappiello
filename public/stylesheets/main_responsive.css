@@ -81,7 +81,6 @@ background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNb
 float: left;
 margin: 0 2% 1% 0;
 width: 50%;
-max-width: 300px;
 min-width: 200px;
 }
 .article-img{
@@ -204,13 +203,13 @@ margin: 0 1%;
 float: left;
 box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
 overflow: hidden;
-height:370px;
-max-height:370px;
+height:330px;
+max-height:330px;
 }
 .widget-desc{
   overflow:hidden;
-  min-height: 130px;
-  height:130px;
+  min-height: 90px;
+  height:90px;
 }
 .widget:hover {
 box-shadow: 0 0px 4px rgba(0, 0, 0, 0.2); }
@@ -290,4 +289,8 @@ display: none; }
 }
 .not-home{
   background: white;
+}
+.widget h3 {
+  white-space: nowrap;
+  overflow: hidden;
 }

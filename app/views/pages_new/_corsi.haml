@@ -33,27 +33,45 @@
             news
             open_days
 
+            students-info
             corso_3d_studio_max_interior_design
             corso_autocad_interior_design
           ).include? page.title_url_it
         end
 
+        pages.reject! do |page|
+          page.title_url_it =~ /autocad/
+        end
+
+
         corsi = []
         pages.each do |page|
+          desc_small = page.meta_description_it
+          desc_small = truncate desc_small, 280
+
           corsi << { # TODO: translation
             name:       page.title_it,
-            desc_small: page.meta_description_it,
+            desc_small: desc_small,
             title_url:  page.title_url_it,
           }
         end
 
+      :css
+        .widget > img {
+          width: 100%
+        }
+
       - corsi.each_with_index do |corso, idx|
         .widget.bg-white
-          %iframe{:allowfullscreen => "", :frameborder => "0", :src => "https://www.youtube.com/embed/KICyR3BZWwE", :width => "100%"}
+
+          %img.article-img{ src: "/images/corsi/#{corso[:title_url]}.jpg" }
+          -# %iframe{:allowfullscreen => "", :frameborder => "0", :src => "https://www.youtube.com/embed/KICyR3BZWwE", :width => "100%"}
           .separator15
           .line-compress
             .line-compress
-              %h3= corso[:name]
+              %h3
+                = corso[:title_url]
+                = corso[:name]
               .separator5
               .widget-desc
                 %h6= corso[:desc_small]

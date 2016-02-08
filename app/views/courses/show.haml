@@ -8,6 +8,22 @@
   }
   corso = MH.new corso
 
+  noko = Nokogiri::HTML(corso.text)
+  aside = noko.search("#aside").first.inner_html
+
+  noko = Nokogiri::HTML(corso.text)
+  noko.search("#aside").remove()
+
+  main = noko.inner_html
+  main.gsub! /vimeo/
+
+  gal_match = /flickr_gallery\((\d+)\)/
+
+  gallery_id = main.match gal_match
+  main.gsub! gal_match, ''
+  gallery_id = gallery_id[1] if gallery_id
+
+
 .line.bg-white
   .line-compress.line-max
     .separator15
@@ -27,22 +43,6 @@
           %div
             -# :markdown
             -#   #{corso.text}
-            :ruby
-              noko = Nokogiri::HTML(corso.text)
-              aside = noko.search("#aside").first.inner_html
-
-              noko = Nokogiri::HTML(corso.text)
-              noko.search("#aside").remove()
-
-              main = noko.inner_html
-
-              gal_match = /flickr_gallery\((\d+)\)/
-
-              gallery_id = main.match gal_match
-              main.gsub! gal_match, ''
-              gallery_id = gallery_id[1] if gallery_id
-
-
             = Maruku.new(main).to_html
 
             .separator15
@@ -54,7 +54,6 @@
               }
             - if gallery_id
               #photos{ :"data-set_id" => gallery_id }
-
 
           .separator50
     .col4.line-tablet
