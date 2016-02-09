@@ -41,6 +41,7 @@ set :password,  password_var
 
 ssh_options[:forward_agent] = true
 set :deploy_via, :remote_cache
+# set :deploy_via, :copy
 
 
 #
@@ -109,6 +110,8 @@ namespace :chmod do
   desc "chmod entire dir"
   task :entire do
     run "cd #{current_path}; chown www-data:www-data -R *"
+    run "cd #{current_path}; git reset HEAD log/.gitignore"
+    run "cd #{current_path}; git checkout log/.gitignore"
     run "cd #{current_path}; git add ."
     run "cd #{current_path}; git add -u"
     run "cd #{current_path}; git stash"
