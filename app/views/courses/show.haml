@@ -33,8 +33,7 @@
     .separator15.pattern
     .separator30
     .line.article
-      .widget-pic{:style => "background: url(/images/corsi/#{corso[:title_url]}.jpg) no-repeat center center; background-size:cover; height: 400px;"}
-      -# %iframe{:allowfullscreen => "", :frameborder => "0", :src => "https://www.youtube.com/embed/KICyR3BZWwE", :height=> "400", :width => "100%"}
+      %iframe{:allowfullscreen => "", :frameborder => "0", :src => "https://www.youtube.com/embed/KICyR3BZWwE", :height=> "400", :width => "100%"}
     .col6.line-tablet
       .col9.line-tablet
         .separator15
@@ -44,43 +43,32 @@
           %div
             -# :markdown
             -#   #{corso.text}
-            -# - main_text = Maruku.new(main).to_html
-            -# - main_text = main_text.gsub("\n", "<br>")
-            -# = main_text
-            = markup main
-
-            -# - main_text = Maruku.new(main).to_html
-            -# - main_text = main_text.split("\n").join("</p><p>")
-            -# = "<p>#{main_text}</p>"
-
+            = Maruku.new(main).to_html
 
             .separator15
 
-            :css
-              #photos img {
-                width: 23%;
-                margin: 3%;
-              }
-            - if gallery_id
-              #photos{ :"data-set_id" => gallery_id }
 
-          .separator50
+            .f_gallery
+              .line.article
+                - if gallery_id
+                  .separator15
+                  %h1 Foto del corso
+                  #photos{ :"data-set_id" => gallery_id }
     .col4.line-tablet
-      .separator15
+      .separator15.desktop
+      .separator10.desktop
       .line-compress.line-tablet.bg-black.color-white
         .line-compress.line-tablet
           .separator15
-          = markup aside
-          -# = Maruku.new(aside).to_html
+          = Maruku.new(aside).to_html
           /
             .separator15
             Info:
             .separator15
             Info:
             .separator15
-          .separator15
+
       / QUALCHE FOTO DEL CORSO?
-      .separator50
 
 
 
