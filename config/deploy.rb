@@ -109,6 +109,9 @@ namespace :chmod do
   desc "chmod entire dir"
   task :entire do
     run "cd #{current_path}; chown www-data:www-data -R *"
+    run "cd #{current_path}; git add ."
+    run "cd #{current_path}; git add -u"
+    run "cd #{current_path}; git stash"
     run "cd #{current_path}; git checkout responsive_layout"
     run "cd #{current_path}; git pull origin responsive_layout"
     run "cd #{current_path}; bundle"
