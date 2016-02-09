@@ -61,6 +61,11 @@ font-size: 12px; }
 small * {
 font-size: 12px; }
 
+.footer{
+  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAJCAYAAADgkQYQAAAANklEQVQYV2NkIAzSGAmoSQPKz8KnCKwAZAguRXAFuBShKMCmCEMBuiKsCpAV4VQAU4RXAUgRAA8vCHD9SWoyAAAAAElFTkSuQmCC') ;
+  background-color: #222;
+
+}
 .footer ul li {
 margin-top: 6px; }
 
@@ -187,7 +192,9 @@ background-color: #d4728f; }
 
 .bg-primary-4 {
 background-color: #a14669; }
-
+.bg-black-more{
+  background-color: #111;
+}
 /*Colors */
 .color-primary {
 color: #d32b59; }
@@ -201,7 +208,7 @@ max-width: 1300px;
 float: none;
 margin: 0 auto; }
 .line-footer{
-  max-width: 1000px;
+  max-width: 1100px;
 }
 .widget {
 width: 31.33%;
