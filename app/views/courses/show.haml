@@ -15,7 +15,7 @@
   noko.search("#aside").remove()
 
   main = noko.inner_html
-  main.gsub! /vimeo/
+  main.gsub! /vimeo\((\d+)\)|youtube\((\d+)\)/, ''
 
   gal_match = /flickr_gallery\((\d+)\)/
 
