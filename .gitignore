@@ -22,3 +22,4 @@ public/users_portfolio
 public/users_images
 .DS_Store
 log/*
+log/.gitignore
