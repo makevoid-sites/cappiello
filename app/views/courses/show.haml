@@ -15,13 +15,14 @@
   noko.search("#aside").remove()
 
   main = noko.inner_html
-  main.gsub! /vimeo\((\d+)\)|youtube\((\d+)\)/, ''
-
   gal_match = /flickr_gallery\((\d+)\)/
-
   gallery_id = main.match gal_match
-  main.gsub! gal_match, ''
   gallery_id = gallery_id[1] if gallery_id
+
+  noko.search("form").remove()
+  main = noko.inner_html
+  main.gsub! gal_match, ''
+  main.gsub! /vimeo\((\d+)\)|youtube\((\d+)\)/, ''
 
 
 .line.bg-white
@@ -56,13 +57,13 @@
 
             .separator15
 
-            :css
-              #photos img {
-                width: 23%;
-                margin: 3%;
-              }
             - if gallery_id
-              #photos{ :"data-set_id" => gallery_id }
+              .f_gallery
+                .line.article
+                  .separator15
+                  %h1 Foto del corso
+                  #photos{ :"data-set_id" => gallery_id }
+
 
           .separator50
     .col4.line-tablet
