@@ -335,3 +335,31 @@ display: none; }
   white-space: nowrap;
   overflow: hidden;
 }
+/*slider*/
+.owl-prev,.owl-next{
+  text-align: center;
+  background:rgba(0,0,0, .35);
+  width:50px;
+  height:50px;
+  line-height: 52px;
+  border-radius:25px;
+  font-size: 20px;
+  position:absolute;
+  z-index:99;
+  top:40%;
+  cursor:pointer;
+}
+.owl-prev:hover,.owl-next:hover{
+opacity:.8;
+}
+.owl-prev:active,.owl-next:active{
+  background: rgba(0,0,0, .6);
+}
+.owl-prev{
+    left:2%;
+    text-indent:-2px;
+}
+.owl-next{
+  right:2%;
+  text-indent:2px;
+}

@@ -1,6 +1,6 @@
 
 .bg-white
-.line.bg-black.color-white
+.line.color-white
   .separator50
   .separator15
   .owl-carousel.line
@@ -12,13 +12,14 @@
       $(document).ready(function() {
 
       $(".owl-carousel").owlCarousel({
-      items: 1,
-      mouseDrag: true,
-      pullDrag: true,
-      touchDrag:true,
-      autoplay:true,
-      autoplaySpeed: 1000,
-      autoplayTimeout:6000
+        items: 1,
+        mouseDrag: true,
+        pullDrag: true,
+        touchDrag:true,
+        autoplay:true,
+        autoplaySpeed: 1000,
+        autoplayTimeout:6000,
+        navText: ['<i class="fa fa-chevron-left"></i>', '<i class="fa fa-chevron-right"></i>']
       });
     });
 .line.bg-white
