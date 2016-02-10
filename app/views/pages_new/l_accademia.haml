@@ -1,8 +1,26 @@
 
 .bg-white
 .line.bg-black.color-white
-  .separator100
-  SLIDERINO here
+  .separator50
+  .separator15
+  .owl-carousel.line
+    .item
+      %img{:src => "http://owlgraphic.com/owlcarousel/demos/assets/fullimage3.jpg"}
+    .item
+      %img{:src => "http://owlgraphic.com/owlcarousel/demos/assets/fullimage2.jpg"}
+  :javascript
+      $(document).ready(function() {
+
+      $(".owl-carousel").owlCarousel({
+      items: 1,
+      mouseDrag: true,
+      pullDrag: true,
+      touchDrag:true,
+      autoplay:true,
+      autoplaySpeed: 1000,
+      autoplayTimeout:6000
+      });
+    });
 .line.bg-white
   .separator50
   .line-compress.line-max
