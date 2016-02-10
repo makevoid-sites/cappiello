@@ -256,8 +256,7 @@
           .separator100
           .separator50.desktop
           .separator30
-          %a#video-home.line.center-content.no-scroll{:href=> "https://www.youtube.com/watch?v=_5BJ4VrkENw&autoplay=1"}
-            %i.fa.fa-play-circle.play-home-video.color-white
+
           .separator100
           .separator30.desktop
           .slogan.line
@@ -312,36 +311,7 @@
         } else {
           $('#top-menu').addClass('scrolling');
         }
-      :javascript
-        $("#video-home").on('click', function(e) {
-        $.fancybox({
-                "padding" : 0,
-                "margin": 20,
-                "minWidth": window.innerWidth - window.innerWidth / 8,
-                "minHeight": window.innerHeight - window.innerHeight / 8,
-                "fitToView": true,
-                "scrolling": "no",
-                "closeBtn": true,
-                "scrollOutside": false,
-                "type" : 'swf',
-                'centerOnScroll': true,
-                'hideOnOverlayClick': true,
-                "showNavArrows": false,
-                "enableEscapeButton": true,
-                "autoDimension": true,
-                "overlayOpacity": 1,
-                'href' : this.href.replace(new RegExp("watch\\?v=", "i"), 'v/'),
-                'swf' : { 'wmode' : 'transparent', 'allowfullscreen' : 'true' },
-                'helpers' : {
-                'overlay' : {
-                'css' : {
-                'background' : 'black'
-                }
-                }
-                }
-            });
-        e.preventDefault();
-        });
+
       :javascript
 
         if (window.location.hash) {
