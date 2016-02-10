@@ -337,6 +337,8 @@ display: none; }
 }
 /*slider*/
 .owl-carousel{
+  height:auto;
+  min-height:0;
   max-height:430px;
   overflow-y:hidden;
 }
