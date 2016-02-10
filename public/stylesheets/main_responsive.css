@@ -336,6 +336,10 @@ display: none; }
   overflow: hidden;
 }
 /*slider*/
+.owl-carousel{
+  max-height:430px;
+  overflow-y:hidden;
+}
 .owl-prev,.owl-next{
   text-align: center;
   background:rgba(0,0,0, .35);
