@@ -191,9 +191,7 @@ color:black;
 }
 .header .header-menu a,.header .header-menu a.active,.header .header-menu a:hover{
   line-height: 85px;
-  min-height:85px;
-  display: inline-block;
-  padding: 0 1%;
+  padding: 33px 1%;
   font-weight: 500;
   font-size: 14px;
   margin:0 0 0 0;
