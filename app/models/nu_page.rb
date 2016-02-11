@@ -79,4 +79,41 @@ class NuPage
   ALL = load_all
   ALL_SAF = load_all_saf
 
+
+  def self.all_saf_filtered
+    pages = all_saf
+
+    pages.reject! do |page|
+      page.parent_id.blank?
+    end
+
+    pages.reject! do |page|
+      %w(
+        l_accademia
+        borse_di_studio
+        contatti
+        corsi_annuali
+        corsi_esitvi
+        corsi_master
+        date_e_orari
+        formula_master
+        incontro-tutor
+        info
+        laboratori
+        news
+        open_days
+
+        students-info
+        corso_3d_studio_max_interior_design
+        corso_autocad_interior_design
+      ).include? page.title_url_it
+    end
+
+    pages.reject! do |page|
+      page.title_url_it =~ /autocad/
+    end
+
+    pages
+  end
+
 end
