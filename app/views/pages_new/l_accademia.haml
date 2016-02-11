@@ -3,10 +3,18 @@
   .separator50
   .separator15
   .owl-carousel.line.bg-black
-    .item
-      %img{:src => "/images/corsi/corso_photoshop.jpg"}
-    .item
-      %img{:src => "/images/corsi/corso_web_design.jpg"}
+    - nu_pages = NuPage.all
+    - pages = []
+    - nu_pages.each do |page|
+      - pages << Hashie::Mash.new( name: page, img_url: "not_set" ) }
+      
+    - pages = pages.map{ |page| page.img_url = "/images/corsi/#{page.name}.jpg" }
+
+
+    -# - pages = pages.map{ |page| page.antani = "eccome!"; } # sets page to page.name in the "pages" array
+    - for page in pages
+      .item
+        %img{:src => page.img_url }
   :javascript
       $(document).ready(function() {
 
