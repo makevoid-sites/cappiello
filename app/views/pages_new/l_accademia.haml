@@ -2,19 +2,23 @@
 .line.color-white
   .separator50
   .separator15
-  .owl-carousel.line.bg-black
-    :ruby
-      pages = NuPage.all_saf_filtered
-      pages = pages.map{ |page| page.title_url_it }
-      pages = pages.map do |page|
-        Hashie::Mash.new( name: page, img_url: "not_set" )
-      end
-      pages = pages.map{ |page| page.img_url = "/images/corsi/#{page.name}.jpg"; page }
+  .fixed-height
+    .owl-carousel.line.bg-black
+      :ruby
+        pages = NuPage.all_saf_filtered
+        pages = pages.map{ |page| page.title_url_it }
+        pages = pages.map do |page|
+          Hashie::Mash.new( name: page, img_url: "not_set" )
+        end
+        pages = pages.map{ |page| page.img_url = "/images/corsi/#{page.name}.jpg"; page }
 
-    -# - pages = pages.map{ |page| page.antani = "eccome!"; } # sets page to page.name in the "pages" array
-    - for page in pages
-      .item
-        %img{:src => page.img_url }
+        pages.reject! { |p| ["sketchup_base", "sketchup_avanzato"].include? p.name  }
+
+        pages.shuffle!
+      -# - pages = pages.map{ |page| page.antani = "eccome!"; } # sets page to page.name in the "pages" array
+      - for page in pages
+        .item
+          %img{:src => page.img_url }
 
   :javascript
       $(document).ready(function() {
@@ -28,15 +32,16 @@
         autoplaySpeed: 1000,
         autoplayTimeout:5000,
         loop: true,
+        // center: true,
         autoHeight : true,
         // lazyLoad : true,
         navText: ['<i class="fa fa-chevron-left"></i>', '<i class="fa fa-chevron-right"></i>']
       });
     });
 .line.bg-white
-  .separator50
+  .separator10
   .line-compress.line-max
-    .separator50
+    .separator10
     %h1.line.center-content.article-title.font-custom
       L'Accademia
     .separator30
