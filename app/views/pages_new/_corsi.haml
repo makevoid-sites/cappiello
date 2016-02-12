@@ -6,9 +6,44 @@
       I Corsi
     .separator30
     .separator15.pattern
+    .separator15
+    %nav.corsi-nav.line.center-content
+      %a.btn.bg-primary.center-content.line-tablet.color-white.toggle-opacity-inverse-hover{href: js_void, data: { filter: "*" } } Tutti
+      %a.btn.bg-primary.center-content.line-tablet.color-white.toggle-opacity-inverse-hover{href: js_void, data: { filter: "interior" } } Interior
+      %a.btn.bg-primary.center-content.line-tablet.color-white.toggle-opacity-inverse-hover{href: js_void, data: { filter: "visual" } } Visual
+      %a.btn.bg-primary.center-content.line-tablet.color-white.toggle-opacity-inverse-hover{href: js_void, data: { filter: "grafica" } } Grafica
+      %a.btn.bg-primary.center-content.line-tablet.color-white.toggle-opacity-inverse-hover{href: js_void, data: { filter: "estivo" } } Estivo
+      %a.btn.bg-primary.center-content.line-tablet.color-white.toggle-opacity-inverse-hover{href: js_void, data: { filter: "breve" } } Breve
+      %a.btn.bg-primary.center-content.line-tablet.color-white.toggle-opacity-inverse-hover{href: js_void, data: { filter: "base" } } Base
+      %a.btn.bg-primary.center-content.line-tablet.color-white.toggle-opacity-inverse-hover{href: js_void, data: { filter: "avanzato" } } Avanzato
+      %a.btn.bg-primary.center-content.line-tablet.color-white.toggle-opacity-inverse-hover{href: js_void, data: { filter: "master" } } Master
+      %a.btn.bg-primary.center-content.line-tablet.color-white.toggle-opacity-inverse-hover{href: js_void, data: { filter: "sketchup" } } Sketchup
+
+    .separator15
+    .separator15.pattern
     .separator30
     .line.article.grid
       :ruby
+        def classes(name)
+          klasses = []
+          klasses << "autocad" if name =~ /autocad/i
+          klasses << "sketchup" if name =~ /sketch/i
+          klasses << "photoshop" if name =~ /photoshop/i
+          klasses << "interior" if name =~ /interior/i
+          klasses << "visual" if name =~ /visual/i
+          klasses << "grafica" if name =~ /grafica/i
+          klasses << "master" if name =~ /master/i
+          klasses << "photo" if name =~ /photo/i
+          klasses << "web" if name =~ /web/i
+          klasses << "estivo" if name =~ /estivo/i
+          klasses << "annuale" if name =~ /annuale/i
+          klasses << "breve" if name =~ /breve/i
+          klasses << "base" if name =~ /base/i
+          klasses << "avanzato" if name =~ /avanzato/i
+          klasses
+        end
+
+
         # raise NuPage.all.inspect
         # pages = NuPage.all_saf
         pages = NuPage.all_saf_filtered
@@ -22,6 +57,7 @@
             name:       page.title_it,
             desc_small: desc_small,
             title_url:  page.title_url_it,
+            classes:    classes("#{page.title_url_it}_#{page.title_it}")
           }
         end
 
@@ -31,7 +67,7 @@
         }
 
       - corsi.each_with_index do |corso, idx|
-        .widget.bg-white.grid-item
+        .widget.bg-white.grid-item{ class: corso[:classes].join(" ") }
           .widget-pic{:style => "background: url(/images/corsi/#{corso[:title_url]}.jpg) no-repeat center center; background-size:cover;"}
           -# %iframe{:allowfullscreen => "", :frameborder => "0", :src => "https://www.youtube.com/embed/KICyR3BZWwE", :width => "100%"}
           .separator15
@@ -56,8 +92,16 @@
   .separator30
 
 :coffee
-  grid = $('.grid')
-  grid.isotope(
-    itemSelector: '.grid-item',
+  c = console
+  grid = $ '.grid'
+  nav  = $ ".corsi-nav a"
+
+  grid.isotope
+    itemSelector: '.grid-item'
     layoutMode: 'fitRows'
-  )
+
+  nav.on "click", (evt) =>
+    elem = evt.currentTarget
+    filter = elem.dataset.filter
+    grid.isotope
+      filter: ".\#{filter}"

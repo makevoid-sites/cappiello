@@ -383,3 +383,8 @@ opacity:.8;
     margin-bottom: 3%;
   }
 }
+.corsi-nav a {
+  width: auto;
+  display: inline-block;
+  margin-bottom: 5px;
+}
