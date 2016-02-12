@@ -1,4 +1,3 @@
-
 .line.bg-muted
   .separator50#corsi
   .line-compress.line-max
@@ -8,7 +7,7 @@
     .separator30
     .separator15.pattern
     .separator30
-    .line.article
+    .line.article.grid
       :ruby
         # raise NuPage.all.inspect
         # pages = NuPage.all_saf
@@ -32,7 +31,7 @@
         }
 
       - corsi.each_with_index do |corso, idx|
-        .widget.bg-white
+        .widget.bg-white.grid-item
           .widget-pic{:style => "background: url(/images/corsi/#{corso[:title_url]}.jpg) no-repeat center center; background-size:cover;"}
           -# %iframe{:allowfullscreen => "", :frameborder => "0", :src => "https://www.youtube.com/embed/KICyR3BZWwE", :width => "100%"}
           .separator15
@@ -55,3 +54,10 @@
           .separator30
   .separator50
   .separator30
+
+:coffee
+  grid = $('.grid')
+  grid.isotope(
+    itemSelector: '.grid-item',
+    layoutMode: 'fitRows'
+  )
