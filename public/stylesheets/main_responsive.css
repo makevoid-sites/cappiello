@@ -131,12 +131,17 @@ min-width: 200px;
 .top-menu {
   position:fixed;
   top:0;
+  line-height:23px;
   background: #222;
   z-index:99999;
 }
+.top-menu-right *, .top-menu-right a{
+  font-size: 12px;
+}
 .top-menu-social a {
-margin-right: 3%;
+margin-right: 10px;
 font-size: 18px;
+vertical-align: middle;
 color: rgba(255, 255, 255, 0.5); }
 .top-menu-social a:hover {
 color: white;
