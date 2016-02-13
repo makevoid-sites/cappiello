@@ -122,10 +122,10 @@
     %meta{ property: "og:url", content: request_url }/
     %meta{ property: "fb:admins", content: "1218562195" }/
     -# TODO UI downloadare e vendorizzare
-    -# %script{:src => "https://cdnjs.cloudflare.com/ajax/libs/jquery-smooth-scroll/1.7.2/jquery.smooth-scroll.min.js", :type => "text/javascript"}
-    %script{:src => "https://cdnjs.cloudflare.com/ajax/libs/jquery-smooth-scroll/1.7.2/jquery.smooth-scroll.min.js", :type => "text/javascript"}
+    %script{:src => "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js", :type => "text/javascript"}
     = javascript_include_tag "jquery", "jquery-cycle", "jquery-swfobject", "jquery-flickr", "jquery-mousewheel", "jquery-fancybox", "isotope", "owl-carousel", "master"
     = yield :head
+    %script{:src => "https://cdnjs.cloudflare.com/ajax/libs/jquery-smooth-scroll/1.7.2/jquery.smooth-scroll.min.js", :type => "text/javascript"}
 
     %script{ type: "text/javascript" }
       var action = '#{controller.action_name}'
@@ -171,17 +171,17 @@
         .col6.offset-left2.radius3
           %a.btn.btn-small.bg-muted.color-white{:href => "/"} Accademia
           .separator10
-          %a#link-mobile-corsi.btn.btn-small.bg-muted.color-white{:href => "/#corsi"} Corsi
+          %a#link-mobile-corsi.btn.btn-small.bg-muted.color-white.smooth-scroll{:href => "#corsi"} Corsi
           .separator10
           - nav_link :news
           .separator10
-          %a#link-mobile-gallery.btn.btn-small.bg-muted.color-white{:href => "/#gallery"} Gallery
+          %a#link-mobile-gallery.btn.btn-small.bg-muted.color-white.smooth-scroll{:href => "#gallery"} Gallery
           .separator10
-          %a#link-mobile-borse-di-studio.btn.btn-small.bg-muted.color-white{:href => "/#borse_di_studio"} Borse di Studio
+          %a#link-mobile-borse-di-studio.btn.btn-small.bg-muted.color-white.smooth-scroll{:href => "#borse_di_studio"} Borse di Studio
           .separator10
           %a.btn.btn-small.bg-muted.color-white Open Day
           .separator10
-          %a#link-mobile-contatti.btn.btn-small.bg-muted.color-white{:href => "/#contatti"} Contatti
+          %a#link-mobile-contatti.btn.btn-small.bg-muted.color-white.smooth-scroll{:href => "#contatti"} Contatti
           .separator15
           %a.btn.btn-small.color-white.bg-primary Area utenti
         .separator15
@@ -192,7 +192,7 @@
             |
           %a.color-white english
         .separator15
-        %a.color-white{:href => "/#contatti"}
+        %a.color-white.smooth-scroll{:href => "#contatti"}
           %i.fa.fa-phone
           Telefono
           &nbsp;&nbsp;
@@ -233,7 +233,7 @@
                       %small
                         &nbsp;&nbsp; AREA UTENTI &nbsp;&nbsp;
 
-                    %a.color-white.toggle-opacity-inverse-hover{:href => "/pag/contatti"}
+                    %a.color-white.toggle-opacity-inverse-hover.smooth-scroll{:href => "#contatti"}
                       &nbsp;&nbsp;&nbsp;&nbsp;
                       %i.fa.fa-phone.color-white
                         Telefono &nbsp;&nbsp;
@@ -258,12 +258,12 @@
           .col8.right-content.desktop
             .header-menu.desktop
               - nav_link :l_accademia
-              %a#link-corsi{ href: "/#corsi" } Corsi
+              %a#link-corsi.smooth-scroll{ href: "#corsi" } Corsi
               - nav_link :news
-              %a#link-gallery{ href: "/#gallery" } La Gallery
-              %a#link-borse-di-studio{ href: "/#borse-di-studio" } Borse di studio
+              %a#link-gallery.smooth-scroll{ href: "#gallery" } La Gallery
+              %a#link-borse-di-studio.smooth-scroll{ href: "#borse-di-studio" } Borse di studio
               - nav_link :open_days
-              %a#link-contatti{ href: "/#contatti" } Contatti
+              %a#link-contatti.smooth-scroll{ href: "#contatti" } Contatti
               -# nav_link :contatti
 
       / end header and menu
@@ -285,10 +285,9 @@
 
       #fb-root
       :javascript
-        $('.header a').smoothScroll({
-          'offset': 50,
-          'speed': 350,
-          'preventDefault': true
+        $('.smooth-scroll').smoothScroll({
+          'offset': -50,
+          'speed': 450
         });
       :javascript
 
