@@ -1,9 +1,9 @@
 set :application, "cappiello"
 set :app_name, "cappiello"
 
-if ENV["ENV"] == "staging"
-  set :app_name, "cappiello_staging"
-end
+# if ENV["ENV"] == "staging"
+#   set :app_name, "cappiello_staging"
+# end
 
 
 # look at where are you deploying!
