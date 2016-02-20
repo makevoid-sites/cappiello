@@ -54,7 +54,6 @@ $(function(){
     this.init = function(callback) {
       // var photoset_id = $("#photos").attr("data-set_id")
       var photoset_id = $("#photos").data("setId")
-      console.log(photoset_id)
       var api_url = "https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key="+api_key+"&photoset_id="+photoset_id+"&format=json&nojsoncallback=1"
 
       // DEBUG IE diahanz

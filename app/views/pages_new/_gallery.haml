@@ -48,7 +48,6 @@
       $("#photos").html("<div class='gallery_loading center-content'> Loading...</div>")
 
       id = $(evt.currentTarget).data "setId"
-      -# console.log id
       $("#photos").data "setId", id
 
       gallery = new FlickrGallery()

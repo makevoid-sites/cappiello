@@ -75,14 +75,11 @@ class ApplicationController < ActionController::Base
 
   # redirect without www.
 
-  before_filter :redirect_without_www
+  before_filter :redirect_without_www if Rails.env == "production"
 
   def redirect_without_www
     split = request.host.split(".")
-    if split[0] == "www"
-      port = ":3000" if Rails.env == "development"
-      redirect_to "http://#{split[1..-1].join(".")}#{port}#{request.path}"
-    end
+    redirect_to "http://#{split[1..-1].join(".")}#{port}#{request.path}" if split[0] == "www"
   end
 
   # Mixpanel
@@ -167,7 +164,7 @@ class ApplicationController < ActionController::Base
 
   # i18n - 2 languages
 
-  helper_method :tr, :tf
+  helper_method :tr, :tf, :tm, :th
 
   module Internationalize
     def lang
@@ -181,20 +178,53 @@ class ApplicationController < ActionController::Base
 
     def method_missing(method)
       # puts "DEBUG pippo -- method: #{method}, lang: #{lang}, self: #{self}, class: #{self.class}"
-      if method.to_s == "to_ary"
-        super
-      else
-        if (self ? self.class : Page)::TRANSLATE.include? method.to_s
-          self.send("#{method}_#{lang}")
-        end
-      end
+      # if method.to_s == "to_ary"
+      #   super
+      # else
+        # if (self ? self.class : Page)::TRANSLATE.include? method.to_s
+          if self.class == Hashie::Mash
+            self["#{method}_#{lang}"]
+          else
+            self.send "#{method}_#{lang}"
+          end
+        # end
+      # end
     end
   end
 
+  # TODO: change to tm implementation that is lighter and more understandable
   def tr(object)
     object.extend Internationalize
     object.lang = current_lang
     object
+  end
+
+  def tm(obj)
+    obj.define_method :title do
+      instance_method "title_#{current_lang}"
+    end
+    obj.define_method :title_url do
+      instance_method "title_url_#{current_lang}"
+    end
+    obj.define_method :meta_description do
+      instance_method "meta_description_#{current_lang}"
+    end
+    obj.define_method :meta_keywords do
+      instance_method "meta_keywords_#{current_lang}"
+    end
+    obj.define_method :text do
+      instance_method "text_#{current_lang}"
+    end
+    obj
+  end
+
+  def th(mh)
+    mh[:"title"] = mh[:"title_#{current_lang}"]
+    mh[:"title_url"] = mh[:"title_url_#{current_lang}"]
+    mh[:"meta_description"] = mh[:"meta_description_#{current_lang}"]
+    mh[:"meta_keywords"] = mh[:"meta_keywords_#{current_lang}"]
+    mh[:"text"] = mh[:"text_#{current_lang}"]
+    mh
   end
 
   def tf(first, last=first)
@@ -236,7 +266,7 @@ class ApplicationController < ActionController::Base
 
   # subdomain and language
 
-  helper_method :host_and_port, :subdomain, :english?, :italian?
+  helper_method :host_and_port, :subdomain, :english?, :italian?, :en?, :it?
 
   def subdomain
     "en"
@@ -246,9 +276,13 @@ class ApplicationController < ActionController::Base
     request.host.split(".")[0] == subdomain
   end
 
+  alias :en? :english?
+
   def italian?
     !english?
   end
+
+  alias :it? :italian?
 
   def app_host
     "#{request.host.gsub("#{subdomain}.", '')}"

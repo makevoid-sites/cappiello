@@ -1,6 +1,7 @@
 :ruby
   def load_content(page_name)
     page = Page.find_by_url page_name
+    raise NotFound unless page
     text = markup tr(page).text
     parse_text text
   end

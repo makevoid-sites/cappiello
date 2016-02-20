@@ -38,9 +38,10 @@ class PagesController < ApplicationController
     @user = current_user || User.new
 
     raise NotFound if @page.nil?
-    load_news if @page.id == 1
+    # load_news if @page.id == 1
 
     # track_page(:course) if @page.course?
+    true
   end
 
   def stats
@@ -79,10 +80,10 @@ class PagesController < ApplicationController
     end
   end
 
-  def load_news
-    @news = Article.news.all(limit: 8).reverse
-    @posts = Article.posts.all(limit: 8)
-  end
+  # def load_news
+  #   @news = Article.news.all(limit: 8).reverse
+  #   @posts = Article.posts.all(limit: 8)
+  # end
 
   # static pages
 

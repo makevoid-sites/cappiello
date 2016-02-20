@@ -3,19 +3,19 @@
   .line-compress.line-max
     .separator50
     %h1.line.color-muted.center-content.article-title.font-custom
-      I Corsi
+      = tf "I Corsi", "Courses"
     .separator30
     .separator15.pattern
     .separator15
     %nav.corsi-nav.line.center-content
-      %a.btn.bg-primary.center-content.line-tablet.color-white.toggle-opacity-inverse-hover{href: js_void, data: { filter: "*" } } Tutti
+      %a.btn.bg-primary.center-content.line-tablet.color-white.toggle-opacity-inverse-hover{href: js_void, data: { filter: "*" } }= tf "Tutti", "All"
       %a.btn.bg-primary.center-content.line-tablet.color-white.toggle-opacity-inverse-hover{href: js_void, data: { filter: "interior" } } Interior
       %a.btn.bg-primary.center-content.line-tablet.color-white.toggle-opacity-inverse-hover{href: js_void, data: { filter: "visual" } } Visual
       %a.btn.bg-primary.center-content.line-tablet.color-white.toggle-opacity-inverse-hover{href: js_void, data: { filter: "grafica" } } Grafica
-      %a.btn.bg-primary.center-content.line-tablet.color-white.toggle-opacity-inverse-hover{href: js_void, data: { filter: "estivo" } } Estivo
-      %a.btn.bg-primary.center-content.line-tablet.color-white.toggle-opacity-inverse-hover{href: js_void, data: { filter: "breve" } } Breve
-      %a.btn.bg-primary.center-content.line-tablet.color-white.toggle-opacity-inverse-hover{href: js_void, data: { filter: "base" } } Base
-      %a.btn.bg-primary.center-content.line-tablet.color-white.toggle-opacity-inverse-hover{href: js_void, data: { filter: "avanzato" } } Avanzato
+      %a.btn.bg-primary.center-content.line-tablet.color-white.toggle-opacity-inverse-hover{href: js_void, data: { filter: "estivo" } }= tf "Estivo", "Summer"
+      %a.btn.bg-primary.center-content.line-tablet.color-white.toggle-opacity-inverse-hover{href: js_void, data: { filter: "breve" } }= tf "Breve", "Short"
+      %a.btn.bg-primary.center-content.line-tablet.color-white.toggle-opacity-inverse-hover{href: js_void, data: { filter: "base" } }= tf "Base", "Basic"
+      %a.btn.bg-primary.center-content.line-tablet.color-white.toggle-opacity-inverse-hover{href: js_void, data: { filter: "avanzato" } }= tf "Avanzato", "Advanced"
       %a.btn.bg-primary.center-content.line-tablet.color-white.toggle-opacity-inverse-hover{href: js_void, data: { filter: "master" } } Master
       %a.btn.bg-primary.center-content.line-tablet.color-white.toggle-opacity-inverse-hover{href: js_void, data: { filter: "sketchup" } } Sketchup
 
@@ -50,13 +50,15 @@
 
         corsi = []
         pages.each do |page|
-          desc_small = page.meta_description_it
+          page = th(page)
+          desc_small = page.meta_description
           desc_small = truncate desc_small, 280
 
           corsi << { # TODO: translation
-            name:       page.title_it,
+            name:       page.title,
             desc_small: desc_small,
-            title_url:  page.title_url_it,
+            title_url:  page.title_url,
+            title_url_it:  page.title_url_it,
             classes:    classes("#{page.title_url_it}_#{page.title_it}")
           }
         end
@@ -68,7 +70,7 @@
 
       - corsi.each_with_index do |corso, idx|
         .widget.bg-white.grid-item{ class: corso[:classes].join(" ") }
-          .widget-pic{:style => "background: url(/images/corsi/#{corso[:title_url]}.jpg) no-repeat center center; background-size:cover;"}
+          .widget-pic{:style => "background: url(/images/corsi/#{corso[:title_url_it]}.jpg) no-repeat center center; background-size:cover;"}
           -# %iframe{:allowfullscreen => "", :frameborder => "0", :src => "https://www.youtube.com/embed/KICyR3BZWwE", :width => "100%"}
           .separator15
           .line-compress
@@ -83,8 +85,8 @@
               .line
                 .col7.line-tablet
                 .col3.line-tablet
-                  %a.btn.bg-primary.center-content.line-tablet.color-white.push-right.toggle-opacity-inverse-hover{:href => "/c/#{corso[:title_url]}"}
-                    Informazioni
+                  %a.btn.bg-primary.center-content.line-tablet.color-white.push-right.toggle-opacity-inverse-hover{:href => "/c/#{corso[:title_url_it]}"}
+                    = tf "Informazioni", "More Info"
           .separator15
         - if idx % 3 == 2
           .separator30

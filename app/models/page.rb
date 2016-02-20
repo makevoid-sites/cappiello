@@ -33,10 +33,9 @@ class Page
   def self.find_by_url(title_url_or_it)
     title = title_url_or_it
     title = title || "l_accademia"
-    # page = Page.all(title_url_it: title)  | Page.all(title_url_en: title)
-    # page = Page.all(title_url_it: title)#  | Page.all(title_url_en: title)
-    # page.first
-    Page.first(title_url_it: title)#  | Page.all(title_url_en: title)
+    page = Page.all(title_url_it: title)  | Page.all(title_url_en: title)
+    page.first
+    # Page.first(title_url_it: title) # pippo
   end
 
   # alias :load_page :find_by_url
