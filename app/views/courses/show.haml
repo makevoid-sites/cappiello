@@ -1,12 +1,20 @@
 :ruby
+  def load_text_en(page)
+    cont = File.read "#{Rails.root}/db/pages/#{page.title_url_en}_en.md"
+    cont.strip
+  end
+
   id = params[:id]
   page = NuPage.find id
+  page[:text_en] = load_text_en page if en?
   page = th page
+
   ## raise page.inspect
   corso = { # TODO: translation
-    name:       page.title,
-    title_url:  page.title_url,
-    text:       page.text,
+    name:          page.title,
+    title_url_it:  page.title_url_it,
+    title_url:     page.title_url,
+    text:          page.text,
   }
   corso = MH.new corso
 
@@ -37,7 +45,7 @@
     .separator15.pattern
     .separator30
     .line.article
-      .widget-pic{:style => "background: url(/images/corsi/#{corso[:title_url]}.jpg) no-repeat center center; background-size:cover; height: 400px;"}
+      .widget-pic{:style => "background: url(/images/corsi/#{corso[:title_url_it]}.jpg) no-repeat center center; background-size:cover; height: 400px;"}
       -# %iframe{:allowfullscreen => "", :frameborder => "0", :src => "https://www.youtube.com/embed/KICyR3BZWwE", :height=> "400", :width => "100%"}
     .col6.line-tablet
       .col9.line-tablet
@@ -71,18 +79,19 @@
           .separator50
     .col4.line-tablet
       .separator15
-      .line-compress.line-tablet.bg-black.color-white
-        .line-compress.line-tablet
-          .separator15
-          = markup aside
-          -# = Maruku.new(aside).to_html
-          /
+      - if aside
+        .line-compress.line-tablet.bg-black.color-white
+          .line-compress.line-tablet
             .separator15
-            Info:
+            = markup aside
+            -# = Maruku.new(aside).to_html
+            /
+              .separator15
+              Info:
+              .separator15
+              Info:
+              .separator15
             .separator15
-            Info:
-            .separator15
-          .separator15
       / QUALCHE FOTO DEL CORSO?
       .separator50
 
