@@ -103,5 +103,6 @@
   nav.on "click", (evt) =>
     elem = evt.currentTarget
     filter = elem.dataset.filter
+    filter = ".\#{filter}" unless filter == "*"
     grid.isotope
-      filter: ".\#{filter}"
+      filter: filter

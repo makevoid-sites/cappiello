@@ -4,7 +4,7 @@
   .line-compress.line-max
     .separator50
     %h1.line.color-muted.center-content.article-title.font-custom
-      La Gallery
+      Lavori degli Studenti
     .separator30
     .separator15.pattern
     .separator30
@@ -31,7 +31,7 @@
     .separator30
     .f_gallery
       .line.article
-        #photos{"data-set_id" => "72157625778631893"}
+        #photos{ data: { set_id:  "72157625778631893" } }
 
       -# %a.flickr_button{:href => "http://www.flickr.com/photos/accademiacappiello/sets/72157659720037219/"}
     .separator30
@@ -47,9 +47,9 @@
       # TODO: add loading
       $("#photos").html("<div class='gallery_loading center-content'> Loading...</div>")
 
-      id = $(evt.currentTarget).data "set_id"
-      console.log id
-      $("#photos").data "set_id", id
+      id = $(evt.currentTarget).data "setId"
+      -# console.log id
+      $("#photos").data "setId", id
 
       gallery = new FlickrGallery()
       gallery.init ->

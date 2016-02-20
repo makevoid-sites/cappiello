@@ -11,7 +11,7 @@ class PagesController < ApplicationController
   public
 
   def index
-    redirect_to "/pag/l_accademia"
+    redirect_to "/#accademia"
     # params[:id] = "35"
     # @page = Page.get(params[:id].to_i)
     # load_news
