@@ -1,15 +1,18 @@
 :ruby
   id = params[:id]
   page = NuPage.find id
+  page = th page
+  ## raise page.inspect
   corso = { # TODO: translation
-    name:       page.title_it,
-    title_url:  page.title_url_it,
-    text:       page.text_it,
+    name:       page.title,
+    title_url:  page.title_url,
+    text:       page.text,
   }
   corso = MH.new corso
 
   noko = Nokogiri::HTML(corso.text)
-  aside = noko.search("#aside").first.inner_html
+  aside = noko.search("#aside").first
+  aside = aside.inner_html if aside
 
   noko = Nokogiri::HTML(corso.text)
   noko.search("#aside").remove()
