@@ -1,4 +1,7 @@
 :ruby
+  host_it = APP_HOST
+  host_en = "en.#{host_it}"
+
   def home_url
     "/pages/l_accademia"
   end
@@ -149,14 +152,19 @@
             .line
               .separator5
               %a.color-white{ href: "/cookies" }
-                Ottieni maggiori informazioni sulla tua privacy e su un metodo per bloccare i cookie di profilazione.
-              Oppure
+                - if it?
+                  Ottieni maggiori informazioni sulla tua privacy e su un metodo per bloccare i cookie di profilazione.
+                - else
+                  Obtain more informations on your privacy and on a way to block profiling cookies.
+              = tf "Oppure", "Or"
           .col3.line-tablet.right-content.center-content-tablet
             .separator15.tablet.mobile
             .separator5
             %button#cookie_btn.v-middle.center-content.button.bg-primary.color-white.radius5{ href: js_void }
               .separator2
-              &nbsp;&nbsp;Consenti l'uso dei cookie.&nbsp;&nbsp;
+              &nbsp;&nbsp;
+              = tf "Consenti l'uso dei cookie.", "Accept the use of cookies."
+              &nbsp;&nbsp;
               .separator2
       .separator10
     / mobile menu
@@ -169,26 +177,26 @@
         .col6.offset-left2.radius3
           %a.btn.btn-small.bg-muted.color-white{:href => "/#accademia"} Accademia
           .separator10
-          %a#link-mobile-corsi.btn.btn-small.bg-muted.color-white.smooth-scroll{:href => "/#corsi"} Corsi
+          %a#link-mobile-corsi.btn.btn-small.bg-muted.color-white.smooth-scroll{:href => "/#corsi"}= tf "Corsi", "Courses"
           .separator10
           - nav_link :news
           .separator10
           %a#link-mobile-gallery.btn.btn-small.bg-muted.color-white.smooth-scroll{:href => "/#gallery"} Gallery
           .separator10
-          %a#link-mobile-borse-di-studio.btn.btn-small.bg-muted.color-white.smooth-scroll{:href => "/#borse_di_studio"} Borse di Studio
+          %a#link-mobile-borse-di-studio.btn.btn-small.bg-muted.color-white.smooth-scroll{:href => "/#borse_di_studio"}= tf "Borse di Studio", "Scolarships"
           .separator10
           %a.btn.btn-small.bg-muted.color-white Open Day
           .separator10
-          %a#link-mobile-contatti.btn.btn-small.bg-muted.color-white.smooth-scroll{:href => "/#contatti"} Contatti
+          %a#link-mobile-contatti.btn.btn-small.bg-muted.color-white.smooth-scroll{:href => "/#contatti"}= tf "Contatti", "Contacts"
           .separator15
-          %a.btn.btn-small.color-white.bg-primary Area utenti
+          %a.btn.btn-small.color-white.bg-primary= tf "Area utenti", "Account"
         .separator15
         .line.center-content
-          Lingua
-          %a.font-medium{ href: "", class: "#{"color-primary" if it?}" } italiano
+          = tf "Lingua", "Language"
+          %a.font-medium{ href: "http://#{host_it}", class: "#{"color-#{it? ? "primary" : "white"}"}" } Italiano
           %span
             |
-          %a.color-white{  } english
+          %a.font-medium{ href: "http://#{host_en}", class: "#{"color-#{en? ? "primary" : "white"}" }" } English
         .separator15
         %a.color-white.smooth-scroll{:href => "#contatti"}
           %i.fa.fa-phone
@@ -229,22 +237,22 @@
 
                     %a.bg-muted.color-white.radius20.toggle-opacity-inverse-hover{:href => "#"}
                       %small
-                        &nbsp;&nbsp; AREA UTENTI &nbsp;&nbsp;
+                        &nbsp;&nbsp; #{tf "AREA UTENTI", "ACCOUNT"} &nbsp;&nbsp;
 
                     %a.color-white.toggle-opacity-inverse-hover.smooth-scroll{:href => "#contatti"}
                       &nbsp;&nbsp;&nbsp;&nbsp;
                       %i.fa.fa-phone.color-white
-                        Telefono &nbsp;&nbsp;
+                        #{tf "Telefono", "Telephone"} &nbsp;&nbsp;
                     %a.color-white.toggle-opacity-inverse-hover{:href => "mailto:info@accademiacappiello.it"}
                       &nbsp;&nbsp;&nbsp;
                       %i.fa.fa-envelope.color-white
                       &nbsp;&nbsp;Email &nbsp;&nbsp;
                     %span
-                      Lingua
-                      %a.font-medium.color-primary italiano
+                      = tf "Lingua", "Language"
+                      %a.font-medium{ href: "http://#{host_it}", class: "#{"color-#{it? ? "primary" : "white"}"}" } Italiano
                       %span
                         |
-                      %a.color-white english
+                      %a.font-medium{ href: "http://#{host_en}", class: "#{"color-#{en? ? "primary" : "white"}" }" } English
           .separator5
       #slide.line.bg-white
         .line-compress.line-max.header#top-menu
@@ -256,12 +264,12 @@
           .col8.right-content.desktop
             .header-menu.desktop
               %a#link-accademia.smooth-scroll{ href: "/#accademia" } L'Accademia
-              %a#link-corsi.smooth-scroll{ href: "/#corsi" } Corsi
+              %a#link-corsi.smooth-scroll{ href: "/#corsi" }= tf "Corsi", "Courses"
               - nav_link :news
-              %a#link-gallery.smooth-scroll{ href: "/#gallery" } La Gallery
-              %a#link-borse-di-studio.smooth-scroll{ href: "/#borse-di-studio" } Borse di studio
+              %a#link-gallery.smooth-scroll{ href: "/#gallery" } Gallery
+              %a#link-borse-di-studio.smooth-scroll{ href: "/#borse-di-studio" }= tf "Borse di studio", "Scolarships"
               - nav_link :open_days
-              %a#link-contatti.smooth-scroll{ href: "/#contatti" } Contatti
+              %a#link-contatti.smooth-scroll{ href: "/#contatti" }= tf "Contatti", "Contacts"
               -# nav_link :contatti
 
       / end header and menu
@@ -280,6 +288,8 @@
       -# ------------
       = yield
       -# ------------
+      .separator30
+      = render partial: "pages_new/footer"
 
       #fb-root
       :javascript

@@ -3,7 +3,7 @@
   .line-compress.line-max
     .separator50
     %h1.line.center-content.article-title.font-custom
-      Contatti
+      = tf "Contatti", "Contacts"
     .separator30
     .separator15.pattern
     .separator30
@@ -12,7 +12,7 @@
     .line.article.center-content-tablet
       .col7.line-tablet
 
-        %h1 Indirizzo
+        %h1= tf "Indirizzo", "Address"
         .separator15
         %h4 Accademia d’Arte e Design Leonetto Cappiello
         %p
@@ -25,17 +25,18 @@
             %span.caps FAX
             +39 055 681 32 11
           %br/
-          da Lunedì a Venerdì 9.00-13.00, 16.00-18.00
+          #{it? ? "da Lunedì a Venerdì" : "Monday to Friday"} 9.00-13.00, 16.00-18.00
         %p
           %h1 Email
           %br/
           %a{:href => "mailto:info@accademiacappiello.it"} info@accademiacappiello.it
         %p
-          N°Iscrizione
-          %span.caps CCIAA
-          di Firenze e P.
-          %span.caps IVA
-          04049410485
+          - if it?
+            N°Iscrizione
+            %span.caps CCIAA
+            di Firenze e P.
+            %span.caps IVA
+            04049410485
         .separator15
 
       .col3.line-tablet
@@ -51,11 +52,11 @@
         %h1 Info
         %p
           %a{:href => "http://maps.google.it/maps?client=safari&oe=UTF-8&ie=UTF8&q=accademia+cappiello+firenze&fb=1&gl=it&hq=accademia+cappiello&hnear=Florence&t=h&z=16&iwloc=A"}
-            %span.caps COME
-            %span.caps RAGGIUNGERCI
+            %span.caps= tf "COME", "REACH"
+            %span.caps= tf "RAGGIUNGERCI", "US"
         %p
           %a{:href => "/pages/info"}
-            Iscriviti alla
+            = tf "Iscriviti alla", "Subscribe to our"
             %span.caps NEWSLETTER
         %p
   .separator50

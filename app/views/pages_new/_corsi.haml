@@ -13,6 +13,7 @@
       %a.btn.bg-primary.center-content.line-tablet.color-white.toggle-opacity-inverse-hover{href: js_void, data: { filter: "visual" } } Visual
       %a.btn.bg-primary.center-content.line-tablet.color-white.toggle-opacity-inverse-hover{href: js_void, data: { filter: "grafica" } } Grafica
       %a.btn.bg-primary.center-content.line-tablet.color-white.toggle-opacity-inverse-hover{href: js_void, data: { filter: "estivo" } }= tf "Estivo", "Summer"
+      %a.btn.bg-primary.center-content.line-tablet.color-white.toggle-opacity-inverse-hover{href: js_void, data: { filter: "annuale" } }= tf "Annuale", "Full"
       %a.btn.bg-primary.center-content.line-tablet.color-white.toggle-opacity-inverse-hover{href: js_void, data: { filter: "breve" } }= tf "Breve", "Short"
       %a.btn.bg-primary.center-content.line-tablet.color-white.toggle-opacity-inverse-hover{href: js_void, data: { filter: "base" } }= tf "Base", "Basic"
       %a.btn.bg-primary.center-content.line-tablet.color-white.toggle-opacity-inverse-hover{href: js_void, data: { filter: "avanzato" } }= tf "Avanzato", "Advanced"
@@ -36,8 +37,8 @@
           klasses << "photo" if name =~ /photo/i
           klasses << "web" if name =~ /web/i
           klasses << "estivo" if name =~ /estivo/i
-          klasses << "annuale" if name =~ /annuale/i
-          klasses << "breve" if name =~ /breve/i
+          klasses << "annuale" if name =~ /annuale|15 mesi/i
+          klasses << "breve" if name =~ /breve|seral|workshop/i
           klasses << "base" if name =~ /base/i
           klasses << "avanzato" if name =~ /avanzato/i
           klasses
@@ -70,7 +71,8 @@
 
       - corsi.each_with_index do |corso, idx|
         .widget.bg-white.grid-item{ class: corso[:classes].join(" ") }
-          .widget-pic{:style => "background: url(/images/corsi/#{corso[:title_url_it]}.jpg) no-repeat center center; background-size:cover;"}
+          %a{ href: "/c/#{corso[:title_url_it]}" }
+            .widget-pic{:style => "background: url(/images/corsi/#{corso[:title_url_it]}.jpg) no-repeat center center; background-size:cover;"}
           -# %iframe{:allowfullscreen => "", :frameborder => "0", :src => "https://www.youtube.com/embed/KICyR3BZWwE", :width => "100%"}
           .separator15
           .line-compress

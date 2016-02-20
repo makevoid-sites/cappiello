@@ -7,6 +7,7 @@ end
 APP_NAME = Rails.application.class.name.split("::")[0].downcase
 DEVELOPER_NAME = "Francesco Canessa"
 
+APP_HOST = Rails.env == "development" ? "localhost:3000" : "accademia-cappiello.it"
 
 require "haml"
 require "haml/template"
@@ -54,14 +55,13 @@ end
 
 class NotFound < Exception
   attr_accessor :code, :status_exception
-  
+
   def initialize
     @code = 404
     @status_exception = true
   end
-  
+
   def message
     "Pagina non trovata"
   end
 end
-

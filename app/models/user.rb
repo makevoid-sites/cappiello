@@ -158,7 +158,6 @@ class User
 
   # user pdf uploads
 
-  APP_HOST = Rails.env == "development" ? "localhost:3000" : "accademia-cappiello.it"
 
   def cv?
     File.exists? "#{Rails.root}/public#{cv}"
