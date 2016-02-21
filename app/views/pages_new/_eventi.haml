@@ -1,0 +1,94 @@
+.line.bg-muted
+  .separator50#eventi
+  .line-compress.line-max
+    .separator50
+    %h1.line.color-muted.center-content.article-title.font-custom
+      = tf "Eventi", "Events"
+    .separator30
+    .separator15.pattern
+    .separator30
+    .line.article.grid
+      :ruby
+        def classes(name)
+          klasses = []
+          klasses << "autocad" if name =~ /autocad/i
+          klasses << "sketchup" if name =~ /sketch/i
+          klasses << "photoshop" if name =~ /photoshop/i
+          klasses << "interior" if name =~ /interior/i
+          klasses << "visual" if name =~ /visual/i
+          klasses << "grafica" if name =~ /grafica/i
+          klasses << "master" if name =~ /master/i
+          klasses << "photo" if name =~ /photo/i
+          klasses << "web" if name =~ /web/i
+          klasses << "estivo" if name =~ /estivo/i
+          klasses << "annuale" if name =~ /annuale|15 mesi/i
+          klasses << "breve" if name =~ /breve|seral|workshop/i
+          klasses << "base" if name =~ /base/i
+          klasses << "avanzato" if name =~ /avanzato/i
+          klasses
+        end
+
+
+        # raise NuPage.all.inspect
+        # pages = NuPage.all_saf
+        pages = NuPage.all_saf_filtered
+
+        corsi = []
+        pages.each do |page|
+          page = th(page)
+          desc_small = page.meta_description
+          desc_small = truncate desc_small, 280
+
+          corsi << { # TODO: translation
+            name:       page.title,
+            desc_small: desc_small,
+            title_url:  page.title_url,
+            title_url_it:  page.title_url_it,
+            classes:    classes("#{page.title_url_it}_#{page.title_it}")
+          }
+        end
+
+      :css
+        .widget > img {
+          width: 100%
+        }
+
+      - corsi.each_with_index do |corso, idx|
+        .widget.bg-white.grid-item{ class: corso[:classes].join(" ") }
+          %a{ href: "/c/#{corso[:title_url_it]}" }
+            .widget-pic{:style => "background: url(/images/corsi/#{corso[:title_url_it]}.jpg) no-repeat center center; background-size:cover;"}
+            .widget-pic-title
+              Nome evento
+          -# %iframe{:allowfullscreen => "", :frameborder => "0", :src => "https://www.youtube.com/embed/KICyR3BZWwE", :width => "100%"}
+          .line-compress
+            .widget-desc
+              %h6
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            .separator15
+            .separator10
+            .line-compress
+              .col7.line-tablet
+              .col3.line-tablet
+                %a.btn.bg-primary.center-content.line-tablet.color-white.push-right.toggle-opacity-inverse-hover{:href => "/c/#{corso[:title_url_it]}"}
+                  = tf "Informazioni", "More Info"
+          .separator15
+        - if idx % 3 == 2
+          .separator30
+  .separator50
+  .separator30
+
+:coffee
+  c = console
+  grid = $ '.grid'
+  nav  = $ ".corsi-nav a"
+
+  grid.isotope
+    itemSelector: '.grid-item'
+    layoutMode: 'fitRows'
+
+  nav.on "click", (evt) =>
+    elem = evt.currentTarget
+    filter = elem.dataset.filter
+    filter = ".\#{filter}" unless filter == "*"
+    grid.isotope
+      filter: filter

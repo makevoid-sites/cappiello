@@ -250,6 +250,15 @@ max-height:387px;
 .widget-pic{
   height:200px;
 }
+.widget-pic-title{
+  color:white;
+  font-size:20px;
+  position: relative;
+  top:-180px;
+  width:95%;
+  margin:0 auto;
+  float:none;
+}
 .widget-desc{
   overflow:hidden;
   min-height: 94px;
