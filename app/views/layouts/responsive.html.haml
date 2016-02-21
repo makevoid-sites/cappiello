@@ -175,7 +175,7 @@
         .separator30
         .separator10
         .col6.offset-left2.radius3
-          %a.btn.btn-small.bg-muted.color-white{:href => "/#accademia"} Accademia
+          %a.btn.btn-small.bg-muted.color-white{:href => "/#accademia"}= tf "L'Accademia", "The Accademia"
           .separator10
           %a#link-mobile-corsi.btn.btn-small.bg-muted.color-white.smooth-scroll{:href => "/#corsi"}= tf "Corsi", "Courses"
           .separator10
@@ -263,7 +263,7 @@
 
           .col8.right-content.desktop
             .header-menu.desktop
-              %a#link-accademia.smooth-scroll{ href: "/#accademia" } L'Accademia
+              %a#link-accademia.smooth-scroll{ href: "/#accademia" }= tf "L'Accademia", "The Accademia"
               %a#link-corsi.smooth-scroll{ href: "/#corsi" }= tf "Corsi", "Courses"
               - nav_link :news
               %a#link-gallery.smooth-scroll{ href: "/#gallery" } Gallery

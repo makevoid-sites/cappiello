@@ -25,17 +25,17 @@
       .col5.line-tablet
         .col5.line-tablet.color-white
           .separator30
-          %h3.color-muted-inverse La Scuola
+          %h3.color-muted-inverse= tf "La Scuola", "The School"
           %ul
             .separator10
             %li
               %a.color-white.toggle-opacity-hover{href: "/#accademia"} Accademia
             .separator10
             %li
-              %a.color-white.toggle-opacity-hover{href: "/#contatti"} Dove Siamo
+              %a.color-white.toggle-opacity-hover{href: "/#contatti"}= tf  "Dove Siamo", "Location"
             .separator10
             %li
-              %a.color-white.toggle-opacity-hover{href: "/#contatti"} Contatti
+              %a.color-white.toggle-opacity-hover{href: "/#contatti"}= tf  "Contatti", "Contacts"
             .separator10
             %li
               %a.color-white.toggle-opacity-hover{href: "#TODO"} Privacy Policy
@@ -44,38 +44,38 @@
               %a.color-white.toggle-opacity-hover{href: "/cookies"}= tf "Utilizzo dei Cookies", "Cookie Policy"
         .col5.line-tablet.color-white
           .separator30
-          %h3.color-muted-inverse Opportunità
+          %h3.color-muted-inverse= tf "Opportunità", "Opportunities"
           %ul
             .separator10
             %li
-              %a.color-white.toggle-opacity-hover{href: "/#borse-di-studio"} Borse di studio
+              %a.color-white.toggle-opacity-hover{href: "/#borse-di-studio"}= tf "Borse di studio", "Scolarships"
             .separator10
             %li
               %a.color-white.toggle-opacity-hover{href: "/pages/open_days"} Open Day!
       .col5.line-tablet.line-tablet
         .col5.line-tablet.color-white
           .separator30
-          %h3.color-muted-inverse Per le aziende
+          %h3.color-muted-inverse= tf "Per le aziende", "For companies"
           %ul
             .separator10
             %li
               %a.color-white.toggle-opacity-hover{href: "#TODO"} Partnership
             .separator10
             %li
-              %a.color-white.toggle-opacity-hover{href: "#TODO"} Offerte di lavoro
+              %a.color-white.toggle-opacity-hover{href: "#TODO"}= tf "Offerte di lavoro", "Post a Job advert"
         .col5.line-tablet.color-white
           .separator30
-          %h3.color-muted-inverse Corsi e Master
+          %h3.color-muted-inverse Corsi #{tf "e", "and"} Master
           %ul
             .separator10
             %li
-              %a.color-white.toggle-opacity-hover{href: "/pag/courses_sel?s=annuale"} Corsi annuali
+              %a.color-white.toggle-opacity-hover{href: "/pag/courses_sel?s=annuale"}= tf "Corsi annuali", "Annual courses"
             .separator10
             %li
               %a.color-white.toggle-opacity-hover{href: "/pag/courses_sel?s=master"} Master
             .separator10
             %li
-              %a.color-white.toggle-opacity-hover{href: "/pag/courses_sel?s=breve"} Corsi brevi e serali
+              %a.color-white.toggle-opacity-hover{href: "/pag/courses_sel?s=breve"}= tf "Corsi brevi e serali", "Short and evening courses"
       .separator100
-      .color-muted-inverse.font-smaller.center-content © 2015 Accademia Cappiello - Firenze
+      .color-muted-inverse.font-smaller.center-content © #{Time.now.year} Accademia Cappiello - Firenze
       .separator50
