@@ -259,7 +259,8 @@
           .col2.line-tablet.center-content-tablet
             .separator3
             %a{:href => "/#accademia"}
-              %img.logo{:src => "/images/logo.png"}
+              %img.logo-scrolling{:src => "/images/logo.png"}
+              %img.logo{:src => "/images/logo-white.png"}
 
           .col8.right-content.desktop
             .header-menu.desktop
@@ -324,7 +325,25 @@
           $('.header-menu a').removeClass('active');
           $(this).addClass('active');
         });
+      :javascript
+          $(window).on('scroll', function onWindowScroll() {
 
+            if ($(window).scrollTop() > 100) {
+              if (!$('.header').hasClass('scrolling')) {
+                $('.header').fadeTo(0, 0.2);
+                $('.header, .header-menu').addClass('scrolling');
+
+                $('.header').fadeTo(1500, 1);
+              }
+            } else {
+              $('.header, .header-menu').removeClass('scrolling');
+            }
+
+          });
+          if ($(window).scrollTop() > 100) {
+
+            $('.header, .header-menu').addClass('scrolling');
+          }
       :javascript
         var bar = document.querySelector(".cookie_bar")
           , btn = document.querySelector("#cookie_btn")

@@ -1,9 +1,7 @@
 .bg-white#accademia
-.line.color-white
-  .separator50
-  .separator15
+.line.color-white.bg-white
   .fixed-height
-    .owl-carousel.line.bg-black
+    .owl-carousel.line.bg-white
       :ruby
         pages = NuPage.all_saf_filtered
         pages = pages.map{ |page| page.title_url_it }

@@ -56,16 +56,6 @@ body,html {
   max-width: 100%;
   overflow-x: hidden;
 }
-.opacity-0-3{
-  opacity:0.3;
-}
-.opacity1{
-  opacity:1;
-}
-.transition-opacity{
-transition: opacity 3s linear;
--webkit-transition: opacity 3s linear;
-}
 .font-custom{
 font-family: 'Montserrat';
 }
@@ -92,6 +82,8 @@ a.gallery_link img{
 box-shadow: 0 3px 6px lightgrey;
 }
 .article-title{
+z-index:0;
+letter-spacing:-1px;
 font-size: 2.75em;
 line-height: 2em;
 }
@@ -142,6 +134,8 @@ min-width: 200px;
 .top-menu {
   position:fixed;
   top:0;
+  left:0;
+  right:0;
   line-height:23px;
   background: #222;
   z-index:99999;
@@ -182,24 +176,47 @@ opacity:.6;
 opacity:1;
 cursor: pointer;
 }
-.logo{
+.logo, .logo-scrolling{
   width:100%;
   min-width: 200px;
   max-width:210px;
 }
-
+.logo-scrolling {
+  display:none;
+}
+.header.scrolling .logo{
+  display: none;
+}
+.header.scrolling .logo-scrolling {
+  display: inherit;
+}
 .header{
-  box-shadow:0 2px 10px rgba(0,0,0, .1);
-  z-index:9999;
+  z-index:999998;
   min-width:100%;
   float: none;
   margin:0 auto;
   position:fixed;
-  top:37px;
+  top:50px;
   height:85px;
+  background: none;
+}
+.header.scrolling{
+  top:39px;
+}
+.header.scrolling{
+  box-shadow:0 2px 10px rgba(0,0,0, .1);
   background: white;
 }
 .header a{
+  color:white;
+  opacity:.9;
+  transition:none;
+  transition: opacity .3s linear;
+}
+.header .header-menu a:active{
+  background: none;
+}
+.header.scrolling a{
 color:#333;
 }
 .header img{
@@ -213,12 +230,18 @@ color:#333;
   font-size: 14px;
   margin:0 0 0 0;
 }
-.header-menu a:hover {
+.header .header-menu a{
+  opacity:.75;
+}
+.header .header-menu a:hover{
+  opacity:1;
+  background-color: none;
+}
+.header-menu.scrolling a:hover {
   background-color: rgba(0,0,0, .15);
-  opacity:.8;
+  opacity:.7;
  }
-.header .header-menu a:hover,.header .header-menu a.active{
-  background-color: #eee;
+.header .header-menu.scrolling a:hover,.header .header-menu a.active{
   opacity:.8;
 }
 /*Backgrounds */
@@ -374,7 +397,10 @@ display: none; }
 .owl-carousel{
   height:auto;
   min-height:0;
-  max-height:430px;
+  position: relative;
+  background: white;
+  top:-50px;
+  max-height:100vh;
   overflow-y:hidden;
 }
 .owl-prev,.owl-next{
