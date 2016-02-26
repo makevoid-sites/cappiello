@@ -110,8 +110,7 @@ namespace :chmod do
   desc "chmod entire dir"
   task :entire do
     run "cd #{current_path}; chown www-data:www-data -R *"
-    run "cd #{current_path}; git reset HEAD log/.gitignore"
-    run "cd #{current_path}; git checkout log/.gitignore"
+    run "cd #{current_path}; git checkout log"
     run "cd #{current_path}; git add ."
     run "cd #{current_path}; git add -u"
     run "cd #{current_path}; git stash"
