@@ -184,6 +184,13 @@ cursor: pointer;
 .logo-scrolling {
   display:none;
 }
+
+body.not-home .logo-scrolling{
+  display:inherit;
+}
+body.not-home .logo{
+  display:none;
+}
 .header.scrolling .logo{
   display: none;
 }
@@ -200,10 +207,10 @@ cursor: pointer;
   height:85px;
   background: none;
 }
-.header.scrolling{
+.header.scrolling, body.not-home .header{
   top:39px;
 }
-.header.scrolling{
+.header.scrolling, body.not-home .header{
   box-shadow:0 2px 10px rgba(0,0,0, .1);
   background: white;
 }
@@ -213,7 +220,7 @@ cursor: pointer;
   transition:none;
   transition: opacity .3s linear;
 }
-.header.scrolling a{
+.header.scrolling a, body.not-home .header a{
 color:#333;
 }
 .header img{
@@ -234,7 +241,7 @@ color:#333;
   opacity:1;
   background-color: none;
 }
-.header-menu.scrolling a:hover {
+.header-menu.scrolling a:hover, body.not-home .header-menu a:hover {
   background-color: rgba(0,0,0, .07);
   opacity:.7;
  }

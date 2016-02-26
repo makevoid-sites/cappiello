@@ -326,6 +326,7 @@
           $(this).addClass('active');
         });
       :javascript
+        if (!$('body').hasClass('not-home')) {
           $(window).on('scroll', function onWindowScroll() {
 
             if ($(window).scrollTop() > 100) {
@@ -344,6 +345,7 @@
 
             $('.header, .header-menu').addClass('scrolling');
           }
+        }
       :javascript
         var bar = document.querySelector(".cookie_bar")
           , btn = document.querySelector("#cookie_btn")
