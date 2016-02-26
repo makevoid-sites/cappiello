@@ -296,6 +296,7 @@ background: rgba(0, 0, 0, 0.85); }
 #menuMobile a {
 line-height: 30px;
 font-size: 14.5px;
+font-weight: 500;
 }
 #menuMobile a.active{
   font-style:italic;
