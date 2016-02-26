@@ -1,5 +1,5 @@
-.line.bg-muted
-  .separator50#corsi
+.line.bg-muted#corsi
+  .separator50
   .line-compress.line-max
     .separator50
     %h1.line.color-muted.center-content.article-title.font-custom
@@ -83,12 +83,14 @@
               .separator5
               .widget-desc
                 %h6= corso[:desc_small]
-              .separator10
+              .separator30
               .line
                 .col7.line-tablet
                 .col3.line-tablet
                   %a.btn.bg-primary.center-content.line-tablet.color-white.push-right.toggle-opacity-inverse-hover{:href => "/c/#{corso[:title_url_it]}"}
+
                     = tf "Informazioni", "More Info"
+
           .separator15
         - if idx % 3 == 2
           .separator30

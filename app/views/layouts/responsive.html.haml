@@ -295,7 +295,16 @@
       :javascript
         $('.smooth-scroll').smoothScroll({
           'offset': -50,
-          'speed': 450
+          'preventDefault': true,
+          'easing': 'swing',
+          'speed': 1200,
+          'autoCoefficient': 0,
+          'beforeScroll': function (e) {
+            $('' + e.scrollTarget).fadeTo(300, 0.3);
+          },
+          'afterScroll': function (e) {
+            $('' + e.scrollTarget).fadeTo(500, 1);
+          }
         });
       :javascript
 
