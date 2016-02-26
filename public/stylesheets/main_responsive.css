@@ -213,9 +213,6 @@ cursor: pointer;
   transition:none;
   transition: opacity .3s linear;
 }
-.header .header-menu a:active{
-  background: none;
-}
 .header.scrolling a{
 color:#333;
 }
@@ -243,6 +240,12 @@ color:#333;
  }
 .header .header-menu.scrolling a:hover,.header .header-menu a.active{
   opacity:.8;
+}
+
+.header.scrolling .header-menu a:active,.header.scrolling .header-menu a.active{
+  background: none;
+  opacity:1;
+  color:#d32859;
 }
 /*Backgrounds */
 .bg-primary {
