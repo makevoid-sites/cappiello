@@ -235,7 +235,7 @@ color:#333;
   background-color: none;
 }
 .header-menu.scrolling a:hover {
-  background-color: rgba(0,0,0, .15);
+  background-color: rgba(0,0,0, .07);
   opacity:.7;
  }
 .header .header-menu.scrolling a:hover,.header .header-menu a.active{
