@@ -413,7 +413,7 @@ display: none; }
   font-size: 20px;
   position:absolute;
   z-index:99;
-  top:43%;
+  top:55%;
   cursor:pointer;
 }
 .owl-prev:hover,.owl-next:hover{
