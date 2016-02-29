@@ -148,7 +148,7 @@
       .separator5
       .line
         .line
-          .col7.line-tablet.center-content-tablet
+          .col8.line-tablet.center-content-tablet
             .line
               .separator5
               %a.color-white{ href: "/cookies" }
@@ -156,16 +156,17 @@
                   Ottieni maggiori informazioni sulla tua privacy e su un metodo per bloccare i cookie di profilazione.
                 - else
                   Obtain more informations on your privacy and on a way to block profiling cookies.
-              = tf "Oppure", "Or"
-          .col3.line-tablet.right-content.center-content-tablet
+              = tf "Oppure consenti l'uso dei cookies.", "Or accept the use of cookies."
+          .col2.line-tablet.right-content.center-content-tablet
             .separator15.tablet.mobile
             .separator5
-            %button#cookie_btn.v-middle.center-content.button.bg-primary.color-white.radius5{ href: js_void }
+            %button#cookie_btn.v-middle.center-content.button.bg-primary.color-white.radius3{ href: js_void }
               .separator2
               &nbsp;&nbsp;
               = tf "Consenti l'uso dei cookie.", "Accept the use of cookies."
               &nbsp;&nbsp;
               .separator2
+      .separator10.tablet.mobile
       .separator10
     / mobile menu
     %a#btnMenu.absolute.top.right.color-white.mobile.tablet.center-content.layer4{:href => "javascript:void(0)", :onclick => "$(this).toggleClass('rotate bg-primary'); $('#menuMobile').toggleClass('hide');"}
