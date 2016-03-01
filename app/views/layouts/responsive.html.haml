@@ -143,6 +143,11 @@
   - path = "l_accademia" if ["/", ""].include? request.path
   - not_home = path != "l_accademia"
   %body{ class: "#{controller.controller_name} #{controller.action_name} #{"master" if master?} #{"admin" if admin?} #{path} #{"not-home" if not_home}"}
+    #loading.center-content
+      %img{:src => "/images/logo-loading.png"}
+      .separator50
+      .line
+        %img{:src => "/images/ajax-loader.gif", :style => "opacity:0.4;"}
     .separator50
     #cookies.cookie_bar.line-compress.color-white.hidden.fixed.top
       .separator5
@@ -168,7 +173,7 @@
               .separator2
       .separator10.tablet.mobile
       .separator10
-    #top-menu-social.color-white
+    #top-menu-social
       .line-compress.top-menu
         .separator5
         .top-menu-social.col4
@@ -210,26 +215,26 @@
                     %span
                       |
                     %a.font-medium{ href: "http://#{host_en}", class: "#{"color-#{en? ? "primary" : "white"}" }" } English
-      #slide.line.bg-white
-        .line-compress.line-max.header#top-menu
-          .col2.line-tablet.center-content-tablet
-            .separator3
-            %a{:href => "/#accademia"}
-              %img.logo-scrolling{:src => "/images/logo.png"}
-              %img.logo{:src => "/images/logo-white.png"}
+    #slide.line.bg-white
+      .line-compress.line-max.header#top-menu
+        .col2.line-tablet.center-content-tablet
+          .separator3
+          %a{:href => "/#accademia"}
+            %img.logo-scrolling{:src => "/images/logo.png"}
+            %img.logo{:src => "/images/logo-white.png"}
 
-          .col8.right-content.desktop
-            .header-menu.desktop
-              %a#link-accademia.smooth-scroll{ href: "/#accademia" }= tf "L'Accademia", "The Accademia"
-              %a#link-corsi.smooth-scroll{ href: "/#corsi" }= tf "Corsi", "Courses"
-              - nav_link :news
-              %a#link-gallery.smooth-scroll{ href: "/#gallery" } Gallery
-              %a#link-borse-di-studio.smooth-scroll{ href: "/#borse-di-studio" }= tf "Borse di studio", "Scolarships"
-              %a#link-open-days.smooth-scroll{ href: "/#open-days" } Open Days
-              %a#link-contatti.smooth-scroll{ href: "/#contatti" }= tf "Contatti", "Contacts"
-              -# nav_link :contatti
+        .col8.right-content.desktop
+          .header-menu.desktop
+            %a#link-accademia.smooth-scroll{ href: "/#accademia" }= tf "L'Accademia", "The Accademia"
+            %a#link-corsi.smooth-scroll{ href: "/#corsi" }= tf "Corsi", "Courses"
+            - nav_link :news
+            %a#link-gallery.smooth-scroll{ href: "/#gallery" } Gallery
+            %a#link-borse-di-studio.smooth-scroll{ href: "/#borse-di-studio" }= tf "Borse di studio", "Scolarships"
+            %a#link-open-days.smooth-scroll{ href: "/#open-days" } Open Days
+            %a#link-contatti.smooth-scroll{ href: "/#contatti" }= tf "Contatti", "Contacts"
+            -# nav_link :contatti
       / mobile menu
-      #menuMobile.overlay.over-y-scroll.color-white.center-content.hide.layer2{:style => 'z-index:-1;'}
+      #menuMobile.overlay.over-y-scroll.color-white.center-content.hide
         .separator30
         .separator10
         .col6.offset-left2.radius3
@@ -321,19 +326,18 @@
         });
       :javascript
         if (!$('body').hasClass('not-home')) {
-          $(window).on('scroll', function onWindowScroll() {
+          $(window).on('scroll', function onWindowScroll(e) {
 
-            if ($(window).scrollTop() > 100) {
+            if ($(window).scrollTop() > 60) {
               if (!$('.header').hasClass('scrolling')) {
                 $('.header').fadeTo(0, 0.2);
                 $('.header, .header-menu').addClass('scrolling');
 
-                $('.header').fadeTo(1500, 1);
+                $('.header').fadeTo(450, 1);
               }
             } else {
               $('.header, .header-menu').removeClass('scrolling');
             }
-
           });
           if ($(window).scrollTop() > 100) {
 
@@ -355,6 +359,15 @@
           bar.classList.remove("hidden")
           btn.addEventListener("click", hideBar)
         }
+      :javascript
+        $(document).ready(function () {
+          window.setTimeout(function () {
+          $('#loading').fadeOut(450, function () {
+
+            $('body, html').css({'overflow-y': 'auto'});
+          });
+          }, 1300);
+        });
       :javascript
         var google_conversion_id = 1048016950;
         var google_custom_params = window.google_tag_params;

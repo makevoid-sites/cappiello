@@ -43,8 +43,6 @@
   src: local('Open Sans Bold'), local('OpenSans-Bold'), url('/fonts/open_sans_bold.woff2') format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
 }
-
-
 body *, html * {
 letter-spacing: initial;
 letter-spacing: "";
@@ -52,11 +50,29 @@ font-weight: 300;
 font-family: "Open Sans", Helvetica Neue, Arial, sans-serif;
 font-size:14.5px;
 }
-body,html {
+body{
   background-color: none;
   background: trasparent;
   max-width: 100%;
   overflow-x: hidden;
+  overflow-y: hidden;
+}
+body.not-home{
+  overflow-y: auto;
+}
+#loading{
+  position: fixed;
+  top:0;
+  height:100%;
+  min-height: 100vh;
+  left:0;
+  width:100%;
+  z-index:99999999999;
+  background: white;
+  padding-top:13%;
+}
+body.not-home #loading {
+  display:none;
 }
 .font-custom{
 font-family: 'Montserrat';
@@ -138,8 +154,9 @@ min-width: 200px;
   top:0;
   left:0;
   right:0;
-  line-height:20px;
-  padding-bottom:5px;
+  min-height:35px;
+  line-height:21px;
+  padding-bottom:7px;
   background: #222;
   z-index:99999;
 }
@@ -211,7 +228,7 @@ body.not-home .logo{
   background: none;
 }
 .header.scrolling, body.not-home .header{
-  top:35px;
+  top:38px;
 }
 .header.scrolling, body.not-home .header{
   box-shadow:0 2px 10px rgba(0,0,0, .1);
