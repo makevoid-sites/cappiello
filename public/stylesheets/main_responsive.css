@@ -53,6 +53,8 @@ font-family: "Open Sans", Helvetica Neue, Arial, sans-serif;
 font-size:14.5px;
 }
 body,html {
+  background-color: none;
+  background: trasparent;
   max-width: 100%;
   overflow-x: hidden;
 }
@@ -136,7 +138,8 @@ min-width: 200px;
   top:0;
   left:0;
   right:0;
-  line-height:23px;
+  line-height:20px;
+  padding-bottom:5px;
   background: #222;
   z-index:99999;
 }
@@ -208,7 +211,7 @@ body.not-home .logo{
   background: none;
 }
 .header.scrolling, body.not-home .header{
-  top:39px;
+  top:35px;
 }
 .header.scrolling, body.not-home .header{
   box-shadow:0 2px 10px rgba(0,0,0, .1);
