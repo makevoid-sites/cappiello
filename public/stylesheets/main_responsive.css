@@ -199,6 +199,7 @@ cursor: pointer;
 .logo, .logo-scrolling{
   width:100%;
   min-width: 200px;
+  height:100%;
   max-width:210px;
 }
 .logo-scrolling {
@@ -226,6 +227,7 @@ body.not-home .logo{
   top:50px;
   height:85px;
   background: none;
+  transform:  none;
 }
 .header.scrolling, body.not-home .header{
   top:38px;
@@ -436,11 +438,19 @@ display: none; }
 .grid-item {
   margin-bottom: 2%;
 }
+.carousel {
+  box-shadow:none;
+  margin-top:-12px;
+}
 @media screen and (max-width: 800px) {
   .grid-item {
     margin-bottom: 3%;
   }
-
+  .logo{
+    transform: none;
+    float:none;
+    margin: 0 auto;
+  }
   body{
     font-size:13.5px;
   }
