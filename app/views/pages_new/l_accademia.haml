@@ -1,41 +1,6 @@
+= render partial: "pages_new/home_slider.html"
 .bg-white#accademia
 .line.color-white.bg-white
-  .fixed-height
-    .owl-carousel.line.bg-white
-      :ruby
-        pages = NuPage.all_saf_filtered
-        pages = pages.map{ |page| page.title_url_it }
-        pages = pages.map do |page|
-          Hashie::Mash.new( name: page, img_url: "not_set" )
-        end
-        pages = pages.map{ |page| page.img_url = "/images/corsi/#{page.name}.jpg"; page }
-
-        pages.reject! { |p| ["sketchup_base", "sketchup_avanzato"].include? p.name  }
-
-        pages.shuffle!
-      -# - pages = pages.map{ |page| page.antani = "eccome!"; } # sets page to page.name in the "pages" array
-      - for page in pages
-        .item
-          %img{:src => page.img_url }
-
-  :javascript
-      $(document).ready(function() {
-
-      $(".owl-carousel").owlCarousel({
-        items: 1,
-        mouseDrag: false,
-        pullDrag: true,
-        touchDrag:true,
-        autoplay:true,
-        autoplaySpeed: 1000,
-        autoplayTimeout:5000,
-        loop: true,
-        center: true,
-        autoHeight : true,
-        // lazyLoad : true,
-        navText: ['<i class="fa fa-chevron-left"></i>', '<i class="fa fa-chevron-right"></i>']
-      });
-    });
 .line.bg-white
   .separator10
   .line-compress.line-max

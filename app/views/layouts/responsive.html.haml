@@ -104,8 +104,10 @@
     -# TODO UI salvare il font
     -# %link{:href => "https://fonts.googleapis.com/css?family=Open+Sans:400,700italic,700,600italic,600,400italic,300italic,300&subset=latin,cyrillic-ext", :rel => "stylesheet", :type => "text/css"}/
     %link{:href => "/stylesheets/fancybox.css", :rel => "stylesheet"}/
-    %link{:href => "http://www.owlcarousel.owlgraphic.com/assets/owlcarousel/assets/owl.carousel.min.css", :rel => "stylesheet"}/
-    %link{:href => "http://www.owlcarousel.owlgraphic.com/assets/owlcarousel/assets/owl.theme.default.min.css", :rel => "stylesheet"}/
+    %link{:href => "/vendor/revolution-slider/css/settings.css", :rel => "stylesheet"}/
+    %link{:href => "/vendor/revolution-slider/css/layers.css", :rel => "stylesheet"}/
+    %link{:href => "/vendor/revolution-slider/css/navigation.css", :rel => "stylesheet"}/
+    %link{:href => "/vendor/revolution-slider/css/noneed.css", :rel => "stylesheet"}/
     = stylesheet_link_tag "main_responsive"#, :cache =>  "cache/all"
     - unless Rails.env == "production"
       - debug = " anonym_id: #{session[:anonym_id]}"
@@ -127,6 +129,17 @@
 
     = javascript_include_tag "jquery", "jquery-cycle", "jquery-swfobject", "jquery-flickr", "jquery-mousewheel", "jquery-fancybox", "jquery-smoothscroll", "isotope", "owl-carousel", "master"
     = yield :head
+    %script{ type: "text/javascript", src: "/vendor/revolution-slider/js/jquery.themepunch.tools.min.js" }
+    %script{ type: "text/javascript", src: "/vendor/revolution-slider/js/jquery.themepunch.revolution.min.js" }
+    %script{ type: "text/javascript", src: "/vendor/revolution-slider/js/revolution.extension.actions.min.js" }
+    %script{ type: "text/javascript", src: "/vendor/revolution-slider/js/revolution.extension.carousel.min.js" }
+    %script{ type: "text/javascript", src: "/vendor/revolution-slider/js/revolution.extension.kenburn.min.js" }
+    %script{ type: "text/javascript", src: "/vendor/revolution-slider/js/revolution.extension.layeranimation.min.js" }
+    %script{ type: "text/javascript", src: "/vendor/revolution-slider/js/revolution.extension.migration.min.js" }
+    %script{ type: "text/javascript", src: "/vendor/revolution-slider/js/revolution.extension.navigation.min.js" }
+    %script{ type: "text/javascript", src: "/vendor/revolution-slider/js/revolution.extension.parallax.min.js" }
+    %script{ type: "text/javascript", src: "/vendor/revolution-slider/js/revolution.extension.slideanims.min.js" }
+    %script{ type: "text/javascript", src: "/vendor/revolution-slider/js/revolution.extension.video.min.js" }
 
     %script{ type: "text/javascript" }
       var action = '#{controller.action_name}'
@@ -273,6 +286,7 @@
       %a#btnMenu.absolute.top.right.color-white.mobile.tablet.center-content.layer4{:href => "javascript:void(0)", :onclick => "$(this).toggleClass('rotate bg-primary'); $('#menuMobile').toggleClass('hide');"}
         %i.fa.fa-bars
       / end header and menu
+
 
       / --------------content
 
