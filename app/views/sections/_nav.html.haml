@@ -5,7 +5,7 @@
       - pages.each_with_index do |page, idx|
         - if idx == 1
           %li
-            = link_to "News Blog", [:posts]
+            = link_to "News", [:posts]
         - case page.title_url_en
         - when "annual_courses"
           %li
@@ -77,4 +77,3 @@
       = link_to image_tag("icons/flickr_icon.png"), "http://www.flickr.com/photos/accademiacappiello/"
       = link_to image_tag("icons/twitter_icon.png"), "http://twitter.com/Acc_Cappiello"
       = link_to image_tag("icons/instagram_icon.png"), "http://instagram.com/accademiacappiello"
-
