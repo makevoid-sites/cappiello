@@ -41,13 +41,12 @@ class UsersController < ApplicationController
         dest = "#{Rails.root}/public/users_images/#{@user.id}.#{format}"
         FileUtils.cp file_user_image.path, dest
       end
-      
+
       session[:user_id] = @user.id
       path = session[:last_url] || root_path
       path = @user.redirect_url unless @user.redirect_url.blank?
       UserMailer.welcome(@user).deliver
       send_form_notification @user
-      track :registration
       flash[:notice] = tf("La registrazione è andata a buon fine!", "You registered successfully!") if flash[:notice].blank?
       redirect_to path
     else
@@ -90,13 +89,13 @@ class UsersController < ApplicationController
 
       send_form_notification @user
       flash[:notice] = tf("L'invio e' andato a buon fine!", "You sent the informations successfully!") if flash[:notice].blank?
-      
+
     	if params[:user][:tmp_form] == "tutor"
     		redirect_to "/pages/form_confirmation"
     	else
     		redirect_to @user
     	end
-    	
+
     else
       @page = Page.first(title_url_en: "info")
       flash[:error] = tf("Non è stato possibile aggiornare il profilo", "An error occurred updating your infos")

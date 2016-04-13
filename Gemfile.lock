@@ -94,7 +94,6 @@ GEM
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0.6.0)
     erubis (2.7.0)
-    escape (0.0.4)
     eventmachine (1.0.8)
     ffi (1.9.10)
     formatador (0.2.5)
@@ -127,10 +126,6 @@ GEM
     method_source (0.8.2)
     mime-types (1.25.1)
     mini_portile (0.6.2)
-    mixpanel (4.1.1)
-      escape
-      json
-      rack
     multi_json (1.11.2)
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
@@ -228,7 +223,6 @@ DEPENDENCIES
   haml
   json
   maruku
-  mixpanel
   nokogiri
   rails (~> 3.1.8)
   railties (~> 3.1.8)
@@ -241,4 +235,4 @@ DEPENDENCIES
   xpath
 
 BUNDLED WITH
-   1.10.6
+   1.11.2

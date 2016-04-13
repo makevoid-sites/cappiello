@@ -88,21 +88,21 @@ class ApplicationController < ActionController::Base
   # Mixpanel
 
   # before_filter :initialize_mixpanel if Rails.env != "development"
-
-  def initialize_mixpanel
-    @mixpanel = Mixpanel::Tracker.new(MIXPANEL_TOKEN, request.env, { async: true })
-  end
-
-  def track(event, properties={})
-    user = !current_user.nil? ? @current_user.name : "Unregistered"
-    anon_cookie = !@current_user.nil? ? @current_user.anonym_id : session[:anonym_id]
-    @mixpanel.track_event event, properties.merge( user: user , cookie: anon_cookie) if Rails.env == "production"
-  end
-
-  def track_page(event_name)
-    properties = { page: @page.title_it }
-    track "page", properties
-  end
+  # 
+  # def initialize_mixpanel
+  #   @mixpanel = Mixpanel::Tracker.new(MIXPANEL_TOKEN, request.env, { async: true })
+  # end
+  #
+  # def track(event, properties={})
+  #   user = !current_user.nil? ? @current_user.name : "Unregistered"
+  #   anon_cookie = !@current_user.nil? ? @current_user.anonym_id : session[:anonym_id]
+  #   @mixpanel.track_event event, properties.merge( user: user , cookie: anon_cookie) if Rails.env == "production"
+  # end
+  #
+  # def track_page(event_name)
+  #   properties = { page: @page.title_it }
+  #   track "page", properties
+  # end
 
   # Auth(orization)
 

@@ -5,8 +5,8 @@ module ApplicationHelper
   include MarkupHelpers
   include UsersHelper
 
-  require 'voidtools/sinatra/tracking'
-  include Voidtools::Tracking
+  # require 'voidtools/sinatra/tracking'
+  # include Voidtools::Tracking
 
   def master?
     # return false if @page.nil?
