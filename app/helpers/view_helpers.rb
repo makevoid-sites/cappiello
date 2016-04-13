@@ -20,8 +20,4 @@ module ViewHelpers
     "UA-20626831-1"
   end
 
-  def meta_author
-    "Francesco 'makevoid' Canessa"
-  end
-
 end
