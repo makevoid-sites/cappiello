@@ -17,6 +17,8 @@
       %h3.info_title= tf("RICHIESTA INFORMAZIONI", "INFORMATION REQUEST")
       = f.check_box :int_annuali_visual
       = f.label     :int_annuali_visual,    "#{tf "GRAFICA PUBBLICITARIA - Annuale", "GRAPHIC DESIGN - 1 year Course"}"
+      = f.check_box :int_annuali_interior		
+ -    = f.label     :int_annuali_interior,  "INTERIOR DESIGN - #{tf "Corso Annuale", "1 Year Course"}"
       = f.check_box :int_annuali_product
       = f.label     :int_annuali_product,  "PRODUCT DESIGN - #{tf "Corso Annuale", "1 Year Course"}"
       = f.check_box :int_annuali_web
