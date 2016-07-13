@@ -3,7 +3,7 @@ development:
   adapter: mysql
   username: root
   password:
-  host:     localhost
+  host:     127.0.0.1
 
 test:
   database: cappiello_test
@@ -17,7 +17,7 @@ production:
   adapter: mysql
   username: root
   password: secret
-  host:     localhost
+  host:     127.0.0.1
 
 staging:
   database: cappiello_staging
