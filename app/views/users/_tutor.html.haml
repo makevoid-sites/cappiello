@@ -24,10 +24,10 @@
       = f.label :cap, tf("CAP", "ZIP")
       = f.text_field :cap
       = f.label :tel, tf("Telefono", "Phone")
+      = f.text_field :tel
       = f.label :country, tf("Paese", "Country")
       - country = !@user.country && current_lang == "it" ? "Italy" : @user.country
       = f.select :country, options_for_select(Country.all, selected: country), include_blank: true
-      = f.text_field :tel
       = f.label :qualification, tf("Titolo di studio", "Degree")
       = f.text_field :qualification
 
