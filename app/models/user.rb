@@ -35,6 +35,7 @@ class User
   property :int_annuali_visual,   Boolean, default: false
   property :int_annuali_interior, Boolean, default: false
   property :int_annuali_product, Boolean, default: false
+  property :int_annuali_fashion, Boolean, default: false
   property :int_annuali_web, Boolean, default: false
   property :int_master_visual,   Boolean, default: false
   property :int_master_interior, Boolean, default: false
